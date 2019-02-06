@@ -15,6 +15,18 @@ fixture_raw <- map(
         as_tibble()
 )
 
-test <- map_df(fixture_raw, bind_rows) %>% 
-    filter(X1 != "")
+afl_fixture <- map_df(fixture_raw, bind_rows) %>% 
+    filter(X1 != "") %>% 
+    select(date = X1, home_team = X2, away_team = X4, venue = X5, X3) %>% 
+    mutate(date = date %>% str_trunc(width = (nchar(.) - 10), side = "right", ellipsis = ""))
+
+(18 * 22) / 2
+
+afl_fixture <- afl_fixture %>% 
+    filter(X3 == "vs.") %>% 
+    select(-X3)
+
+afl_fixture %>% 
+    select(home_team:venue) %>% 
+    map_int(~ unique(.) %>% length())
 
