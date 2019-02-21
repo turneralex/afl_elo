@@ -17,6 +17,8 @@ fixture_raw_2018 <- map(
         select(round, everything())
 )
 
+rm(fixture_url_2018)
+
 afl_fixture_2018 <- fixture_raw_2018 %>% 
     map_df(bind_rows)
 

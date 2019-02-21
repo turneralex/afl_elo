@@ -17,6 +17,8 @@ fixture_raw_2016 <- map(
         select(round, everything())
 )
 
+rm(fixture_url_2016)
+
 fixture_raw_2016[[1]]
 
 afl_fixture_2016 <- fixture_raw_2016 %>% 

@@ -15,7 +15,10 @@ fixture_raw_2014 <- map(
         as_tibble() %>% 
         mutate(round = paste("Round", (.x - 1))) %>% 
         select(round, everything())
+
 )
+
+rm(fixture_url_2014)
 
 fixture_raw_2014[[23]]
 
