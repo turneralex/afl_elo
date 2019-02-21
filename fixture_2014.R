@@ -20,8 +20,6 @@ fixture_raw_2014 <- map(
 
 rm(fixture_url_2014)
 
-fixture_raw_2014[[23]]
-
 afl_fixture_2014 <- fixture_raw_2014 %>% 
     map_df(bind_rows)
 

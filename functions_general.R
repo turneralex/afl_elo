@@ -19,9 +19,8 @@ is_home <- function(season_year, game_venue, game_away_team, data) {
 
 is_home("2018", "MCG", "Greater Western Sydney", afl_venues_all)
 
-fixture_url_2019 <- "https://en.wikipedia.org/wiki/2019_AFL_season"
-
-get_round_scores <- function(fixture_url, round) {
+get_round_scores <- function(season, round) {
+    fixture_url <- paste0("https://en.wikipedia.org/wiki/", season, "_AFL_season")
     round <- round + 3
     
     fixture_url %>% 
@@ -36,4 +35,4 @@ get_round_scores <- function(fixture_url, round) {
                   away_score = X4 %>% str_remove_all(".*[(]|[)]") %>% as.integer())
 }
 
-get_round_scores(fixture_url_2019, 1)    
+get_round_scores(2019, 1)    

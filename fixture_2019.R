@@ -17,7 +17,7 @@ fixture_raw_2019 <- map(
         select(round, everything())
 )
 
-fixture_raw_2019[[1]]
+rm(fixture_url_2018)
 
 afl_fixture_2019 <- fixture_raw_2019 %>% 
     map_df(bind_rows) %>% 
