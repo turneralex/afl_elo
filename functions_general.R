@@ -21,12 +21,12 @@ is_home("2018", "MCG", "Greater Western Sydney", afl_venues_all)
 
 fixture_url_2019 <- "https://en.wikipedia.org/wiki/2019_AFL_season"
 
-round_1 <- 3
-
-get_round_scores <- function(fixture_url, table_id) {
+get_round_scores <- function(fixture_url, round) {
+    round <- round + 3
+    
     fixture_url %>% 
         read_html() %>% 
-        html_nodes(xpath = paste("//*[@id='mw-content-text']/div/table[", table_id, "]")) %>% 
+        html_nodes(xpath = paste("//*[@id='mw-content-text']/div/table[", round, "]")) %>% 
         html_table() %>% 
         magrittr::extract2(1) %>% 
         as_tibble() %>% 
@@ -36,4 +36,4 @@ get_round_scores <- function(fixture_url, table_id) {
                   away_score = X4 %>% str_remove_all(".*[(]|[)]") %>% as.integer())
 }
 
-get_round_scores(fixture_url_2019, round_1 + 1)    
+get_round_scores(fixture_url_2019, 1)    

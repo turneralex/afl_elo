@@ -20,8 +20,6 @@ parameter_optim <- function(data = afl_elo, par) {
         sum()
 }
 
-parameter_optim(par = c(50, 50, 0.5)) 
-
 elo_par <- optim(
     par = c(50, 50, 0.5),
     lower = c(-Inf, -Inf, 0),
@@ -33,4 +31,5 @@ elo_par <- optim(
     purrr::pluck("par") %>% 
     set_names(c("k", "hga", "regress"))
 
-elo_par
+elo_par %>% 
+    parameter_optim(data = afl_elo)
