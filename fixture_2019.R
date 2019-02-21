@@ -34,6 +34,8 @@ afl_fixture_2019 <- fixture_raw_2019 %>%
            away_score = NA) %>% 
     select(season, match_id, round, date, venue, home_team:away_score)
 
+rm(fixture_raw_2019)
+
 afl_fixture_2019$venue %>% unique()
 
 afl_fixture_2019 <- afl_fixture_2019 %>% 

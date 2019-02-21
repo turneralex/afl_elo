@@ -22,6 +22,8 @@ fixture_raw_2017[[1]]
 afl_fixture_2017 <- fixture_raw_2017 %>% 
     map_df(bind_rows)
 
+rm(fixture_raw_2017)
+
 afl_fixture_2017$X3 %>% 
     unique() %>% 
     magrittr::extract(nchar(.) <= 10)

@@ -1,3 +1,5 @@
+library(tidyverse)
+
 elo_model %>% 
     as_tibble() %>% 
     mutate(season = afl_elo$season) %>% 
