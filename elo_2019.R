@@ -9,7 +9,7 @@ elo_model <- elo.run(
     data = afl_elo
 ) 
 
-get_round_scores("https://en.wikipedia.org/wiki/2018_AFL_season", round = 1)   
+get_round_scores(2019, round = 1)   
 
 afl_fixture_2019 %>% 
     filter(round == "Round 1") %>% 
