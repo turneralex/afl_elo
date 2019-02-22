@@ -28,12 +28,12 @@ rd1_away_elo <- map_dbl(
         pull(rating)
 )
 
-rd1_home <- afl_fixture_2019 %>%
+rd1_hga_app <- afl_fixture_2019 %>%
     filter(round == "Round 1") %>% 
     mutate(hga_app = pmap_int(list(season, venue, away_team), is_home, data = afl_venues_all)) %>% 
     pull(hga_app)
 
-rd1_prob <- elo.prob(rd1_home_elo + rd1_home * elo_par["hga"], rd1_away_elo)
+rd1_prob <- elo.prob(rd1_home_elo + rd1_hga_app * elo_par["hga"], rd1_away_elo)
 
 pmap_chr(
     list(
@@ -43,4 +43,3 @@ pmap_chr(
     ),
     ~ if_else(..1 > 0.5, ..2, ..3)
 )
-
