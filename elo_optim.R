@@ -26,7 +26,7 @@ elo_par <- optim(
     upper = c(Inf, Inf, 1),
     parameter_optim, 
     data = afl_elo,
-    method="L-BFGS-B"
+    method = "L-BFGS-B"
 ) %>% 
     purrr::pluck("par") %>% 
     set_names(c("k", "hga", "regress"))
