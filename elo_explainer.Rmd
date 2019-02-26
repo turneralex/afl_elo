@@ -1,0 +1,59 @@
+---
+title: "Elo - how does it work?"
+author: "Alexander Turner"
+output: html_document
+---
+
+After getting a taste for [__Elo ratings systems__](https://en.wikipedia.org/wiki/Elo_rating_system) at uni and always having an interest in systems put together by [__FiveThirtyEight__](https://fivethirtyeight.com/) for the [__NFL__](https://fivethirtyeight.com/methodology/how-our-nfl-predictions-work/) and [__The Arc__](https://thearcfooty.com/) for the [__AFL__](https://thearcfooty.com/2016/12/29/introducing-the-arcs-ratings-system/), I have decided to implement my own version to get a better gauge for team quality in the AFL and see how it fares as a tipper. 
+
+## Why use a ratings system for the AFL?
+
+The quality of AFL teams generates much debate between pundits and fans alike. Everyone has their view on which teams are better than others and, consequently, who will this week and perhaps go on to win the flag. This is all obviously very subjective and a ratings system aims to provide an objective view of team quality and predictions for upcoming games. It can help us better understand where each team sits, ignoring things like ladder position which aren't always indicative of team quality. 
+
+## How it works - overview
+
+In a typical Elo (which mine is) each team is assigned a rating, with the league average being held constant at 1500. These ratings are then used when two teams play each other to generate an expected outcome (note I am not saying "probability of winning", which I'll get back to later). After the teams play, the expected outcome is compared to the actual outcome and the ratings for each team are updated in a zero-sum fashion that maintains the average rating at 1500. Teams that exceed their expected outcome receive a ratings boost and the opposite occurs for worse than expected performace. 
+
+## How it works - expected result
+
+The expected result is between 0 and 1 and is generated using the following formula:
+
+$$
+\begin{aligned}
+\frac{1} {1 + 10^\frac{-home\_elo - away\_elo} {400}}
+\end{aligned}
+$$
+
+Where $home\_elo$ is the Elo rating of home team and $away\_elo$ is the same for the away team. 
+
+Below is a plot showing how the ratings difference for the home team translate into expected outcomes. 
+
+```{r echo=FALSE, message=FALSE, fig.align='center'}
+library(tidyverse)
+
+f <- function(x) {
+    1 / (1 + 10^(-x / 400))
+}
+
+f(-600:600) %>% 
+    enframe() %>%
+    mutate(x = -600:600) %>% 
+    ggplot(aes(x, value)) +
+    geom_line() +
+    labs(title = "Expected Outcome",
+         subtitle = "The expected match result based on the ratings differenc for a home team",
+         x = "Ratings Difference",
+         y = "Expected Outcome")
+```
+
+
+## How it works - actual result
+
+We also need an actual result on the interval $[0,1]$ and for this I've used the simple but effective home team share of total scoring in the match. This is obviously bound between 0 and 1 and I think in some ways more desirable than other transformations that rely solely on the margin of victory. The reason for this failing to put a respectable score on the board to me says a lot about team quality. Surely a team that loses 20 to 80 has had a worse day than a team that lost 60 to 120? I sure think so. In share of scoring they would receive 0.2 and 0.33 respectively as their actual results. Additionally, share of scoring is normally distributed just like raw actual results as measured by margin of victory, which is desirable. 
+
+One thing about this approach that may be seen as a drawback and which brings me back to a previous point about expected results and their interprations as probabilities. When optimising the parameters for my Elo model (more on that later) I used AFL regular season data from 2014 to 2018 inclusive. During this entire period of 990 matches the highest expected home team outcome was 0.71 and the lowest 0.33. Even a person with a weak grasp of probability can see that during that period some teams were well over a 71% chance of winning. One simply needs to look at betting markets to see teams are routinely given ~80% chance of winning. This stems from the fact that share of scoring simply never really gets near 0 or 1. The highest home team result is 0.871 (but only 10 results are above 0.8) and the lowest is 0.168 (but only 3 are below 0.2). As a result, the model never predicts results this extreme despite the fact they are not extreme when being considered as probabilities. 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
