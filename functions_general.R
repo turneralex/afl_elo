@@ -19,7 +19,7 @@ is_home("2018", "Cazaly's Stadium", "Western Bulldogs", afl_venues_all)
 
 get_round_scores <- function(season, round) {
     fixture_url <- paste0("https://en.wikipedia.org/wiki/", season, "_AFL_season")
-    round <- round + 3
+    round <- round + 2
     
     fixture_url %>% 
         read_html() %>% 

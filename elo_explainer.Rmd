@@ -4,15 +4,15 @@ author: "Alexander Turner"
 output: html_document
 ---
 
-After getting a taste for [__Elo ratings systems__](https://en.wikipedia.org/wiki/Elo_rating_system) at uni and always having an interest in systems put together by [__FiveThirtyEight__](https://fivethirtyeight.com/) for the [__NFL__](https://fivethirtyeight.com/methodology/how-our-nfl-predictions-work/) and [__The Arc__](https://thearcfooty.com/) for the [__AFL__](https://thearcfooty.com/2016/12/29/introducing-the-arcs-ratings-system/), I have decided to implement my own version to get a better gauge for team quality in the AFL and see how it fares as a tipper. 
+After getting a taste for [__Elo ratings systems__](https://en.wikipedia.org/wiki/Elo_rating_system) at uni and always having an interest in systems put together by [__FiveThirtyEight__](https://fivethirtyeight.com/) and [__The Arc__](https://thearcfooty.com/), I have decided to implement my own version to get a better gauge for team quality in the AFL and see how it fares as a tipper. 
 
 ## Why use a ratings system for the AFL?
 
-The quality of AFL teams generates much debate between pundits and fans alike. Everyone has their view on which teams are better than others and, consequently, who will this week and perhaps go on to win the flag. This is all obviously very subjective and a ratings system aims to provide an objective view of team quality and predictions for upcoming games. It can help us better understand where each team sits, ignoring things like ladder position which aren't always indicative of team quality. 
+The quality of AFL teams generates much debate between pundits and fans alike. Everyone has their view on which teams are better than others and, consequently, who will win this week and perhaps go on to win the flag. This is all obviously very subjective and a ratings system aims to provide an objective view of team quality and predictions for upcoming games. It can help us better understand where each team sits, ignoring things like ladder position which aren't always indicative of team quality. 
 
 ## How it works - overview
 
-In a typical Elo (which mine is) each team is assigned a rating, with the league average being held constant at 1500. These ratings are then used when two teams play each other to generate an expected outcome (note I am not saying "probability of winning", which I'll get back to later). After the teams play, the expected outcome is compared to the actual outcome and the ratings for each team are updated in a zero-sum fashion that maintains the average rating at 1500. Teams that exceed their expected outcome receive a ratings boost and the opposite occurs for worse than expected performace. 
+In a typical Elo model (which mine is) each team is assigned a rating, with the league average being held constant at 1500. These ratings are then used when two teams play each other to generate an expected outcome (note I am not saying "probability of winning", which I'll get back to later). After the teams play, the expected outcome is compared to the actual outcome and the ratings for each team are updated in a zero-sum fashion that maintains the average rating at 1500. Teams that exceed their expected outcome receive a ratings boost and the opposite occurs for worse than expected performance. 
 
 ## How it works - expected result
 
@@ -20,11 +20,11 @@ The expected result is between 0 and 1 and is generated using the following form
 
 $$
 \begin{aligned}
-\frac{1} {1 + 10^\frac{-home\_elo - away\_elo} {400}}
+\frac{1} {1 + 10^\frac{-(home\_rating - away\_rating + HGA)} {400}}
 \end{aligned}
 $$
 
-Where $home\_elo$ is the Elo rating of home team and $away\_elo$ is the same for the away team. 
+Where $home\_rating$ is the Elo rating of home team and $away\_rating$ is the same for the away team. There is also a $HGA$ parameter, which I'll get to a bit later. A value of above 0.5 means Elo is predicting a win for the home team. 
 
 Below is a plot showing how the ratings difference for the home team translate into expected outcomes. 
 
@@ -41,19 +41,82 @@ f(-600:600) %>%
     ggplot(aes(x, value)) +
     geom_line() +
     labs(title = "Expected Outcome",
-         subtitle = "The expected match result based on the ratings differenc for a home team",
+         subtitle = "The expected match result based on the ratings difference for a home team",
          x = "Ratings Difference",
-         y = "Expected Outcome")
+         y = "Expected Result")
 ```
 
 
 ## How it works - actual result
 
-We also need an actual result on the interval $[0,1]$ and for this I've used the simple but effective home team share of total scoring in the match. This is obviously bound between 0 and 1 and I think in some ways more desirable than other transformations that rely solely on the margin of victory. The reason for this failing to put a respectable score on the board to me says a lot about team quality. Surely a team that loses 20 to 80 has had a worse day than a team that lost 60 to 120? I sure think so. In share of scoring they would receive 0.2 and 0.33 respectively as their actual results. Additionally, share of scoring is normally distributed just like raw actual results as measured by margin of victory, which is desirable. 
+We also need an actual result on the interval $[0,1]$ and for this I've used the simple but effective home team share of total points scored in the match. This is obviously bound between 0 and 1 and I think in some ways more desirable than other transformations that rely solely on the margin of victory. The reason for this failing to put a respectable score on the board to me says a lot about team quality. Surely a team that loses 20 to 80 has had a worse day than a team that lost 60 to 120? I sure think so. In share of scoring they would receive 0.2 and 0.33 respectively as their actual results, whereas a margin-based system would view these results as the same. Basically, with share of scoring it is hard to receive a really good actual result if you let your opponent score a lot (which isn't actually the case in margin-based alternatives as long as you win by enough). As a final point on this, share of scoring is normally distributed just like raw actual results as measured by margin of victory, which is sensible. 
 
-One thing about this approach that may be seen as a drawback and which brings me back to a previous point about expected results and their interprations as probabilities. When optimising the parameters for my Elo model (more on that later) I used AFL regular season data from 2014 to 2018 inclusive. During this entire period of 990 matches the highest expected home team outcome was 0.71 and the lowest 0.33. Even a person with a weak grasp of probability can see that during that period some teams were well over a 71% chance of winning. One simply needs to look at betting markets to see teams are routinely given ~80% chance of winning. This stems from the fact that share of scoring simply never really gets near 0 or 1. The highest home team result is 0.871 (but only 10 results are above 0.8) and the lowest is 0.168 (but only 3 are below 0.2). As a result, the model never predicts results this extreme despite the fact they are not extreme when being considered as probabilities. 
+See below histograms comparing the distribution of home team margin and share of scoring for the period of data the model has been optimised on:
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r echo=FALSE, message=FALSE, fig.align='center', fig.height=8}
+library(fitzRoy)
+library(lubridate)
+
+results <- get_match_results() %>% 
+    filter(year(Date) %in% 2014:2018 & Round %in% map_chr(1:23, ~ paste0("R", .))) %>% 
+    select(Home.Points, Away.Points) %>% 
+    mutate(margin = Home.Points - Away.Points,
+           share_of_scoring = Home.Points / (Home.Points + Away.Points)) 
+    
+sos_hist <- results %>% 
+    ggplot(aes(share_of_scoring)) +
+    geom_histogram() +
+    labs(title = "AFL Home Team Share of Scoring Histogram",
+         subtitle = "The share of total points for every home team 2014-2018 inclusive",
+         x = "Share of Scoring",
+         y = "Frequency")
+
+margin_hist <- results %>% 
+    ggplot(aes(margin)) +
+    geom_histogram() +
+    labs(title = "AFL Home Team Margin Histogram",
+         subtitle = "The margin for every home team 2014-2018 inclusive",
+         x = "Margin",
+         y = "Frequency")
+
+cowplot::plot_grid(margin_hist, sos_hist, ncol = 1)
 ```
 
+```{r}
+
+```
+
+
+One thing about this approach that may be seen as a drawback brings me back to a previous point about expected results and their interpretations as probabilities. When optimising the parameters for my Elo model (more on that later) I used AFL regular season data from 2014 to 2018 inclusive. During this entire period of 990 matches the highest expected home team outcome was 0.71 and the lowest 0.33. Even a person with a weak grasp of probability can see that during that period some home teams were well over a 71% chance of winning. One simply needs to look at betting markets to see teams are routinely given ~80% chance of winning. This stems from the fact that share of scoring simply never really gets near 0 or 1. The highest home team result for the period is 0.871 (but only 10 results are above 0.8) and the lowest is 0.168 (but only 3 are below 0.2). As a result, the model never predicts results this extreme despite the fact they are not extreme when being considered as probabilities. Because of all this, I am not considering the expected outcomes as probabilities but instead as its prediction for that team's share of total scoring. 
+
+## How it works - updating the ratings 
+
+After an expected result for a match has been generated the actual result has been recorded we can update the ratings using the following formula: 
+
+$$
+\begin{aligned}
+rating\_home_{new} = rating\_home_{old} + K \times (A_H - E_H)
+\end{aligned}
+$$
+
+Where $A_H$ is the actual result for the home team, $E_H$ is the expected result and $K$ is a parameter that tells us how much to update each team's rating after each match. 
+
+One thing about this Elo system is it will punish teams for poorer than expected performance, even if they win (of course the opposite is true for teams that lose but outperform expectations). This is because the system rewards teams for performances that are above expected results, and a heavily favoured team barely scraping over the line against a lesser opponent is hardly reason to view them more favourably.  
+
+## How it works - K value
+
+The first of three parameters that are part of this Elo system is the $K$ value, which takes a value of ~67. This value indicates how responsive the system should be to match results. Higher $K$ values will mean the team ratings bounce around as greater weight should be placed on recent performances and vice versa for low K values. This $K$ value is fairly typical for a sport like the AFL.
+
+## How it works - home ground advantage & regression to the mean
+
+Along with the $K$ value, there are two other parameters in this Elo model; the first being home ground advantage ($HGA$). There are obviously many ways to approach home ground advantage and I have opted to keep it simple for my first season doing this. In this model, a home team will have $HGA$ applied if the visiting team's home ground(s) are not in the same state (with Geelong being considered as separate from Victoria). In coming years I will probably tweak this so teams playing overseas get no $HGA$ and possibly strip teams like Melbourne of $HGA$ when playing in the Northern Territory. This Elo model has a $HGA$ value of ~19 and this value is added to the rating of the home team to improve their expected result (see the previous Elo formula for expected result). 
+
+The other parameter is [__regression to the mean__](https://en.wikipedia.org/wiki/Regression_toward_the_mean) ($RTM$) and this tells us how much the rating of each should regress back to mean of 1500 at the end of each season. This takes a value of ~0.36. 
+
+## How it works - parameter optimisation
+
+These three parameters, $K$, $HGA$ and $RTM$, all have to be optimised for Elo to do a decent job. Again, I have kept this simple and looked to minimise the [__mean absolute error__](https://en.wikipedia.org/wiki/Mean_absolute_error) between the expected and actual results. In other words, the model is optimised to predict share of scoring as well as possible. The data used for this optimisation was AFL regular season data from 2014 to 2018 inclusive, with initial ratings of 1500 given to each team for Round 1, 2014.
+
+## That's it
+
+At least for my first version of Elo, that is all that goes into it. 

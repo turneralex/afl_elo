@@ -21,7 +21,8 @@ rm(fixture_url_2019)
 
 afl_fixture_2019 <- fixture_raw_2019 %>% 
     map_df(bind_rows) %>% 
-    filter(X3 == "vs.") %>% 
+    filter(X3 %>% str_detect("def\\.|def\\. by|drew with|vs\\.")) %>% 
+    filter(X1 %>% str_length() < 50) %>% # get rid of text row
     select(round, date = X1, home_team = X2, away_team = X4, venue = X5) %>% 
     mutate(season = "2019",
            match_id = 1:nrow(.),
@@ -30,9 +31,12 @@ afl_fixture_2019 <- fixture_raw_2019 %>%
                str_remove(".*, ") %>% 
                paste(., "2019") %>% 
                lubridate::dmy(),
+           home_team = home_team %>% str_remove(" [:digit:].*") %>% str_trim(),
+           away_team = away_team %>% str_remove(" [:digit:].*") %>% str_trim(),
+           venue = venue %>% str_remove(" [(].*"),
            home_score = NA,
            away_score = NA) %>% 
-    select(season, match_id, round, date, venue, home_team:away_score)
+    select(season, match_id, round, date, venue, home_team:away_score) 
 
 rm(fixture_raw_2019)
 
@@ -46,7 +50,7 @@ afl_fixture_2019 <- afl_fixture_2019 %>%
             venue == "Optus Stadium"                                            ~ "Perth Stadium",
             venue == "Blundstone Arena"                                         ~ "Bellerive Oval",
             venue == "GMHBA Stadium"                                            ~ "Kardinia Park",
-            venue == "Spotless Stadium"                                         ~ "Sydney Showground Stadium",
+            venue == "GIANTS Stadium"                                         ~ "Sydney Showground Stadium",
             venue == "University of Tasmania Stadium" | venue == "UTAS Stadium" ~ "York Park",
             venue == "Mars Stadium"                                             ~ "Eureka Stadium",
             venue == "TIO Traeger Park"                                         ~ "Traeger Park",
