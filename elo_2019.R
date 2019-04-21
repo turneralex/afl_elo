@@ -18,7 +18,7 @@ afl_fixture_2019 <- afl_fixture_2019 %>%
 afl_elo <- bind_rows(
     afl_elo,
     afl_fixture_2019 %>% 
-        filter(round %in% map_chr(1:4, ~ paste("Round", .))) %>% # update this
+        filter(round %in% paste("Round", 1:4)) %>% # update this
         mutate(home_score_adjusted = home_score / (home_score + away_score),
                hga_app = pmap_int(list(season, venue, away_team), is_home, data = afl_venues_all))
 ) 
