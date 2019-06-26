@@ -17,12 +17,8 @@ fixture_raw_2015 <- map(
         select(round, everything())
 )
 
-rm(fixture_url_2015)
-
 afl_fixture_2015 <- fixture_raw_2015 %>% 
     map_df(bind_rows)
-
-rm(fixture_raw_2015)
 
 afl_fixture_2015$X3 %>% 
     unique() %>% 
@@ -52,8 +48,6 @@ afl_fixture_2015 <- afl_fixture_2015 %>%
 afl_fixture_2015 <- afl_fixture_2015 %>% 
     mutate(home_score = home_score %>% replace(is.na(home_score), 1),
            away_score = away_score %>% replace(is.na(away_score), 1))
-
-afl_fixture_2015$venue %>% unique() 
 
 afl_fixture_2015 <- afl_fixture_2015 %>% 
     mutate(
@@ -106,6 +100,9 @@ afl_venues_2015 <- afl_venues_2015 %>%
     mutate(year = "2015") %>% 
     select(year, everything())
 
-rm(venues_teams_2015)
+afl_fixture_2015 %>% 
+    write.csv(file = "afl_fixture_2015.csv", row.names = F)
 
-beepr::beep(0)
+afl_venues_2015 %>% 
+    unnest() %>% 
+    write.csv(file = "afl_venues_2015.csv", row.names = F)

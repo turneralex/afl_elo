@@ -17,8 +17,6 @@ fixture_raw_2019 <- map(
         select(round, everything())
 )
 
-rm(fixture_url_2019)
-
 afl_fixture_2019 <- fixture_raw_2019 %>% 
     map_df(bind_rows) %>% 
     filter(X3 %>% str_detect("def\\.|def\\. by|drew with|vs\\.")) %>% 
@@ -37,10 +35,6 @@ afl_fixture_2019 <- fixture_raw_2019 %>%
            home_score = NA,
            away_score = NA) %>% 
     select(season, match_id, round, date, venue, home_team:away_score) 
-
-rm(fixture_raw_2019)
-
-afl_fixture_2019$venue %>% unique()
 
 afl_fixture_2019 <- afl_fixture_2019 %>% 
     mutate(
@@ -93,24 +87,16 @@ afl_venues_2019 <- afl_venues_2019 %>%
     mutate(year = "2019") %>% 
     select(year, everything())
 
-rm(venues_teams_2019)
+afl_fixture_2019 %>% 
+    write.csv(file = "afl_fixture_2019.csv", row.names = F)
 
-afl_fixture_all <- bind_rows(
-    afl_fixture_2014,
-    afl_fixture_2015,
-    afl_fixture_2016,
-    afl_fixture_2017,
-    afl_fixture_2018, 
-    afl_fixture_2019
+afl_venues_2019 %>% 
+    unnest() %>% 
+    write.csv(file = "afl_venues_2019.csv", row.names = F)
+
+rm(
+    fixture_url_2019,
+    fixture_raw_2019,
+    venues_teams_2019,
+    afl_venues_2019,
 )
-
-afl_venues_all <- bind_rows(
-    afl_venues_2014,
-    afl_venues_2015,
-    afl_venues_2016,
-    afl_venues_2017,
-    afl_venues_2018, 
-    afl_venues_2019
-)
-
-beepr::beep(0)

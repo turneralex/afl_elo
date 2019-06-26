@@ -18,12 +18,8 @@ fixture_raw_2014 <- map(
 
 )
 
-rm(fixture_url_2014)
-
 afl_fixture_2014 <- fixture_raw_2014 %>% 
     map_df(bind_rows)
-
-rm(fixture_raw_2014)
 
 afl_fixture_2014$X3 %>% 
     unique() %>% 
@@ -47,8 +43,6 @@ afl_fixture_2014 <- afl_fixture_2014 %>%
            away_score = X4 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
            venue = venue %>% str_remove(" [(].*")) %>% 
     select(season, match_id, round, date, venue:away_score)
-
-afl_fixture_2014$venue %>% unique() 
 
 afl_fixture_2014 <- afl_fixture_2014 %>% 
     mutate(
@@ -101,6 +95,9 @@ afl_venues_2014 <- afl_venues_2014 %>%
     mutate(year = "2014") %>% 
     select(year, everything())
 
-rm(venues_teams_2014)
+afl_fixture_2014 %>% 
+    write.csv(file = "afl_fixture_2014.csv", row.names = F)
 
-beepr::beep(0)
+afl_venues_2014 %>% 
+    unnest() %>% 
+    write.csv(file = "afl_venues_2014.csv", row.names = F)
