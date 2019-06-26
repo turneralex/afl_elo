@@ -1,0 +1,199 @@
+"season","match_id","round","date","venue","home_team","away_team","home_score","away_score"
+"2014",1,"Round 1",2014-03-14,"Docklands Stadium","Collingwood","Fremantle",46,116
+"2014",2,"Round 1",2014-03-15,"Sydney Showground Stadium","Greater Western Sydney","Sydney",99,67
+"2014",3,"Round 1",2014-03-15,"Carrara Stadium","Gold Coast","Richmond",87,69
+"2014",4,"Round 1",2014-03-16,"Docklands Stadium","Carlton","Port Adelaide",87,120
+"2014",5,"Round 1",2014-03-20,"Kardinia Park","Geelong","Adelaide",119,81
+"2014",6,"Round 1",2014-03-21,"Docklands Stadium","North Melbourne","Essendon",60,99
+"2014",7,"Round 1",2014-03-22,"York Park","Hawthorn","Brisbane Lions",139,91
+"2014",8,"Round 1",2014-03-22,"Docklands Stadium","St Kilda","Melbourne",68,51
+"2014",9,"Round 1",2014-03-23,"Subiaco Oval","West Coast","Western Bulldogs",134,69
+"2014",10,"Round 2",2014-03-27,"MCG","Richmond","Carlton",98,86
+"2014",11,"Round 2",2014-03-28,"Docklands Stadium","Essendon","Hawthorn",86,90
+"2014",12,"Round 2",2014-03-29,"Docklands Stadium","St Kilda","Greater Western Sydney",95,88
+"2014",13,"Round 2",2014-03-29,"Adelaide Oval","Port Adelaide","Adelaide",127,73
+"2014",14,"Round 2",2014-03-29,"Subiaco Oval","Fremantle","Gold Coast",87,39
+"2014",15,"Round 2",2014-03-29,"Stadium Australia","Sydney","Collingwood",69,89
+"2014",16,"Round 2",2014-03-30,"Gabba","Brisbane Lions","Geelong",68,93
+"2014",17,"Round 2",2014-03-30,"MCG","Melbourne","West Coast",30,123
+"2014",18,"Round 2",2014-03-30,"Docklands Stadium","Western Bulldogs","North Melbourne",54,83
+"2014",19,"Round 3",2014-04-04,"MCG","Hawthorn","Fremantle",137,79
+"2014",20,"Round 3",2014-04-05,"Docklands Stadium","Western Bulldogs","Richmond",100,98
+"2014",21,"Round 3",2014-04-05,"Adelaide Oval","Adelaide","Sydney",71,134
+"2014",22,"Round 3",2014-04-05,"Carrara Stadium","Gold Coast","Brisbane Lions",114,61
+"2014",23,"Round 3",2014-04-05,"MCG","Collingwood","Geelong",76,87
+"2014",24,"Round 3",2014-04-05,"Subiaco Oval","West Coast","St Kilda",83,58
+"2014",25,"Round 3",2014-04-06,"Sydney Showground Stadium","Greater Western Sydney","Melbourne",79,47
+"2014",26,"Round 3",2014-04-06,"Docklands Stadium","North Melbourne","Port Adelaide",97,90
+"2014",27,"Round 3",2014-04-06,"MCG","Essendon","Carlton",138,57
+"2014",28,"Round 4",2014-04-11,"MCG","Richmond","Collingwood",72,110
+"2014",29,"Round 4",2014-04-12,"MCG","Carlton","Melbourne",58,81
+"2014",30,"Round 4",2014-04-12,"Adelaide Oval","Port Adelaide","Brisbane Lions",159,46
+"2014",31,"Round 4",2014-04-12,"Manuka Oval","Greater Western Sydney","Western Bulldogs",83,110
+"2014",32,"Round 4",2014-04-12,"Carrara Stadium","Gold Coast","Hawthorn",49,148
+"2014",33,"Round 4",2014-04-12,"Kardinia Park","Geelong","West Coast",107,32
+"2014",34,"Round 4",2014-04-13,"SCG","Sydney","North Melbourne",48,91
+"2014",35,"Round 4",2014-04-13,"Docklands Stadium","St Kilda","Adelaide",50,136
+"2014",36,"Round 4",2014-04-13,"Subiaco Oval","Fremantle","Essendon",113,60
+"2014",37,"Round 5",2014-04-17,"Gabba","Brisbane Lions","Richmond",63,106
+"2014",38,"Round 5",2014-04-19,"MCG","Collingwood","North Melbourne",93,58
+"2014",39,"Round 5",2014-04-19,"SCG","Sydney","Fremantle",92,75
+"2014",40,"Round 5",2014-04-19,"Subiaco Oval","West Coast","Port Adelaide",56,70
+"2014",41,"Round 5",2014-04-19,"Docklands Stadium","Essendon","St Kilda",65,81
+"2014",42,"Round 5",2014-04-20,"Adelaide Oval","Adelaide","Greater Western Sydney",137,72
+"2014",43,"Round 5",2014-04-20,"MCG","Melbourne","Gold Coast",78,86
+"2014",44,"Round 5",2014-04-20,"Docklands Stadium","Western Bulldogs","Carlton",91,119
+"2014",45,"Round 5",2014-04-21,"MCG","Geelong","Hawthorn",106,87
+"2014",46,"Round 6",2014-04-25,"MCG","Collingwood","Essendon",83,60
+"2014",47,"Round 6",2014-04-25,"Subiaco Oval","Fremantle","North Melbourne",61,74
+"2014",48,"Round 6",2014-04-25,"Wellington Regional Stadium","St Kilda","Brisbane Lions",79,82
+"2014",49,"Round 6",2014-04-26,"Carrara Stadium","Gold Coast","Greater Western Sydney",134,94
+"2014",50,"Round 6",2014-04-26,"Docklands Stadium","Carlton","West Coast",92,89
+"2014",51,"Round 6",2014-04-26,"MCG","Melbourne","Sydney",38,69
+"2014",52,"Round 6",2014-04-27,"Docklands Stadium","Western Bulldogs","Adelaide",83,92
+"2014",53,"Round 6",2014-04-27,"MCG","Richmond","Hawthorn",52,118
+"2014",54,"Round 6",2014-04-27,"Adelaide Oval","Port Adelaide","Geelong",107,67
+"2014",55,"Round 7",2014-05-02,"MCG","Carlton","Collingwood",70,104
+"2014",56,"Round 7",2014-05-03,"MCG","Hawthorn","St Kilda",175,30
+"2014",57,"Round 7",2014-05-03,"Manuka Oval","Greater Western Sydney","Port Adelaide",97,132
+"2014",58,"Round 7",2014-05-03,"Adelaide Oval","Adelaide","Melbourne",67,70
+"2014",59,"Round 7",2014-05-03,"Docklands Stadium","Essendon","Western Bulldogs",73,65
+"2014",60,"Round 7",2014-05-03,"Gabba","Brisbane Lions","Sydney",44,123
+"2014",61,"Round 7",2014-05-04,"Docklands Stadium","North Melbourne","Gold Coast",77,120
+"2014",62,"Round 7",2014-05-04,"Subiaco Oval","West Coast","Fremantle",54,73
+"2014",63,"Round 7",2014-05-04,"MCG","Geelong","Richmond",81,76
+"2014",64,"Round 8",2014-05-09,"Stadium Australia","Sydney","Hawthorn",107,88
+"2014",65,"Round 8",2014-05-10,"Adelaide Oval","Port Adelaide","Fremantle",94,76
+"2014",66,"Round 8",2014-05-10,"Gabba","Brisbane Lions","Essendon",57,65
+"2014",67,"Round 8",2014-05-10,"MCG","Melbourne","Western Bulldogs",83,99
+"2014",68,"Round 8",2014-05-11,"Subiaco Oval","West Coast","Greater Western Sydney",188,77
+"2014",69,"Round 8",2014-05-12,"Docklands Stadium","St Kilda","Carlton",69,101
+"2014",70,"Round 9",2014-05-15,"Adelaide Oval","Adelaide","Collingwood",76,55
+"2014",71,"Round 9",2014-05-16,"Docklands Stadium","Essendon","Sydney",64,114
+"2014",72,"Round 9",2014-05-17,"MCG","Richmond","Melbourne",74,91
+"2014",73,"Round 9",2014-05-17,"Docklands Stadium","North Melbourne","Brisbane Lions",125,38
+"2014",74,"Round 9",2014-05-17,"Subiaco Oval","Fremantle","Geelong",96,64
+"2014",75,"Round 9",2014-05-18,"Docklands Stadium","St Kilda","Gold Coast",87,125
+"2014",76,"Round 10",2014-05-23,"Kardinia Park","Geelong","North Melbourne",111,91
+"2014",77,"Round 10",2014-05-24,"Sydney Showground Stadium","Greater Western Sydney","Richmond",41,154
+"2014",78,"Round 10",2014-05-24,"MCG","Collingwood","West Coast",109,101
+"2014",79,"Round 10",2014-05-24,"Adelaide Oval","Port Adelaide","Hawthorn",100,86
+"2014",80,"Round 10",2014-05-25,"Carrara Stadium","Gold Coast","Western Bulldogs",119,74
+"2014",81,"Round 10",2014-05-25,"MCG","Carlton","Adelaide",81,76
+"2014",82,"Round 11",2014-05-29,"SCG","Sydney","Geelong",148,38
+"2014",83,"Round 11",2014-05-30,"Docklands Stadium","St Kilda","Collingwood",54,140
+"2014",84,"Round 11",2014-05-31,"Traeger Park","Melbourne","Port Adelaide",75,95
+"2014",85,"Round 11",2014-05-31,"Gabba","Brisbane Lions","Carlton",98,91
+"2014",86,"Round 11",2014-05-31,"MCG","Essendon","Richmond",104,54
+"2014",87,"Round 11",2014-06-01,"Adelaide Oval","Adelaide","Gold Coast",109,77
+"2014",88,"Round 11",2014-06-01,"Docklands Stadium","Western Bulldogs","Fremantle",51,89
+"2014",89,"Round 11",2014-06-01,"MCG","Hawthorn","Greater Western Sydney",94,87
+"2014",90,"Round 11",2014-06-01,"Subiaco Oval","West Coast","North Melbourne",44,82
+"2014",91,"Round 12",2014-06-06,"Docklands Stadium","Geelong","Carlton",107,102
+"2014",92,"Round 12",2014-06-07,"York Park","Hawthorn","West Coast",123,79
+"2014",93,"Round 12",2014-06-07,"Adelaide Oval","Port Adelaide","St Kilda",129,59
+"2014",94,"Round 12",2014-06-07,"Sydney Showground Stadium","Greater Western Sydney","Essendon",66,81
+"2014",95,"Round 12",2014-06-07,"Docklands Stadium","Western Bulldogs","Brisbane Lions",87,95
+"2014",96,"Round 12",2014-06-08,"Carrara Stadium","Gold Coast","Sydney",74,109
+"2014",97,"Round 12",2014-06-08,"Subiaco Oval","Fremantle","Adelaide",90,50
+"2014",98,"Round 12",2014-06-08,"Docklands Stadium","North Melbourne","Richmond",116,88
+"2014",99,"Round 12",2014-06-09,"MCG","Melbourne","Collingwood",28,61
+"2014",100,"Round 13",2014-06-13,"MCG","Carlton","Hawthorn",90,118
+"2014",101,"Round 13",2014-06-14,"MCG","Richmond","Fremantle",85,105
+"2014",102,"Round 13",2014-06-14,"SCG","Sydney","Port Adelaide",98,94
+"2014",103,"Round 13",2014-06-14,"Subiaco Oval","West Coast","Gold Coast",103,100
+"2014",104,"Round 13",2014-06-14,"Adelaide Oval","Adelaide","North Melbourne",109,73
+"2014",105,"Round 13",2014-06-14,"Gabba","Brisbane Lions","Greater Western Sydney",80,125
+"2014",106,"Round 13",2014-06-15,"Kardinia Park","Geelong","St Kilda",133,37
+"2014",107,"Round 13",2014-06-15,"Docklands Stadium","Collingwood","Western Bulldogs",98,106
+"2014",108,"Round 13",2014-06-15,"MCG","Essendon","Melbourne",77,78
+"2014",109,"Round 14",2014-06-20,"MCG","Richmond","Sydney",51,62
+"2014",110,"Round 14",2014-06-21,"Adelaide Oval","Port Adelaide","Western Bulldogs",128,56
+"2014",111,"Round 14",2014-06-21,"MCG","Hawthorn","Collingwood",115,86
+"2014",112,"Round 14",2014-06-21,"Carrara Stadium","Gold Coast","Geelong",118,78
+"2014",113,"Round 14",2014-06-21,"Subiaco Oval","Fremantle","Brisbane Lions",105,22
+"2014",114,"Round 14",2014-06-21,"Docklands Stadium","Essendon","Adelaide",101,92
+"2014",115,"Round 14",2014-06-22,"Sydney Showground Stadium","Greater Western Sydney","Carlton",100,92
+"2014",116,"Round 14",2014-06-22,"Docklands Stadium","St Kilda","West Coast",70,103
+"2014",117,"Round 14",2014-06-22,"MCG","Melbourne","North Melbourne",66,107
+"2014",118,"Round 15",2014-06-27,"Docklands Stadium","Geelong","Essendon",89,80
+"2014",119,"Round 15",2014-06-28,"York Park","Hawthorn","Gold Coast",116,63
+"2014",120,"Round 15",2014-06-28,"Docklands Stadium","St Kilda","Richmond",73,117
+"2014",121,"Round 15",2014-06-28,"Subiaco Oval","Fremantle","West Coast",88,81
+"2014",122,"Round 15",2014-06-28,"Gabba","Brisbane Lions","North Melbourne",70,66
+"2014",123,"Round 15",2014-06-28,"SCG","Sydney","Greater Western Sydney",106,60
+"2014",124,"Round 15",2014-06-29,"Docklands Stadium","Western Bulldogs","Melbourne",91,85
+"2014",125,"Round 15",2014-06-29,"Adelaide Oval","Adelaide","Port Adelaide",99,76
+"2014",126,"Round 15",2014-06-29,"MCG","Collingwood","Carlton",91,76
+"2014",127,"Round 16",2014-07-04,"Docklands Stadium","North Melbourne","Hawthorn",108,88
+"2014",128,"Round 16",2014-07-05,"MCG","Richmond","Brisbane Lions",79,54
+"2014",129,"Round 16",2014-07-05,"Sydney Showground Stadium","Greater Western Sydney","Adelaide",72,140
+"2014",130,"Round 16",2014-07-05,"Carrara Stadium","Gold Coast","Collingwood",80,75
+"2014",131,"Round 16",2014-07-05,"Adelaide Oval","Port Adelaide","Essendon",60,62
+"2014",132,"Round 16",2014-07-05,"Marrara Oval","Melbourne","Fremantle",34,97
+"2014",133,"Round 16",2014-07-06,"Docklands Stadium","Carlton","St Kilda",151,66
+"2014",134,"Round 16",2014-07-06,"Subiaco Oval","West Coast","Sydney",51,79
+"2014",135,"Round 16",2014-07-06,"Kardinia Park","Geelong","Western Bulldogs",69,56
+"2014",136,"Round 17",2014-07-11,"Adelaide Oval","Adelaide","Hawthorn",92,104
+"2014",137,"Round 17",2014-07-12,"MCG","Melbourne","Geelong",36,102
+"2014",138,"Round 17",2014-07-12,"Bellerive Oval","North Melbourne","St Kilda",92,33
+"2014",139,"Round 17",2014-07-12,"Cazaly's Stadium","Western Bulldogs","Gold Coast",94,66
+"2014",140,"Round 17",2014-07-12,"SCG","Sydney","Carlton",122,51
+"2014",141,"Round 17",2014-07-12,"Gabba","Brisbane Lions","West Coast",64,76
+"2014",142,"Round 17",2014-07-13,"Docklands Stadium","Richmond","Port Adelaide",126,106
+"2014",143,"Round 17",2014-07-13,"MCG","Essendon","Collingwood",103,39
+"2014",144,"Round 17",2014-07-13,"Subiaco Oval","Fremantle","Greater Western Sydney",136,60
+"2014",145,"Round 18",2014-07-18,"Docklands Stadium","Carlton","North Melbourne",109,86
+"2014",146,"Round 18",2014-07-19,"Docklands Stadium","St Kilda","Fremantle",118,60
+"2014",147,"Round 18",2014-07-19,"Sydney Showground Stadium","Greater Western Sydney","Geelong",87,94
+"2014",148,"Round 18",2014-07-20,"Adelaide Oval","Port Adelaide","Melbourne",72,69
+"2014",149,"Round 18",2014-07-20,"Docklands Stadium","Western Bulldogs","Essendon",94,101
+"2014",150,"Round 18",2014-07-25,"Subiaco Oval","West Coast","Richmond",42,59
+"2014",151,"Round 18",2014-07-26,"Gabba","Brisbane Lions","Gold Coast",110,56
+"2014",152,"Round 18",2014-07-26,"MCG","Hawthorn","Sydney",104,94
+"2014",153,"Round 18",2014-07-27,"MCG","Collingwood","Adelaide",82,98
+"2014",154,"Round 19",2014-07-31,"Subiaco Oval","Fremantle","Carlton",83,78
+"2014",155,"Round 19",2014-08-01,"SCG","Sydney","Essendon",79,57
+"2014",156,"Round 19",2014-08-02,"Adelaide Oval","Adelaide","West Coast",105,136
+"2014",157,"Round 19",2014-08-02,"MCG","Richmond","Greater Western Sydney",89,62
+"2014",158,"Round 19",2014-08-02,"Docklands Stadium","North Melbourne","Geelong",79,111
+"2014",159,"Round 19",2014-08-02,"Carrara Stadium","Gold Coast","St Kilda",117,64
+"2014",160,"Round 19",2014-08-03,"Docklands Stadium","Melbourne","Brisbane Lions",51,74
+"2014",161,"Round 19",2014-08-03,"York Park","Hawthorn","Western Bulldogs",107,45
+"2014",162,"Round 19",2014-08-03,"MCG","Collingwood","Port Adelaide",76,70
+"2014",163,"Round 20",2014-08-08,"MCG","Richmond","Essendon",95,77
+"2014",164,"Round 20",2014-08-09,"Manuka Oval","Greater Western Sydney","North Melbourne",51,126
+"2014",165,"Round 20",2014-08-09,"Docklands Stadium","Carlton","Gold Coast",97,58
+"2014",166,"Round 20",2014-08-09,"MCG","Hawthorn","Melbourne",115,65
+"2014",167,"Round 20",2014-08-09,"Kardinia Park","Geelong","Fremantle",81,79
+"2014",168,"Round 20",2014-08-09,"Adelaide Oval","Port Adelaide","Sydney",58,84
+"2014",169,"Round 20",2014-08-10,"Gabba","Brisbane Lions","Adelaide",63,168
+"2014",170,"Round 20",2014-08-10,"Docklands Stadium","St Kilda","Western Bulldogs",99,122
+"2014",171,"Round 20",2014-08-10,"Subiaco Oval","West Coast","Collingwood",126,66
+"2014",172,"Round 21",2014-08-15,"Docklands Stadium","Carlton","Geelong",76,82
+"2014",173,"Round 21",2014-08-16,"SCG","Sydney","St Kilda",127,56
+"2014",174,"Round 21",2014-08-16,"Carrara Stadium","Gold Coast","Port Adelaide",47,56
+"2014",175,"Round 21",2014-08-16,"Docklands Stadium","Essendon","West Coast",77,74
+"2014",176,"Round 21",2014-08-16,"Adelaide Oval","Adelaide","Richmond",69,79
+"2014",177,"Round 21",2014-08-16,"MCG","Collingwood","Brisbane Lions",56,123
+"2014",178,"Round 21",2014-08-17,"Docklands Stadium","North Melbourne","Western Bulldogs",111,61
+"2014",179,"Round 21",2014-08-17,"MCG","Melbourne","Greater Western Sydney",34,98
+"2014",180,"Round 21",2014-08-17,"Subiaco Oval","Fremantle","Hawthorn",110,91
+"2014",181,"Round 22",2014-08-22,"Adelaide Oval","Port Adelaide","Carlton",140,37
+"2014",182,"Round 22",2014-08-23,"Bellerive Oval","North Melbourne","Adelaide",101,94
+"2014",183,"Round 22",2014-08-23,"Docklands Stadium","Essendon","Gold Coast",108,89
+"2014",184,"Round 22",2014-08-23,"Sydney Showground Stadium","Greater Western Sydney","Collingwood",67,75
+"2014",185,"Round 22",2014-08-23,"MCG","Hawthorn","Geelong",94,71
+"2014",186,"Round 22",2014-08-23,"Subiaco Oval","West Coast","Melbourne",119,53
+"2014",187,"Round 22",2014-08-24,"Gabba","Brisbane Lions","Fremantle",48,106
+"2014",188,"Round 22",2014-08-24,"Docklands Stadium","Western Bulldogs","Sydney",67,130
+"2014",189,"Round 22",2014-08-24,"MCG","Richmond","St Kilda",98,72
+"2014",190,"Round 23",2014-08-29,"MCG","Collingwood","Hawthorn",56,121
+"2014",191,"Round 23",2014-08-30,"MCG","Carlton","Essendon",90,90
+"2014",192,"Round 23",2014-08-30,"Subiaco Oval","Fremantle","Port Adelaide",105,97
+"2014",193,"Round 23",2014-08-30,"Stadium Australia","Sydney","Richmond",65,68
+"2014",194,"Round 23",2014-08-30,"Kardinia Park","Geelong","Brisbane Lions",143,81
+"2014",195,"Round 23",2014-08-30,"Docklands Stadium","North Melbourne","Melbourne",123,93
+"2014",196,"Round 23",2014-08-31,"Carrara Stadium","Gold Coast","West Coast",99,151
+"2014",197,"Round 23",2014-08-31,"Adelaide Oval","Adelaide","St Kilda",141,62
+"2014",198,"Round 23",2014-08-31,"Docklands Stadium","Western Bulldogs","Greater Western Sydney",109,115

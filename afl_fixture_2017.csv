@@ -1,0 +1,199 @@
+"season","match_id","round","date","venue","home_team","away_team","home_score","away_score"
+"2017",1,"Round 1",2017-03-23,"MCG","Carlton","Richmond",89,132
+"2017",2,"Round 1",2017-03-24,"MCG","Collingwood","Western Bulldogs",86,100
+"2017",3,"Round 1",2017-03-25,"SCG","Sydney","Port Adelaide",82,110
+"2017",4,"Round 1",2017-03-25,"Docklands Stadium","St Kilda","Melbourne",90,120
+"2017",5,"Round 1",2017-03-25,"MCG","Essendon","Hawthorn",116,91
+"2017",6,"Round 1",2017-03-25,"Carrara Stadium","Gold Coast","Brisbane Lions",96,98
+"2017",7,"Round 1",2017-03-26,"Docklands Stadium","North Melbourne","West Coast",93,136
+"2017",8,"Round 1",2017-03-26,"Adelaide Oval","Adelaide","Greater Western Sydney",147,91
+"2017",9,"Round 1",2017-03-26,"Subiaco Oval","Fremantle","Geelong",73,115
+"2017",10,"Round 2",2017-03-30,"MCG","Richmond","Collingwood",99,80
+"2017",11,"Round 2",2017-03-31,"Docklands Stadium","Western Bulldogs","Sydney",110,87
+"2017",12,"Round 2",2017-04-01,"MCG","Hawthorn","Adelaide",89,113
+"2017",13,"Round 2",2017-04-01,"Sydney Showground Stadium","Greater Western Sydney","Gold Coast",160,58
+"2017",14,"Round 2",2017-04-01,"Gabba","Brisbane Lions","Essendon",84,111
+"2017",15,"Round 2",2017-04-01,"Subiaco Oval","West Coast","St Kilda",116,97
+"2017",16,"Round 2",2017-04-02,"Docklands Stadium","Geelong","North Melbourne",112,111
+"2017",17,"Round 2",2017-04-02,"MCG","Melbourne","Carlton",86,64
+"2017",18,"Round 2",2017-04-02,"Adelaide Oval","Port Adelaide","Fremantle",145,56
+"2017",19,"Round 3",2017-04-07,"SCG","Sydney","Collingwood",79,80
+"2017",20,"Round 3",2017-04-08,"Bellerive Oval","North Melbourne","Greater Western Sydney",67,109
+"2017",21,"Round 3",2017-04-08,"MCG","Richmond","West Coast",76,65
+"2017",22,"Round 3",2017-04-08,"Docklands Stadium","Geelong","Melbourne",126,97
+"2017",23,"Round 3",2017-04-08,"Adelaide Oval","Port Adelaide","Adelaide",83,100
+"2017",24,"Round 3",2017-04-08,"Subiaco Oval","Fremantle","Western Bulldogs",89,73
+"2017",25,"Round 3",2017-04-09,"Docklands Stadium","St Kilda","Brisbane Lions",107,76
+"2017",26,"Round 3",2017-04-09,"MCG","Carlton","Essendon",57,42
+"2017",27,"Round 3",2017-04-09,"Carrara Stadium","Gold Coast","Hawthorn",139,53
+"2017",28,"Round 4",2017-04-13,"Subiaco Oval","West Coast","Sydney",91,65
+"2017",29,"Round 4",2017-04-14,"Docklands Stadium","North Melbourne","Western Bulldogs",86,89
+"2017",30,"Round 4",2017-04-15,"MCG","Melbourne","Fremantle",104,106
+"2017",31,"Round 4",2017-04-15,"Manuka Oval","Greater Western Sydney","Port Adelaide",112,81
+"2017",32,"Round 4",2017-04-15,"Docklands Stadium","Carlton","Gold Coast",82,108
+"2017",33,"Round 4",2017-04-15,"Adelaide Oval","Adelaide","Essendon",153,88
+"2017",34,"Round 4",2017-04-16,"Docklands Stadium","Collingwood","St Kilda",55,69
+"2017",35,"Round 4",2017-04-16,"Gabba","Brisbane Lions","Richmond",67,119
+"2017",36,"Round 4",2017-04-17,"MCG","Hawthorn","Geelong",48,134
+"2017",37,"Round 5",2017-04-21,"Adelaide Oval","Port Adelaide","Carlton",137,47
+"2017",38,"Round 5",2017-04-22,"Docklands Stadium","Western Bulldogs","Brisbane Lions",122,90
+"2017",39,"Round 5",2017-04-22,"Carrara Stadium","Gold Coast","Adelaide",86,153
+"2017",40,"Round 5",2017-04-22,"SCG","Sydney","Greater Western Sydney",63,105
+"2017",41,"Round 5",2017-04-22,"Subiaco Oval","Fremantle","North Melbourne",67,62
+"2017",42,"Round 5",2017-04-23,"Docklands Stadium","St Kilda","Geelong",88,126
+"2017",43,"Round 5",2017-04-23,"MCG","Hawthorn","West Coast",125,75
+"2017",44,"Round 5",2017-04-24,"MCG","Richmond","Melbourne",88,75
+"2017",45,"Round 5",2017-04-25,"MCG","Essendon","Collingwood",100,82
+"2017",46,"Round 6",2017-04-28,"Manuka Oval","Greater Western Sydney","Western Bulldogs",75,73
+"2017",47,"Round 6",2017-04-29,"York Park","Hawthorn","St Kilda",55,130
+"2017",48,"Round 6",2017-04-29,"MCG","Carlton","Sydney",97,78
+"2017",49,"Round 6",2017-04-29,"Gabba","Brisbane Lions","Port Adelaide",67,150
+"2017",50,"Round 6",2017-04-29,"Docklands Stadium","North Melbourne","Gold Coast",107,94
+"2017",51,"Round 6",2017-04-29,"Subiaco Oval","West Coast","Fremantle",103,62
+"2017",52,"Round 6",2017-04-30,"Docklands Stadium","Essendon","Melbourne",74,112
+"2017",53,"Round 6",2017-04-30,"MCG","Geelong","Collingwood",78,107
+"2017",54,"Round 6",2017-04-30,"Adelaide Oval","Adelaide","Richmond",140,64
+"2017",55,"Round 7",2017-05-05,"Docklands Stadium","St Kilda","Greater Western Sydney",108,85
+"2017",56,"Round 7",2017-05-06,"Bellerive Oval","North Melbourne","Adelaide",145,86
+"2017",57,"Round 7",2017-05-06,"MCG","Collingwood","Carlton",56,79
+"2017",58,"Round 7",2017-05-06,"Adelaide Oval","Port Adelaide","West Coast",87,97
+"2017",59,"Round 7",2017-05-06,"Carrara Stadium","Gold Coast","Geelong",124,99
+"2017",60,"Round 7",2017-05-06,"Docklands Stadium","Western Bulldogs","Richmond",80,75
+"2017",61,"Round 7",2017-05-07,"SCG","Sydney","Brisbane Lions",135,81
+"2017",62,"Round 7",2017-05-07,"MCG","Melbourne","Hawthorn",91,94
+"2017",63,"Round 7",2017-05-07,"Subiaco Oval","Fremantle","Essendon",116,79
+"2017",64,"Round 8",2017-05-12,"Subiaco Oval","West Coast","Western Bulldogs",69,61
+"2017",65,"Round 8",2017-05-13,"York Park","Hawthorn","Brisbane Lions",113,75
+"2017",66,"Round 8",2017-05-13,"Docklands Stadium","St Kilda","Carlton",85,66
+"2017",67,"Round 8",2017-05-13,"Sydney Showground Stadium","Greater Western Sydney","Collingwood",102,99
+"2017",68,"Round 8",2017-05-13,"MCG","Essendon","Geelong",110,93
+"2017",69,"Round 8",2017-05-13,"Adelaide Oval","Adelaide","Melbourne",66,107
+"2017",70,"Round 8",2017-05-14,"MCG","Richmond","Fremantle",70,72
+"2017",71,"Round 8",2017-05-14,"Jiangwan Stadium","Gold Coast","Port Adelaide",38,110
+"2017",72,"Round 8",2017-05-14,"Docklands Stadium","North Melbourne","Sydney",78,120
+"2017",73,"Round 9",2017-05-19,"Kardinia Park","Geelong","Western Bulldogs",104,81
+"2017",74,"Round 9",2017-05-20,"Docklands Stadium","St Kilda","Sydney",68,118
+"2017",75,"Round 9",2017-05-20,"Sydney Showground Stadium","Greater Western Sydney","Richmond",78,75
+"2017",76,"Round 9",2017-05-20,"Gabba","Brisbane Lions","Adelaide",60,140
+"2017",77,"Round 9",2017-05-20,"MCG","Collingwood","Hawthorn",90,72
+"2017",78,"Round 9",2017-05-21,"Docklands Stadium","Essendon","West Coast",125,64
+"2017",79,"Round 9",2017-05-21,"MCG","Melbourne","North Melbourne",90,104
+"2017",80,"Round 9",2017-05-21,"Subiaco Oval","Fremantle","Carlton",86,51
+"2017",81,"Round 10",2017-05-25,"Kardinia Park","Geelong","Port Adelaide",81,79
+"2017",82,"Round 10",2017-05-26,"SCG","Sydney","Hawthorn",75,81
+"2017",83,"Round 10",2017-05-27,"Docklands Stadium","Western Bulldogs","St Kilda",90,50
+"2017",84,"Round 10",2017-05-27,"Traeger Park","Melbourne","Gold Coast",122,87
+"2017",85,"Round 10",2017-05-27,"MCG","Richmond","Essendon",81,66
+"2017",86,"Round 10",2017-05-27,"Adelaide Oval","Adelaide","Fremantle",143,43
+"2017",87,"Round 10",2017-05-28,"MCG","Collingwood","Brisbane Lions",129,84
+"2017",88,"Round 10",2017-05-28,"Docklands Stadium","Carlton","North Melbourne",96,113
+"2017",89,"Round 10",2017-05-28,"Subiaco Oval","West Coast","Greater Western Sydney",90,98
+"2017",90,"Round 11",2017-06-01,"Adelaide Oval","Port Adelaide","Hawthorn",98,47
+"2017",91,"Round 11",2017-06-02,"Kardinia Park","Geelong","Adelaide",96,74
+"2017",92,"Round 11",2017-06-03,"Carrara Stadium","Gold Coast","West Coast",80,77
+"2017",93,"Round 11",2017-06-03,"Sydney Showground Stadium","Greater Western Sydney","Essendon",117,101
+"2017",94,"Round 11",2017-06-03,"Docklands Stadium","North Melbourne","Richmond",66,101
+"2017",95,"Round 11",2017-06-04,"Subiaco Oval","Fremantle","Collingwood",85,105
+"2017",96,"Round 12",2017-06-08,"SCG","Sydney","Western Bulldogs",88,42
+"2017",97,"Round 12",2017-06-09,"Adelaide Oval","Adelaide","St Kilda",111,54
+"2017",98,"Round 12",2017-06-10,"MCG","Hawthorn","Gold Coast",79,95
+"2017",99,"Round 12",2017-06-10,"Gabba","Brisbane Lions","Fremantle",121,64
+"2017",100,"Round 12",2017-06-10,"Docklands Stadium","Essendon","Port Adelaide",131,61
+"2017",101,"Round 12",2017-06-11,"Docklands Stadium","Carlton","Greater Western Sydney",71,70
+"2017",102,"Round 12",2017-06-12,"MCG","Melbourne","Collingwood",104,100
+"2017",103,"Round 13",2017-06-15,"Subiaco Oval","West Coast","Geelong",83,70
+"2017",104,"Round 13",2017-06-16,"Docklands Stadium","North Melbourne","St Kilda",72,89
+"2017",105,"Round 13",2017-06-17,"MCG","Richmond","Sydney",71,80
+"2017",106,"Round 13",2017-06-17,"Adelaide Oval","Port Adelaide","Brisbane Lions",121,81
+"2017",107,"Round 13",2017-06-17,"Carrara Stadium","Gold Coast","Carlton",73,83
+"2017",108,"Round 13",2017-06-18,"Docklands Stadium","Western Bulldogs","Melbourne",56,113
+"2017",109,"Round 14",2017-06-22,"Adelaide Oval","Adelaide","Hawthorn",82,96
+"2017",110,"Round 14",2017-06-23,"SCG","Sydney","Essendon",86,85
+"2017",111,"Round 14",2017-06-24,"MCG","Collingwood","Port Adelaide",62,93
+"2017",112,"Round 14",2017-06-24,"Gabba","Brisbane Lions","Greater Western Sydney",86,146
+"2017",113,"Round 14",2017-06-24,"Docklands Stadium","Western Bulldogs","North Melbourne",107,106
+"2017",114,"Round 14",2017-06-24,"Subiaco Oval","West Coast","Melbourne",96,99
+"2017",115,"Round 14",2017-06-25,"Kardinia Park","Geelong","Fremantle",74,72
+"2017",116,"Round 14",2017-06-25,"MCG","Richmond","Carlton",84,58
+"2017",117,"Round 14",2017-06-25,"Docklands Stadium","St Kilda","Gold Coast",104,72
+"2017",118,"Round 15",2017-06-30,"MCG","Melbourne","Sydney",50,85
+"2017",119,"Round 15",2017-07-01,"Docklands Stadium","Western Bulldogs","West Coast",80,87
+"2017",120,"Round 15",2017-07-01,"MCG","Carlton","Adelaide",77,89
+"2017",121,"Round 15",2017-07-01,"Carrara Stadium","Gold Coast","North Melbourne",118,99
+"2017",122,"Round 15",2017-07-01,"Sydney Showground Stadium","Greater Western Sydney","Geelong",68,68
+"2017",123,"Round 15",2017-07-01,"Adelaide Oval","Port Adelaide","Richmond",63,76
+"2017",124,"Round 15",2017-07-02,"Docklands Stadium","Essendon","Brisbane Lions",82,90
+"2017",125,"Round 15",2017-07-02,"MCG","Hawthorn","Collingwood",118,94
+"2017",126,"Round 15",2017-07-02,"Subiaco Oval","Fremantle","St Kilda",80,89
+"2017",127,"Round 16",2017-07-07,"Adelaide Oval","Adelaide","Western Bulldogs",104,45
+"2017",128,"Round 16",2017-07-08,"York Park","Hawthorn","Greater Western Sydney",97,97
+"2017",129,"Round 16",2017-07-08,"MCG","Collingwood","Essendon",80,117
+"2017",130,"Round 16",2017-07-08,"SCG","Sydney","Gold Coast",118,51
+"2017",131,"Round 16",2017-07-08,"Gabba","Brisbane Lions","Geelong",78,163
+"2017",132,"Round 16",2017-07-08,"Docklands Stadium","St Kilda","Richmond",138,71
+"2017",133,"Round 16",2017-07-09,"Docklands Stadium","North Melbourne","Fremantle",82,86
+"2017",134,"Round 16",2017-07-09,"MCG","Carlton","Melbourne",82,90
+"2017",135,"Round 16",2017-07-09,"Subiaco Oval","West Coast","Port Adelaide",88,120
+"2017",136,"Round 17",2017-07-14,"Docklands Stadium","St Kilda","Essendon",57,118
+"2017",137,"Round 17",2017-07-15,"MCG","Geelong","Hawthorn",88,85
+"2017",138,"Round 17",2017-07-15,"Adelaide Oval","Port Adelaide","North Melbourne",127,57
+"2017",139,"Round 17",2017-07-15,"Carrara Stadium","Gold Coast","Collingwood",88,103
+"2017",140,"Round 17",2017-07-15,"Sydney Showground Stadium","Greater Western Sydney","Sydney",83,96
+"2017",141,"Round 17",2017-07-15,"Marrara Oval","Melbourne","Adelaide",70,116
+"2017",142,"Round 17",2017-07-16,"Docklands Stadium","Richmond","Brisbane Lions",112,81
+"2017",143,"Round 17",2017-07-16,"MCG","Carlton","Western Bulldogs",62,82
+"2017",144,"Round 17",2017-07-16,"Subiaco Oval","Fremantle","West Coast",44,74
+"2017",145,"Round 18",2017-07-21,"Adelaide Oval","Adelaide","Geelong",91,70
+"2017",146,"Round 18",2017-07-22,"Docklands Stadium","Essendon","North Melbourne",132,105
+"2017",147,"Round 18",2017-07-22,"MCG","Melbourne","Port Adelaide",88,65
+"2017",148,"Round 18",2017-07-22,"Cazaly's Stadium","Western Bulldogs","Gold Coast",110,56
+"2017",149,"Round 18",2017-07-22,"SCG","Sydney","St Kilda",101,59
+"2017",150,"Round 18",2017-07-22,"Subiaco Oval","Fremantle","Hawthorn",48,100
+"2017",151,"Round 18",2017-07-23,"MCG","Richmond","Greater Western Sydney",64,45
+"2017",152,"Round 18",2017-07-23,"Docklands Stadium","Collingwood","West Coast",93,85
+"2017",153,"Round 18",2017-07-23,"Gabba","Brisbane Lions","Carlton",112,82
+"2017",154,"Round 19",2017-07-28,"MCG","Hawthorn","Sydney",72,66
+"2017",155,"Round 19",2017-07-29,"Bellerive Oval","North Melbourne","Melbourne",76,72
+"2017",156,"Round 19",2017-07-29,"Sydney Showground Stadium","Greater Western Sydney","Fremantle",98,86
+"2017",157,"Round 19",2017-07-29,"Adelaide Oval","Port Adelaide","St Kilda",63,61
+"2017",158,"Round 19",2017-07-29,"Carrara Stadium","Gold Coast","Richmond",65,98
+"2017",159,"Round 19",2017-07-29,"Docklands Stadium","Carlton","Geelong",58,123
+"2017",160,"Round 19",2017-07-30,"Docklands Stadium","Western Bulldogs","Essendon",127,97
+"2017",161,"Round 19",2017-07-30,"MCG","Collingwood","Adelaide",103,103
+"2017",162,"Round 19",2017-07-30,"Subiaco Oval","West Coast","Brisbane Lions",113,45
+"2017",163,"Round 20",2017-08-04,"Kardinia Park","Geelong","Sydney",61,107
+"2017",164,"Round 20",2017-08-05,"Manuka Oval","Greater Western Sydney","Melbourne",97,62
+"2017",165,"Round 20",2017-08-05,"MCG","Essendon","Carlton",84,76
+"2017",166,"Round 20",2017-08-05,"Gabba","Brisbane Lions","Western Bulldogs",89,103
+"2017",167,"Round 20",2017-08-05,"Docklands Stadium","North Melbourne","Collingwood",57,111
+"2017",168,"Round 20",2017-08-05,"Subiaco Oval","Fremantle","Gold Coast",90,67
+"2017",169,"Round 20",2017-08-06,"Docklands Stadium","St Kilda","West Coast",103,95
+"2017",170,"Round 20",2017-08-06,"MCG","Richmond","Hawthorn",93,64
+"2017",171,"Round 20",2017-08-06,"Adelaide Oval","Adelaide","Port Adelaide",130,46
+"2017",172,"Round 21",2017-08-11,"Docklands Stadium","Western Bulldogs","Greater Western Sydney",57,105
+"2017",173,"Round 21",2017-08-12,"SCG","Sydney","Fremantle",143,39
+"2017",174,"Round 21",2017-08-12,"Kardinia Park","Geelong","Richmond",80,66
+"2017",175,"Round 21",2017-08-12,"Gabba","Brisbane Lions","Gold Coast",142,84
+"2017",176,"Round 21",2017-08-12,"Docklands Stadium","Essendon","Adelaide",80,123
+"2017",177,"Round 21",2017-08-12,"Subiaco Oval","West Coast","Carlton",100,83
+"2017",178,"Round 21",2017-08-13,"MCG","Melbourne","St Kilda",96,72
+"2017",179,"Round 21",2017-08-13,"York Park","Hawthorn","North Melbourne",116,89
+"2017",180,"Round 21",2017-08-13,"Adelaide Oval","Port Adelaide","Collingwood",98,71
+"2017",181,"Round 22",2017-08-18,"Adelaide Oval","Adelaide","Sydney",80,83
+"2017",182,"Round 22",2017-08-19,"Eureka Stadium","Western Bulldogs","Port Adelaide",79,96
+"2017",183,"Round 22",2017-08-19,"MCG","Collingwood","Geelong",59,70
+"2017",184,"Round 22",2017-08-19,"Sydney Showground Stadium","Greater Western Sydney","West Coast",81,60
+"2017",185,"Round 22",2017-08-19,"Carrara Stadium","Gold Coast","Essendon",57,90
+"2017",186,"Round 22",2017-08-19,"Docklands Stadium","Carlton","Hawthorn",77,70
+"2017",187,"Round 22",2017-08-20,"MCG","Melbourne","Brisbane Lions",104,91
+"2017",188,"Round 22",2017-08-20,"Docklands Stadium","St Kilda","North Melbourne",127,78
+"2017",189,"Round 22",2017-08-20,"Subiaco Oval","Fremantle","Richmond",51,155
+"2017",190,"Round 23",2017-08-25,"Docklands Stadium","Hawthorn","Western Bulldogs",99,90
+"2017",191,"Round 23",2017-08-26,"MCG","Collingwood","Melbourne",99,83
+"2017",192,"Round 23",2017-08-26,"Gabba","Brisbane Lions","North Melbourne",79,130
+"2017",193,"Round 23",2017-08-26,"SCG","Sydney","Carlton",138,57
+"2017",194,"Round 23",2017-08-26,"Kardinia Park","Geelong","Greater Western Sydney",103,59
+"2017",195,"Round 23",2017-08-26,"Adelaide Oval","Port Adelaide","Gold Coast",135,20
+"2017",196,"Round 23",2017-08-27,"Docklands Stadium","Essendon","Fremantle",107,92
+"2017",197,"Round 23",2017-08-27,"MCG","Richmond","St Kilda",122,81
+"2017",198,"Round 23",2017-08-27,"Subiaco Oval","West Coast","Adelaide",100,71
