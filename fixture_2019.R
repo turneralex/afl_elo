@@ -94,9 +94,9 @@ afl_venues_2019 %>%
     unnest() %>% 
     write.csv(file = "afl_venues_2019.csv", row.names = F)
 
-rm(
-    fixture_url_2019,
-    fixture_raw_2019,
-    venues_teams_2019,
-    afl_venues_2019,
-)
+# rm(
+#     fixture_url_2019,
+#     fixture_raw_2019,
+#     venues_teams_2019,
+#     afl_venues_2019,
+# )
