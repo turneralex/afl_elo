@@ -8,8 +8,6 @@ afl_fixture_all <- map_dfr(
     )
 )
 
-afl_fixture_all
-
 afl_venues_all <- map_dfr(
     2014:2019, 
     ~ read_csv(
@@ -18,5 +16,3 @@ afl_venues_all <- map_dfr(
     )
 ) %>% 
     nest(team)
-
-afl_venues_all
