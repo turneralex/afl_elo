@@ -41,11 +41,11 @@ elo_model %>%
 elo_model %>% 
     predict(
         newdata = afl_fixture_2019 %>% 
-            filter(round == "Round 15") %>% 
+            filter(round == paste("Round", length(rounds_so_far) + 1)) %>% 
             mutate(hga_app = pmap_int(list(season, venue, away_team), is_home, data = afl_venues_all))
     ) %>% 
     set_names(
         afl_fixture_2019 %>% 
-            filter(round == "Round 15") %>% 
+            filter(round == paste("Round", length(rounds_so_far) + 1)) %>% 
             pull(home_team)
     )
