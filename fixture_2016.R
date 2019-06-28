@@ -42,16 +42,16 @@ afl_fixture_2016 <- afl_fixture_2016 %>%
 afl_fixture_2016 <- afl_fixture_2016 %>% 
     mutate(
         venue = case_when(
-            venue == "Etihad Stadium"                 ~ "Docklands Stadium",
-            venue == "Blundstone Arena"               ~ "Bellerive Oval",
-            venue == "Simonds Stadium"                ~ "Kardinia Park",
-            venue == "Spotless Stadium"               ~ "Sydney Showground Stadium",
-            venue == "Aurora Stadium"                 ~ "York Park",
-            venue == "TIO Traeger Park"               ~ "Traeger Park",
-            venue == "Metricon Stadium"               ~ "Carrara Stadium",
-            venue == "TIO Stadium"                    ~ "Marrara Oval",
-            venue == "Domain Stadium"                 ~ "Subiaco Oval",
-            T                                         ~ venue
+            venue == "Etihad Stadium"   ~ "Docklands Stadium",
+            venue == "Blundstone Arena" ~ "Bellerive Oval",
+            venue == "Simonds Stadium"  ~ "Kardinia Park",
+            venue == "Spotless Stadium" ~ "Sydney Showground Stadium",
+            venue == "Aurora Stadium"   ~ "York Park",
+            venue == "TIO Traeger Park" ~ "Traeger Park",
+            venue == "Metricon Stadium" ~ "Carrara Stadium",
+            venue == "TIO Stadium"      ~ "Marrara Oval",
+            venue == "Domain Stadium"   ~ "Subiaco Oval",
+            T                           ~ venue
         ) 
     ) 
 

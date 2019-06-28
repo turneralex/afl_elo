@@ -43,19 +43,19 @@ afl_fixture_2014 <- afl_fixture_2014 %>%
 afl_fixture_2014 <- afl_fixture_2014 %>% 
     mutate(
         venue = case_when(
-            venue == "Etihad Stadium"                 ~ "Docklands Stadium",
-            venue == "Blundstone Arena"               ~ "Bellerive Oval",
-            venue == "Simonds Stadium"                ~ "Kardinia Park",
-            venue == "Spotless Stadium"               ~ "Sydney Showground Stadium",
-            venue == "Aurora Stadium"                 ~ "York Park",
-            venue == "TIO Traeger Park"               ~ "Traeger Park",
-            venue == "Metricon Stadium"               ~ "Carrara Stadium",
-            venue == "TIO Stadium"                    ~ "Marrara Oval",
-            venue == "Patersons Stadium"              ~ "Subiaco Oval",
-            venue == "ANZ Stadium"                    ~ "Stadium Australia",
-            venue == "StarTrack Oval"                 ~ "Manuka Oval",
-            venue == "Westpac Stadium"                ~ "Wellington Regional Stadium",
-            T                                         ~ venue
+            venue == "Etihad Stadium"    ~ "Docklands Stadium",
+            venue == "Blundstone Arena"  ~ "Bellerive Oval",
+            venue == "Simonds Stadium"   ~ "Kardinia Park",
+            venue == "Spotless Stadium"  ~ "Sydney Showground Stadium",
+            venue == "Aurora Stadium"    ~ "York Park",
+            venue == "TIO Traeger Park"  ~ "Traeger Park",
+            venue == "Metricon Stadium"  ~ "Carrara Stadium",
+            venue == "TIO Stadium"       ~ "Marrara Oval",
+            venue == "Patersons Stadium" ~ "Subiaco Oval",
+            venue == "ANZ Stadium"       ~ "Stadium Australia",
+            venue == "StarTrack Oval"    ~ "Manuka Oval",
+            venue == "Westpac Stadium"   ~ "Wellington Regional Stadium",
+            T                            ~ venue
         ) 
     ) 
 
