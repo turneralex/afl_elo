@@ -44,7 +44,7 @@ afl_fixture_2019 <- afl_fixture_2019 %>%
             venue == "Optus Stadium"                                            ~ "Perth Stadium",
             venue == "Blundstone Arena"                                         ~ "Bellerive Oval",
             venue == "GMHBA Stadium"                                            ~ "Kardinia Park",
-            venue == "GIANTS Stadium"                                         ~ "Sydney Showground Stadium",
+            venue == "GIANTS Stadium"                                           ~ "Sydney Showground Stadium",
             venue == "University of Tasmania Stadium" | venue == "UTAS Stadium" ~ "York Park",
             venue == "Mars Stadium"                                             ~ "Eureka Stadium",
             venue == "TIO Traeger Park"                                         ~ "Traeger Park",
