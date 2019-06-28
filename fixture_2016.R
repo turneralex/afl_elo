@@ -20,10 +20,6 @@ fixture_raw_2016 <- map(
 afl_fixture_2016 <- fixture_raw_2016 %>% 
     map_df(bind_rows)
 
-afl_fixture_2016$X3 %>% 
-    unique() %>% 
-    magrittr::extract(nchar(.) <= 10)
-
 afl_fixture_2016 <- afl_fixture_2016 %>% 
     filter(X3 %>% str_detect("def\\.|def\\. by|drew with"))
 
