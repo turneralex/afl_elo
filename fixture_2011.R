@@ -52,6 +52,7 @@ afl_fixture_2011 <- afl_fixture_2011 %>%
             venue == "Patersons Stadium" ~ "Subiaco Oval",
             venue == "ANZ Stadium"       ~ "Stadium Australia",
             venue == "AAMI Stadium"      ~ "Football Park",
+            venue == "The Gabba"         ~ "Gabba",
             T                            ~ venue
         ) 
     ) 
