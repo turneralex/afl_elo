@@ -65,6 +65,3 @@ elo_model %>%
             filter(round == "Round 15") %>% 
             pull(home_team)
     )
-
-
-

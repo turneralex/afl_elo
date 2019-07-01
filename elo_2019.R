@@ -3,7 +3,7 @@ source("./functions_general.R")
 library(tidyverse)
 library(elo)
 
-rounds_so_far <- 1:14
+rounds_so_far <- 1:15
 
 afl_fixture_2019 <- map_dfr(
     rounds_so_far,
