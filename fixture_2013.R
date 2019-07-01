@@ -26,7 +26,7 @@ afl_fixture_2013 <- afl_fixture_2013 %>%
 
 afl_fixture_2013 <- afl_fixture_2013 %>% 
     select(round, date = X1, X2, X4, venue = X5) %>% 
-    mutate(season = "2014",
+    mutate(season = "2013",
            match_id = 1:nrow(.),
            date = date %>% 
                str_trunc(width = (nchar(.) - 10), side = "right", ellipsis = "") %>% 
