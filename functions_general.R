@@ -30,7 +30,11 @@ get_round_scores <- function(season, round) {
         filter(X3 %>% str_detect("def\\.|def\\. by|drew with")) %>% 
         select(X2, X4) %>% 
         transmute(home_score = X2 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
-                  away_score = X4 %>% str_remove_all(".*[(]|[)]") %>% as.integer())
+                  away_score = X4 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
+                  home_goals = X2 %>% str_remove_all("[:alpha:]* |\\..*") %>% as.integer(),
+                  away_goals = X4 %>% str_remove_all("[:alpha:]* |\\..*") %>% as.integer(),
+                  home_behinds = home_score - (home_goals * 6),
+                  away_behinds = away_score - (away_goals * 6))
 }
 
 get_round_scores(2019, 1)    

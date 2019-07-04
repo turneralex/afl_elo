@@ -1,37 +1,37 @@
-"year","venue","location","team"
-"2013","Football Park","SA","Adelaide"
-"2013","Football Park","SA","Port Adelaide"
-"2013","Subiaco Oval","WA","Fremantle"
-"2013","Subiaco Oval","WA","West Coast"
-"2013","MCG","VIC","Carlton"
-"2013","MCG","VIC","Melbourne"
-"2013","MCG","VIC","Hawthorn"
-"2013","MCG","VIC","St Kilda"
-"2013","MCG","VIC","Essendon"
-"2013","MCG","VIC","Collingwood"
-"2013","MCG","VIC","Richmond"
-"2013","MCG","VIC","Geelong"
-"2013","Docklands Stadium","VIC","Western Bulldogs"
-"2013","Docklands Stadium","VIC","North Melbourne"
-"2013","Docklands Stadium","VIC","Geelong"
-"2013","Docklands Stadium","VIC","Richmond"
-"2013","Docklands Stadium","VIC","St Kilda"
-"2013","Docklands Stadium","VIC","Collingwood"
-"2013","Docklands Stadium","VIC","Essendon"
-"2013","Docklands Stadium","VIC","Carlton"
-"2013","Docklands Stadium","VIC","Hawthorn"
-"2013","Docklands Stadium","VIC","Melbourne"
-"2013","Stadium Australia","NSW","Greater Western Sydney"
-"2013","Stadium Australia","NSW","Sydney"
-"2013","Carrara Stadium","QLD","Gold Coast"
-"2013","SCG","NSW","Sydney"
-"2013","Gabba","QLD","Brisbane Lions"
-"2013","Bellerive Oval","TAS","North Melbourne"
-"2013","Manuka Oval","ACT","Greater Western Sydney"
-"2013","York Park","TAS","Hawthorn"
-"2013","Wellington Regional Stadium","Other","St Kilda"
-"2013","Sydney Showground Stadium","NSW","Greater Western Sydney"
-"2013","Kardinia Park","GEE","Geelong"
-"2013","Marrara Oval","NT","Western Bulldogs"
-"2013","Marrara Oval","NT","Melbourne"
-"2013","Cazaly's Stadium","QLD","Richmond"
+year,venue,location,team
+2013,Football Park,SA,Adelaide
+2013,Football Park,SA,Port Adelaide
+2013,Subiaco Oval,WA,Fremantle
+2013,Subiaco Oval,WA,West Coast
+2013,MCG,VIC,Carlton
+2013,MCG,VIC,Melbourne
+2013,MCG,VIC,Hawthorn
+2013,MCG,VIC,St Kilda
+2013,MCG,VIC,Essendon
+2013,MCG,VIC,Collingwood
+2013,MCG,VIC,Richmond
+2013,MCG,VIC,Geelong
+2013,Docklands Stadium,VIC,Western Bulldogs
+2013,Docklands Stadium,VIC,North Melbourne
+2013,Docklands Stadium,VIC,Geelong
+2013,Docklands Stadium,VIC,Richmond
+2013,Docklands Stadium,VIC,St Kilda
+2013,Docklands Stadium,VIC,Collingwood
+2013,Docklands Stadium,VIC,Essendon
+2013,Docklands Stadium,VIC,Carlton
+2013,Docklands Stadium,VIC,Hawthorn
+2013,Docklands Stadium,VIC,Melbourne
+2013,Stadium Australia,NSW,Greater Western Sydney
+2013,Stadium Australia,NSW,Sydney
+2013,Carrara Stadium,QLD,Gold Coast
+2013,SCG,NSW,Sydney
+2013,Gabba,QLD,Brisbane Lions
+2013,Bellerive Oval,TAS,North Melbourne
+2013,Manuka Oval,ACT,Greater Western Sydney
+2013,York Park,TAS,Hawthorn
+2013,Wellington Regional Stadium,Other,St Kilda
+2013,Sydney Showground Stadium,NSW,Greater Western Sydney
+2013,Kardinia Park,GEE,Geelong
+2013,Marrara Oval,NT,Western Bulldogs
+2013,Marrara Oval,NT,Melbourne
+2013,Cazaly's Stadium,QLD,Richmond

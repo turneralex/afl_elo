@@ -37,13 +37,19 @@ afl_fixture_2015 <- afl_fixture_2015 %>%
            away_team = X4 %>% str_remove(" [:digit:].*") %>% str_trim(),
            home_score = X2 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
            away_score = X4 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
+           home_goals = X2 %>% str_remove_all("[:alpha:]* |\\..*") %>% as.integer(),
+           away_goals = X4 %>% str_remove_all("[:alpha:]* |\\..*") %>% as.integer(),
+           home_behinds = home_score - (home_goals * 6),
+           away_behinds = away_score - (away_goals * 6),
            venue = venue %>% str_remove(" [(].*")) %>% 
-    select(season, match_id, round, date, venue:away_score)
+    select(season, match_id, round, date, venue:away_behinds)
 
 # replace values for abandoned match
 afl_fixture_2015 <- afl_fixture_2015 %>% 
-    mutate(home_score = home_score %>% replace(is.na(home_score), 1),
-           away_score = away_score %>% replace(is.na(away_score), 1))
+    mutate_at(
+        c("home_score", "away_score", "home_goals", "away_goals", "home_behinds", "away_behinds"),
+        ~ replace(.x, is.na(.x), 1)
+    )
 
 afl_fixture_2015 <- afl_fixture_2015 %>% 
     mutate(
@@ -97,8 +103,8 @@ afl_venues_2015 <- afl_venues_2015 %>%
     select(year, everything())
 
 afl_fixture_2015 %>% 
-    write.csv(file = "afl_fixture_2015.csv", row.names = F)
+    write_csv(here::here("fixtures", "afl_fixture_2015.csv"))
 
 afl_venues_2015 %>% 
     unnest() %>% 
-    write.csv(file = "afl_venues_2015.csv", row.names = F)
+    write_csv(here::here("venues", "afl_venues_2015.csv"))

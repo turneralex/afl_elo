@@ -36,8 +36,12 @@ afl_fixture_2016 <- afl_fixture_2016 %>%
            away_team = X4 %>% str_remove(" [:digit:].*") %>% str_trim(),
            home_score = X2 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
            away_score = X4 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
+           home_goals = X2 %>% str_remove_all("[:alpha:]* |\\..*") %>% as.integer(),
+           away_goals = X4 %>% str_remove_all("[:alpha:]* |\\..*") %>% as.integer(),
+           home_behinds = home_score - (home_goals * 6),
+           away_behinds = away_score - (away_goals * 6),
            venue = venue %>% str_remove(" [(].*")) %>% 
-    select(season, match_id, round, date, venue:away_score)
+    select(season, match_id, round, date, venue:away_behinds)
 
 afl_fixture_2016 <- afl_fixture_2016 %>% 
     mutate(
@@ -87,8 +91,8 @@ afl_venues_2016 <- afl_venues_2016 %>%
     select(year, everything())
 
 afl_fixture_2016 %>% 
-    write.csv(file = "afl_fixture_2016.csv", row.names = F)
+    write_csv(here::here("fixtures", "afl_fixture_2016.csv"))
 
 afl_venues_2016 %>% 
     unnest() %>% 
-    write.csv(file = "afl_venues_2016.csv", row.names = F)
+    write_csv(here::here("venues", "afl_venues_2016.csv"))

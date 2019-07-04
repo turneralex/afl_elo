@@ -1,199 +1,199 @@
-"season","match_id","round","date","venue","home_team","away_team","home_score","away_score"
-"2015",1,"Round 1",2015-04-02,"MCG","Carlton","Richmond",78,105
-"2015",2,"Round 1",2015-04-04,"MCG","Melbourne","Gold Coast",115,89
-"2015",3,"Round 1",2015-04-04,"Stadium Australia","Sydney","Essendon",72,60
-"2015",4,"Round 1",2015-04-04,"Gabba","Brisbane Lions","Collingwood",74,86
-"2015",5,"Round 1",2015-04-04,"Docklands Stadium","Western Bulldogs","West Coast",97,87
-"2015",6,"Round 1",2015-04-05,"Docklands Stadium","St Kilda","Greater Western Sydney",78,87
-"2015",7,"Round 1",2015-04-05,"Adelaide Oval","Adelaide","North Melbourne",140,63
-"2015",8,"Round 1",2015-04-05,"Subiaco Oval","Fremantle","Port Adelaide",75,68
-"2015",9,"Round 1",2015-04-06,"MCG","Hawthorn","Geelong",123,61
-"2015",10,"Round 2",2015-04-10,"Subiaco Oval","West Coast","Carlton",131,62
-"2015",11,"Round 2",2015-04-11,"MCG","Richmond","Western Bulldogs",66,85
-"2015",12,"Round 2",2015-04-11,"Manuka Oval","Greater Western Sydney","Melbourne",101,56
-"2015",13,"Round 2",2015-04-11,"Docklands Stadium","Collingwood","Adelaide",63,90
-"2015",14,"Round 2",2015-04-11,"Carrara Stadium","Gold Coast","St Kilda",76,104
-"2015",15,"Round 2",2015-04-11,"Adelaide Oval","Port Adelaide","Sydney",44,92
-"2015",16,"Round 2",2015-04-12,"Kardinia Park","Geelong","Fremantle",60,104
-"2015",17,"Round 2",2015-04-12,"MCG","Essendon","Hawthorn",78,76
-"2015",18,"Round 2",2015-04-12,"Docklands Stadium","North Melbourne","Brisbane Lions",133,51
-"2015",19,"Round 3",2015-04-17,"MCG","Collingwood","St Kilda",140,66
-"2015",20,"Round 3",2015-04-18,"MCG","Carlton","Essendon",84,105
-"2015",21,"Round 3",2015-04-18,"Adelaide Oval","Adelaide","Melbourne",80,55
-"2015",22,"Round 3",2015-04-18,"SCG","Sydney","Greater Western Sydney",111,90
-"2015",23,"Round 3",2015-04-18,"Docklands Stadium","North Melbourne","Port Adelaide",105,113
-"2015",24,"Round 3",2015-04-18,"Gabba","Brisbane Lions","Richmond",58,137
-"2015",25,"Round 3",2015-04-19,"York Park","Hawthorn","Western Bulldogs",127,57
-"2015",26,"Round 3",2015-04-19,"Kardinia Park","Geelong","Gold Coast",105,96
-"2015",27,"Round 3",2015-04-19,"Subiaco Oval","West Coast","Fremantle",81,111
-"2015",28,"Round 4",2015-04-24,"MCG","Richmond","Melbourne",51,83
-"2015",29,"Round 4",2015-04-25,"Wellington Regional Stadium","St Kilda","Carlton",81,121
-"2015",30,"Round 4",2015-04-25,"MCG","Essendon","Collingwood",49,69
-"2015",31,"Round 4",2015-04-25,"Manuka Oval","Greater Western Sydney","Gold Coast",119,53
-"2015",32,"Round 4",2015-04-25,"Adelaide Oval","Port Adelaide","Hawthorn",99,91
-"2015",33,"Round 4",2015-04-25,"Subiaco Oval","Fremantle","Sydney",74,60
-"2015",34,"Round 4",2015-04-26,"Gabba","Brisbane Lions","West Coast",65,118
-"2015",35,"Round 4",2015-04-26,"Kardinia Park","Geelong","North Melbourne",67,83
-"2015",36,"Round 4",2015-04-26,"Docklands Stadium","Western Bulldogs","Adelaide",125,68
-"2015",37,"Round 5",2015-05-01,"MCG","Carlton","Collingwood",45,120
-"2015",38,"Round 5",2015-05-02,"MCG","Richmond","Geelong",76,85
-"2015",39,"Round 5",2015-05-02,"SCG","Sydney","Western Bulldogs",73,77
-"2015",40,"Round 5",2015-05-02,"Carrara Stadium","Gold Coast","Brisbane Lions",118,54
-"2015",41,"Round 5",2015-05-02,"Docklands Stadium","North Melbourne","Hawthorn",70,130
-"2015",42,"Round 5",2015-05-02,"Subiaco Oval","West Coast","Greater Western Sydney",120,33
-"2015",43,"Round 5",2015-05-03,"MCG","Melbourne","Fremantle",50,118
-"2015",44,"Round 5",2015-05-03,"Docklands Stadium","St Kilda","Essendon",80,82
-"2015",45,"Round 5",2015-05-03,"Adelaide Oval","Adelaide","Port Adelaide",91,115
-"2015",46,"Round 6",2015-05-08,"MCG","Collingwood","Geelong",59,100
-"2015",47,"Round 6",2015-05-09,"Bellerive Oval","North Melbourne","Richmond",109,74
-"2015",48,"Round 6",2015-05-09,"Docklands Stadium","Western Bulldogs","St Kilda",87,94
-"2015",49,"Round 6",2015-05-09,"Sydney Showground Stadium","Greater Western Sydney","Hawthorn",108,98
-"2015",50,"Round 6",2015-05-09,"Carrara Stadium","Gold Coast","Adelaide",78,119
-"2015",51,"Round 6",2015-05-09,"MCG","Melbourne","Sydney",50,88
-"2015",52,"Round 6",2015-05-09,"Subiaco Oval","Fremantle","Essendon",80,52
-"2015",53,"Round 6",2015-05-10,"Docklands Stadium","Carlton","Brisbane Lions",75,84
-"2015",54,"Round 6",2015-05-10,"Adelaide Oval","Port Adelaide","West Coast",68,78
-"2015",55,"Round 7",2015-05-15,"Docklands Stadium","Essendon","North Melbourne",82,93
-"2015",56,"Round 7",2015-05-16,"Adelaide Oval","Adelaide","St Kilda",119,73
-"2015",57,"Round 7",2015-05-16,"MCG","Hawthorn","Melbourne",155,50
-"2015",58,"Round 7",2015-05-16,"Docklands Stadium","Carlton","Greater Western Sydney",57,135
-"2015",59,"Round 7",2015-05-16,"Stadium Australia","Sydney","Geelong",120,77
-"2015",60,"Round 7",2015-05-16,"Subiaco Oval","West Coast","Gold Coast",135,43
-"2015",61,"Round 7",2015-05-17,"Docklands Stadium","Western Bulldogs","Fremantle",88,101
-"2015",62,"Round 7",2015-05-17,"MCG","Richmond","Collingwood",105,100
-"2015",63,"Round 7",2015-05-17,"Gabba","Brisbane Lions","Port Adelaide",102,65
-"2015",64,"Round 8",2015-05-22,"Docklands Stadium","Geelong","Carlton",140,63
-"2015",65,"Round 8",2015-05-23,"Docklands Stadium","St Kilda","West Coast",78,131
-"2015",66,"Round 8",2015-05-23,"Sydney Showground Stadium","Greater Western Sydney","Adelaide",108,84
-"2015",67,"Round 8",2015-05-23,"Carrara Stadium","Gold Coast","Collingwood",63,132
-"2015",68,"Round 8",2015-05-23,"MCG","Hawthorn","Sydney",69,73
-"2015",69,"Round 8",2015-05-23,"Subiaco Oval","Fremantle","North Melbourne",115,42
-"2015",70,"Round 8",2015-05-24,"Docklands Stadium","Essendon","Brisbane Lions",136,78
-"2015",71,"Round 8",2015-05-24,"MCG","Melbourne","Western Bulldogs",103,64
-"2015",72,"Round 8",2015-05-24,"Adelaide Oval","Port Adelaide","Richmond",43,76
-"2015",73,"Round 9",2015-05-29,"SCG","Sydney","Carlton",122,62
-"2015",74,"Round 9",2015-05-30,"York Park","Hawthorn","Gold Coast",93,40
-"2015",75,"Round 9",2015-05-30,"Traeger Park","Melbourne","Port Adelaide",54,115
-"2015",76,"Round 9",2015-05-30,"Docklands Stadium","Western Bulldogs","Greater Western Sydney",113,68
-"2015",77,"Round 9",2015-05-30,"MCG","Richmond","Essendon",72,59
-"2015",78,"Round 9",2015-05-30,"Adelaide Oval","Adelaide","Fremantle",57,68
-"2015",79,"Round 9",2015-05-31,"Gabba","Brisbane Lions","St Kilda",86,108
-"2015",80,"Round 9",2015-05-31,"MCG","Collingwood","North Melbourne",112,95
-"2015",81,"Round 9",2015-05-31,"Subiaco Oval","West Coast","Geelong",120,64
-"2015",82,"Round 10",2015-06-05,"Subiaco Oval","Fremantle","Richmond",70,97
-"2015",83,"Round 10",2015-06-06,"MCG","Carlton","Adelaide",90,99
-"2015",84,"Round 10",2015-06-06,"Carrara Stadium","Gold Coast","Sydney",41,93
-"2015",85,"Round 10",2015-06-06,"Docklands Stadium","Essendon","Geelong",53,122
-"2015",86,"Round 10",2015-06-06,"Adelaide Oval","Port Adelaide","Western Bulldogs",100,62
-"2015",87,"Round 10",2015-06-07,"Sydney Showground Stadium","Greater Western Sydney","Brisbane Lions",97,67
-"2015",88,"Round 10",2015-06-07,"Bellerive Oval","North Melbourne","West Coast",85,75
-"2015",89,"Round 10",2015-06-07,"Docklands Stadium","St Kilda","Hawthorn",69,132
-"2015",90,"Round 10",2015-06-08,"MCG","Melbourne","Collingwood",85,110
-"2015",91,"Round 11",2015-06-12,"Adelaide Oval","Port Adelaide","Geelong",69,92
-"2015",92,"Round 11",2015-06-13,"Carrara Stadium","Gold Coast","Fremantle",46,53
-"2015",93,"Round 11",2015-06-13,"Subiaco Oval","West Coast","Essendon",96,46
-"2015",94,"Round 11",2015-06-13,"Docklands Stadium","North Melbourne","Sydney",75,91
-"2015",95,"Round 11",2015-06-14,"MCG","Collingwood","Greater Western Sydney",119,77
-"2015",96,"Round 11",2015-06-14,"Docklands Stadium","St Kilda","Melbourne",85,83
-"2015",97,"Round 12",2015-06-18,"Adelaide Oval","Adelaide","Hawthorn",85,114
-"2015",98,"Round 12",2015-06-19,"MCG","Richmond","West Coast",70,90
-"2015",99,"Round 12",2015-06-20,"MCG","Carlton","Port Adelaide",110,106
-"2015",100,"Round 12",2015-06-20,"Sydney Showground Stadium","Greater Western Sydney","North Melbourne",61,117
-"2015",101,"Round 12",2015-06-20,"Docklands Stadium","Western Bulldogs","Brisbane Lions",146,74
-"2015",102,"Round 12",2015-06-21,"Kardinia Park","Geelong","Melbourne",89,113
-"2015",103,"Round 13",2015-06-25,"Subiaco Oval","Fremantle","Collingwood",80,73
-"2015",104,"Round 13",2015-06-26,"SCG","Sydney","Richmond",77,95
-"2015",105,"Round 13",2015-06-27,"MCG","Hawthorn","Essendon",114,76
-"2015",106,"Round 13",2015-06-27,"Gabba","Brisbane Lions","Adelaide",69,82
-"2015",107,"Round 13",2015-06-27,"Docklands Stadium","St Kilda","Western Bulldogs",56,62
-"2015",108,"Round 13",2015-06-28,"Docklands Stadium","Carlton","Gold Coast",103,69
-"2015",109,"Round 14",2015-07-02,"SCG","Sydney","Port Adelaide",94,84
-"2015",110,"Round 14",2015-07-03,"MCG","Collingwood","Hawthorn",91,101
-"2015",111,"Round 14",2015-07-04,"MCG","Richmond","Greater Western Sydney",78,69
-"2015",112,"Round 14",2015-07-04,"Carrara Stadium","Gold Coast","North Melbourne",125,70
-"2015",113,"Round 14",2015-07-04,"Docklands Stadium","Western Bulldogs","Carlton",64,53
-"2015",114,"Round 14",2015-07-04,"Marrara Oval","Melbourne","West Coast",60,114
-"2015",115,"Round 14",2015-07-05,"Docklands Stadium","Essendon","St Kilda",52,162
-"2015",116,"Round 14",2015-07-05,"Subiaco Oval","Fremantle","Brisbane Lions",84,48
-"2015",117,"Round 14",2015-07-05,"Adelaide Oval","Adelaide","Geelong",1,1
-"2015",118,"Round 15",2015-07-09,"Adelaide Oval","Port Adelaide","Collingwood",66,63
-"2015",119,"Round 15",2015-07-10,"MCG","Richmond","Carlton",71,41
-"2015",120,"Round 15",2015-07-11,"MCG","Essendon","Melbourne",69,60
-"2015",121,"Round 15",2015-07-11,"Cazaly's Stadium","Western Bulldogs","Gold Coast",95,73
-"2015",122,"Round 15",2015-07-11,"Docklands Stadium","North Melbourne","Geelong",120,79
-"2015",123,"Round 15",2015-07-11,"Subiaco Oval","West Coast","Adelaide",147,91
-"2015",124,"Round 15",2015-07-12,"Sydney Showground Stadium","Greater Western Sydney","St Kilda",84,49
-"2015",125,"Round 15",2015-07-12,"York Park","Hawthorn","Fremantle",115,43
-"2015",126,"Round 15",2015-07-12,"Gabba","Brisbane Lions","Sydney",49,70
-"2015",127,"Round 16",2015-07-17,"Docklands Stadium","North Melbourne","Essendon",93,68
-"2015",128,"Round 16",2015-07-18,"Kardinia Park","Geelong","Western Bulldogs",72,64
-"2015",129,"Round 16",2015-07-18,"Carrara Stadium","Gold Coast","Greater Western Sydney",79,94
-"2015",130,"Round 16",2015-07-18,"Docklands Stadium","Collingwood","West Coast",56,87
-"2015",131,"Round 16",2015-07-18,"Stadium Australia","Sydney","Hawthorn",57,146
-"2015",132,"Round 16",2015-07-18,"Subiaco Oval","Fremantle","Carlton",95,53
-"2015",133,"Round 16",2015-07-19,"MCG","Melbourne","Brisbane Lions",60,36
-"2015",134,"Round 16",2015-07-19,"Adelaide Oval","Port Adelaide","Adelaide",113,116
-"2015",135,"Round 16",2015-07-19,"Docklands Stadium","St Kilda","Richmond",73,89
-"2015",136,"Round 17",2015-07-24,"Docklands Stadium","Carlton","Hawthorn",35,173
-"2015",137,"Round 17",2015-07-25,"Manuka Oval","Greater Western Sydney","Geelong",42,69
-"2015",138,"Round 17",2015-07-25,"Adelaide Oval","Adelaide","Gold Coast",125,80
-"2015",139,"Round 17",2015-07-25,"MCG","Richmond","Fremantle",78,82
-"2015",140,"Round 17",2015-07-25,"Docklands Stadium","Essendon","Port Adelaide",116,129
-"2015",141,"Round 17",2015-07-25,"Gabba","Brisbane Lions","North Melbourne",38,110
-"2015",142,"Round 17",2015-07-26,"Docklands Stadium","Western Bulldogs","Collingwood",104,86
-"2015",143,"Round 17",2015-07-26,"MCG","Melbourne","St Kilda",46,83
-"2015",144,"Round 17",2015-07-26,"Subiaco Oval","West Coast","Sydney",103,51
-"2015",145,"Round 18",2015-07-31,"MCG","Hawthorn","Richmond",53,71
-"2015",146,"Round 18",2015-08-01,"Kardinia Park","Geelong","Brisbane Lions",113,57
-"2015",147,"Round 18",2015-08-01,"MCG","Collingwood","Melbourne",54,91
-"2015",148,"Round 18",2015-08-01,"SCG","Sydney","Adelaide",117,65
-"2015",149,"Round 18",2015-08-01,"Docklands Stadium","Carlton","North Melbourne",54,118
-"2015",150,"Round 18",2015-08-01,"Carrara Stadium","Gold Coast","West Coast",83,83
-"2015",151,"Round 18",2015-08-02,"Adelaide Oval","Port Adelaide","St Kilda",112,49
-"2015",152,"Round 18",2015-08-02,"Docklands Stadium","Essendon","Western Bulldogs",40,127
-"2015",153,"Round 18",2015-08-02,"Subiaco Oval","Fremantle","Greater Western Sydney",84,63
-"2015",154,"Round 19",2015-08-07,"Adelaide Oval","Adelaide","Richmond",88,52
-"2015",155,"Round 19",2015-08-08,"MCG","Collingwood","Carlton",105,87
-"2015",156,"Round 19",2015-08-08,"Docklands Stadium","Western Bulldogs","Port Adelaide",128,64
-"2015",157,"Round 19",2015-08-08,"Gabba","Brisbane Lions","Gold Coast",100,114
-"2015",158,"Round 19",2015-08-08,"Kardinia Park","Geelong","Sydney",95,63
-"2015",159,"Round 19",2015-08-08,"Subiaco Oval","West Coast","Hawthorn",74,88
-"2015",160,"Round 19",2015-08-09,"MCG","Melbourne","North Melbourne",92,127
-"2015",161,"Round 19",2015-08-09,"Sydney Showground Stadium","Greater Western Sydney","Essendon",93,61
-"2015",162,"Round 19",2015-08-09,"Docklands Stadium","St Kilda","Fremantle",59,96
-"2015",163,"Round 20",2015-08-14,"SCG","Sydney","Collingwood",87,76
-"2015",164,"Round 20",2015-08-15,"Docklands Stadium","Essendon","Adelaide",59,171
-"2015",165,"Round 20",2015-08-15,"Bellerive Oval","North Melbourne","St Kilda",120,83
-"2015",166,"Round 20",2015-08-15,"Adelaide Oval","Port Adelaide","Greater Western Sydney",111,90
-"2015",167,"Round 20",2015-08-15,"MCG","Geelong","Hawthorn",85,121
-"2015",168,"Round 20",2015-08-15,"Gabba","Brisbane Lions","Carlton",131,67
-"2015",169,"Round 20",2015-08-16,"MCG","Richmond","Gold Coast",138,55
-"2015",170,"Round 20",2015-08-16,"Docklands Stadium","Western Bulldogs","Melbourne",153,55
-"2015",171,"Round 20",2015-08-16,"Subiaco Oval","Fremantle","West Coast",80,104
-"2015",172,"Round 21",2015-08-21,"Docklands Stadium","Hawthorn","Port Adelaide",86,108
-"2015",173,"Round 21",2015-08-22,"MCG","Collingwood","Richmond",56,147
-"2015",174,"Round 21",2015-08-22,"Sydney Showground Stadium","Greater Western Sydney","Sydney",44,133
-"2015",175,"Round 21",2015-08-22,"Carrara Stadium","Gold Coast","Essendon",97,95
-"2015",176,"Round 21",2015-08-22,"Docklands Stadium","St Kilda","Geelong",97,97
-"2015",177,"Round 21",2015-08-22,"Adelaide Oval","Adelaide","Brisbane Lions",131,44
-"2015",178,"Round 21",2015-08-23,"Docklands Stadium","North Melbourne","Fremantle",94,83
-"2015",179,"Round 21",2015-08-23,"MCG","Carlton","Melbourne",78,55
-"2015",180,"Round 21",2015-08-23,"Subiaco Oval","West Coast","Western Bulldogs",162,85
-"2015",181,"Round 22",2015-08-28,"MCG","Geelong","Collingwood",62,110
-"2015",182,"Round 22",2015-08-29,"Sydney Showground Stadium","Greater Western Sydney","Carlton",132,51
-"2015",183,"Round 22",2015-08-29,"York Park","Hawthorn","Brisbane Lions",134,62
-"2015",184,"Round 22",2015-08-29,"Docklands Stadium","North Melbourne","Western Bulldogs",73,96
-"2015",185,"Round 22",2015-08-29,"MCG","Essendon","Richmond",47,74
-"2015",186,"Round 22",2015-08-29,"Carrara Stadium","Gold Coast","Port Adelaide",51,88
-"2015",187,"Round 22",2015-08-30,"Adelaide Oval","Adelaide","West Coast",126,69
-"2015",188,"Round 22",2015-08-30,"Docklands Stadium","St Kilda","Sydney",38,135
-"2015",189,"Round 22",2015-08-30,"Subiaco Oval","Fremantle","Melbourne",108,54
-"2015",190,"Round 23",2015-09-04,"Docklands Stadium","Richmond","North Melbourne",108,67
-"2015",191,"Round 23",2015-09-05,"Kardinia Park","Geelong","Adelaide",119,80
-"2015",192,"Round 23",2015-09-05,"Gabba","Brisbane Lions","Western Bulldogs",130,122
-"2015",193,"Round 23",2015-09-05,"Adelaide Oval","Port Adelaide","Fremantle",122,53
-"2015",194,"Round 23",2015-09-05,"MCG","Hawthorn","Carlton",113,56
-"2015",195,"Round 23",2015-09-05,"SCG","Sydney","Gold Coast",127,64
-"2015",196,"Round 23",2015-09-05,"Subiaco Oval","West Coast","St Kilda",125,30
-"2015",197,"Round 23",2015-09-06,"Docklands Stadium","Melbourne","Greater Western Sydney",103,77
-"2015",198,"Round 23",2015-09-06,"MCG","Collingwood","Essendon",92,95
+season,match_id,round,date,venue,home_team,away_team,home_score,away_score,home_goals,away_goals,home_behinds,away_behinds
+2015,1,Round 1,2015-04-02,MCG,Carlton,Richmond,78,105,11,15,12,15
+2015,2,Round 1,2015-04-04,MCG,Melbourne,Gold Coast,115,89,17,13,13,11
+2015,3,Round 1,2015-04-04,Stadium Australia,Sydney,Essendon,72,60,10,9,12,6
+2015,4,Round 1,2015-04-04,Gabba,Brisbane Lions,Collingwood,74,86,11,12,8,14
+2015,5,Round 1,2015-04-04,Docklands Stadium,Western Bulldogs,West Coast,97,87,14,14,13,3
+2015,6,Round 1,2015-04-05,Docklands Stadium,St Kilda,Greater Western Sydney,78,87,11,12,12,15
+2015,7,Round 1,2015-04-05,Adelaide Oval,Adelaide,North Melbourne,140,63,21,9,14,9
+2015,8,Round 1,2015-04-05,Subiaco Oval,Fremantle,Port Adelaide,75,68,11,10,9,8
+2015,9,Round 1,2015-04-06,MCG,Hawthorn,Geelong,123,61,17,8,21,13
+2015,10,Round 2,2015-04-10,Subiaco Oval,West Coast,Carlton,131,62,20,9,11,8
+2015,11,Round 2,2015-04-11,MCG,Richmond,Western Bulldogs,66,85,9,12,12,13
+2015,12,Round 2,2015-04-11,Manuka Oval,Greater Western Sydney,Melbourne,101,56,15,8,11,8
+2015,13,Round 2,2015-04-11,Docklands Stadium,Collingwood,Adelaide,63,90,9,12,9,18
+2015,14,Round 2,2015-04-11,Carrara Stadium,Gold Coast,St Kilda,76,104,10,16,16,8
+2015,15,Round 2,2015-04-11,Adelaide Oval,Port Adelaide,Sydney,44,92,6,14,8,8
+2015,16,Round 2,2015-04-12,Kardinia Park,Geelong,Fremantle,60,104,9,15,6,14
+2015,17,Round 2,2015-04-12,MCG,Essendon,Hawthorn,78,76,12,11,6,10
+2015,18,Round 2,2015-04-12,Docklands Stadium,North Melbourne,Brisbane Lions,133,51,20,7,13,9
+2015,19,Round 3,2015-04-17,MCG,Collingwood,St Kilda,140,66,21,10,14,6
+2015,20,Round 3,2015-04-18,MCG,Carlton,Essendon,84,105,11,16,18,9
+2015,21,Round 3,2015-04-18,Adelaide Oval,Adelaide,Melbourne,80,55,12,7,8,13
+2015,22,Round 3,2015-04-18,SCG,Sydney,Greater Western Sydney,111,90,16,12,15,18
+2015,23,Round 3,2015-04-18,Docklands Stadium,North Melbourne,Port Adelaide,105,113,16,17,9,11
+2015,24,Round 3,2015-04-18,Gabba,Brisbane Lions,Richmond,58,137,8,21,10,11
+2015,25,Round 3,2015-04-19,York Park,Hawthorn,Western Bulldogs,127,57,19,8,13,9
+2015,26,Round 3,2015-04-19,Kardinia Park,Geelong,Gold Coast,105,96,16,13,9,18
+2015,27,Round 3,2015-04-19,Subiaco Oval,West Coast,Fremantle,81,111,12,17,9,9
+2015,28,Round 4,2015-04-24,MCG,Richmond,Melbourne,51,83,6,12,15,11
+2015,29,Round 4,2015-04-25,Wellington Regional Stadium,St Kilda,Carlton,81,121,12,18,9,13
+2015,30,Round 4,2015-04-25,MCG,Essendon,Collingwood,49,69,6,9,13,15
+2015,31,Round 4,2015-04-25,Manuka Oval,Greater Western Sydney,Gold Coast,119,53,16,7,23,11
+2015,32,Round 4,2015-04-25,Adelaide Oval,Port Adelaide,Hawthorn,99,91,15,13,9,13
+2015,33,Round 4,2015-04-25,Subiaco Oval,Fremantle,Sydney,74,60,11,8,8,12
+2015,34,Round 4,2015-04-26,Gabba,Brisbane Lions,West Coast,65,118,9,17,11,16
+2015,35,Round 4,2015-04-26,Kardinia Park,Geelong,North Melbourne,67,83,9,12,13,11
+2015,36,Round 4,2015-04-26,Docklands Stadium,Western Bulldogs,Adelaide,125,68,18,10,17,8
+2015,37,Round 5,2015-05-01,MCG,Carlton,Collingwood,45,120,6,18,9,12
+2015,38,Round 5,2015-05-02,MCG,Richmond,Geelong,76,85,11,12,10,13
+2015,39,Round 5,2015-05-02,SCG,Sydney,Western Bulldogs,73,77,10,11,13,11
+2015,40,Round 5,2015-05-02,Carrara Stadium,Gold Coast,Brisbane Lions,118,54,18,7,10,12
+2015,41,Round 5,2015-05-02,Docklands Stadium,North Melbourne,Hawthorn,70,130,10,19,10,16
+2015,42,Round 5,2015-05-02,Subiaco Oval,West Coast,Greater Western Sydney,120,33,18,4,12,9
+2015,43,Round 5,2015-05-03,MCG,Melbourne,Fremantle,50,118,6,18,14,10
+2015,44,Round 5,2015-05-03,Docklands Stadium,St Kilda,Essendon,80,82,11,11,14,16
+2015,45,Round 5,2015-05-03,Adelaide Oval,Adelaide,Port Adelaide,91,115,13,18,13,7
+2015,46,Round 6,2015-05-08,MCG,Collingwood,Geelong,59,100,8,15,11,10
+2015,47,Round 6,2015-05-09,Bellerive Oval,North Melbourne,Richmond,109,74,16,10,13,14
+2015,48,Round 6,2015-05-09,Docklands Stadium,Western Bulldogs,St Kilda,87,94,13,14,9,10
+2015,49,Round 6,2015-05-09,Sydney Showground Stadium,Greater Western Sydney,Hawthorn,108,98,16,14,12,14
+2015,50,Round 6,2015-05-09,Carrara Stadium,Gold Coast,Adelaide,78,119,11,18,12,11
+2015,51,Round 6,2015-05-09,MCG,Melbourne,Sydney,50,88,7,12,8,16
+2015,52,Round 6,2015-05-09,Subiaco Oval,Fremantle,Essendon,80,52,12,7,8,10
+2015,53,Round 6,2015-05-10,Docklands Stadium,Carlton,Brisbane Lions,75,84,11,12,9,12
+2015,54,Round 6,2015-05-10,Adelaide Oval,Port Adelaide,West Coast,68,78,10,11,8,12
+2015,55,Round 7,2015-05-15,Docklands Stadium,Essendon,North Melbourne,82,93,12,13,10,15
+2015,56,Round 7,2015-05-16,Adelaide Oval,Adelaide,St Kilda,119,73,18,10,11,13
+2015,57,Round 7,2015-05-16,MCG,Hawthorn,Melbourne,155,50,24,7,11,8
+2015,58,Round 7,2015-05-16,Docklands Stadium,Carlton,Greater Western Sydney,57,135,9,19,3,21
+2015,59,Round 7,2015-05-16,Stadium Australia,Sydney,Geelong,120,77,18,11,12,11
+2015,60,Round 7,2015-05-16,Subiaco Oval,West Coast,Gold Coast,135,43,21,6,9,7
+2015,61,Round 7,2015-05-17,Docklands Stadium,Western Bulldogs,Fremantle,88,101,14,15,4,11
+2015,62,Round 7,2015-05-17,MCG,Richmond,Collingwood,105,100,16,15,9,10
+2015,63,Round 7,2015-05-17,Gabba,Brisbane Lions,Port Adelaide,102,65,15,8,12,17
+2015,64,Round 8,2015-05-22,Docklands Stadium,Geelong,Carlton,140,63,22,9,8,9
+2015,65,Round 8,2015-05-23,Docklands Stadium,St Kilda,West Coast,78,131,12,20,6,11
+2015,66,Round 8,2015-05-23,Sydney Showground Stadium,Greater Western Sydney,Adelaide,108,84,16,12,12,12
+2015,67,Round 8,2015-05-23,Carrara Stadium,Gold Coast,Collingwood,63,132,9,20,9,12
+2015,68,Round 8,2015-05-23,MCG,Hawthorn,Sydney,69,73,9,11,15,7
+2015,69,Round 8,2015-05-23,Subiaco Oval,Fremantle,North Melbourne,115,42,17,5,13,12
+2015,70,Round 8,2015-05-24,Docklands Stadium,Essendon,Brisbane Lions,136,78,21,12,10,6
+2015,71,Round 8,2015-05-24,MCG,Melbourne,Western Bulldogs,103,64,15,9,13,10
+2015,72,Round 8,2015-05-24,Adelaide Oval,Port Adelaide,Richmond,43,76,5,11,13,10
+2015,73,Round 9,2015-05-29,SCG,Sydney,Carlton,122,62,19,9,8,8
+2015,74,Round 9,2015-05-30,York Park,Hawthorn,Gold Coast,93,40,14,6,9,4
+2015,75,Round 9,2015-05-30,Traeger Park,Melbourne,Port Adelaide,54,115,8,18,6,7
+2015,76,Round 9,2015-05-30,Docklands Stadium,Western Bulldogs,Greater Western Sydney,113,68,16,11,17,2
+2015,77,Round 9,2015-05-30,MCG,Richmond,Essendon,72,59,10,8,12,11
+2015,78,Round 9,2015-05-30,Adelaide Oval,Adelaide,Fremantle,57,68,7,10,15,8
+2015,79,Round 9,2015-05-31,Gabba,Brisbane Lions,St Kilda,86,108,13,16,8,12
+2015,80,Round 9,2015-05-31,MCG,Collingwood,North Melbourne,112,95,17,14,10,11
+2015,81,Round 9,2015-05-31,Subiaco Oval,West Coast,Geelong,120,64,16,10,24,4
+2015,82,Round 10,2015-06-05,Subiaco Oval,Fremantle,Richmond,70,97,10,15,10,7
+2015,83,Round 10,2015-06-06,MCG,Carlton,Adelaide,90,99,14,14,6,15
+2015,84,Round 10,2015-06-06,Carrara Stadium,Gold Coast,Sydney,41,93,5,13,11,15
+2015,85,Round 10,2015-06-06,Docklands Stadium,Essendon,Geelong,53,122,7,19,11,8
+2015,86,Round 10,2015-06-06,Adelaide Oval,Port Adelaide,Western Bulldogs,100,62,16,9,4,8
+2015,87,Round 10,2015-06-07,Sydney Showground Stadium,Greater Western Sydney,Brisbane Lions,97,67,14,10,13,7
+2015,88,Round 10,2015-06-07,Bellerive Oval,North Melbourne,West Coast,85,75,13,10,7,15
+2015,89,Round 10,2015-06-07,Docklands Stadium,St Kilda,Hawthorn,69,132,10,20,9,12
+2015,90,Round 10,2015-06-08,MCG,Melbourne,Collingwood,85,110,13,17,7,8
+2015,91,Round 11,2015-06-12,Adelaide Oval,Port Adelaide,Geelong,69,92,11,14,3,8
+2015,92,Round 11,2015-06-13,Carrara Stadium,Gold Coast,Fremantle,46,53,7,6,4,17
+2015,93,Round 11,2015-06-13,Subiaco Oval,West Coast,Essendon,96,46,14,6,12,10
+2015,94,Round 11,2015-06-13,Docklands Stadium,North Melbourne,Sydney,75,91,10,14,15,7
+2015,95,Round 11,2015-06-14,MCG,Collingwood,Greater Western Sydney,119,77,18,11,11,11
+2015,96,Round 11,2015-06-14,Docklands Stadium,St Kilda,Melbourne,85,83,12,12,13,11
+2015,97,Round 12,2015-06-18,Adelaide Oval,Adelaide,Hawthorn,85,114,12,17,13,12
+2015,98,Round 12,2015-06-19,MCG,Richmond,West Coast,70,90,10,13,10,12
+2015,99,Round 12,2015-06-20,MCG,Carlton,Port Adelaide,110,106,17,16,8,10
+2015,100,Round 12,2015-06-20,Sydney Showground Stadium,Greater Western Sydney,North Melbourne,61,117,8,18,13,9
+2015,101,Round 12,2015-06-20,Docklands Stadium,Western Bulldogs,Brisbane Lions,146,74,22,11,14,8
+2015,102,Round 12,2015-06-21,Kardinia Park,Geelong,Melbourne,89,113,13,18,11,5
+2015,103,Round 13,2015-06-25,Subiaco Oval,Fremantle,Collingwood,80,73,12,11,8,7
+2015,104,Round 13,2015-06-26,SCG,Sydney,Richmond,77,95,11,14,11,11
+2015,105,Round 13,2015-06-27,MCG,Hawthorn,Essendon,114,76,16,11,18,10
+2015,106,Round 13,2015-06-27,Gabba,Brisbane Lions,Adelaide,69,82,10,11,9,16
+2015,107,Round 13,2015-06-27,Docklands Stadium,St Kilda,Western Bulldogs,56,62,7,9,14,8
+2015,108,Round 13,2015-06-28,Docklands Stadium,Carlton,Gold Coast,103,69,14,9,19,15
+2015,109,Round 14,2015-07-02,SCG,Sydney,Port Adelaide,94,84,14,12,10,12
+2015,110,Round 14,2015-07-03,MCG,Collingwood,Hawthorn,91,101,12,15,19,11
+2015,111,Round 14,2015-07-04,MCG,Richmond,Greater Western Sydney,78,69,10,10,18,9
+2015,112,Round 14,2015-07-04,Carrara Stadium,Gold Coast,North Melbourne,125,70,19,10,11,10
+2015,113,Round 14,2015-07-04,Docklands Stadium,Western Bulldogs,Carlton,64,53,9,7,10,11
+2015,114,Round 14,2015-07-04,Marrara Oval,Melbourne,West Coast,60,114,9,16,6,18
+2015,115,Round 14,2015-07-05,Docklands Stadium,Essendon,St Kilda,52,162,8,25,4,12
+2015,116,Round 14,2015-07-05,Subiaco Oval,Fremantle,Brisbane Lions,84,48,13,7,6,6
+2015,117,Round 14,2015-07-05,Adelaide Oval,Adelaide,Geelong,1,1,1,1,1,1
+2015,118,Round 15,2015-07-09,Adelaide Oval,Port Adelaide,Collingwood,66,63,9,9,12,9
+2015,119,Round 15,2015-07-10,MCG,Richmond,Carlton,71,41,10,5,11,11
+2015,120,Round 15,2015-07-11,MCG,Essendon,Melbourne,69,60,10,7,9,18
+2015,121,Round 15,2015-07-11,Cazaly's Stadium,Western Bulldogs,Gold Coast,95,73,14,11,11,7
+2015,122,Round 15,2015-07-11,Docklands Stadium,North Melbourne,Geelong,120,79,18,11,12,13
+2015,123,Round 15,2015-07-11,Subiaco Oval,West Coast,Adelaide,147,91,22,14,15,7
+2015,124,Round 15,2015-07-12,Sydney Showground Stadium,Greater Western Sydney,St Kilda,84,49,12,6,12,13
+2015,125,Round 15,2015-07-12,York Park,Hawthorn,Fremantle,115,43,17,6,13,7
+2015,126,Round 15,2015-07-12,Gabba,Brisbane Lions,Sydney,49,70,7,10,7,10
+2015,127,Round 16,2015-07-17,Docklands Stadium,North Melbourne,Essendon,93,68,14,9,9,14
+2015,128,Round 16,2015-07-18,Kardinia Park,Geelong,Western Bulldogs,72,64,10,9,12,10
+2015,129,Round 16,2015-07-18,Carrara Stadium,Gold Coast,Greater Western Sydney,79,94,12,13,7,16
+2015,130,Round 16,2015-07-18,Docklands Stadium,Collingwood,West Coast,56,87,7,11,14,21
+2015,131,Round 16,2015-07-18,Stadium Australia,Sydney,Hawthorn,57,146,7,23,15,8
+2015,132,Round 16,2015-07-18,Subiaco Oval,Fremantle,Carlton,95,53,13,8,17,5
+2015,133,Round 16,2015-07-19,MCG,Melbourne,Brisbane Lions,60,36,8,4,12,12
+2015,134,Round 16,2015-07-19,Adelaide Oval,Port Adelaide,Adelaide,113,116,17,18,11,8
+2015,135,Round 16,2015-07-19,Docklands Stadium,St Kilda,Richmond,73,89,10,13,13,11
+2015,136,Round 17,2015-07-24,Docklands Stadium,Carlton,Hawthorn,35,173,4,27,11,11
+2015,137,Round 17,2015-07-25,Manuka Oval,Greater Western Sydney,Geelong,42,69,6,9,6,15
+2015,138,Round 17,2015-07-25,Adelaide Oval,Adelaide,Gold Coast,125,80,19,12,11,8
+2015,139,Round 17,2015-07-25,MCG,Richmond,Fremantle,78,82,10,12,18,10
+2015,140,Round 17,2015-07-25,Docklands Stadium,Essendon,Port Adelaide,116,129,17,20,14,9
+2015,141,Round 17,2015-07-25,Gabba,Brisbane Lions,North Melbourne,38,110,5,16,8,14
+2015,142,Round 17,2015-07-26,Docklands Stadium,Western Bulldogs,Collingwood,104,86,15,13,14,8
+2015,143,Round 17,2015-07-26,MCG,Melbourne,St Kilda,46,83,6,12,10,11
+2015,144,Round 17,2015-07-26,Subiaco Oval,West Coast,Sydney,103,51,15,7,13,9
+2015,145,Round 18,2015-07-31,MCG,Hawthorn,Richmond,53,71,7,10,11,11
+2015,146,Round 18,2015-08-01,Kardinia Park,Geelong,Brisbane Lions,113,57,17,8,11,9
+2015,147,Round 18,2015-08-01,MCG,Collingwood,Melbourne,54,91,7,13,12,13
+2015,148,Round 18,2015-08-01,SCG,Sydney,Adelaide,117,65,17,9,15,11
+2015,149,Round 18,2015-08-01,Docklands Stadium,Carlton,North Melbourne,54,118,8,18,6,10
+2015,150,Round 18,2015-08-01,Carrara Stadium,Gold Coast,West Coast,83,83,12,11,11,17
+2015,151,Round 18,2015-08-02,Adelaide Oval,Port Adelaide,St Kilda,112,49,17,6,10,13
+2015,152,Round 18,2015-08-02,Docklands Stadium,Essendon,Western Bulldogs,40,127,5,19,10,13
+2015,153,Round 18,2015-08-02,Subiaco Oval,Fremantle,Greater Western Sydney,84,63,12,9,12,9
+2015,154,Round 19,2015-08-07,Adelaide Oval,Adelaide,Richmond,88,52,11,8,22,4
+2015,155,Round 19,2015-08-08,MCG,Collingwood,Carlton,105,87,16,13,9,9
+2015,156,Round 19,2015-08-08,Docklands Stadium,Western Bulldogs,Port Adelaide,128,64,19,9,14,10
+2015,157,Round 19,2015-08-08,Gabba,Brisbane Lions,Gold Coast,100,114,14,17,16,12
+2015,158,Round 19,2015-08-08,Kardinia Park,Geelong,Sydney,95,63,14,9,11,9
+2015,159,Round 19,2015-08-08,Subiaco Oval,West Coast,Hawthorn,74,88,11,13,8,10
+2015,160,Round 19,2015-08-09,MCG,Melbourne,North Melbourne,92,127,14,19,8,13
+2015,161,Round 19,2015-08-09,Sydney Showground Stadium,Greater Western Sydney,Essendon,93,61,14,8,9,13
+2015,162,Round 19,2015-08-09,Docklands Stadium,St Kilda,Fremantle,59,96,8,15,11,6
+2015,163,Round 20,2015-08-14,SCG,Sydney,Collingwood,87,76,13,10,9,16
+2015,164,Round 20,2015-08-15,Docklands Stadium,Essendon,Adelaide,59,171,8,27,11,9
+2015,165,Round 20,2015-08-15,Bellerive Oval,North Melbourne,St Kilda,120,83,18,11,12,17
+2015,166,Round 20,2015-08-15,Adelaide Oval,Port Adelaide,Greater Western Sydney,111,90,16,13,15,12
+2015,167,Round 20,2015-08-15,MCG,Geelong,Hawthorn,85,121,12,19,13,7
+2015,168,Round 20,2015-08-15,Gabba,Brisbane Lions,Carlton,131,67,20,9,11,13
+2015,169,Round 20,2015-08-16,MCG,Richmond,Gold Coast,138,55,22,8,6,7
+2015,170,Round 20,2015-08-16,Docklands Stadium,Western Bulldogs,Melbourne,153,55,24,8,9,7
+2015,171,Round 20,2015-08-16,Subiaco Oval,Fremantle,West Coast,80,104,11,15,14,14
+2015,172,Round 21,2015-08-21,Docklands Stadium,Hawthorn,Port Adelaide,86,108,13,16,8,12
+2015,173,Round 21,2015-08-22,MCG,Collingwood,Richmond,56,147,7,23,14,9
+2015,174,Round 21,2015-08-22,Sydney Showground Stadium,Greater Western Sydney,Sydney,44,133,6,20,8,13
+2015,175,Round 21,2015-08-22,Carrara Stadium,Gold Coast,Essendon,97,95,14,14,13,11
+2015,176,Round 21,2015-08-22,Docklands Stadium,St Kilda,Geelong,97,97,14,15,13,7
+2015,177,Round 21,2015-08-22,Adelaide Oval,Adelaide,Brisbane Lions,131,44,20,6,11,8
+2015,178,Round 21,2015-08-23,Docklands Stadium,North Melbourne,Fremantle,94,83,14,12,10,11
+2015,179,Round 21,2015-08-23,MCG,Carlton,Melbourne,78,55,12,7,6,13
+2015,180,Round 21,2015-08-23,Subiaco Oval,West Coast,Western Bulldogs,162,85,25,13,12,7
+2015,181,Round 22,2015-08-28,MCG,Geelong,Collingwood,62,110,9,17,8,8
+2015,182,Round 22,2015-08-29,Sydney Showground Stadium,Greater Western Sydney,Carlton,132,51,20,7,12,9
+2015,183,Round 22,2015-08-29,York Park,Hawthorn,Brisbane Lions,134,62,21,9,8,8
+2015,184,Round 22,2015-08-29,Docklands Stadium,North Melbourne,Western Bulldogs,73,96,10,14,13,12
+2015,185,Round 22,2015-08-29,MCG,Essendon,Richmond,47,74,7,10,5,14
+2015,186,Round 22,2015-08-29,Carrara Stadium,Gold Coast,Port Adelaide,51,88,7,12,9,16
+2015,187,Round 22,2015-08-30,Adelaide Oval,Adelaide,West Coast,126,69,19,10,12,9
+2015,188,Round 22,2015-08-30,Docklands Stadium,St Kilda,Sydney,38,135,4,20,14,15
+2015,189,Round 22,2015-08-30,Subiaco Oval,Fremantle,Melbourne,108,54,17,8,6,6
+2015,190,Round 23,2015-09-04,Docklands Stadium,Richmond,North Melbourne,108,67,16,10,12,7
+2015,191,Round 23,2015-09-05,Kardinia Park,Geelong,Adelaide,119,80,17,11,17,14
+2015,192,Round 23,2015-09-05,Gabba,Brisbane Lions,Western Bulldogs,130,122,19,19,16,8
+2015,193,Round 23,2015-09-05,Adelaide Oval,Port Adelaide,Fremantle,122,53,18,8,14,5
+2015,194,Round 23,2015-09-05,MCG,Hawthorn,Carlton,113,56,17,8,11,8
+2015,195,Round 23,2015-09-05,SCG,Sydney,Gold Coast,127,64,19,9,13,10
+2015,196,Round 23,2015-09-05,Subiaco Oval,West Coast,St Kilda,125,30,18,4,17,6
+2015,197,Round 23,2015-09-06,Docklands Stadium,Melbourne,Greater Western Sydney,103,77,15,11,13,11
+2015,198,Round 23,2015-09-06,MCG,Collingwood,Essendon,92,95,14,14,8,11

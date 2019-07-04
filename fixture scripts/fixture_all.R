@@ -6,7 +6,7 @@ afl_fixture_all <- map_dfr(
     2014:2019, 
     ~ read_csv(
         paste0(wd, "/fixtures/afl_fixture_", .x, ".csv"),
-        col_types = "cicDcccii"
+        col_types = "cicDccciiiiii"
     )
 )
 

@@ -33,8 +33,12 @@ afl_fixture_2019 <- fixture_raw_2019 %>%
            away_team = away_team %>% str_remove(" [:digit:].*") %>% str_trim(),
            venue = venue %>% str_remove(" [(].*"),
            home_score = NA,
-           away_score = NA) %>% 
-    select(season, match_id, round, date, venue, home_team:away_score) 
+           away_score = NA,
+           home_goals = NA,
+           away_goals = NA,
+           home_behinds = NA,
+           away_behinds = NA) %>% 
+    select(season, match_id, round, date, venue, home_team:away_behinds) 
 
 afl_fixture_2019 <- afl_fixture_2019 %>% 
     mutate(
@@ -88,8 +92,8 @@ afl_venues_2019 <- afl_venues_2019 %>%
     select(year, everything())
 
 afl_fixture_2019 %>% 
-    write.csv(file = "afl_fixture_2019.csv", row.names = F)
+    write_csv(here::here("fixtures", "afl_fixture_2019.csv"))
 
 afl_venues_2019 %>% 
     unnest() %>% 
-    write.csv(file = "afl_venues_2019.csv", row.names = F)
+    write_csv(here::here("venues", "afl_venues_2019.csv"))

@@ -1,199 +1,199 @@
-"season","match_id","round","date","venue","home_team","away_team","home_score","away_score"
-"2018",1,"Round 1",2018-03-22,"MCG","Richmond","Carlton",121,95
-"2018",2,"Round 1",2018-03-23,"Docklands Stadium","Essendon","Adelaide",99,87
-"2018",3,"Round 1",2018-03-24,"Docklands Stadium","St Kilda","Brisbane Lions",107,82
-"2018",4,"Round 1",2018-03-24,"Adelaide Oval","Port Adelaide","Fremantle",110,60
-"2018",5,"Round 1",2018-03-24,"Cazaly's Stadium","Gold Coast","North Melbourne",55,39
-"2018",6,"Round 1",2018-03-24,"MCG","Hawthorn","Collingwood",101,67
-"2018",7,"Round 1",2018-03-25,"Manuka Oval","Greater Western Sydney","Western Bulldogs",133,51
-"2018",8,"Round 1",2018-03-25,"MCG","Melbourne","Geelong",94,97
-"2018",9,"Round 1",2018-03-25,"Perth Stadium","West Coast","Sydney",86,115
-"2018",10,"Round 2",2018-03-29,"Adelaide Oval","Adelaide","Richmond",118,82
-"2018",11,"Round 2",2018-03-30,"Docklands Stadium","North Melbourne","St Kilda",95,43
-"2018",12,"Round 2",2018-03-31,"Docklands Stadium","Carlton","Gold Coast",67,101
-"2018",13,"Round 2",2018-03-31,"MCG","Collingwood","Greater Western Sydney",79,95
-"2018",14,"Round 2",2018-03-31,"Gabba","Brisbane Lions","Melbourne",74,100
-"2018",15,"Round 2",2018-03-31,"Perth Stadium","Fremantle","Essendon",106,90
-"2018",16,"Round 2",2018-04-01,"Docklands Stadium","Western Bulldogs","West Coast",70,121
-"2018",17,"Round 2",2018-04-01,"SCG","Sydney","Port Adelaide",71,94
-"2018",18,"Round 2",2018-04-02,"MCG","Geelong","Hawthorn",117,118
-"2018",19,"Round 3",2018-04-06,"MCG","Carlton","Collingwood",76,100
-"2018",20,"Round 3",2018-04-07,"Adelaide Oval","Port Adelaide","Brisbane Lions",97,92
-"2018",21,"Round 3",2018-04-07,"MCG","Melbourne","North Melbourne",123,86
-"2018",22,"Round 3",2018-04-07,"Perth Stadium","Gold Coast","Fremantle",68,96
-"2018",23,"Round 3",2018-04-07,"SCG","Sydney","Greater Western Sydney",103,87
-"2018",24,"Round 3",2018-04-07,"Docklands Stadium","St Kilda","Adelaide",55,104
-"2018",25,"Round 3",2018-04-08,"MCG","Richmond","Hawthorn",102,89
-"2018",26,"Round 3",2018-04-08,"Docklands Stadium","Western Bulldogs","Essendon",104,83
-"2018",27,"Round 3",2018-04-08,"Perth Stadium","West Coast","Geelong",95,80
-"2018",28,"Round 4",2018-04-13,"Adelaide Oval","Adelaide","Collingwood",58,106
-"2018",29,"Round 4",2018-04-14,"Manuka Oval","Greater Western Sydney","Fremantle",82,51
-"2018",30,"Round 4",2018-04-14,"MCG","Richmond","Brisbane Lions",110,17
-"2018",31,"Round 4",2018-04-14,"Docklands Stadium","Western Bulldogs","Sydney",79,86
-"2018",32,"Round 4",2018-04-14,"Bellerive Oval","North Melbourne","Carlton",116,30
-"2018",33,"Round 4",2018-04-14,"Perth Stadium","West Coast","Gold Coast",139,59
-"2018",34,"Round 4",2018-04-15,"Docklands Stadium","Essendon","Port Adelaide",106,84
-"2018",35,"Round 4",2018-04-15,"MCG","Hawthorn","Melbourne",115,48
-"2018",36,"Round 4",2018-04-15,"Kardinia Park","Geelong","St Kilda",103,56
-"2018",37,"Round 5",2018-04-20,"SCG","Sydney","Adelaide",75,85
-"2018",38,"Round 5",2018-04-21,"Docklands Stadium","St Kilda","Greater Western Sydney",73,73
-"2018",39,"Round 5",2018-04-21,"MCG","Carlton","West Coast",69,79
-"2018",40,"Round 5",2018-04-21,"Adelaide Oval","Port Adelaide","Geelong",50,84
-"2018",41,"Round 5",2018-04-21,"Perth Stadium","Fremantle","Western Bulldogs",108,54
-"2018",42,"Round 5",2018-04-22,"Docklands Stadium","North Melbourne","Hawthorn",98,70
-"2018",43,"Round 5",2018-04-22,"Gabba","Brisbane Lions","Gold Coast",71,76
-"2018",44,"Round 5",2018-04-24,"MCG","Melbourne","Richmond",56,102
-"2018",45,"Round 5",2018-04-25,"MCG","Collingwood","Essendon",101,52
-"2018",46,"Round 6",2018-04-27,"Docklands Stadium","Western Bulldogs","Carlton",80,59
-"2018",47,"Round 6",2018-04-28,"Kardinia Park","Geelong","Sydney",69,86
-"2018",48,"Round 6",2018-04-28,"Docklands Stadium","North Melbourne","Port Adelaide",69,102
-"2018",49,"Round 6",2018-04-28,"Sydney Showground Stadium","Greater Western Sydney","Brisbane Lions",77,43
-"2018",50,"Round 6",2018-04-28,"York Park","Hawthorn","St Kilda",89,54
-"2018",51,"Round 6",2018-04-28,"Adelaide Oval","Adelaide","Gold Coast",110,62
-"2018",52,"Round 6",2018-04-29,"Docklands Stadium","Essendon","Melbourne",72,108
-"2018",53,"Round 6",2018-04-29,"MCG","Collingwood","Richmond",70,113
-"2018",54,"Round 6",2018-04-29,"Perth Stadium","Fremantle","West Coast",81,89
-"2018",55,"Round 7",2018-05-04,"Kardinia Park","Geelong","Greater Western Sydney",93,32
-"2018",56,"Round 7",2018-05-05,"Eureka Stadium","Western Bulldogs","Gold Coast",81,72
-"2018",57,"Round 7",2018-05-05,"MCG","Essendon","Hawthorn",67,90
-"2018",58,"Round 7",2018-05-05,"Perth Stadium","West Coast","Port Adelaide",102,60
-"2018",59,"Round 7",2018-05-05,"SCG","Sydney","North Melbourne",66,68
-"2018",60,"Round 7",2018-05-05,"Adelaide Oval","Adelaide","Carlton",125,70
-"2018",61,"Round 7",2018-05-06,"MCG","Richmond","Fremantle",110,33
-"2018",62,"Round 7",2018-05-06,"Docklands Stadium","St Kilda","Melbourne",67,106
-"2018",63,"Round 7",2018-05-06,"Gabba","Brisbane Lions","Collingwood",114,121
-"2018",64,"Round 8",2018-05-11,"MCG","Hawthorn","Sydney",71,79
-"2018",65,"Round 8",2018-05-12,"Sydney Showground Stadium","Greater Western Sydney","West Coast",61,86
-"2018",66,"Round 8",2018-05-12,"MCG","Carlton","Essendon",91,78
-"2018",67,"Round 8",2018-05-12,"Gabba","Gold Coast","Melbourne",77,146
-"2018",68,"Round 8",2018-05-12,"Adelaide Oval","Port Adelaide","Adelaide",95,90
-"2018",69,"Round 8",2018-05-12,"Docklands Stadium","Western Bulldogs","Brisbane Lions",107,93
-"2018",70,"Round 8",2018-05-12,"Perth Stadium","Fremantle","St Kilda",89,59
-"2018",71,"Round 8",2018-05-13,"Docklands Stadium","North Melbourne","Richmond",72,82
-"2018",72,"Round 8",2018-05-13,"MCG","Collingwood","Geelong",45,66
-"2018",73,"Round 9",2018-05-18,"Adelaide Oval","Adelaide","Western Bulldogs",63,26
-"2018",74,"Round 9",2018-05-19,"Bellerive Oval","North Melbourne","Greater Western Sydney",112,69
-"2018",75,"Round 9",2018-05-19,"Jiangwan Stadium","Gold Coast","Port Adelaide",42,82
-"2018",76,"Round 9",2018-05-19,"MCG","Essendon","Geelong",84,50
-"2018",77,"Round 9",2018-05-19,"SCG","Sydney","Fremantle",111,52
-"2018",78,"Round 9",2018-05-19,"Docklands Stadium","St Kilda","Collingwood",72,100
-"2018",79,"Round 9",2018-05-20,"MCG","Carlton","Melbourne",50,159
-"2018",80,"Round 9",2018-05-20,"Gabba","Brisbane Lions","Hawthorn",129,73
-"2018",81,"Round 9",2018-05-20,"Perth Stadium","West Coast","Richmond",130,83
-"2018",82,"Round 10",2018-05-25,"Docklands Stadium","Collingwood","Western Bulldogs",90,55
-"2018",83,"Round 10",2018-05-26,"MCG","Richmond","St Kilda",105,77
-"2018",84,"Round 10",2018-05-26,"Gabba","Brisbane Lions","Sydney",49,67
-"2018",85,"Round 10",2018-05-26,"Kardinia Park","Geelong","Carlton",73,45
-"2018",86,"Round 10",2018-05-26,"Sydney Showground Stadium","Greater Western Sydney","Essendon",60,95
-"2018",87,"Round 10",2018-05-27,"Docklands Stadium","Hawthorn","West Coast",60,75
-"2018",88,"Round 10",2018-05-27,"Traeger Park","Melbourne","Adelaide",146,55
-"2018",89,"Round 10",2018-05-27,"Perth Stadium","Fremantle","North Melbourne",58,86
-"2018",90,"Round 11",2018-06-01,"SCG","Sydney","Carlton",91,61
-"2018",91,"Round 11",2018-06-02,"Docklands Stadium","Western Bulldogs","Melbourne",51,100
-"2018",92,"Round 11",2018-06-02,"York Park","Hawthorn","Port Adelaide",64,61
-"2018",93,"Round 11",2018-06-02,"Carrara Stadium","Gold Coast","Geelong",36,121
-"2018",94,"Round 11",2018-06-02,"MCG","Essendon","Richmond",43,114
-"2018",95,"Round 11",2018-06-02,"Perth Stadium","West Coast","St Kilda",101,88
-"2018",96,"Round 11",2018-06-03,"Docklands Stadium","North Melbourne","Brisbane Lions",141,87
-"2018",97,"Round 11",2018-06-03,"MCG","Collingwood","Fremantle",138,77
-"2018",98,"Round 11",2018-06-03,"Adelaide Oval","Adelaide","Greater Western Sydney",81,97
-"2018",99,"Round 12",2018-06-08,"Adelaide Oval","Port Adelaide","Richmond",72,58
-"2018",100,"Round 12",2018-06-09,"Kardinia Park","Geelong","North Melbourne",96,59
-"2018",101,"Round 12",2018-06-09,"Sydney Showground Stadium","Greater Western Sydney","Gold Coast",134,26
-"2018",102,"Round 12",2018-06-09,"Docklands Stadium","St Kilda","Sydney",55,126
-"2018",103,"Round 12",2018-06-10,"Gabba","Brisbane Lions","Essendon",62,84
-"2018",104,"Round 12",2018-06-10,"Perth Stadium","Fremantle","Adelaide",71,68
-"2018",105,"Round 12",2018-06-11,"MCG","Melbourne","Collingwood",91,133
-"2018",106,"Round 13",2018-06-14,"Adelaide Oval","Port Adelaide","Western Bulldogs",132,75
-"2018",107,"Round 13",2018-06-15,"SCG","Sydney","West Coast",72,57
-"2018",108,"Round 13",2018-06-16,"Docklands Stadium","Carlton","Fremantle",46,103
-"2018",109,"Round 13",2018-06-16,"Carrara Stadium","Gold Coast","St Kilda",78,80
-"2018",110,"Round 13",2018-06-16,"MCG","Hawthorn","Adelaide",88,32
-"2018",111,"Round 13",2018-06-17,"MCG","Geelong","Richmond",65,83
-"2018",112,"Round 14",2018-06-21,"Perth Stadium","West Coast","Essendon",52,80
-"2018",113,"Round 14",2018-06-22,"Adelaide Oval","Port Adelaide","Melbourne",75,65
-"2018",114,"Round 14",2018-06-23,"York Park","Hawthorn","Gold Coast",96,43
-"2018",115,"Round 14",2018-06-23,"Gabba","Brisbane Lions","Greater Western Sydney",82,109
-"2018",116,"Round 14",2018-06-23,"Docklands Stadium","Western Bulldogs","North Melbourne",75,77
-"2018",117,"Round 14",2018-06-24,"MCG","Collingwood","Carlton",79,59
-"2018",118,"Round 15",2018-06-28,"Docklands Stadium","Richmond","Sydney",93,67
-"2018",119,"Round 15",2018-06-29,"Docklands Stadium","Western Bulldogs","Geelong",103,101
-"2018",120,"Round 15",2018-06-30,"MCG","Carlton","Port Adelaide",69,90
-"2018",121,"Round 15",2018-06-30,"Adelaide Oval","Adelaide","West Coast",88,78
-"2018",122,"Round 15",2018-06-30,"Carrara Stadium","Gold Coast","Collingwood",60,99
-"2018",123,"Round 15",2018-06-30,"Sydney Showground Stadium","Greater Western Sydney","Hawthorn",95,84
-"2018",124,"Round 15",2018-07-01,"MCG","Melbourne","St Kilda",117,119
-"2018",125,"Round 15",2018-07-01,"Docklands Stadium","Essendon","North Melbourne",125,108
-"2018",126,"Round 15",2018-07-01,"Perth Stadium","Fremantle","Brisbane Lions",64,119
-"2018",127,"Round 16",2018-07-05,"SCG","Sydney","Geelong",59,71
-"2018",128,"Round 16",2018-07-06,"MCG","Richmond","Adelaide",103,56
-"2018",129,"Round 16",2018-07-07,"Gabba","Brisbane Lions","Carlton",120,55
-"2018",130,"Round 16",2018-07-07,"Adelaide Oval","Port Adelaide","St Kilda",86,50
-"2018",131,"Round 16",2018-07-07,"Docklands Stadium","Western Bulldogs","Hawthorn",59,122
-"2018",132,"Round 16",2018-07-07,"Marrara Oval","Melbourne","Fremantle",102,48
-"2018",133,"Round 16",2018-07-08,"Docklands Stadium","North Melbourne","Gold Coast",95,58
-"2018",134,"Round 16",2018-07-08,"MCG","Essendon","Collingwood",62,78
-"2018",135,"Round 16",2018-07-08,"Perth Stadium","West Coast","Greater Western Sydney",86,75
-"2018",136,"Round 17",2018-07-12,"Adelaide Oval","Adelaide","Geelong",112,97
-"2018",137,"Round 17",2018-07-13,"Docklands Stadium","St Kilda","Carlton",116,52
-"2018",138,"Round 17",2018-07-14,"York Park","Hawthorn","Brisbane Lions",65,98
-"2018",139,"Round 17",2018-07-14,"MCG","Melbourne","Western Bulldogs",119,69
-"2018",140,"Round 17",2018-07-14,"Carrara Stadium","Gold Coast","Essendon",51,95
-"2018",141,"Round 17",2018-07-14,"Sydney Showground Stadium","Greater Western Sydney","Richmond",79,77
-"2018",142,"Round 17",2018-07-15,"MCG","Collingwood","West Coast",67,102
-"2018",143,"Round 17",2018-07-15,"Docklands Stadium","North Melbourne","Sydney",98,104
-"2018",144,"Round 17",2018-07-15,"Perth Stadium","Fremantle","Port Adelaide",59,50
-"2018",145,"Round 18",2018-07-20,"Docklands Stadium","St Kilda","Richmond",57,111
-"2018",146,"Round 18",2018-07-21,"MCG","Collingwood","North Melbourne",130,64
-"2018",147,"Round 18",2018-07-21,"SCG","Sydney","Gold Coast",64,88
-"2018",148,"Round 18",2018-07-21,"Docklands Stadium","Essendon","Fremantle",99,70
-"2018",149,"Round 18",2018-07-21,"Gabba","Brisbane Lions","Adelaide",88,93
-"2018",150,"Round 18",2018-07-21,"Kardinia Park","Geelong","Melbourne",100,98
-"2018",151,"Round 18",2018-07-22,"Docklands Stadium","Carlton","Hawthorn",52,124
-"2018",152,"Round 18",2018-07-22,"Perth Stadium","West Coast","Western Bulldogs",100,46
-"2018",153,"Round 18",2018-07-22,"Adelaide Oval","Port Adelaide","Greater Western Sydney",58,80
-"2018",154,"Round 19",2018-07-27,"Docklands Stadium","Essendon","Sydney",109,66
-"2018",155,"Round 19",2018-07-28,"MCG","Richmond","Collingwood",105,77
-"2018",156,"Round 19",2018-07-28,"Kardinia Park","Geelong","Brisbane Lions",120,78
-"2018",157,"Round 19",2018-07-28,"Sydney Showground Stadium","Greater Western Sydney","St Kilda",86,61
-"2018",158,"Round 19",2018-07-28,"Carrara Stadium","Gold Coast","Carlton",44,79
-"2018",159,"Round 19",2018-07-28,"Adelaide Oval","Adelaide","Melbourne",77,90
-"2018",160,"Round 19",2018-07-29,"Bellerive Oval","North Melbourne","West Coast",81,41
-"2018",161,"Round 19",2018-07-29,"Eureka Stadium","Western Bulldogs","Port Adelaide",34,78
-"2018",162,"Round 19",2018-07-29,"Perth Stadium","Fremantle","Hawthorn",53,112
-"2018",163,"Round 20",2018-08-03,"MCG","Richmond","Geelong",85,82
-"2018",164,"Round 20",2018-08-04,"MCG","Hawthorn","Essendon",107,103
-"2018",165,"Round 20",2018-08-04,"Gabba","Brisbane Lions","North Melbourne",104,107
-"2018",166,"Round 20",2018-08-04,"Adelaide Oval","Adelaide","Port Adelaide",96,93
-"2018",167,"Round 20",2018-08-04,"Docklands Stadium","St Kilda","Western Bulldogs",68,103
-"2018",168,"Round 20",2018-08-04,"SCG","Sydney","Collingwood",73,71
-"2018",169,"Round 20",2018-08-05,"Docklands Stadium","Carlton","Greater Western Sydney",46,151
-"2018",170,"Round 20",2018-08-05,"MCG","Melbourne","Gold Coast",143,47
-"2018",171,"Round 20",2018-08-05,"Perth Stadium","West Coast","Fremantle",142,84
-"2018",172,"Round 21",2018-08-10,"Docklands Stadium","Essendon","St Kilda",122,79
-"2018",173,"Round 21",2018-08-11,"MCG","Hawthorn","Geelong",71,60
-"2018",174,"Round 21",2018-08-11,"Carrara Stadium","Gold Coast","Richmond",51,125
-"2018",175,"Round 21",2018-08-11,"Adelaide Oval","Port Adelaide","West Coast",58,62
-"2018",176,"Round 21",2018-08-11,"Docklands Stadium","Collingwood","Brisbane Lions",104,73
-"2018",177,"Round 21",2018-08-11,"Manuka Oval","Greater Western Sydney","Adelaide",106,92
-"2018",178,"Round 21",2018-08-12,"Docklands Stadium","North Melbourne","Western Bulldogs",85,92
-"2018",179,"Round 21",2018-08-12,"MCG","Melbourne","Sydney",78,87
-"2018",180,"Round 21",2018-08-12,"Perth Stadium","Fremantle","Carlton",101,72
-"2018",181,"Round 22",2018-08-17,"MCG","Richmond","Essendon",81,73
-"2018",182,"Round 22",2018-08-18,"MCG","Collingwood","Port Adelaide",115,64
-"2018",183,"Round 22",2018-08-18,"Kardinia Park","Geelong","Fremantle",158,25
-"2018",184,"Round 22",2018-08-18,"Sydney Showground Stadium","Greater Western Sydney","Sydney",60,80
-"2018",185,"Round 22",2018-08-18,"Carrara Stadium","Gold Coast","Brisbane Lions",74,78
-"2018",186,"Round 22",2018-08-18,"Docklands Stadium","St Kilda","Hawthorn",76,80
-"2018",187,"Round 22",2018-08-19,"Docklands Stadium","Carlton","Western Bulldogs",49,66
-"2018",188,"Round 22",2018-08-19,"Perth Stadium","West Coast","Melbourne",91,108
-"2018",189,"Round 22",2018-08-19,"Adelaide Oval","Adelaide","North Melbourne",86,77
-"2018",190,"Round 23",2018-08-24,"Adelaide Oval","Port Adelaide","Essendon",89,111
-"2018",191,"Round 23",2018-08-25,"Kardinia Park","Geelong","Gold Coast",142,40
-"2018",192,"Round 23",2018-08-25,"MCG","Richmond","Western Bulldogs",98,95
-"2018",193,"Round 23",2018-08-25,"Perth Stadium","Fremantle","Collingwood",67,76
-"2018",194,"Round 23",2018-08-25,"Docklands Stadium","Carlton","Adelaide",61,165
-"2018",195,"Round 23",2018-08-25,"SCG","Sydney","Hawthorn",74,83
-"2018",196,"Round 23",2018-08-26,"Gabba","Brisbane Lions","West Coast",72,98
-"2018",197,"Round 23",2018-08-26,"MCG","Melbourne","Greater Western Sydney",102,57
-"2018",198,"Round 23",2018-08-26,"Docklands Stadium","St Kilda","North Melbourne",94,117
+season,match_id,round,date,venue,home_team,away_team,home_score,away_score,home_goals,away_goals,home_behinds,away_behinds
+2018,1,Round 1,2018-03-22,MCG,Richmond,Carlton,121,95,17,15,19,5
+2018,2,Round 1,2018-03-23,Docklands Stadium,Essendon,Adelaide,99,87,14,12,15,15
+2018,3,Round 1,2018-03-24,Docklands Stadium,St Kilda,Brisbane Lions,107,82,16,12,11,10
+2018,4,Round 1,2018-03-24,Adelaide Oval,Port Adelaide,Fremantle,110,60,16,9,14,6
+2018,5,Round 1,2018-03-24,Cazaly's Stadium,Gold Coast,North Melbourne,55,39,7,5,13,9
+2018,6,Round 1,2018-03-24,MCG,Hawthorn,Collingwood,101,67,15,9,11,13
+2018,7,Round 1,2018-03-25,Manuka Oval,Greater Western Sydney,Western Bulldogs,133,51,20,7,13,9
+2018,8,Round 1,2018-03-25,MCG,Melbourne,Geelong,94,97,13,14,16,13
+2018,9,Round 1,2018-03-25,Perth Stadium,West Coast,Sydney,86,115,13,18,8,7
+2018,10,Round 2,2018-03-29,Adelaide Oval,Adelaide,Richmond,118,82,18,12,10,10
+2018,11,Round 2,2018-03-30,Docklands Stadium,North Melbourne,St Kilda,95,43,13,5,17,13
+2018,12,Round 2,2018-03-31,Docklands Stadium,Carlton,Gold Coast,67,101,9,15,13,11
+2018,13,Round 2,2018-03-31,MCG,Collingwood,Greater Western Sydney,79,95,12,15,7,5
+2018,14,Round 2,2018-03-31,Gabba,Brisbane Lions,Melbourne,74,100,10,14,14,16
+2018,15,Round 2,2018-03-31,Perth Stadium,Fremantle,Essendon,106,90,16,14,10,6
+2018,16,Round 2,2018-04-01,Docklands Stadium,Western Bulldogs,West Coast,70,121,9,18,16,13
+2018,17,Round 2,2018-04-01,SCG,Sydney,Port Adelaide,71,94,10,14,11,10
+2018,18,Round 2,2018-04-02,MCG,Geelong,Hawthorn,117,118,18,17,9,16
+2018,19,Round 3,2018-04-06,MCG,Carlton,Collingwood,76,100,11,16,10,4
+2018,20,Round 3,2018-04-07,Adelaide Oval,Port Adelaide,Brisbane Lions,97,92,14,14,13,8
+2018,21,Round 3,2018-04-07,MCG,Melbourne,North Melbourne,123,86,18,13,15,8
+2018,22,Round 3,2018-04-07,Perth Stadium,Gold Coast,Fremantle,68,96,10,13,8,18
+2018,23,Round 3,2018-04-07,SCG,Sydney,Greater Western Sydney,103,87,16,12,7,15
+2018,24,Round 3,2018-04-07,Docklands Stadium,St Kilda,Adelaide,55,104,7,15,13,14
+2018,25,Round 3,2018-04-08,MCG,Richmond,Hawthorn,102,89,15,13,12,11
+2018,26,Round 3,2018-04-08,Docklands Stadium,Western Bulldogs,Essendon,104,83,14,12,20,11
+2018,27,Round 3,2018-04-08,Perth Stadium,West Coast,Geelong,95,80,14,11,11,14
+2018,28,Round 4,2018-04-13,Adelaide Oval,Adelaide,Collingwood,58,106,9,16,4,10
+2018,29,Round 4,2018-04-14,Manuka Oval,Greater Western Sydney,Fremantle,82,51,11,7,16,9
+2018,30,Round 4,2018-04-14,MCG,Richmond,Brisbane Lions,110,17,16,2,14,5
+2018,31,Round 4,2018-04-14,Docklands Stadium,Western Bulldogs,Sydney,79,86,11,13,13,8
+2018,32,Round 4,2018-04-14,Bellerive Oval,North Melbourne,Carlton,116,30,18,4,8,6
+2018,33,Round 4,2018-04-14,Perth Stadium,West Coast,Gold Coast,139,59,21,9,13,5
+2018,34,Round 4,2018-04-15,Docklands Stadium,Essendon,Port Adelaide,106,84,16,12,10,12
+2018,35,Round 4,2018-04-15,MCG,Hawthorn,Melbourne,115,48,18,6,7,12
+2018,36,Round 4,2018-04-15,Kardinia Park,Geelong,St Kilda,103,56,15,7,13,14
+2018,37,Round 5,2018-04-20,SCG,Sydney,Adelaide,75,85,10,12,15,13
+2018,38,Round 5,2018-04-21,Docklands Stadium,St Kilda,Greater Western Sydney,73,73,10,9,13,19
+2018,39,Round 5,2018-04-21,MCG,Carlton,West Coast,69,79,10,10,9,19
+2018,40,Round 5,2018-04-21,Adelaide Oval,Port Adelaide,Geelong,50,84,7,12,8,12
+2018,41,Round 5,2018-04-21,Perth Stadium,Fremantle,Western Bulldogs,108,54,16,8,12,6
+2018,42,Round 5,2018-04-22,Docklands Stadium,North Melbourne,Hawthorn,98,70,14,11,14,4
+2018,43,Round 5,2018-04-22,Gabba,Brisbane Lions,Gold Coast,71,76,10,11,11,10
+2018,44,Round 5,2018-04-24,MCG,Melbourne,Richmond,56,102,8,15,8,12
+2018,45,Round 5,2018-04-25,MCG,Collingwood,Essendon,101,52,14,7,17,10
+2018,46,Round 6,2018-04-27,Docklands Stadium,Western Bulldogs,Carlton,80,59,11,8,14,11
+2018,47,Round 6,2018-04-28,Kardinia Park,Geelong,Sydney,69,86,10,12,9,14
+2018,48,Round 6,2018-04-28,Docklands Stadium,North Melbourne,Port Adelaide,69,102,10,15,9,12
+2018,49,Round 6,2018-04-28,Sydney Showground Stadium,Greater Western Sydney,Brisbane Lions,77,43,10,5,17,13
+2018,50,Round 6,2018-04-28,York Park,Hawthorn,St Kilda,89,54,13,7,11,12
+2018,51,Round 6,2018-04-28,Adelaide Oval,Adelaide,Gold Coast,110,62,16,9,14,8
+2018,52,Round 6,2018-04-29,Docklands Stadium,Essendon,Melbourne,72,108,10,16,12,12
+2018,53,Round 6,2018-04-29,MCG,Collingwood,Richmond,70,113,10,16,10,17
+2018,54,Round 6,2018-04-29,Perth Stadium,Fremantle,West Coast,81,89,12,13,9,11
+2018,55,Round 7,2018-05-04,Kardinia Park,Geelong,Greater Western Sydney,93,32,14,4,9,8
+2018,56,Round 7,2018-05-05,Eureka Stadium,Western Bulldogs,Gold Coast,81,72,11,10,15,12
+2018,57,Round 7,2018-05-05,MCG,Essendon,Hawthorn,67,90,10,13,7,12
+2018,58,Round 7,2018-05-05,Perth Stadium,West Coast,Port Adelaide,102,60,16,9,6,6
+2018,59,Round 7,2018-05-05,SCG,Sydney,North Melbourne,66,68,9,9,12,14
+2018,60,Round 7,2018-05-05,Adelaide Oval,Adelaide,Carlton,125,70,19,10,11,10
+2018,61,Round 7,2018-05-06,MCG,Richmond,Fremantle,110,33,15,4,20,9
+2018,62,Round 7,2018-05-06,Docklands Stadium,St Kilda,Melbourne,67,106,9,16,13,10
+2018,63,Round 7,2018-05-06,Gabba,Brisbane Lions,Collingwood,114,121,18,19,6,7
+2018,64,Round 8,2018-05-11,MCG,Hawthorn,Sydney,71,79,10,12,11,7
+2018,65,Round 8,2018-05-12,Sydney Showground Stadium,Greater Western Sydney,West Coast,61,86,8,12,13,14
+2018,66,Round 8,2018-05-12,MCG,Carlton,Essendon,91,78,14,10,7,18
+2018,67,Round 8,2018-05-12,Gabba,Gold Coast,Melbourne,77,146,11,21,11,20
+2018,68,Round 8,2018-05-12,Adelaide Oval,Port Adelaide,Adelaide,95,90,14,14,11,6
+2018,69,Round 8,2018-05-12,Docklands Stadium,Western Bulldogs,Brisbane Lions,107,93,16,14,11,9
+2018,70,Round 8,2018-05-12,Perth Stadium,Fremantle,St Kilda,89,59,13,8,11,11
+2018,71,Round 8,2018-05-13,Docklands Stadium,North Melbourne,Richmond,72,82,11,12,6,10
+2018,72,Round 8,2018-05-13,MCG,Collingwood,Geelong,45,66,5,9,15,12
+2018,73,Round 9,2018-05-18,Adelaide Oval,Adelaide,Western Bulldogs,63,26,9,2,9,14
+2018,74,Round 9,2018-05-19,Bellerive Oval,North Melbourne,Greater Western Sydney,112,69,17,9,10,15
+2018,75,Round 9,2018-05-19,Jiangwan Stadium,Gold Coast,Port Adelaide,42,82,6,11,6,16
+2018,76,Round 9,2018-05-19,MCG,Essendon,Geelong,84,50,12,7,12,8
+2018,77,Round 9,2018-05-19,SCG,Sydney,Fremantle,111,52,17,7,9,10
+2018,78,Round 9,2018-05-19,Docklands Stadium,St Kilda,Collingwood,72,100,10,15,12,10
+2018,79,Round 9,2018-05-20,MCG,Carlton,Melbourne,50,159,7,25,8,9
+2018,80,Round 9,2018-05-20,Gabba,Brisbane Lions,Hawthorn,129,73,20,11,9,7
+2018,81,Round 9,2018-05-20,Perth Stadium,West Coast,Richmond,130,83,20,12,10,11
+2018,82,Round 10,2018-05-25,Docklands Stadium,Collingwood,Western Bulldogs,90,55,13,8,12,7
+2018,83,Round 10,2018-05-26,MCG,Richmond,St Kilda,105,77,15,12,15,5
+2018,84,Round 10,2018-05-26,Gabba,Brisbane Lions,Sydney,49,67,6,10,13,7
+2018,85,Round 10,2018-05-26,Kardinia Park,Geelong,Carlton,73,45,11,5,7,15
+2018,86,Round 10,2018-05-26,Sydney Showground Stadium,Greater Western Sydney,Essendon,60,95,8,14,12,11
+2018,87,Round 10,2018-05-27,Docklands Stadium,Hawthorn,West Coast,60,75,9,11,6,9
+2018,88,Round 10,2018-05-27,Traeger Park,Melbourne,Adelaide,146,55,23,8,8,7
+2018,89,Round 10,2018-05-27,Perth Stadium,Fremantle,North Melbourne,58,86,8,12,10,14
+2018,90,Round 11,2018-06-01,SCG,Sydney,Carlton,91,61,13,9,13,7
+2018,91,Round 11,2018-06-02,Docklands Stadium,Western Bulldogs,Melbourne,51,100,7,15,9,10
+2018,92,Round 11,2018-06-02,York Park,Hawthorn,Port Adelaide,64,61,9,9,10,7
+2018,93,Round 11,2018-06-02,Carrara Stadium,Gold Coast,Geelong,36,121,4,17,12,19
+2018,94,Round 11,2018-06-02,MCG,Essendon,Richmond,43,114,6,17,7,12
+2018,95,Round 11,2018-06-02,Perth Stadium,West Coast,St Kilda,101,88,16,14,5,4
+2018,96,Round 11,2018-06-03,Docklands Stadium,North Melbourne,Brisbane Lions,141,87,21,12,15,15
+2018,97,Round 11,2018-06-03,MCG,Collingwood,Fremantle,138,77,21,12,12,5
+2018,98,Round 11,2018-06-03,Adelaide Oval,Adelaide,Greater Western Sydney,81,97,11,14,15,13
+2018,99,Round 12,2018-06-08,Adelaide Oval,Port Adelaide,Richmond,72,58,10,8,12,10
+2018,100,Round 12,2018-06-09,Kardinia Park,Geelong,North Melbourne,96,59,14,8,12,11
+2018,101,Round 12,2018-06-09,Sydney Showground Stadium,Greater Western Sydney,Gold Coast,134,26,20,4,14,2
+2018,102,Round 12,2018-06-09,Docklands Stadium,St Kilda,Sydney,55,126,7,19,13,12
+2018,103,Round 12,2018-06-10,Gabba,Brisbane Lions,Essendon,62,84,8,12,14,12
+2018,104,Round 12,2018-06-10,Perth Stadium,Fremantle,Adelaide,71,68,10,9,11,14
+2018,105,Round 12,2018-06-11,MCG,Melbourne,Collingwood,91,133,14,20,7,13
+2018,106,Round 13,2018-06-14,Adelaide Oval,Port Adelaide,Western Bulldogs,132,75,20,11,12,9
+2018,107,Round 13,2018-06-15,SCG,Sydney,West Coast,72,57,10,7,12,15
+2018,108,Round 13,2018-06-16,Docklands Stadium,Carlton,Fremantle,46,103,6,15,10,13
+2018,109,Round 13,2018-06-16,Carrara Stadium,Gold Coast,St Kilda,78,80,11,11,12,14
+2018,110,Round 13,2018-06-16,MCG,Hawthorn,Adelaide,88,32,12,4,16,8
+2018,111,Round 13,2018-06-17,MCG,Geelong,Richmond,65,83,9,12,11,11
+2018,112,Round 14,2018-06-21,Perth Stadium,West Coast,Essendon,52,80,6,12,16,8
+2018,113,Round 14,2018-06-22,Adelaide Oval,Port Adelaide,Melbourne,75,65,11,9,9,11
+2018,114,Round 14,2018-06-23,York Park,Hawthorn,Gold Coast,96,43,13,5,18,13
+2018,115,Round 14,2018-06-23,Gabba,Brisbane Lions,Greater Western Sydney,82,109,12,16,10,13
+2018,116,Round 14,2018-06-23,Docklands Stadium,Western Bulldogs,North Melbourne,75,77,11,12,9,5
+2018,117,Round 14,2018-06-24,MCG,Collingwood,Carlton,79,59,11,9,13,5
+2018,118,Round 15,2018-06-28,Docklands Stadium,Richmond,Sydney,93,67,14,11,9,1
+2018,119,Round 15,2018-06-29,Docklands Stadium,Western Bulldogs,Geelong,103,101,16,15,7,11
+2018,120,Round 15,2018-06-30,MCG,Carlton,Port Adelaide,69,90,10,13,9,12
+2018,121,Round 15,2018-06-30,Adelaide Oval,Adelaide,West Coast,88,78,12,12,16,6
+2018,122,Round 15,2018-06-30,Carrara Stadium,Gold Coast,Collingwood,60,99,8,14,12,15
+2018,123,Round 15,2018-06-30,Sydney Showground Stadium,Greater Western Sydney,Hawthorn,95,84,13,13,17,6
+2018,124,Round 15,2018-07-01,MCG,Melbourne,St Kilda,117,119,18,18,9,11
+2018,125,Round 15,2018-07-01,Docklands Stadium,Essendon,North Melbourne,125,108,19,16,11,12
+2018,126,Round 15,2018-07-01,Perth Stadium,Fremantle,Brisbane Lions,64,119,9,18,10,11
+2018,127,Round 16,2018-07-05,SCG,Sydney,Geelong,59,71,9,8,5,23
+2018,128,Round 16,2018-07-06,MCG,Richmond,Adelaide,103,56,15,8,13,8
+2018,129,Round 16,2018-07-07,Gabba,Brisbane Lions,Carlton,120,55,18,7,12,13
+2018,130,Round 16,2018-07-07,Adelaide Oval,Port Adelaide,St Kilda,86,50,12,7,14,8
+2018,131,Round 16,2018-07-07,Docklands Stadium,Western Bulldogs,Hawthorn,59,122,9,19,5,8
+2018,132,Round 16,2018-07-07,Marrara Oval,Melbourne,Fremantle,102,48,13,7,24,6
+2018,133,Round 16,2018-07-08,Docklands Stadium,North Melbourne,Gold Coast,95,58,14,8,11,10
+2018,134,Round 16,2018-07-08,MCG,Essendon,Collingwood,62,78,9,12,8,6
+2018,135,Round 16,2018-07-08,Perth Stadium,West Coast,Greater Western Sydney,86,75,13,10,8,15
+2018,136,Round 17,2018-07-12,Adelaide Oval,Adelaide,Geelong,112,97,16,14,16,13
+2018,137,Round 17,2018-07-13,Docklands Stadium,St Kilda,Carlton,116,52,16,7,20,10
+2018,138,Round 17,2018-07-14,York Park,Hawthorn,Brisbane Lions,65,98,9,15,11,8
+2018,139,Round 17,2018-07-14,MCG,Melbourne,Western Bulldogs,119,69,18,10,11,9
+2018,140,Round 17,2018-07-14,Carrara Stadium,Gold Coast,Essendon,51,95,6,13,15,17
+2018,141,Round 17,2018-07-14,Sydney Showground Stadium,Greater Western Sydney,Richmond,79,77,11,10,13,17
+2018,142,Round 17,2018-07-15,MCG,Collingwood,West Coast,67,102,9,15,13,12
+2018,143,Round 17,2018-07-15,Docklands Stadium,North Melbourne,Sydney,98,104,15,16,8,8
+2018,144,Round 17,2018-07-15,Perth Stadium,Fremantle,Port Adelaide,59,50,8,7,11,8
+2018,145,Round 18,2018-07-20,Docklands Stadium,St Kilda,Richmond,57,111,8,16,9,15
+2018,146,Round 18,2018-07-21,MCG,Collingwood,North Melbourne,130,64,20,9,10,10
+2018,147,Round 18,2018-07-21,SCG,Sydney,Gold Coast,64,88,8,12,16,16
+2018,148,Round 18,2018-07-21,Docklands Stadium,Essendon,Fremantle,99,70,13,11,21,4
+2018,149,Round 18,2018-07-21,Gabba,Brisbane Lions,Adelaide,88,93,13,13,10,15
+2018,150,Round 18,2018-07-21,Kardinia Park,Geelong,Melbourne,100,98,16,14,4,14
+2018,151,Round 18,2018-07-22,Docklands Stadium,Carlton,Hawthorn,52,124,7,18,10,16
+2018,152,Round 18,2018-07-22,Perth Stadium,West Coast,Western Bulldogs,100,46,14,6,16,10
+2018,153,Round 18,2018-07-22,Adelaide Oval,Port Adelaide,Greater Western Sydney,58,80,8,11,10,14
+2018,154,Round 19,2018-07-27,Docklands Stadium,Essendon,Sydney,109,66,15,10,19,6
+2018,155,Round 19,2018-07-28,MCG,Richmond,Collingwood,105,77,16,12,9,5
+2018,156,Round 19,2018-07-28,Kardinia Park,Geelong,Brisbane Lions,120,78,18,11,12,12
+2018,157,Round 19,2018-07-28,Sydney Showground Stadium,Greater Western Sydney,St Kilda,86,61,13,8,8,13
+2018,158,Round 19,2018-07-28,Carrara Stadium,Gold Coast,Carlton,44,79,5,12,14,7
+2018,159,Round 19,2018-07-28,Adelaide Oval,Adelaide,Melbourne,77,90,10,13,17,12
+2018,160,Round 19,2018-07-29,Bellerive Oval,North Melbourne,West Coast,81,41,12,6,9,5
+2018,161,Round 19,2018-07-29,Eureka Stadium,Western Bulldogs,Port Adelaide,34,78,5,11,4,12
+2018,162,Round 19,2018-07-29,Perth Stadium,Fremantle,Hawthorn,53,112,7,17,11,10
+2018,163,Round 20,2018-08-03,MCG,Richmond,Geelong,85,82,12,12,13,10
+2018,164,Round 20,2018-08-04,MCG,Hawthorn,Essendon,107,103,16,16,11,7
+2018,165,Round 20,2018-08-04,Gabba,Brisbane Lions,North Melbourne,104,107,16,16,8,11
+2018,166,Round 20,2018-08-04,Adelaide Oval,Adelaide,Port Adelaide,96,93,13,14,18,9
+2018,167,Round 20,2018-08-04,Docklands Stadium,St Kilda,Western Bulldogs,68,103,9,15,14,13
+2018,168,Round 20,2018-08-04,SCG,Sydney,Collingwood,73,71,11,10,7,11
+2018,169,Round 20,2018-08-05,Docklands Stadium,Carlton,Greater Western Sydney,46,151,7,23,4,13
+2018,170,Round 20,2018-08-05,MCG,Melbourne,Gold Coast,143,47,21,7,17,5
+2018,171,Round 20,2018-08-05,Perth Stadium,West Coast,Fremantle,142,84,21,13,16,6
+2018,172,Round 21,2018-08-10,Docklands Stadium,Essendon,St Kilda,122,79,18,11,14,13
+2018,173,Round 21,2018-08-11,MCG,Hawthorn,Geelong,71,60,10,8,11,12
+2018,174,Round 21,2018-08-11,Carrara Stadium,Gold Coast,Richmond,51,125,7,19,9,11
+2018,175,Round 21,2018-08-11,Adelaide Oval,Port Adelaide,West Coast,58,62,9,9,4,8
+2018,176,Round 21,2018-08-11,Docklands Stadium,Collingwood,Brisbane Lions,104,73,14,11,20,7
+2018,177,Round 21,2018-08-11,Manuka Oval,Greater Western Sydney,Adelaide,106,92,15,13,16,14
+2018,178,Round 21,2018-08-12,Docklands Stadium,North Melbourne,Western Bulldogs,85,92,12,13,13,14
+2018,179,Round 21,2018-08-12,MCG,Melbourne,Sydney,78,87,10,13,18,9
+2018,180,Round 21,2018-08-12,Perth Stadium,Fremantle,Carlton,101,72,15,10,11,12
+2018,181,Round 22,2018-08-17,MCG,Richmond,Essendon,81,73,12,11,9,7
+2018,182,Round 22,2018-08-18,MCG,Collingwood,Port Adelaide,115,64,17,10,13,4
+2018,183,Round 22,2018-08-18,Kardinia Park,Geelong,Fremantle,158,25,24,3,14,7
+2018,184,Round 22,2018-08-18,Sydney Showground Stadium,Greater Western Sydney,Sydney,60,80,8,11,12,14
+2018,185,Round 22,2018-08-18,Carrara Stadium,Gold Coast,Brisbane Lions,74,78,11,10,8,18
+2018,186,Round 22,2018-08-18,Docklands Stadium,St Kilda,Hawthorn,76,80,11,12,10,8
+2018,187,Round 22,2018-08-19,Docklands Stadium,Carlton,Western Bulldogs,49,66,7,10,7,6
+2018,188,Round 22,2018-08-19,Perth Stadium,West Coast,Melbourne,91,108,14,16,7,12
+2018,189,Round 22,2018-08-19,Adelaide Oval,Adelaide,North Melbourne,86,77,12,11,14,11
+2018,190,Round 23,2018-08-24,Adelaide Oval,Port Adelaide,Essendon,89,111,13,17,11,9
+2018,191,Round 23,2018-08-25,Kardinia Park,Geelong,Gold Coast,142,40,22,5,10,10
+2018,192,Round 23,2018-08-25,MCG,Richmond,Western Bulldogs,98,95,15,14,8,11
+2018,193,Round 23,2018-08-25,Perth Stadium,Fremantle,Collingwood,67,76,9,11,13,10
+2018,194,Round 23,2018-08-25,Docklands Stadium,Carlton,Adelaide,61,165,8,26,13,9
+2018,195,Round 23,2018-08-25,SCG,Sydney,Hawthorn,74,83,10,12,14,11
+2018,196,Round 23,2018-08-26,Gabba,Brisbane Lions,West Coast,72,98,11,14,6,14
+2018,197,Round 23,2018-08-26,MCG,Melbourne,Greater Western Sydney,102,57,15,8,12,9
+2018,198,Round 23,2018-08-26,Docklands Stadium,St Kilda,North Melbourne,94,117,14,17,10,15

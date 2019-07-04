@@ -1,34 +1,34 @@
-"year","venue","location","team"
-"2011","MCG","VIC","Carlton"
-"2011","MCG","VIC","Geelong"
-"2011","MCG","VIC","Melbourne"
-"2011","MCG","VIC","St Kilda"
-"2011","MCG","VIC","Hawthorn"
-"2011","MCG","VIC","Collingwood"
-"2011","MCG","VIC","Richmond"
-"2011","MCG","VIC","Essendon"
-"2011","Docklands Stadium","VIC","Collingwood"
-"2011","Docklands Stadium","VIC","Essendon"
-"2011","Docklands Stadium","VIC","North Melbourne"
-"2011","Docklands Stadium","VIC","Western Bulldogs"
-"2011","Docklands Stadium","VIC","St Kilda"
-"2011","Docklands Stadium","VIC","Carlton"
-"2011","Docklands Stadium","VIC","Geelong"
-"2011","Docklands Stadium","VIC","Melbourne"
-"2011","Docklands Stadium","VIC","Richmond"
-"2011","Football Park","SA","Adelaide"
-"2011","Football Park","SA","Port Adelaide"
-"2011","Gabba","QLD","Brisbane Lions"
-"2011","Gabba","QLD","Gold Coast"
-"2011","Subiaco Oval","WA","West Coast"
-"2011","Subiaco Oval","WA","Fremantle"
-"2011","Stadium Australia","NSW","Sydney"
-"2011","Kardinia Park","GEE","Geelong"
-"2011","York Park","TAS","Hawthorn"
-"2011","SCG","NSW","Sydney"
-"2011","Manuka Oval","ACT","Western Bulldogs"
-"2011","Carrara Stadium","QLD","Gold Coast"
-"2011","Marrara Oval","NT","Richmond"
-"2011","Marrara Oval","NT","Melbourne"
-"2011","Cazaly's Stadium","QLD","Richmond"
-"2011","Adelaide Oval","SA","Port Adelaide"
+year,venue,location,team
+2011,MCG,VIC,Carlton
+2011,MCG,VIC,Geelong
+2011,MCG,VIC,Melbourne
+2011,MCG,VIC,St Kilda
+2011,MCG,VIC,Hawthorn
+2011,MCG,VIC,Collingwood
+2011,MCG,VIC,Richmond
+2011,MCG,VIC,Essendon
+2011,Docklands Stadium,VIC,Collingwood
+2011,Docklands Stadium,VIC,Essendon
+2011,Docklands Stadium,VIC,North Melbourne
+2011,Docklands Stadium,VIC,Western Bulldogs
+2011,Docklands Stadium,VIC,St Kilda
+2011,Docklands Stadium,VIC,Carlton
+2011,Docklands Stadium,VIC,Geelong
+2011,Docklands Stadium,VIC,Melbourne
+2011,Docklands Stadium,VIC,Richmond
+2011,Football Park,SA,Adelaide
+2011,Football Park,SA,Port Adelaide
+2011,Gabba,QLD,Brisbane Lions
+2011,Gabba,QLD,Gold Coast
+2011,Subiaco Oval,WA,West Coast
+2011,Subiaco Oval,WA,Fremantle
+2011,Stadium Australia,NSW,Sydney
+2011,Kardinia Park,GEE,Geelong
+2011,York Park,TAS,Hawthorn
+2011,SCG,NSW,Sydney
+2011,Manuka Oval,ACT,Western Bulldogs
+2011,Carrara Stadium,QLD,Gold Coast
+2011,Marrara Oval,NT,Richmond
+2011,Marrara Oval,NT,Melbourne
+2011,Cazaly's Stadium,QLD,Richmond
+2011,Adelaide Oval,SA,Port Adelaide

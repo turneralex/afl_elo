@@ -1,35 +1,35 @@
-"year","venue","location","team"
-"2015","MCG","VIC","Carlton"
-"2015","MCG","VIC","Melbourne"
-"2015","MCG","VIC","Hawthorn"
-"2015","MCG","VIC","Richmond"
-"2015","MCG","VIC","Essendon"
-"2015","MCG","VIC","Collingwood"
-"2015","MCG","VIC","Geelong"
-"2015","Stadium Australia","NSW","Sydney"
-"2015","Gabba","QLD","Brisbane Lions"
-"2015","Docklands Stadium","VIC","Western Bulldogs"
-"2015","Docklands Stadium","VIC","St Kilda"
-"2015","Docklands Stadium","VIC","Collingwood"
-"2015","Docklands Stadium","VIC","North Melbourne"
-"2015","Docklands Stadium","VIC","Carlton"
-"2015","Docklands Stadium","VIC","Essendon"
-"2015","Docklands Stadium","VIC","Geelong"
-"2015","Docklands Stadium","VIC","Hawthorn"
-"2015","Docklands Stadium","VIC","Richmond"
-"2015","Docklands Stadium","VIC","Melbourne"
-"2015","Adelaide Oval","SA","Adelaide"
-"2015","Adelaide Oval","SA","Port Adelaide"
-"2015","Subiaco Oval","WA","Fremantle"
-"2015","Subiaco Oval","WA","West Coast"
-"2015","Manuka Oval","ACT","Greater Western Sydney"
-"2015","Carrara Stadium","QLD","Gold Coast"
-"2015","Kardinia Park","GEE","Geelong"
-"2015","SCG","NSW","Sydney"
-"2015","York Park","TAS","Hawthorn"
-"2015","Wellington Regional Stadium","Other","St Kilda"
-"2015","Bellerive Oval","TAS","North Melbourne"
-"2015","Sydney Showground Stadium","NSW","Greater Western Sydney"
-"2015","Traeger Park","NT","Melbourne"
-"2015","Marrara Oval","NT","Melbourne"
-"2015","Cazaly's Stadium","QLD","Western Bulldogs"
+year,venue,location,team
+2015,MCG,VIC,Carlton
+2015,MCG,VIC,Melbourne
+2015,MCG,VIC,Hawthorn
+2015,MCG,VIC,Richmond
+2015,MCG,VIC,Essendon
+2015,MCG,VIC,Collingwood
+2015,MCG,VIC,Geelong
+2015,Stadium Australia,NSW,Sydney
+2015,Gabba,QLD,Brisbane Lions
+2015,Docklands Stadium,VIC,Western Bulldogs
+2015,Docklands Stadium,VIC,St Kilda
+2015,Docklands Stadium,VIC,Collingwood
+2015,Docklands Stadium,VIC,North Melbourne
+2015,Docklands Stadium,VIC,Carlton
+2015,Docklands Stadium,VIC,Essendon
+2015,Docklands Stadium,VIC,Geelong
+2015,Docklands Stadium,VIC,Hawthorn
+2015,Docklands Stadium,VIC,Richmond
+2015,Docklands Stadium,VIC,Melbourne
+2015,Adelaide Oval,SA,Adelaide
+2015,Adelaide Oval,SA,Port Adelaide
+2015,Subiaco Oval,WA,Fremantle
+2015,Subiaco Oval,WA,West Coast
+2015,Manuka Oval,ACT,Greater Western Sydney
+2015,Carrara Stadium,QLD,Gold Coast
+2015,Kardinia Park,GEE,Geelong
+2015,SCG,NSW,Sydney
+2015,York Park,TAS,Hawthorn
+2015,Wellington Regional Stadium,Other,St Kilda
+2015,Bellerive Oval,TAS,North Melbourne
+2015,Sydney Showground Stadium,NSW,Greater Western Sydney
+2015,Traeger Park,NT,Melbourne
+2015,Marrara Oval,NT,Melbourne
+2015,Cazaly's Stadium,QLD,Western Bulldogs

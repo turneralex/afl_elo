@@ -1,33 +1,33 @@
-"year","venue","location","team"
-"2019","MCG","VIC","Carlton"
-"2019","MCG","VIC","Collingwood"
-"2019","MCG","VIC","Melbourne"
-"2019","MCG","VIC","Richmond"
-"2019","MCG","VIC","Hawthorn"
-"2019","MCG","VIC","Essendon"
-"2019","MCG","VIC","Geelong"
-"2019","Adelaide Oval","SA","Adelaide"
-"2019","Adelaide Oval","SA","Port Adelaide"
-"2019","Gabba","QLD","Brisbane Lions"
-"2019","Docklands Stadium","VIC","Western Bulldogs"
-"2019","Docklands Stadium","VIC","St Kilda"
-"2019","Docklands Stadium","VIC","Essendon"
-"2019","Docklands Stadium","VIC","North Melbourne"
-"2019","Docklands Stadium","VIC","Carlton"
-"2019","Docklands Stadium","VIC","Richmond"
-"2019","Docklands Stadium","VIC","Collingwood"
-"2019","Docklands Stadium","VIC","Hawthorn"
-"2019","Sydney Showground Stadium","NSW","Greater Western Sydney"
-"2019","Perth Stadium","WA","Fremantle"
-"2019","Perth Stadium","WA","West Coast"
-"2019","SCG","NSW","Sydney"
-"2019","Kardinia Park","GEE","Geelong"
-"2019","Carrara Stadium","QLD","Gold Coast"
-"2019","Manuka Oval","ACT","Greater Western Sydney"
-"2019","York Park","TAS","Hawthorn"
-"2019","Eureka Stadium","VIC","Western Bulldogs"
-"2019","Bellerive Oval","TAS","North Melbourne"
-"2019","Marrara Oval","NT","Melbourne"
-"2019","Jiangwan Stadium","Other","St Kilda"
-"2019","Riverway Stadium","QLD","Gold Coast"
-"2019","Traeger Park","NT","Melbourne"
+year,venue,location,team
+2019,MCG,VIC,Carlton
+2019,MCG,VIC,Collingwood
+2019,MCG,VIC,Melbourne
+2019,MCG,VIC,Richmond
+2019,MCG,VIC,Hawthorn
+2019,MCG,VIC,Essendon
+2019,MCG,VIC,Geelong
+2019,Adelaide Oval,SA,Adelaide
+2019,Adelaide Oval,SA,Port Adelaide
+2019,Gabba,QLD,Brisbane Lions
+2019,Docklands Stadium,VIC,Western Bulldogs
+2019,Docklands Stadium,VIC,St Kilda
+2019,Docklands Stadium,VIC,Essendon
+2019,Docklands Stadium,VIC,North Melbourne
+2019,Docklands Stadium,VIC,Carlton
+2019,Docklands Stadium,VIC,Richmond
+2019,Docklands Stadium,VIC,Collingwood
+2019,Docklands Stadium,VIC,Hawthorn
+2019,Sydney Showground Stadium,NSW,Greater Western Sydney
+2019,Perth Stadium,WA,Fremantle
+2019,Perth Stadium,WA,West Coast
+2019,SCG,NSW,Sydney
+2019,Kardinia Park,GEE,Geelong
+2019,Carrara Stadium,QLD,Gold Coast
+2019,Manuka Oval,ACT,Greater Western Sydney
+2019,York Park,TAS,Hawthorn
+2019,Eureka Stadium,VIC,Western Bulldogs
+2019,Bellerive Oval,TAS,North Melbourne
+2019,Marrara Oval,NT,Melbourne
+2019,Jiangwan Stadium,Other,St Kilda
+2019,Riverway Stadium,QLD,Gold Coast
+2019,Traeger Park,NT,Melbourne

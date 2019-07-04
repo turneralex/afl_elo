@@ -1,35 +1,35 @@
-"year","venue","location","team"
-"2018","MCG","VIC","Richmond"
-"2018","MCG","VIC","Hawthorn"
-"2018","MCG","VIC","Melbourne"
-"2018","MCG","VIC","Collingwood"
-"2018","MCG","VIC","Geelong"
-"2018","MCG","VIC","Carlton"
-"2018","MCG","VIC","Essendon"
-"2018","Docklands Stadium","VIC","Essendon"
-"2018","Docklands Stadium","VIC","St Kilda"
-"2018","Docklands Stadium","VIC","North Melbourne"
-"2018","Docklands Stadium","VIC","Carlton"
-"2018","Docklands Stadium","VIC","Western Bulldogs"
-"2018","Docklands Stadium","VIC","Collingwood"
-"2018","Docklands Stadium","VIC","Hawthorn"
-"2018","Docklands Stadium","VIC","Richmond"
-"2018","Adelaide Oval","SA","Port Adelaide"
-"2018","Adelaide Oval","SA","Adelaide"
-"2018","Cazaly's Stadium","QLD","Gold Coast"
-"2018","Manuka Oval","ACT","Greater Western Sydney"
-"2018","Perth Stadium","WA","West Coast"
-"2018","Perth Stadium","WA","Fremantle"
-"2018","Perth Stadium","WA","Gold Coast"
-"2018","Gabba","QLD","Brisbane Lions"
-"2018","Gabba","QLD","Gold Coast"
-"2018","SCG","NSW","Sydney"
-"2018","Bellerive Oval","TAS","North Melbourne"
-"2018","Kardinia Park","GEE","Geelong"
-"2018","Sydney Showground Stadium","NSW","Greater Western Sydney"
-"2018","York Park","TAS","Hawthorn"
-"2018","Eureka Stadium","VIC","Western Bulldogs"
-"2018","Jiangwan Stadium","Other","Gold Coast"
-"2018","Traeger Park","NT","Melbourne"
-"2018","Carrara Stadium","QLD","Gold Coast"
-"2018","Marrara Oval","NT","Melbourne"
+year,venue,location,team
+2018,MCG,VIC,Richmond
+2018,MCG,VIC,Hawthorn
+2018,MCG,VIC,Melbourne
+2018,MCG,VIC,Collingwood
+2018,MCG,VIC,Geelong
+2018,MCG,VIC,Carlton
+2018,MCG,VIC,Essendon
+2018,Docklands Stadium,VIC,Essendon
+2018,Docklands Stadium,VIC,St Kilda
+2018,Docklands Stadium,VIC,North Melbourne
+2018,Docklands Stadium,VIC,Carlton
+2018,Docklands Stadium,VIC,Western Bulldogs
+2018,Docklands Stadium,VIC,Collingwood
+2018,Docklands Stadium,VIC,Hawthorn
+2018,Docklands Stadium,VIC,Richmond
+2018,Adelaide Oval,SA,Port Adelaide
+2018,Adelaide Oval,SA,Adelaide
+2018,Cazaly's Stadium,QLD,Gold Coast
+2018,Manuka Oval,ACT,Greater Western Sydney
+2018,Perth Stadium,WA,West Coast
+2018,Perth Stadium,WA,Fremantle
+2018,Perth Stadium,WA,Gold Coast
+2018,Gabba,QLD,Brisbane Lions
+2018,Gabba,QLD,Gold Coast
+2018,SCG,NSW,Sydney
+2018,Bellerive Oval,TAS,North Melbourne
+2018,Kardinia Park,GEE,Geelong
+2018,Sydney Showground Stadium,NSW,Greater Western Sydney
+2018,York Park,TAS,Hawthorn
+2018,Eureka Stadium,VIC,Western Bulldogs
+2018,Jiangwan Stadium,Other,Gold Coast
+2018,Traeger Park,NT,Melbourne
+2018,Carrara Stadium,QLD,Gold Coast
+2018,Marrara Oval,NT,Melbourne

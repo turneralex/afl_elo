@@ -1,199 +1,199 @@
-"season","match_id","round","date","venue","home_team","away_team","home_score","away_score"
-"2016",1,"Round 1",2016-03-24,"MCG","Richmond","Carlton",92,83
-"2016",2,"Round 1",2016-03-26,"MCG","Melbourne","Greater Western Sydney",80,78
-"2016",3,"Round 1",2016-03-26,"Carrara Stadium","Gold Coast","Essendon",121,60
-"2016",4,"Round 1",2016-03-26,"SCG","Sydney","Collingwood",133,53
-"2016",5,"Round 1",2016-03-26,"Docklands Stadium","North Melbourne","Adelaide",107,97
-"2016",6,"Round 1",2016-03-27,"Docklands Stadium","Western Bulldogs","Fremantle",103,38
-"2016",7,"Round 1",2016-03-27,"Adelaide Oval","Port Adelaide","St Kilda",133,100
-"2016",8,"Round 1",2016-03-27,"Subiaco Oval","West Coast","Brisbane Lions",166,102
-"2016",9,"Round 1",2016-03-28,"MCG","Geelong","Hawthorn",116,86
-"2016",10,"Round 2",2016-04-01,"MCG","Collingwood","Richmond",87,86
-"2016",11,"Round 2",2016-04-02,"Adelaide Oval","Adelaide","Port Adelaide",144,86
-"2016",12,"Round 2",2016-04-02,"MCG","Essendon","Melbourne",80,67
-"2016",13,"Round 2",2016-04-02,"Gabba","Brisbane Lions","North Melbourne",83,117
-"2016",14,"Round 2",2016-04-02,"Docklands Stadium","St Kilda","Western Bulldogs",36,93
-"2016",15,"Round 2",2016-04-02,"Subiaco Oval","Fremantle","Gold Coast",100,126
-"2016",16,"Round 2",2016-04-03,"Manuka Oval","Greater Western Sydney","Geelong",89,76
-"2016",17,"Round 2",2016-04-03,"MCG","Hawthorn","West Coast",99,53
-"2016",18,"Round 2",2016-04-03,"Docklands Stadium","Carlton","Sydney",71,131
-"2016",19,"Round 3",2016-04-08,"Adelaide Oval","Port Adelaide","Essendon",112,51
-"2016",20,"Round 3",2016-04-09,"MCG","St Kilda","Collingwood",119,90
-"2016",21,"Round 3",2016-04-09,"Docklands Stadium","Richmond","Adelaide",92,128
-"2016",22,"Round 3",2016-04-09,"SCG","Sydney","Greater Western Sydney",93,68
-"2016",23,"Round 3",2016-04-09,"Carrara Stadium","Gold Coast","Carlton",95,41
-"2016",24,"Round 3",2016-04-09,"Subiaco Oval","West Coast","Fremantle",92,59
-"2016",25,"Round 3",2016-04-10,"Bellerive Oval","North Melbourne","Melbourne",136,131
-"2016",26,"Round 3",2016-04-10,"Docklands Stadium","Western Bulldogs","Hawthorn",90,93
-"2016",27,"Round 3",2016-04-10,"Kardinia Park","Geelong","Brisbane Lions",125,56
-"2016",28,"Round 4",2016-04-15,"Subiaco Oval","West Coast","Richmond",125,57
-"2016",29,"Round 4",2016-04-16,"MCG","Essendon","Geelong",42,72
-"2016",30,"Round 4",2016-04-16,"York Park","Hawthorn","St Kilda",87,84
-"2016",31,"Round 4",2016-04-16,"Gabba","Brisbane Lions","Gold Coast",107,94
-"2016",32,"Round 4",2016-04-16,"Docklands Stadium","Carlton","Western Bulldogs",49,85
-"2016",33,"Round 4",2016-04-16,"Adelaide Oval","Adelaide","Sydney",113,103
-"2016",34,"Round 4",2016-04-17,"Manuka Oval","Greater Western Sydney","Port Adelaide",151,65
-"2016",35,"Round 4",2016-04-17,"MCG","Collingwood","Melbourne",67,102
-"2016",36,"Round 4",2016-04-17,"Docklands Stadium","North Melbourne","Fremantle",132,101
-"2016",37,"Round 5",2016-04-22,"MCG","Hawthorn","Adelaide",112,109
-"2016",38,"Round 5",2016-04-23,"SCG","Sydney","West Coast",88,49
-"2016",39,"Round 5",2016-04-23,"Carrara Stadium","Gold Coast","North Melbourne",81,119
-"2016",40,"Round 5",2016-04-23,"Docklands Stadium","Western Bulldogs","Brisbane Lions",120,67
-"2016",41,"Round 5",2016-04-23,"Adelaide Oval","Port Adelaide","Geelong",59,107
-"2016",42,"Round 5",2016-04-24,"Docklands Stadium","St Kilda","Greater Western Sydney",79,126
-"2016",43,"Round 5",2016-04-24,"Subiaco Oval","Fremantle","Carlton",68,72
-"2016",44,"Round 5",2016-04-24,"MCG","Melbourne","Richmond",129,96
-"2016",45,"Round 5",2016-04-25,"MCG","Collingwood","Essendon",142,73
-"2016",46,"Round 6",2016-04-29,"Docklands Stadium","North Melbourne","Western Bulldogs",61,45
-"2016",47,"Round 6",2016-04-30,"Docklands Stadium","Melbourne","St Kilda",96,135
-"2016",48,"Round 6",2016-04-30,"Adelaide Oval","Adelaide","Fremantle",97,64
-"2016",49,"Round 6",2016-04-30,"Sydney Showground Stadium","Greater Western Sydney","Hawthorn",158,83
-"2016",50,"Round 6",2016-04-30,"Kardinia Park","Geelong","Gold Coast",168,48
-"2016",51,"Round 6",2016-04-30,"MCG","Richmond","Port Adelaide",59,94
-"2016",52,"Round 6",2016-05-01,"Gabba","Brisbane Lions","Sydney",94,97
-"2016",53,"Round 6",2016-05-01,"MCG","Carlton","Essendon",72,57
-"2016",54,"Round 6",2016-05-01,"Subiaco Oval","West Coast","Collingwood",124,62
-"2016",55,"Round 7",2016-05-06,"MCG","Richmond","Hawthorn",90,136
-"2016",56,"Round 7",2016-05-07,"MCG","Collingwood","Carlton",84,99
-"2016",57,"Round 7",2016-05-07,"Kardinia Park","Geelong","West Coast",123,79
-"2016",58,"Round 7",2016-05-07,"SCG","Sydney","Essendon",135,54
-"2016",59,"Round 7",2016-05-07,"Carrara Stadium","Gold Coast","Melbourne",87,160
-"2016",60,"Round 7",2016-05-07,"Docklands Stadium","Western Bulldogs","Adelaide",123,108
-"2016",61,"Round 7",2016-05-07,"Subiaco Oval","Fremantle","Greater Western Sydney",77,95
-"2016",62,"Round 7",2016-05-08,"Docklands Stadium","St Kilda","North Melbourne",75,82
-"2016",63,"Round 7",2016-05-08,"Adelaide Oval","Port Adelaide","Brisbane Lions",136,59
-"2016",64,"Round 8",2016-05-13,"Adelaide Oval","Adelaide","Geelong",72,98
-"2016",65,"Round 8",2016-05-14,"Docklands Stadium","Essendon","North Melbourne",60,74
-"2016",66,"Round 8",2016-05-14,"York Park","Hawthorn","Fremantle",116,75
-"2016",67,"Round 8",2016-05-14,"Sydney Showground Stadium","Greater Western Sydney","Gold Coast",149,58
-"2016",68,"Round 8",2016-05-14,"MCG","Richmond","Sydney",101,100
-"2016",69,"Round 8",2016-05-14,"Gabba","Brisbane Lions","Collingwood",65,143
-"2016",70,"Round 8",2016-05-15,"Docklands Stadium","Carlton","Port Adelaide",93,91
-"2016",71,"Round 8",2016-05-15,"MCG","Melbourne","Western Bulldogs",82,114
-"2016",72,"Round 8",2016-05-15,"Subiaco Oval","West Coast","St Kilda",132,29
-"2016",73,"Round 9",2016-05-20,"MCG","Hawthorn","Sydney",55,69
-"2016",74,"Round 9",2016-05-21,"MCG","Collingwood","Geelong",104,80
-"2016",75,"Round 9",2016-05-21,"Carrara Stadium","Gold Coast","Adelaide",74,149
-"2016",76,"Round 9",2016-05-21,"Adelaide Oval","Port Adelaide","West Coast",86,94
-"2016",77,"Round 9",2016-05-21,"Subiaco Oval","Fremantle","Richmond",45,83
-"2016",78,"Round 9",2016-05-21,"Docklands Stadium","North Melbourne","Carlton",113,46
-"2016",79,"Round 9",2016-05-22,"MCG","Melbourne","Brisbane Lions",131,68
-"2016",80,"Round 9",2016-05-22,"Sydney Showground Stadium","Greater Western Sydney","Western Bulldogs",98,73
-"2016",81,"Round 9",2016-05-22,"Docklands Stadium","St Kilda","Essendon",109,63
-"2016",82,"Round 10",2016-05-27,"SCG","Sydney","North Melbourne",91,65
-"2016",83,"Round 10",2016-05-28,"Gabba","Brisbane Lions","Hawthorn",87,135
-"2016",84,"Round 10",2016-05-28,"Traeger Park","Melbourne","Port Adelaide",76,121
-"2016",85,"Round 10",2016-05-28,"Docklands Stadium","St Kilda","Fremantle",101,67
-"2016",86,"Round 10",2016-05-28,"MCG","Essendon","Richmond",67,105
-"2016",87,"Round 10",2016-05-28,"Adelaide Oval","Adelaide","Greater Western Sydney",107,85
-"2016",88,"Round 10",2016-05-29,"Docklands Stadium","Carlton","Geelong",104,85
-"2016",89,"Round 10",2016-05-29,"MCG","Collingwood","Western Bulldogs",53,74
-"2016",90,"Round 10",2016-05-29,"Subiaco Oval","West Coast","Gold Coast",132,55
-"2016",91,"Round 11",2016-06-03,"Bellerive Oval","North Melbourne","Richmond",124,54
-"2016",92,"Round 11",2016-06-04,"MCG","Hawthorn","Melbourne",82,64
-"2016",93,"Round 11",2016-06-04,"Docklands Stadium","Carlton","Brisbane Lions",102,64
-"2016",94,"Round 11",2016-06-04,"Kardinia Park","Geelong","Greater Western Sydney",98,88
-"2016",95,"Round 11",2016-06-04,"Subiaco Oval","Fremantle","Essendon",126,47
-"2016",96,"Round 11",2016-06-04,"Carrara Stadium","Gold Coast","Sydney",41,79
-"2016",97,"Round 11",2016-06-05,"MCG","Collingwood","Port Adelaide",58,125
-"2016",98,"Round 11",2016-06-05,"Docklands Stadium","Western Bulldogs","West Coast",83,75
-"2016",99,"Round 11",2016-06-05,"Adelaide Oval","Adelaide","St Kilda",133,45
-"2016",100,"Round 12",2016-06-10,"Docklands Stadium","Essendon","Hawthorn",43,151
-"2016",101,"Round 12",2016-06-11,"Adelaide Oval","Port Adelaide","Western Bulldogs",97,100
-"2016",102,"Round 12",2016-06-11,"Gabba","Brisbane Lions","Fremantle",64,147
-"2016",103,"Round 12",2016-06-11,"Docklands Stadium","Geelong","North Melbourne",105,74
-"2016",104,"Round 12",2016-06-11,"Subiaco Oval","West Coast","Adelaide",76,105
-"2016",105,"Round 12",2016-06-12,"Docklands Stadium","St Kilda","Carlton",110,78
-"2016",106,"Round 12",2016-06-12,"MCG","Richmond","Gold Coast",114,97
-"2016",107,"Round 12",2016-06-12,"Sydney Showground Stadium","Greater Western Sydney","Sydney",105,63
-"2016",108,"Round 12",2016-06-13,"MCG","Melbourne","Collingwood",104,58
-"2016",109,"Round 13",2016-06-17,"Docklands Stadium","North Melbourne","Hawthorn",84,93
-"2016",110,"Round 13",2016-06-18,"Gabba","Brisbane Lions","West Coast",82,131
-"2016",111,"Round 13",2016-06-18,"Subiaco Oval","Fremantle","Port Adelaide",86,69
-"2016",112,"Round 13",2016-06-18,"Docklands Stadium","Western Bulldogs","Geelong",43,100
-"2016",113,"Round 13",2016-06-19,"SCG","Sydney","Melbourne",86,31
-"2016",114,"Round 13",2016-06-19,"Docklands Stadium","Essendon","Greater Western Sydney",90,117
-"2016",115,"Round 14",2016-06-23,"Adelaide Oval","Adelaide","North Melbourne",100,67
-"2016",116,"Round 14",2016-06-24,"MCG","Collingwood","Fremantle",85,37
-"2016",117,"Round 14",2016-06-25,"MCG","Richmond","Brisbane Lions",117,75
-"2016",118,"Round 14",2016-06-25,"Sydney Showground Stadium","Greater Western Sydney","Carlton",127,65
-"2016",119,"Round 14",2016-06-25,"Docklands Stadium","St Kilda","Geelong",93,90
-"2016",120,"Round 14",2016-06-26,"York Park","Hawthorn","Gold Coast",86,60
-"2016",121,"Round 15",2016-06-30,"Subiaco Oval","West Coast","Essendon",130,52
-"2016",122,"Round 15",2016-07-01,"Adelaide Oval","Port Adelaide","Richmond",94,56
-"2016",123,"Round 15",2016-07-02,"Carrara Stadium","Gold Coast","St Kilda",108,68
-"2016",124,"Round 15",2016-07-02,"SCG","Sydney","Western Bulldogs",79,83
-"2016",125,"Round 15",2016-07-02,"MCG","Carlton","Collingwood",45,57
-"2016",126,"Round 15",2016-07-03,"MCG","Melbourne","Adelaide",98,120
-"2016",127,"Round 16",2016-07-07,"Adelaide Oval","Port Adelaide","Hawthorn",79,101
-"2016",128,"Round 16",2016-07-08,"Kardinia Park","Geelong","Sydney",60,98
-"2016",129,"Round 16",2016-07-09,"Sydney Showground Stadium","Greater Western Sydney","Collingwood",93,125
-"2016",130,"Round 16",2016-07-09,"Carrara Stadium","Gold Coast","Brisbane Lions",139,113
-"2016",131,"Round 16",2016-07-09,"Docklands Stadium","Western Bulldogs","Richmond",85,75
-"2016",132,"Round 16",2016-07-09,"Marrara Oval","Melbourne","Fremantle",87,55
-"2016",133,"Round 16",2016-07-10,"MCG","Carlton","Adelaide",47,107
-"2016",134,"Round 16",2016-07-10,"Subiaco Oval","West Coast","North Melbourne",104,72
-"2016",135,"Round 16",2016-07-10,"Docklands Stadium","Essendon","St Kilda",98,109
-"2016",136,"Round 17",2016-07-14,"SCG","Sydney","Hawthorn",70,75
-"2016",137,"Round 17",2016-07-15,"Subiaco Oval","Fremantle","Geelong",61,78
-"2016",138,"Round 17",2016-07-16,"MCG","Richmond","Essendon",102,83
-"2016",139,"Round 17",2016-07-16,"Docklands Stadium","North Melbourne","Port Adelaide",77,105
-"2016",140,"Round 17",2016-07-16,"Cazaly's Stadium","Western Bulldogs","Gold Coast",107,59
-"2016",141,"Round 17",2016-07-16,"Adelaide Oval","Adelaide","Collingwood",97,69
-"2016",142,"Round 17",2016-07-17,"MCG","Carlton","West Coast",75,82
-"2016",143,"Round 17",2016-07-17,"Docklands Stadium","St Kilda","Melbourne",110,74
-"2016",144,"Round 17",2016-07-17,"Gabba","Brisbane Lions","Greater Western Sydney",67,146
-"2016",145,"Round 18",2016-07-22,"Docklands Stadium","Collingwood","North Melbourne",84,124
-"2016",146,"Round 18",2016-07-23,"SCG","Sydney","Carlton",74,68
-"2016",147,"Round 18",2016-07-23,"Carrara Stadium","Gold Coast","Fremantle",105,81
-"2016",148,"Round 18",2016-07-23,"Subiaco Oval","West Coast","Melbourne",66,60
-"2016",149,"Round 18",2016-07-23,"Kardinia Park","Geelong","Adelaide",85,55
-"2016",150,"Round 18",2016-07-23,"Docklands Stadium","Western Bulldogs","St Kilda",60,75
-"2016",151,"Round 18",2016-07-24,"Docklands Stadium","Essendon","Brisbane Lions",91,128
-"2016",152,"Round 18",2016-07-24,"MCG","Hawthorn","Richmond",114,44
-"2016",153,"Round 18",2016-07-24,"Adelaide Oval","Port Adelaide","Greater Western Sydney",60,79
-"2016",154,"Round 19",2016-07-29,"Kardinia Park","Geelong","Western Bulldogs",103,78
-"2016",155,"Round 19",2016-07-30,"Manuka Oval","Greater Western Sydney","Richmond",111,23
-"2016",156,"Round 19",2016-07-30,"York Park","Hawthorn","Carlton",74,55
-"2016",157,"Round 19",2016-07-30,"MCG","Collingwood","West Coast",91,72
-"2016",158,"Round 19",2016-07-30,"Docklands Stadium","North Melbourne","St Kilda",85,62
-"2016",159,"Round 19",2016-07-30,"Gabba","Brisbane Lions","Port Adelaide",79,173
-"2016",160,"Round 19",2016-07-31,"MCG","Melbourne","Gold Coast",66,64
-"2016",161,"Round 19",2016-07-31,"Subiaco Oval","Fremantle","Sydney",47,137
-"2016",162,"Round 19",2016-07-31,"Adelaide Oval","Adelaide","Essendon",143,61
-"2016",163,"Round 20",2016-08-05,"MCG","Richmond","Collingwood",92,77
-"2016",164,"Round 20",2016-08-06,"SCG","Sydney","Port Adelaide",100,33
-"2016",165,"Round 20",2016-08-06,"MCG","Melbourne","Hawthorn",110,81
-"2016",166,"Round 20",2016-08-06,"Carrara Stadium","Gold Coast","Greater Western Sydney",84,92
-"2016",167,"Round 20",2016-08-06,"Docklands Stadium","Western Bulldogs","North Melbourne",61,47
-"2016",168,"Round 20",2016-08-06,"Adelaide Oval","Adelaide","Brisbane Lions",177,39
-"2016",169,"Round 20",2016-08-07,"MCG","Carlton","St Kilda",51,122
-"2016",170,"Round 20",2016-08-07,"Docklands Stadium","Geelong","Essendon",100,34
-"2016",171,"Round 20",2016-08-07,"Subiaco Oval","Fremantle","West Coast",64,110
-"2016",172,"Round 21",2016-08-12,"Docklands Stadium","Western Bulldogs","Collingwood",95,92
-"2016",173,"Round 21",2016-08-13,"Gabba","Brisbane Lions","Carlton",99,95
-"2016",174,"Round 21",2016-08-13,"MCG","Hawthorn","North Melbourne",96,57
-"2016",175,"Round 21",2016-08-13,"Sydney Showground Stadium","Greater Western Sydney","West Coast",96,97
-"2016",176,"Round 21",2016-08-13,"Docklands Stadium","St Kilda","Sydney",76,146
-"2016",177,"Round 21",2016-08-13,"Adelaide Oval","Port Adelaide","Melbourne",54,94
-"2016",178,"Round 21",2016-08-14,"Docklands Stadium","Essendon","Gold Coast",75,69
-"2016",179,"Round 21",2016-08-14,"MCG","Richmond","Geelong",78,82
-"2016",180,"Round 21",2016-08-14,"Subiaco Oval","Fremantle","Adelaide",70,142
-"2016",181,"Round 22",2016-08-19,"Subiaco Oval","West Coast","Hawthorn",92,67
-"2016",182,"Round 22",2016-08-20,"Bellerive Oval","North Melbourne","Sydney",76,85
-"2016",183,"Round 22",2016-08-20,"MCG","Richmond","St Kilda",46,55
-"2016",184,"Round 22",2016-08-20,"Sydney Showground Stadium","Greater Western Sydney","Fremantle",129,37
-"2016",185,"Round 22",2016-08-20,"Docklands Stadium","Collingwood","Gold Coast",118,47
-"2016",186,"Round 22",2016-08-20,"Adelaide Oval","Port Adelaide","Adelaide",94,109
-"2016",187,"Round 22",2016-08-21,"MCG","Carlton","Melbourne",78,58
-"2016",188,"Round 22",2016-08-21,"Gabba","Brisbane Lions","Geelong",69,129
-"2016",189,"Round 22",2016-08-21,"Docklands Stadium","Essendon","Western Bulldogs",53,93
-"2016",190,"Round 23",2016-08-26,"Adelaide Oval","Adelaide","West Coast",71,100
-"2016",191,"Round 23",2016-08-27,"Kardinia Park","Geelong","Melbourne",155,44
-"2016",192,"Round 23",2016-08-27,"MCG","Essendon","Carlton",103,79
-"2016",193,"Round 23",2016-08-27,"SCG","Sydney","Richmond",164,51
-"2016",194,"Round 23",2016-08-27,"Docklands Stadium","North Melbourne","Greater Western Sydney",63,100
-"2016",195,"Round 23",2016-08-27,"Carrara Stadium","Gold Coast","Port Adelaide",66,89
-"2016",196,"Round 23",2016-08-28,"Docklands Stadium","St Kilda","Brisbane Lions",161,103
-"2016",197,"Round 23",2016-08-28,"MCG","Hawthorn","Collingwood",112,111
-"2016",198,"Round 23",2016-08-28,"Subiaco Oval","Fremantle","Western Bulldogs",69,49
+season,match_id,round,date,venue,home_team,away_team,home_score,away_score,home_goals,away_goals,home_behinds,away_behinds
+2016,1,Round 1,2016-03-24,MCG,Richmond,Carlton,92,83,14,12,8,11
+2016,2,Round 1,2016-03-26,MCG,Melbourne,Greater Western Sydney,80,78,12,10,8,18
+2016,3,Round 1,2016-03-26,Carrara Stadium,Gold Coast,Essendon,121,60,17,9,19,6
+2016,4,Round 1,2016-03-26,SCG,Sydney,Collingwood,133,53,18,7,25,11
+2016,5,Round 1,2016-03-26,Docklands Stadium,North Melbourne,Adelaide,107,97,16,14,11,13
+2016,6,Round 1,2016-03-27,Docklands Stadium,Western Bulldogs,Fremantle,103,38,15,5,13,8
+2016,7,Round 1,2016-03-27,Adelaide Oval,Port Adelaide,St Kilda,133,100,20,15,13,10
+2016,8,Round 1,2016-03-27,Subiaco Oval,West Coast,Brisbane Lions,166,102,26,15,10,12
+2016,9,Round 1,2016-03-28,MCG,Geelong,Hawthorn,116,86,18,12,8,14
+2016,10,Round 2,2016-04-01,MCG,Collingwood,Richmond,87,86,13,12,9,14
+2016,11,Round 2,2016-04-02,Adelaide Oval,Adelaide,Port Adelaide,144,86,22,11,12,20
+2016,12,Round 2,2016-04-02,MCG,Essendon,Melbourne,80,67,11,10,14,7
+2016,13,Round 2,2016-04-02,Gabba,Brisbane Lions,North Melbourne,83,117,11,17,17,15
+2016,14,Round 2,2016-04-02,Docklands Stadium,St Kilda,Western Bulldogs,36,93,5,13,6,15
+2016,15,Round 2,2016-04-02,Subiaco Oval,Fremantle,Gold Coast,100,126,14,19,16,12
+2016,16,Round 2,2016-04-03,Manuka Oval,Greater Western Sydney,Geelong,89,76,13,11,11,10
+2016,17,Round 2,2016-04-03,MCG,Hawthorn,West Coast,99,53,14,7,15,11
+2016,18,Round 2,2016-04-03,Docklands Stadium,Carlton,Sydney,71,131,10,20,11,11
+2016,19,Round 3,2016-04-08,Adelaide Oval,Port Adelaide,Essendon,112,51,17,7,10,9
+2016,20,Round 3,2016-04-09,MCG,St Kilda,Collingwood,119,90,18,14,11,6
+2016,21,Round 3,2016-04-09,Docklands Stadium,Richmond,Adelaide,92,128,13,19,14,14
+2016,22,Round 3,2016-04-09,SCG,Sydney,Greater Western Sydney,93,68,14,10,9,8
+2016,23,Round 3,2016-04-09,Carrara Stadium,Gold Coast,Carlton,95,41,13,5,17,11
+2016,24,Round 3,2016-04-09,Subiaco Oval,West Coast,Fremantle,92,59,12,8,20,11
+2016,25,Round 3,2016-04-10,Bellerive Oval,North Melbourne,Melbourne,136,131,21,20,10,11
+2016,26,Round 3,2016-04-10,Docklands Stadium,Western Bulldogs,Hawthorn,90,93,13,14,12,9
+2016,27,Round 3,2016-04-10,Kardinia Park,Geelong,Brisbane Lions,125,56,18,7,17,14
+2016,28,Round 4,2016-04-15,Subiaco Oval,West Coast,Richmond,125,57,18,9,17,3
+2016,29,Round 4,2016-04-16,MCG,Essendon,Geelong,42,72,6,9,6,18
+2016,30,Round 4,2016-04-16,York Park,Hawthorn,St Kilda,87,84,13,13,9,6
+2016,31,Round 4,2016-04-16,Gabba,Brisbane Lions,Gold Coast,107,94,14,14,23,10
+2016,32,Round 4,2016-04-16,Docklands Stadium,Carlton,Western Bulldogs,49,85,7,13,7,7
+2016,33,Round 4,2016-04-16,Adelaide Oval,Adelaide,Sydney,113,103,16,15,17,13
+2016,34,Round 4,2016-04-17,Manuka Oval,Greater Western Sydney,Port Adelaide,151,65,22,9,19,11
+2016,35,Round 4,2016-04-17,MCG,Collingwood,Melbourne,67,102,9,16,13,6
+2016,36,Round 4,2016-04-17,Docklands Stadium,North Melbourne,Fremantle,132,101,20,14,12,17
+2016,37,Round 5,2016-04-22,MCG,Hawthorn,Adelaide,112,109,17,17,10,7
+2016,38,Round 5,2016-04-23,SCG,Sydney,West Coast,88,49,12,7,16,7
+2016,39,Round 5,2016-04-23,Carrara Stadium,Gold Coast,North Melbourne,81,119,11,18,15,11
+2016,40,Round 5,2016-04-23,Docklands Stadium,Western Bulldogs,Brisbane Lions,120,67,17,10,18,7
+2016,41,Round 5,2016-04-23,Adelaide Oval,Port Adelaide,Geelong,59,107,8,16,11,11
+2016,42,Round 5,2016-04-24,Docklands Stadium,St Kilda,Greater Western Sydney,79,126,12,19,7,12
+2016,43,Round 5,2016-04-24,Subiaco Oval,Fremantle,Carlton,68,72,9,10,14,12
+2016,44,Round 5,2016-04-24,MCG,Melbourne,Richmond,129,96,20,14,9,12
+2016,45,Round 5,2016-04-25,MCG,Collingwood,Essendon,142,73,22,11,10,7
+2016,46,Round 6,2016-04-29,Docklands Stadium,North Melbourne,Western Bulldogs,61,45,9,6,7,9
+2016,47,Round 6,2016-04-30,Docklands Stadium,Melbourne,St Kilda,96,135,15,20,6,15
+2016,48,Round 6,2016-04-30,Adelaide Oval,Adelaide,Fremantle,97,64,14,8,13,16
+2016,49,Round 6,2016-04-30,Sydney Showground Stadium,Greater Western Sydney,Hawthorn,158,83,24,12,14,11
+2016,50,Round 6,2016-04-30,Kardinia Park,Geelong,Gold Coast,168,48,25,7,18,6
+2016,51,Round 6,2016-04-30,MCG,Richmond,Port Adelaide,59,94,8,13,11,16
+2016,52,Round 6,2016-05-01,Gabba,Brisbane Lions,Sydney,94,97,14,15,10,7
+2016,53,Round 6,2016-05-01,MCG,Carlton,Essendon,72,57,10,8,12,9
+2016,54,Round 6,2016-05-01,Subiaco Oval,West Coast,Collingwood,124,62,18,9,16,8
+2016,55,Round 7,2016-05-06,MCG,Richmond,Hawthorn,90,136,13,21,12,10
+2016,56,Round 7,2016-05-07,MCG,Collingwood,Carlton,84,99,12,15,12,9
+2016,57,Round 7,2016-05-07,Kardinia Park,Geelong,West Coast,123,79,18,12,15,7
+2016,58,Round 7,2016-05-07,SCG,Sydney,Essendon,135,54,20,7,15,12
+2016,59,Round 7,2016-05-07,Carrara Stadium,Gold Coast,Melbourne,87,160,14,24,3,16
+2016,60,Round 7,2016-05-07,Docklands Stadium,Western Bulldogs,Adelaide,123,108,18,17,15,6
+2016,61,Round 7,2016-05-07,Subiaco Oval,Fremantle,Greater Western Sydney,77,95,11,14,11,11
+2016,62,Round 7,2016-05-08,Docklands Stadium,St Kilda,North Melbourne,75,82,11,11,9,16
+2016,63,Round 7,2016-05-08,Adelaide Oval,Port Adelaide,Brisbane Lions,136,59,21,7,10,17
+2016,64,Round 8,2016-05-13,Adelaide Oval,Adelaide,Geelong,72,98,11,13,6,20
+2016,65,Round 8,2016-05-14,Docklands Stadium,Essendon,North Melbourne,60,74,8,10,12,14
+2016,66,Round 8,2016-05-14,York Park,Hawthorn,Fremantle,116,75,17,11,14,9
+2016,67,Round 8,2016-05-14,Sydney Showground Stadium,Greater Western Sydney,Gold Coast,149,58,22,9,17,4
+2016,68,Round 8,2016-05-14,MCG,Richmond,Sydney,101,100,14,15,17,10
+2016,69,Round 8,2016-05-14,Gabba,Brisbane Lions,Collingwood,65,143,10,20,5,23
+2016,70,Round 8,2016-05-15,Docklands Stadium,Carlton,Port Adelaide,93,91,14,13,9,13
+2016,71,Round 8,2016-05-15,MCG,Melbourne,Western Bulldogs,82,114,12,17,10,12
+2016,72,Round 8,2016-05-15,Subiaco Oval,West Coast,St Kilda,132,29,20,3,12,11
+2016,73,Round 9,2016-05-20,MCG,Hawthorn,Sydney,55,69,7,10,13,9
+2016,74,Round 9,2016-05-21,MCG,Collingwood,Geelong,104,80,16,11,8,14
+2016,75,Round 9,2016-05-21,Carrara Stadium,Gold Coast,Adelaide,74,149,11,22,8,17
+2016,76,Round 9,2016-05-21,Adelaide Oval,Port Adelaide,West Coast,86,94,13,14,8,10
+2016,77,Round 9,2016-05-21,Subiaco Oval,Fremantle,Richmond,45,83,6,11,9,17
+2016,78,Round 9,2016-05-21,Docklands Stadium,North Melbourne,Carlton,113,46,17,6,11,10
+2016,79,Round 9,2016-05-22,MCG,Melbourne,Brisbane Lions,131,68,19,9,17,14
+2016,80,Round 9,2016-05-22,Sydney Showground Stadium,Greater Western Sydney,Western Bulldogs,98,73,15,10,8,13
+2016,81,Round 9,2016-05-22,Docklands Stadium,St Kilda,Essendon,109,63,16,9,13,9
+2016,82,Round 10,2016-05-27,SCG,Sydney,North Melbourne,91,65,14,9,7,11
+2016,83,Round 10,2016-05-28,Gabba,Brisbane Lions,Hawthorn,87,135,13,21,9,9
+2016,84,Round 10,2016-05-28,Traeger Park,Melbourne,Port Adelaide,76,121,10,18,16,13
+2016,85,Round 10,2016-05-28,Docklands Stadium,St Kilda,Fremantle,101,67,15,10,11,7
+2016,86,Round 10,2016-05-28,MCG,Essendon,Richmond,67,105,10,16,7,9
+2016,87,Round 10,2016-05-28,Adelaide Oval,Adelaide,Greater Western Sydney,107,85,15,13,17,7
+2016,88,Round 10,2016-05-29,Docklands Stadium,Carlton,Geelong,104,85,16,12,8,13
+2016,89,Round 10,2016-05-29,MCG,Collingwood,Western Bulldogs,53,74,7,11,11,8
+2016,90,Round 10,2016-05-29,Subiaco Oval,West Coast,Gold Coast,132,55,20,7,12,13
+2016,91,Round 11,2016-06-03,Bellerive Oval,North Melbourne,Richmond,124,54,18,7,16,12
+2016,92,Round 11,2016-06-04,MCG,Hawthorn,Melbourne,82,64,11,10,16,4
+2016,93,Round 11,2016-06-04,Docklands Stadium,Carlton,Brisbane Lions,102,64,16,9,6,10
+2016,94,Round 11,2016-06-04,Kardinia Park,Geelong,Greater Western Sydney,98,88,14,14,14,4
+2016,95,Round 11,2016-06-04,Subiaco Oval,Fremantle,Essendon,126,47,20,6,6,11
+2016,96,Round 11,2016-06-04,Carrara Stadium,Gold Coast,Sydney,41,79,6,11,5,13
+2016,97,Round 11,2016-06-05,MCG,Collingwood,Port Adelaide,58,125,7,19,16,11
+2016,98,Round 11,2016-06-05,Docklands Stadium,Western Bulldogs,West Coast,83,75,12,11,11,9
+2016,99,Round 11,2016-06-05,Adelaide Oval,Adelaide,St Kilda,133,45,19,6,19,9
+2016,100,Round 12,2016-06-10,Docklands Stadium,Essendon,Hawthorn,43,151,6,23,7,13
+2016,101,Round 12,2016-06-11,Adelaide Oval,Port Adelaide,Western Bulldogs,97,100,14,15,13,10
+2016,102,Round 12,2016-06-11,Gabba,Brisbane Lions,Fremantle,64,147,9,23,10,9
+2016,103,Round 12,2016-06-11,Docklands Stadium,Geelong,North Melbourne,105,74,15,12,15,2
+2016,104,Round 12,2016-06-11,Subiaco Oval,West Coast,Adelaide,76,105,11,15,10,15
+2016,105,Round 12,2016-06-12,Docklands Stadium,St Kilda,Carlton,110,78,17,12,8,6
+2016,106,Round 12,2016-06-12,MCG,Richmond,Gold Coast,114,97,17,15,12,7
+2016,107,Round 12,2016-06-12,Sydney Showground Stadium,Greater Western Sydney,Sydney,105,63,15,9,15,9
+2016,108,Round 12,2016-06-13,MCG,Melbourne,Collingwood,104,58,16,8,8,10
+2016,109,Round 13,2016-06-17,Docklands Stadium,North Melbourne,Hawthorn,84,93,11,14,18,9
+2016,110,Round 13,2016-06-18,Gabba,Brisbane Lions,West Coast,82,131,12,20,10,11
+2016,111,Round 13,2016-06-18,Subiaco Oval,Fremantle,Port Adelaide,86,69,12,9,14,15
+2016,112,Round 13,2016-06-18,Docklands Stadium,Western Bulldogs,Geelong,43,100,5,16,13,4
+2016,113,Round 13,2016-06-19,SCG,Sydney,Melbourne,86,31,12,4,14,7
+2016,114,Round 13,2016-06-19,Docklands Stadium,Essendon,Greater Western Sydney,90,117,12,17,18,15
+2016,115,Round 14,2016-06-23,Adelaide Oval,Adelaide,North Melbourne,100,67,12,10,28,7
+2016,116,Round 14,2016-06-24,MCG,Collingwood,Fremantle,85,37,12,5,13,7
+2016,117,Round 14,2016-06-25,MCG,Richmond,Brisbane Lions,117,75,17,11,15,9
+2016,118,Round 14,2016-06-25,Sydney Showground Stadium,Greater Western Sydney,Carlton,127,65,18,9,19,11
+2016,119,Round 14,2016-06-25,Docklands Stadium,St Kilda,Geelong,93,90,14,13,9,12
+2016,120,Round 14,2016-06-26,York Park,Hawthorn,Gold Coast,86,60,12,8,14,12
+2016,121,Round 15,2016-06-30,Subiaco Oval,West Coast,Essendon,130,52,20,7,10,10
+2016,122,Round 15,2016-07-01,Adelaide Oval,Port Adelaide,Richmond,94,56,14,8,10,8
+2016,123,Round 15,2016-07-02,Carrara Stadium,Gold Coast,St Kilda,108,68,15,8,18,20
+2016,124,Round 15,2016-07-02,SCG,Sydney,Western Bulldogs,79,83,11,13,13,5
+2016,125,Round 15,2016-07-02,MCG,Carlton,Collingwood,45,57,6,8,9,9
+2016,126,Round 15,2016-07-03,MCG,Melbourne,Adelaide,98,120,15,18,8,12
+2016,127,Round 16,2016-07-07,Adelaide Oval,Port Adelaide,Hawthorn,79,101,12,15,7,11
+2016,128,Round 16,2016-07-08,Kardinia Park,Geelong,Sydney,60,98,9,15,6,8
+2016,129,Round 16,2016-07-09,Sydney Showground Stadium,Greater Western Sydney,Collingwood,93,125,14,19,9,11
+2016,130,Round 16,2016-07-09,Carrara Stadium,Gold Coast,Brisbane Lions,139,113,22,17,7,11
+2016,131,Round 16,2016-07-09,Docklands Stadium,Western Bulldogs,Richmond,85,75,12,11,13,9
+2016,132,Round 16,2016-07-09,Marrara Oval,Melbourne,Fremantle,87,55,12,8,15,7
+2016,133,Round 16,2016-07-10,MCG,Carlton,Adelaide,47,107,7,16,5,11
+2016,134,Round 16,2016-07-10,Subiaco Oval,West Coast,North Melbourne,104,72,16,11,8,6
+2016,135,Round 16,2016-07-10,Docklands Stadium,Essendon,St Kilda,98,109,14,17,14,7
+2016,136,Round 17,2016-07-14,SCG,Sydney,Hawthorn,70,75,10,11,10,9
+2016,137,Round 17,2016-07-15,Subiaco Oval,Fremantle,Geelong,61,78,9,11,7,12
+2016,138,Round 17,2016-07-16,MCG,Richmond,Essendon,102,83,16,11,6,17
+2016,139,Round 17,2016-07-16,Docklands Stadium,North Melbourne,Port Adelaide,77,105,10,16,17,9
+2016,140,Round 17,2016-07-16,Cazaly's Stadium,Western Bulldogs,Gold Coast,107,59,15,8,17,11
+2016,141,Round 17,2016-07-16,Adelaide Oval,Adelaide,Collingwood,97,69,14,10,13,9
+2016,142,Round 17,2016-07-17,MCG,Carlton,West Coast,75,82,11,12,9,10
+2016,143,Round 17,2016-07-17,Docklands Stadium,St Kilda,Melbourne,110,74,15,11,20,8
+2016,144,Round 17,2016-07-17,Gabba,Brisbane Lions,Greater Western Sydney,67,146,9,22,13,14
+2016,145,Round 18,2016-07-22,Docklands Stadium,Collingwood,North Melbourne,84,124,12,18,12,16
+2016,146,Round 18,2016-07-23,SCG,Sydney,Carlton,74,68,10,10,14,8
+2016,147,Round 18,2016-07-23,Carrara Stadium,Gold Coast,Fremantle,105,81,16,12,9,9
+2016,148,Round 18,2016-07-23,Subiaco Oval,West Coast,Melbourne,66,60,10,8,6,12
+2016,149,Round 18,2016-07-23,Kardinia Park,Geelong,Adelaide,85,55,12,7,13,13
+2016,150,Round 18,2016-07-23,Docklands Stadium,Western Bulldogs,St Kilda,60,75,9,11,6,9
+2016,151,Round 18,2016-07-24,Docklands Stadium,Essendon,Brisbane Lions,91,128,12,20,19,8
+2016,152,Round 18,2016-07-24,MCG,Hawthorn,Richmond,114,44,16,5,18,14
+2016,153,Round 18,2016-07-24,Adelaide Oval,Port Adelaide,Greater Western Sydney,60,79,9,11,6,13
+2016,154,Round 19,2016-07-29,Kardinia Park,Geelong,Western Bulldogs,103,78,16,11,7,12
+2016,155,Round 19,2016-07-30,Manuka Oval,Greater Western Sydney,Richmond,111,23,17,3,9,5
+2016,156,Round 19,2016-07-30,York Park,Hawthorn,Carlton,74,55,10,7,14,13
+2016,157,Round 19,2016-07-30,MCG,Collingwood,West Coast,91,72,13,11,13,6
+2016,158,Round 19,2016-07-30,Docklands Stadium,North Melbourne,St Kilda,85,62,12,8,13,14
+2016,159,Round 19,2016-07-30,Gabba,Brisbane Lions,Port Adelaide,79,173,11,25,13,23
+2016,160,Round 19,2016-07-31,MCG,Melbourne,Gold Coast,66,64,9,9,12,10
+2016,161,Round 19,2016-07-31,Subiaco Oval,Fremantle,Sydney,47,137,7,21,5,11
+2016,162,Round 19,2016-07-31,Adelaide Oval,Adelaide,Essendon,143,61,22,9,11,7
+2016,163,Round 20,2016-08-05,MCG,Richmond,Collingwood,92,77,14,11,8,11
+2016,164,Round 20,2016-08-06,SCG,Sydney,Port Adelaide,100,33,14,4,16,9
+2016,165,Round 20,2016-08-06,MCG,Melbourne,Hawthorn,110,81,17,11,8,15
+2016,166,Round 20,2016-08-06,Carrara Stadium,Gold Coast,Greater Western Sydney,84,92,13,14,6,8
+2016,167,Round 20,2016-08-06,Docklands Stadium,Western Bulldogs,North Melbourne,61,47,9,7,7,5
+2016,168,Round 20,2016-08-06,Adelaide Oval,Adelaide,Brisbane Lions,177,39,27,6,15,3
+2016,169,Round 20,2016-08-07,MCG,Carlton,St Kilda,51,122,7,19,9,8
+2016,170,Round 20,2016-08-07,Docklands Stadium,Geelong,Essendon,100,34,15,4,10,10
+2016,171,Round 20,2016-08-07,Subiaco Oval,Fremantle,West Coast,64,110,9,17,10,8
+2016,172,Round 21,2016-08-12,Docklands Stadium,Western Bulldogs,Collingwood,95,92,14,14,11,8
+2016,173,Round 21,2016-08-13,Gabba,Brisbane Lions,Carlton,99,95,15,13,9,17
+2016,174,Round 21,2016-08-13,MCG,Hawthorn,North Melbourne,96,57,14,8,12,9
+2016,175,Round 21,2016-08-13,Sydney Showground Stadium,Greater Western Sydney,West Coast,96,97,14,14,12,13
+2016,176,Round 21,2016-08-13,Docklands Stadium,St Kilda,Sydney,76,146,11,23,10,8
+2016,177,Round 21,2016-08-13,Adelaide Oval,Port Adelaide,Melbourne,54,94,8,13,6,16
+2016,178,Round 21,2016-08-14,Docklands Stadium,Essendon,Gold Coast,75,69,11,9,9,15
+2016,179,Round 21,2016-08-14,MCG,Richmond,Geelong,78,82,12,10,6,22
+2016,180,Round 21,2016-08-14,Subiaco Oval,Fremantle,Adelaide,70,142,11,21,4,16
+2016,181,Round 22,2016-08-19,Subiaco Oval,West Coast,Hawthorn,92,67,13,10,14,7
+2016,182,Round 22,2016-08-20,Bellerive Oval,North Melbourne,Sydney,76,85,10,12,16,13
+2016,183,Round 22,2016-08-20,MCG,Richmond,St Kilda,46,55,6,7,10,13
+2016,184,Round 22,2016-08-20,Sydney Showground Stadium,Greater Western Sydney,Fremantle,129,37,19,5,15,7
+2016,185,Round 22,2016-08-20,Docklands Stadium,Collingwood,Gold Coast,118,47,16,6,22,11
+2016,186,Round 22,2016-08-20,Adelaide Oval,Port Adelaide,Adelaide,94,109,14,15,10,19
+2016,187,Round 22,2016-08-21,MCG,Carlton,Melbourne,78,58,11,7,12,16
+2016,188,Round 22,2016-08-21,Gabba,Brisbane Lions,Geelong,69,129,10,19,9,15
+2016,189,Round 22,2016-08-21,Docklands Stadium,Essendon,Western Bulldogs,53,93,7,14,11,9
+2016,190,Round 23,2016-08-26,Adelaide Oval,Adelaide,West Coast,71,100,10,14,11,16
+2016,191,Round 23,2016-08-27,Kardinia Park,Geelong,Melbourne,155,44,24,6,11,8
+2016,192,Round 23,2016-08-27,MCG,Essendon,Carlton,103,79,15,10,13,19
+2016,193,Round 23,2016-08-27,SCG,Sydney,Richmond,164,51,25,7,14,9
+2016,194,Round 23,2016-08-27,Docklands Stadium,North Melbourne,Greater Western Sydney,63,100,9,14,9,16
+2016,195,Round 23,2016-08-27,Carrara Stadium,Gold Coast,Port Adelaide,66,89,9,13,12,11
+2016,196,Round 23,2016-08-28,Docklands Stadium,St Kilda,Brisbane Lions,161,103,25,15,11,13
+2016,197,Round 23,2016-08-28,MCG,Hawthorn,Collingwood,112,111,17,17,10,9
+2016,198,Round 23,2016-08-28,Subiaco Oval,Fremantle,Western Bulldogs,69,49,10,6,9,13
