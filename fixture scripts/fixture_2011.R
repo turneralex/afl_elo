@@ -32,7 +32,7 @@ afl_fixture_2011 <- afl_fixture_2011 %>%
            date = date %>% 
                str_trunc(width = (nchar(.) - 10), side = "right", ellipsis = "") %>% 
                str_remove(".*, ") %>% 
-               paste(., "2014") %>% 
+               paste(., "2011") %>% 
                lubridate::dmy(),
            home_team = X2 %>% str_remove(" [:digit:].*") %>% str_trim(),
            away_team = X4 %>% str_remove(" [:digit:].*") %>% str_trim(),
