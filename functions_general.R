@@ -1,7 +1,6 @@
-library(tidyverse)
-library(rvest)
-
 is_home <- function(season_year, game_venue, game_away_team, data) {
+    library(tidyverse)
+    
     location <- data %>% 
         filter(year == season_year & venue == game_venue) %>% 
         pull(location) 
@@ -18,6 +17,9 @@ is_home <- function(season_year, game_venue, game_away_team, data) {
 is_home("2018", "Cazaly's Stadium", "Western Bulldogs", afl_venues_all)
 
 get_round_scores <- function(season, round) {
+    library(tidyverse)
+    library(rvest)
+    
     fixture_url <- paste0("https://en.wikipedia.org/wiki/", season, "_AFL_season")
     round <- round + 2
     
