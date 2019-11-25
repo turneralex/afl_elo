@@ -19,9 +19,8 @@ fixture_raw_2019 <- map(
 
 afl_fixture_2019 <- fixture_raw_2019 %>% 
     map_df(bind_rows) %>% 
-    filter(X3 %>% str_detect("def\\.|def\\. by|drew with|vs\\.")) %>% 
-    filter(X1 %>% str_length() < 50) %>% # get rid of text row
-    select(round, date = X1, home_team = X2, away_team = X4, venue = X5) %>% 
+    filter(X3 %>% str_detect("def\\.|def\\. by|drew with|vs\\.") & X1 %>% str_length() < 50) %>% 
+    select(round, date = X1, X2, X4, venue = X5) %>% 
     mutate(season = "2019",
            match_id = 1:nrow(.),
            date = date %>% 
@@ -29,16 +28,16 @@ afl_fixture_2019 <- fixture_raw_2019 %>%
                str_remove(".*, ") %>% 
                paste(., "2019") %>% 
                lubridate::dmy(),
-           home_team = home_team %>% str_remove(" [:digit:].*") %>% str_trim(),
-           away_team = away_team %>% str_remove(" [:digit:].*") %>% str_trim(),
-           venue = venue %>% str_remove(" [(].*"),
-           home_score = NA,
-           away_score = NA,
-           home_goals = NA,
-           away_goals = NA,
-           home_behinds = NA,
-           away_behinds = NA) %>% 
-    select(season, match_id, round, date, venue, home_team:away_behinds) 
+           home_team = X2 %>% str_remove(" [:digit:].*") %>% str_trim(),
+           away_team = X4 %>% str_remove(" [:digit:].*") %>% str_trim(),
+           home_score = X2 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
+           away_score = X4 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
+           home_goals = X2 %>% str_remove_all("[:alpha:]* |\\..*") %>% as.integer(),
+           away_goals = X4 %>% str_remove_all("[:alpha:]* |\\..*") %>% as.integer(),
+           home_behinds = home_score - (home_goals * 6),
+           away_behinds = away_score - (away_goals * 6),
+           venue = venue %>% str_remove(" [(].*")) %>% 
+    select(season, match_id, round, date, venue:away_behinds)
 
 afl_fixture_2019 <- afl_fixture_2019 %>% 
     mutate(
@@ -91,9 +90,9 @@ afl_venues_2019 <- afl_venues_2019 %>%
     mutate(year = "2019") %>% 
     select(year, everything())
 
-# afl_fixture_2019 %>% 
-#     write_csv(here::here("fixtures", "afl_fixture_2019.csv"))
-# 
-# afl_venues_2019 %>% 
-#     unnest() %>% 
-#     write_csv(here::here("venues", "afl_venues_2019.csv"))
+afl_fixture_2019 %>%
+    write_csv(here::here("fixtures", "afl_fixture_2019.csv"))
+
+afl_venues_2019 %>%
+    unnest(cols = c(teams)) %>%
+    write_csv(here::here("venues", "afl_venues_2019.csv"))

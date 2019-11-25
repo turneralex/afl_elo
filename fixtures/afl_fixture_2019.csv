@@ -1,199 +1,199 @@
 season,match_id,round,date,venue,home_team,away_team,home_score,away_score,home_goals,away_goals,home_behinds,away_behinds
-2019,1,Round 1,2019-03-21,MCG,Carlton,Richmond,NA,NA,NA,NA,NA,NA
-2019,2,Round 1,2019-03-22,MCG,Collingwood,Geelong,NA,NA,NA,NA,NA,NA
-2019,3,Round 1,2019-03-23,MCG,Melbourne,Port Adelaide,NA,NA,NA,NA,NA,NA
-2019,4,Round 1,2019-03-23,Adelaide Oval,Adelaide,Hawthorn,NA,NA,NA,NA,NA,NA
-2019,5,Round 1,2019-03-23,Gabba,Brisbane Lions,West Coast,NA,NA,NA,NA,NA,NA
-2019,6,Round 1,2019-03-23,Docklands Stadium,Western Bulldogs,Sydney,NA,NA,NA,NA,NA,NA
-2019,7,Round 1,2019-03-24,Docklands Stadium,St Kilda,Gold Coast,NA,NA,NA,NA,NA,NA
-2019,8,Round 1,2019-03-24,Sydney Showground Stadium,Greater Western Sydney,Essendon,NA,NA,NA,NA,NA,NA
-2019,9,Round 1,2019-03-24,Perth Stadium,Fremantle,North Melbourne,NA,NA,NA,NA,NA,NA
-2019,10,Round 2,2019-03-28,MCG,Richmond,Collingwood,NA,NA,NA,NA,NA,NA
-2019,11,Round 2,2019-03-29,SCG,Sydney,Adelaide,NA,NA,NA,NA,NA,NA
-2019,12,Round 2,2019-03-30,Docklands Stadium,Essendon,St Kilda,NA,NA,NA,NA,NA,NA
-2019,13,Round 2,2019-03-30,Adelaide Oval,Port Adelaide,Carlton,NA,NA,NA,NA,NA,NA
-2019,14,Round 2,2019-03-30,Perth Stadium,West Coast,Greater Western Sydney,NA,NA,NA,NA,NA,NA
-2019,15,Round 2,2019-03-30,Kardinia Park,Geelong,Melbourne,NA,NA,NA,NA,NA,NA
-2019,16,Round 2,2019-03-31,Docklands Stadium,North Melbourne,Brisbane Lions,NA,NA,NA,NA,NA,NA
-2019,17,Round 2,2019-03-31,MCG,Hawthorn,Western Bulldogs,NA,NA,NA,NA,NA,NA
-2019,18,Round 2,2019-03-31,Carrara Stadium,Gold Coast,Fremantle,NA,NA,NA,NA,NA,NA
-2019,19,Round 3,2019-04-04,Adelaide Oval,Adelaide,Geelong,NA,NA,NA,NA,NA,NA
-2019,20,Round 3,2019-04-05,MCG,Melbourne,Essendon,NA,NA,NA,NA,NA,NA
-2019,21,Round 3,2019-04-06,Docklands Stadium,Carlton,Sydney,NA,NA,NA,NA,NA,NA
-2019,22,Round 3,2019-04-06,Sydney Showground Stadium,Greater Western Sydney,Richmond,NA,NA,NA,NA,NA,NA
-2019,23,Round 3,2019-04-06,Gabba,Brisbane Lions,Port Adelaide,NA,NA,NA,NA,NA,NA
-2019,24,Round 3,2019-04-06,MCG,Collingwood,West Coast,NA,NA,NA,NA,NA,NA
-2019,25,Round 3,2019-04-07,Docklands Stadium,Western Bulldogs,Gold Coast,NA,NA,NA,NA,NA,NA
-2019,26,Round 3,2019-04-07,MCG,Hawthorn,North Melbourne,NA,NA,NA,NA,NA,NA
-2019,27,Round 3,2019-04-07,Perth Stadium,Fremantle,St Kilda,NA,NA,NA,NA,NA,NA
-2019,28,Round 4,2019-04-11,SCG,Sydney,Melbourne,NA,NA,NA,NA,NA,NA
-2019,29,Round 4,2019-04-12,MCG,Collingwood,Western Bulldogs,NA,NA,NA,NA,NA,NA
-2019,30,Round 4,2019-04-13,Kardinia Park,Geelong,Greater Western Sydney,NA,NA,NA,NA,NA,NA
-2019,31,Round 4,2019-04-13,MCG,Essendon,Brisbane Lions,NA,NA,NA,NA,NA,NA
-2019,32,Round 4,2019-04-13,Adelaide Oval,Port Adelaide,Richmond,NA,NA,NA,NA,NA,NA
-2019,33,Round 4,2019-04-13,Docklands Stadium,North Melbourne,Adelaide,NA,NA,NA,NA,NA,NA
-2019,34,Round 4,2019-04-13,Perth Stadium,West Coast,Fremantle,NA,NA,NA,NA,NA,NA
-2019,35,Round 4,2019-04-14,Carrara Stadium,Gold Coast,Carlton,NA,NA,NA,NA,NA,NA
-2019,36,Round 4,2019-04-14,Docklands Stadium,St Kilda,Hawthorn,NA,NA,NA,NA,NA,NA
-2019,37,Round 5,2019-04-18,Gabba,Brisbane Lions,Collingwood,NA,NA,NA,NA,NA,NA
-2019,38,Round 5,2019-04-19,Docklands Stadium,North Melbourne,Essendon,NA,NA,NA,NA,NA,NA
-2019,39,Round 5,2019-04-19,Perth Stadium,West Coast,Port Adelaide,NA,NA,NA,NA,NA,NA
-2019,40,Round 5,2019-04-20,Manuka Oval,Greater Western Sydney,Fremantle,NA,NA,NA,NA,NA,NA
-2019,41,Round 5,2019-04-20,MCG,Melbourne,St Kilda,NA,NA,NA,NA,NA,NA
-2019,42,Round 5,2019-04-20,Docklands Stadium,Richmond,Sydney,NA,NA,NA,NA,NA,NA
-2019,43,Round 5,2019-04-21,Docklands Stadium,Western Bulldogs,Carlton,NA,NA,NA,NA,NA,NA
-2019,44,Round 5,2019-04-21,Adelaide Oval,Adelaide,Gold Coast,NA,NA,NA,NA,NA,NA
-2019,45,Round 5,2019-04-22,MCG,Hawthorn,Geelong,NA,NA,NA,NA,NA,NA
-2019,46,Round 6,2019-04-24,MCG,Richmond,Melbourne,NA,NA,NA,NA,NA,NA
-2019,47,Round 6,2019-04-25,MCG,Essendon,Collingwood,NA,NA,NA,NA,NA,NA
-2019,48,Round 6,2019-04-26,Adelaide Oval,Port Adelaide,North Melbourne,NA,NA,NA,NA,NA,NA
-2019,49,Round 6,2019-04-27,Carrara Stadium,Gold Coast,Brisbane Lions,NA,NA,NA,NA,NA,NA
-2019,50,Round 6,2019-04-27,Docklands Stadium,St Kilda,Adelaide,NA,NA,NA,NA,NA,NA
-2019,51,Round 6,2019-04-27,SCG,Sydney,Greater Western Sydney,NA,NA,NA,NA,NA,NA
-2019,52,Round 6,2019-04-27,Perth Stadium,Fremantle,Western Bulldogs,NA,NA,NA,NA,NA,NA
-2019,53,Round 6,2019-04-28,York Park,Hawthorn,Carlton,NA,NA,NA,NA,NA,NA
-2019,54,Round 6,2019-04-28,Kardinia Park,Geelong,West Coast,NA,NA,NA,NA,NA,NA
-2019,55,Round 7,2019-05-03,Docklands Stadium,Collingwood,Port Adelaide,NA,NA,NA,NA,NA,NA
-2019,56,Round 7,2019-05-04,MCG,Melbourne,Hawthorn,NA,NA,NA,NA,NA,NA
-2019,57,Round 7,2019-05-04,Manuka Oval,Greater Western Sydney,St Kilda,NA,NA,NA,NA,NA,NA
-2019,58,Round 7,2019-05-04,Gabba,Brisbane Lions,Sydney,NA,NA,NA,NA,NA,NA
-2019,59,Round 7,2019-05-04,Docklands Stadium,Western Bulldogs,Richmond,NA,NA,NA,NA,NA,NA
-2019,60,Round 7,2019-05-04,Perth Stadium,West Coast,Gold Coast,NA,NA,NA,NA,NA,NA
-2019,61,Round 7,2019-05-05,Docklands Stadium,Carlton,North Melbourne,NA,NA,NA,NA,NA,NA
-2019,62,Round 7,2019-05-05,MCG,Geelong,Essendon,NA,NA,NA,NA,NA,NA
-2019,63,Round 7,2019-05-05,Adelaide Oval,Adelaide,Fremantle,NA,NA,NA,NA,NA,NA
-2019,64,Round 8,2019-05-10,SCG,Sydney,Essendon,NA,NA,NA,NA,NA,NA
-2019,65,Round 8,2019-05-11,Eureka Stadium,Western Bulldogs,Brisbane Lions,NA,NA,NA,NA,NA,NA
-2019,66,Round 8,2019-05-11,MCG,Carlton,Collingwood,NA,NA,NA,NA,NA,NA
-2019,67,Round 8,2019-05-11,Carrara Stadium,Gold Coast,Melbourne,NA,NA,NA,NA,NA,NA
-2019,68,Round 8,2019-05-11,Docklands Stadium,St Kilda,West Coast,NA,NA,NA,NA,NA,NA
-2019,69,Round 8,2019-05-11,Adelaide Oval,Port Adelaide,Adelaide,NA,NA,NA,NA,NA,NA
-2019,70,Round 8,2019-05-12,Docklands Stadium,North Melbourne,Geelong,NA,NA,NA,NA,NA,NA
-2019,71,Round 8,2019-05-12,MCG,Hawthorn,Greater Western Sydney,NA,NA,NA,NA,NA,NA
-2019,72,Round 8,2019-05-12,Perth Stadium,Fremantle,Richmond,NA,NA,NA,NA,NA,NA
-2019,73,Round 9,2019-05-17,Perth Stadium,West Coast,Melbourne,NA,NA,NA,NA,NA,NA
-2019,74,Round 9,2019-05-18,MCG,Collingwood,St Kilda,NA,NA,NA,NA,NA,NA
-2019,75,Round 9,2019-05-18,Gabba,Brisbane Lions,Adelaide,NA,NA,NA,NA,NA,NA
-2019,76,Round 9,2019-05-18,Kardinia Park,Geelong,Western Bulldogs,NA,NA,NA,NA,NA,NA
-2019,77,Round 9,2019-05-18,Docklands Stadium,Essendon,Fremantle,NA,NA,NA,NA,NA,NA
-2019,78,Round 9,2019-05-18,Bellerive Oval,North Melbourne,Sydney,NA,NA,NA,NA,NA,NA
-2019,79,Round 9,2019-05-19,Adelaide Oval,Port Adelaide,Gold Coast,NA,NA,NA,NA,NA,NA
-2019,80,Round 9,2019-05-19,MCG,Richmond,Hawthorn,NA,NA,NA,NA,NA,NA
-2019,81,Round 9,2019-05-19,Sydney Showground Stadium,Greater Western Sydney,Carlton,NA,NA,NA,NA,NA,NA
-2019,82,Round 10,2019-05-24,SCG,Sydney,Collingwood,NA,NA,NA,NA,NA,NA
-2019,83,Round 10,2019-05-25,York Park,Hawthorn,Port Adelaide,NA,NA,NA,NA,NA,NA
-2019,84,Round 10,2019-05-25,Docklands Stadium,Western Bulldogs,North Melbourne,NA,NA,NA,NA,NA,NA
-2019,85,Round 10,2019-05-25,Adelaide Oval,Adelaide,West Coast,NA,NA,NA,NA,NA,NA
-2019,86,Round 10,2019-05-25,Carrara Stadium,Gold Coast,Geelong,NA,NA,NA,NA,NA,NA
-2019,87,Round 10,2019-05-25,MCG,Richmond,Essendon,NA,NA,NA,NA,NA,NA
-2019,88,Round 10,2019-05-26,MCG,Melbourne,Greater Western Sydney,NA,NA,NA,NA,NA,NA
-2019,89,Round 10,2019-05-26,Docklands Stadium,St Kilda,Carlton,NA,NA,NA,NA,NA,NA
-2019,90,Round 10,2019-05-26,Perth Stadium,Fremantle,Brisbane Lions,NA,NA,NA,NA,NA,NA
-2019,91,Round 11,2019-05-31,Docklands Stadium,North Melbourne,Richmond,NA,NA,NA,NA,NA,NA
-2019,92,Round 11,2019-06-01,MCG,Collingwood,Fremantle,NA,NA,NA,NA,NA,NA
-2019,93,Round 11,2019-06-01,Sydney Showground Stadium,Greater Western Sydney,Gold Coast,NA,NA,NA,NA,NA,NA
-2019,94,Round 11,2019-06-01,Kardinia Park,Geelong,Sydney,NA,NA,NA,NA,NA,NA
-2019,95,Round 11,2019-06-01,Gabba,Brisbane Lions,Hawthorn,NA,NA,NA,NA,NA,NA
-2019,96,Round 11,2019-06-01,Marrara Oval,Melbourne,Adelaide,NA,NA,NA,NA,NA,NA
-2019,97,Round 11,2019-06-02,Jiangwan Stadium,St Kilda,Port Adelaide,NA,NA,NA,NA,NA,NA
-2019,98,Round 11,2019-06-02,MCG,Essendon,Carlton,NA,NA,NA,NA,NA,NA
-2019,99,Round 11,2019-06-02,Perth Stadium,West Coast,Western Bulldogs,NA,NA,NA,NA,NA,NA
-2019,100,Round 12,2019-06-07,MCG,Richmond,Geelong,NA,NA,NA,NA,NA,NA
-2019,101,Round 12,2019-06-08,Docklands Stadium,Carlton,Brisbane Lions,NA,NA,NA,NA,NA,NA
-2019,102,Round 12,2019-06-08,Carrara Stadium,Gold Coast,North Melbourne,NA,NA,NA,NA,NA,NA
-2019,103,Round 12,2019-06-08,Adelaide Oval,Adelaide,Greater Western Sydney,NA,NA,NA,NA,NA,NA
-2019,104,Round 12,2019-06-09,SCG,Sydney,West Coast,NA,NA,NA,NA,NA,NA
-2019,105,Round 12,2019-06-10,MCG,Collingwood,Melbourne,NA,NA,NA,NA,NA,NA
-2019,106,Round 13,2019-06-13,Adelaide Oval,Adelaide,Richmond,NA,NA,NA,NA,NA,NA
-2019,107,Round 13,2019-06-14,Docklands Stadium,Essendon,Hawthorn,NA,NA,NA,NA,NA,NA
-2019,108,Round 13,2019-06-15,Riverway Stadium,Gold Coast,St Kilda,NA,NA,NA,NA,NA,NA
-2019,109,Round 13,2019-06-15,Perth Stadium,Fremantle,Port Adelaide,NA,NA,NA,NA,NA,NA
-2019,110,Round 13,2019-06-15,Docklands Stadium,Carlton,Western Bulldogs,NA,NA,NA,NA,NA,NA
-2019,111,Round 13,2019-06-16,Bellerive Oval,North Melbourne,Greater Western Sydney,NA,NA,NA,NA,NA,NA
-2019,112,Round 14,2019-06-20,Perth Stadium,West Coast,Essendon,NA,NA,NA,NA,NA,NA
-2019,113,Round 14,2019-06-21,SCG,Sydney,Hawthorn,NA,NA,NA,NA,NA,NA
-2019,114,Round 14,2019-06-22,MCG,Melbourne,Fremantle,NA,NA,NA,NA,NA,NA
-2019,115,Round 14,2019-06-22,Docklands Stadium,St Kilda,Brisbane Lions,NA,NA,NA,NA,NA,NA
-2019,116,Round 14,2019-06-22,Adelaide Oval,Port Adelaide,Geelong,NA,NA,NA,NA,NA,NA
-2019,117,Round 14,2019-06-23,Docklands Stadium,Western Bulldogs,Collingwood,NA,NA,NA,NA,NA,NA
-2019,118,Round 15,2019-06-27,Docklands Stadium,Essendon,Greater Western Sydney,NA,NA,NA,NA,NA,NA
-2019,119,Round 15,2019-06-28,Kardinia Park,Geelong,Adelaide,NA,NA,NA,NA,NA,NA
-2019,120,Round 15,2019-06-29,MCG,Hawthorn,West Coast,NA,NA,NA,NA,NA,NA
-2019,121,Round 15,2019-06-29,SCG,Sydney,Gold Coast,NA,NA,NA,NA,NA,NA
-2019,122,Round 15,2019-06-29,Docklands Stadium,Collingwood,North Melbourne,NA,NA,NA,NA,NA,NA
-2019,123,Round 15,2019-06-29,Adelaide Oval,Port Adelaide,Western Bulldogs,NA,NA,NA,NA,NA,NA
-2019,124,Round 15,2019-06-30,Docklands Stadium,St Kilda,Richmond,NA,NA,NA,NA,NA,NA
-2019,125,Round 15,2019-06-30,Gabba,Brisbane Lions,Melbourne,NA,NA,NA,NA,NA,NA
-2019,126,Round 15,2019-06-30,Perth Stadium,Fremantle,Carlton,NA,NA,NA,NA,NA,NA
-2019,127,Round 16,2019-07-05,MCG,Hawthorn,Collingwood,NA,NA,NA,NA,NA,NA
-2019,128,Round 16,2019-07-06,MCG,Essendon,Sydney,NA,NA,NA,NA,NA,NA
-2019,129,Round 16,2019-07-06,Carrara Stadium,Gold Coast,Richmond,NA,NA,NA,NA,NA,NA
-2019,130,Round 16,2019-07-06,Adelaide Oval,Adelaide,Port Adelaide,NA,NA,NA,NA,NA,NA
-2019,131,Round 16,2019-07-06,Docklands Stadium,Western Bulldogs,Geelong,NA,NA,NA,NA,NA,NA
-2019,132,Round 16,2019-07-06,Perth Stadium,Fremantle,West Coast,NA,NA,NA,NA,NA,NA
-2019,133,Round 16,2019-07-07,MCG,Carlton,Melbourne,NA,NA,NA,NA,NA,NA
-2019,134,Round 16,2019-07-07,Bellerive Oval,North Melbourne,St Kilda,NA,NA,NA,NA,NA,NA
-2019,135,Round 16,2019-07-07,Sydney Showground Stadium,Greater Western Sydney,Brisbane Lions,NA,NA,NA,NA,NA,NA
-2019,136,Round 17,2019-07-12,Perth Stadium,West Coast,Collingwood,NA,NA,NA,NA,NA,NA
-2019,137,Round 17,2019-07-13,SCG,Sydney,Carlton,NA,NA,NA,NA,NA,NA
-2019,138,Round 17,2019-07-13,York Park,Hawthorn,Fremantle,NA,NA,NA,NA,NA,NA
-2019,139,Round 17,2019-07-13,Docklands Stadium,Essendon,North Melbourne,NA,NA,NA,NA,NA,NA
-2019,140,Round 17,2019-07-13,Carrara Stadium,Gold Coast,Adelaide,NA,NA,NA,NA,NA,NA
-2019,141,Round 17,2019-07-13,Kardinia Park,Geelong,St Kilda,NA,NA,NA,NA,NA,NA
-2019,142,Round 17,2019-07-14,MCG,Richmond,Greater Western Sydney,NA,NA,NA,NA,NA,NA
-2019,143,Round 17,2019-07-14,Docklands Stadium,Western Bulldogs,Melbourne,NA,NA,NA,NA,NA,NA
-2019,144,Round 17,2019-07-14,Adelaide Oval,Port Adelaide,Brisbane Lions,NA,NA,NA,NA,NA,NA
-2019,145,Round 18,2019-07-19,Adelaide Oval,Adelaide,Essendon,NA,NA,NA,NA,NA,NA
-2019,146,Round 18,2019-07-20,MCG,Richmond,Port Adelaide,NA,NA,NA,NA,NA,NA
-2019,147,Round 18,2019-07-20,Docklands Stadium,Carlton,Gold Coast,NA,NA,NA,NA,NA,NA
-2019,148,Round 18,2019-07-20,Sydney Showground Stadium,Greater Western Sydney,Collingwood,NA,NA,NA,NA,NA,NA
-2019,149,Round 18,2019-07-20,Gabba,Brisbane Lions,North Melbourne,NA,NA,NA,NA,NA,NA
-2019,150,Round 18,2019-07-20,Perth Stadium,Fremantle,Sydney,NA,NA,NA,NA,NA,NA
-2019,151,Round 18,2019-07-21,MCG,Geelong,Hawthorn,NA,NA,NA,NA,NA,NA
-2019,152,Round 18,2019-07-21,Traeger Park,Melbourne,West Coast,NA,NA,NA,NA,NA,NA
-2019,153,Round 18,2019-07-21,Docklands Stadium,St Kilda,Western Bulldogs,NA,NA,NA,NA,NA,NA
-2019,154,Round 19,2019-07-26,MCG,Collingwood,Richmond,NA,NA,NA,NA,NA,NA
-2019,155,Round 19,2019-07-27,York Park,Hawthorn,Brisbane Lions,NA,NA,NA,NA,NA,NA
-2019,156,Round 19,2019-07-27,MCG,Carlton,Adelaide,NA,NA,NA,NA,NA,NA
-2019,157,Round 19,2019-07-27,Perth Stadium,West Coast,North Melbourne,NA,NA,NA,NA,NA,NA
-2019,158,Round 19,2019-07-27,Docklands Stadium,St Kilda,Melbourne,NA,NA,NA,NA,NA,NA
-2019,159,Round 19,2019-07-27,Adelaide Oval,Port Adelaide,Greater Western Sydney,NA,NA,NA,NA,NA,NA
-2019,160,Round 19,2019-07-28,Docklands Stadium,Western Bulldogs,Fremantle,NA,NA,NA,NA,NA,NA
-2019,161,Round 19,2019-07-28,SCG,Sydney,Geelong,NA,NA,NA,NA,NA,NA
-2019,162,Round 19,2019-07-28,Carrara Stadium,Gold Coast,Essendon,NA,NA,NA,NA,NA,NA
-2019,163,Round 20,2019-08-02,Docklands Stadium,North Melbourne,Hawthorn,NA,NA,NA,NA,NA,NA
-2019,164,Round 20,2019-08-03,Docklands Stadium,Essendon,Port Adelaide,NA,NA,NA,NA,NA,NA
-2019,165,Round 20,2019-08-03,Sydney Showground Stadium,Greater Western Sydney,Sydney,NA,NA,NA,NA,NA,NA
-2019,166,Round 20,2019-08-03,Perth Stadium,Fremantle,Geelong,NA,NA,NA,NA,NA,NA
-2019,167,Round 20,2019-08-03,MCG,Melbourne,Richmond,NA,NA,NA,NA,NA,NA
-2019,168,Round 20,2019-08-03,Adelaide Oval,Adelaide,St Kilda,NA,NA,NA,NA,NA,NA
-2019,169,Round 20,2019-08-04,MCG,Collingwood,Gold Coast,NA,NA,NA,NA,NA,NA
-2019,170,Round 20,2019-08-04,Docklands Stadium,Carlton,West Coast,NA,NA,NA,NA,NA,NA
-2019,171,Round 20,2019-08-04,Gabba,Brisbane Lions,Western Bulldogs,NA,NA,NA,NA,NA,NA
-2019,172,Round 21,2019-08-09,Manuka Oval,Greater Western Sydney,Hawthorn,NA,NA,NA,NA,NA,NA
-2019,173,Round 21,2019-08-10,MCG,Melbourne,Collingwood,NA,NA,NA,NA,NA,NA
-2019,174,Round 21,2019-08-10,Adelaide Oval,Port Adelaide,Sydney,NA,NA,NA,NA,NA,NA
-2019,175,Round 21,2019-08-10,Gabba,Brisbane Lions,Gold Coast,NA,NA,NA,NA,NA,NA
-2019,176,Round 21,2019-08-10,Docklands Stadium,Essendon,Western Bulldogs,NA,NA,NA,NA,NA,NA
-2019,177,Round 21,2019-08-10,Kardinia Park,Geelong,North Melbourne,NA,NA,NA,NA,NA,NA
-2019,178,Round 21,2019-08-11,Docklands Stadium,St Kilda,Fremantle,NA,NA,NA,NA,NA,NA
-2019,179,Round 21,2019-08-11,MCG,Richmond,Carlton,NA,NA,NA,NA,NA,NA
-2019,180,Round 21,2019-08-11,Perth Stadium,West Coast,Adelaide,NA,NA,NA,NA,NA,NA
-2019,181,Round 22,2019-08-16,MCG,Melbourne,Sydney,NA,NA,NA,NA,NA,NA
-2019,182,Round 22,2019-08-17,MCG,Carlton,St Kilda,NA,NA,NA,NA,NA,NA
-2019,183,Round 22,2019-08-17,Gabba,Brisbane Lions,Geelong,NA,NA,NA,NA,NA,NA
-2019,184,Round 22,2019-08-17,Adelaide Oval,Adelaide,Collingwood,NA,NA,NA,NA,NA,NA
-2019,185,Round 22,2019-08-17,Docklands Stadium,North Melbourne,Port Adelaide,NA,NA,NA,NA,NA,NA
-2019,186,Round 22,2019-08-17,Perth Stadium,Fremantle,Essendon,NA,NA,NA,NA,NA,NA
-2019,187,Round 22,2019-08-18,MCG,Richmond,West Coast,NA,NA,NA,NA,NA,NA
-2019,188,Round 22,2019-08-18,Sydney Showground Stadium,Greater Western Sydney,Western Bulldogs,NA,NA,NA,NA,NA,NA
-2019,189,Round 22,2019-08-18,Docklands Stadium,Hawthorn,Gold Coast,NA,NA,NA,NA,NA,NA
-2019,190,Round 23,NA,MCG,Richmond,Brisbane Lions,NA,NA,NA,NA,NA,NA
-2019,191,Round 23,NA,Perth Stadium,West Coast,Hawthorn,NA,NA,NA,NA,NA,NA
-2019,192,Round 23,NA,Bellerive Oval,North Melbourne,Melbourne,NA,NA,NA,NA,NA,NA
-2019,193,Round 23,NA,Carrara Stadium,Gold Coast,Greater Western Sydney,NA,NA,NA,NA,NA,NA
-2019,194,Round 23,NA,Adelaide Oval,Port Adelaide,Fremantle,NA,NA,NA,NA,NA,NA
-2019,195,Round 23,NA,Kardinia Park,Geelong,Carlton,NA,NA,NA,NA,NA,NA
-2019,196,Round 23,NA,MCG,Collingwood,Essendon,NA,NA,NA,NA,NA,NA
-2019,197,Round 23,NA,Eureka Stadium,Western Bulldogs,Adelaide,NA,NA,NA,NA,NA,NA
-2019,198,Round 23,NA,SCG,Sydney,St Kilda,NA,NA,NA,NA,NA,NA
+2019,1,Round 1,2019-03-21,MCG,Carlton,Richmond,64,97,9,14,10,13
+2019,2,Round 1,2019-03-22,MCG,Collingwood,Geelong,65,72,9,10,11,12
+2019,3,Round 1,2019-03-23,MCG,Melbourne,Port Adelaide,61,87,9,12,7,15
+2019,4,Round 1,2019-03-23,Adelaide Oval,Adelaide,Hawthorn,55,87,7,12,13,15
+2019,5,Round 1,2019-03-23,Gabba,Brisbane Lions,West Coast,102,58,15,8,12,10
+2019,6,Round 1,2019-03-23,Docklands Stadium,Western Bulldogs,Sydney,82,65,11,9,16,11
+2019,7,Round 1,2019-03-24,Docklands Stadium,St Kilda,Gold Coast,85,84,13,13,7,6
+2019,8,Round 1,2019-03-24,Sydney Showground Stadium,Greater Western Sydney,Essendon,112,40,16,5,16,10
+2019,9,Round 1,2019-03-24,Perth Stadium,Fremantle,North Melbourne,141,59,21,9,15,5
+2019,10,Round 2,2019-03-28,MCG,Richmond,Collingwood,66,110,10,17,6,8
+2019,11,Round 2,2019-03-29,SCG,Sydney,Adelaide,62,88,8,12,14,16
+2019,12,Round 2,2019-03-30,Docklands Stadium,Essendon,St Kilda,65,76,9,10,11,16
+2019,13,Round 2,2019-03-30,Adelaide Oval,Port Adelaide,Carlton,88,72,13,11,10,6
+2019,14,Round 2,2019-03-30,Perth Stadium,West Coast,Greater Western Sydney,104,52,16,7,8,10
+2019,15,Round 2,2019-03-30,Kardinia Park,Geelong,Melbourne,126,46,20,6,6,10
+2019,16,Round 2,2019-03-31,Docklands Stadium,North Melbourne,Brisbane Lions,87,107,13,16,9,11
+2019,17,Round 2,2019-03-31,MCG,Hawthorn,Western Bulldogs,87,106,13,16,9,10
+2019,18,Round 2,2019-03-31,Carrara Stadium,Gold Coast,Fremantle,61,58,7,8,19,10
+2019,19,Round 3,2019-04-04,Adelaide Oval,Adelaide,Geelong,75,99,10,14,15,15
+2019,20,Round 3,2019-04-05,MCG,Melbourne,Essendon,112,130,18,20,4,10
+2019,21,Round 3,2019-04-06,Docklands Stadium,Carlton,Sydney,74,93,10,14,14,9
+2019,22,Round 3,2019-04-06,Sydney Showground Stadium,Greater Western Sydney,Richmond,125,76,19,10,11,16
+2019,23,Round 3,2019-04-06,Gabba,Brisbane Lions,Port Adelaide,107,90,16,13,11,12
+2019,24,Round 3,2019-04-06,MCG,Collingwood,West Coast,76,98,11,15,10,8
+2019,25,Round 3,2019-04-07,Docklands Stadium,Western Bulldogs,Gold Coast,68,73,9,10,14,13
+2019,26,Round 3,2019-04-07,MCG,Hawthorn,North Melbourne,87,71,13,10,9,11
+2019,27,Round 3,2019-04-07,Perth Stadium,Fremantle,St Kilda,71,66,11,9,5,12
+2019,28,Round 4,2019-04-11,SCG,Sydney,Melbourne,78,100,11,15,12,10
+2019,29,Round 4,2019-04-12,MCG,Collingwood,Western Bulldogs,78,64,11,9,12,10
+2019,30,Round 4,2019-04-13,Kardinia Park,Geelong,Greater Western Sydney,75,79,11,11,9,13
+2019,31,Round 4,2019-04-13,MCG,Essendon,Brisbane Lions,112,65,17,9,10,11
+2019,32,Round 4,2019-04-13,Adelaide Oval,Port Adelaide,Richmond,92,99,14,15,8,9
+2019,33,Round 4,2019-04-13,Docklands Stadium,North Melbourne,Adelaide,71,59,9,8,17,11
+2019,34,Round 4,2019-04-13,Perth Stadium,West Coast,Fremantle,69,56,10,7,9,14
+2019,35,Round 4,2019-04-14,Carrara Stadium,Gold Coast,Carlton,59,57,8,8,11,9
+2019,36,Round 4,2019-04-14,Docklands Stadium,St Kilda,Hawthorn,74,69,10,10,14,9
+2019,37,Round 5,2019-04-18,Gabba,Brisbane Lions,Collingwood,61,123,8,18,13,15
+2019,38,Round 5,2019-04-19,Docklands Stadium,North Melbourne,Essendon,58,116,7,17,16,14
+2019,39,Round 5,2019-04-19,Perth Stadium,West Coast,Port Adelaide,53,95,8,13,5,17
+2019,40,Round 5,2019-04-20,Manuka Oval,Greater Western Sydney,Fremantle,82,106,11,16,16,10
+2019,41,Round 5,2019-04-20,MCG,Melbourne,St Kilda,55,95,7,15,13,5
+2019,42,Round 5,2019-04-20,Docklands Stadium,Richmond,Sydney,89,67,13,10,11,7
+2019,43,Round 5,2019-04-21,Docklands Stadium,Western Bulldogs,Carlton,57,101,7,15,15,11
+2019,44,Round 5,2019-04-21,Adelaide Oval,Adelaide,Gold Coast,119,46,18,6,11,10
+2019,45,Round 5,2019-04-22,MCG,Hawthorn,Geelong,90,113,13,17,12,11
+2019,46,Round 6,2019-04-24,MCG,Richmond,Melbourne,85,42,12,6,13,6
+2019,47,Round 6,2019-04-25,MCG,Essendon,Collingwood,69,73,10,10,9,13
+2019,48,Round 6,2019-04-26,Adelaide Oval,Port Adelaide,North Melbourne,88,72,12,11,16,6
+2019,49,Round 6,2019-04-27,Carrara Stadium,Gold Coast,Brisbane Lions,62,111,9,16,8,15
+2019,50,Round 6,2019-04-27,Docklands Stadium,St Kilda,Adelaide,68,97,10,15,8,7
+2019,51,Round 6,2019-04-27,SCG,Sydney,Greater Western Sydney,79,120,12,18,7,12
+2019,52,Round 6,2019-04-27,Perth Stadium,Fremantle,Western Bulldogs,88,69,13,9,10,15
+2019,53,Round 6,2019-04-28,York Park,Hawthorn,Carlton,93,88,13,13,15,10
+2019,54,Round 6,2019-04-28,Kardinia Park,Geelong,West Coast,104,46,15,7,14,4
+2019,55,Round 7,2019-05-03,Docklands Stadium,Collingwood,Port Adelaide,108,69,15,10,18,9
+2019,56,Round 7,2019-05-04,MCG,Melbourne,Hawthorn,79,74,11,11,13,8
+2019,57,Round 7,2019-05-04,Manuka Oval,Greater Western Sydney,St Kilda,114,70,18,10,6,10
+2019,58,Round 7,2019-05-04,Gabba,Brisbane Lions,Sydney,103,81,14,12,19,9
+2019,59,Round 7,2019-05-04,Docklands Stadium,Western Bulldogs,Richmond,99,52,15,7,9,10
+2019,60,Round 7,2019-05-04,Perth Stadium,West Coast,Gold Coast,80,57,11,8,14,9
+2019,61,Round 7,2019-05-05,Docklands Stadium,Carlton,North Melbourne,62,120,8,18,14,12
+2019,62,Round 7,2019-05-05,MCG,Geelong,Essendon,86,54,13,7,8,12
+2019,63,Round 7,2019-05-05,Adelaide Oval,Adelaide,Fremantle,51,34,7,5,9,4
+2019,64,Round 8,2019-05-10,SCG,Sydney,Essendon,77,72,11,10,11,12
+2019,65,Round 8,2019-05-11,Eureka Stadium,Western Bulldogs,Brisbane Lions,92,76,13,11,14,10
+2019,66,Round 8,2019-05-11,MCG,Carlton,Collingwood,87,106,13,16,9,10
+2019,67,Round 8,2019-05-11,Carrara Stadium,Gold Coast,Melbourne,60,61,9,8,6,13
+2019,68,Round 8,2019-05-11,Docklands Stadium,St Kilda,West Coast,70,88,10,12,10,16
+2019,69,Round 8,2019-05-11,Adelaide Oval,Port Adelaide,Adelaide,68,88,9,13,14,10
+2019,70,Round 8,2019-05-12,Docklands Stadium,North Melbourne,Geelong,80,104,11,16,14,8
+2019,71,Round 8,2019-05-12,MCG,Hawthorn,Greater Western Sydney,71,38,10,5,11,8
+2019,72,Round 8,2019-05-12,Perth Stadium,Fremantle,Richmond,86,111,12,17,14,9
+2019,73,Round 9,2019-05-17,Perth Stadium,West Coast,Melbourne,85,69,13,9,7,15
+2019,74,Round 9,2019-05-18,MCG,Collingwood,St Kilda,112,71,17,10,10,11
+2019,75,Round 9,2019-05-18,Gabba,Brisbane Lions,Adelaide,93,92,13,13,15,14
+2019,76,Round 9,2019-05-18,Kardinia Park,Geelong,Western Bulldogs,133,89,21,13,7,11
+2019,77,Round 9,2019-05-18,Docklands Stadium,Essendon,Fremantle,60,53,8,7,12,11
+2019,78,Round 9,2019-05-18,Bellerive Oval,North Melbourne,Sydney,72,77,10,11,12,11
+2019,79,Round 9,2019-05-19,Adelaide Oval,Port Adelaide,Gold Coast,89,51,13,7,11,9
+2019,80,Round 9,2019-05-19,MCG,Richmond,Hawthorn,95,59,14,8,11,11
+2019,81,Round 9,2019-05-19,Sydney Showground Stadium,Greater Western Sydney,Carlton,138,45,20,7,18,3
+2019,82,Round 10,2019-05-24,SCG,Sydney,Collingwood,73,80,11,11,7,14
+2019,83,Round 10,2019-05-25,York Park,Hawthorn,Port Adelaide,80,49,12,6,8,13
+2019,84,Round 10,2019-05-25,Docklands Stadium,Western Bulldogs,North Melbourne,90,115,13,18,12,7
+2019,85,Round 10,2019-05-25,Adelaide Oval,Adelaide,West Coast,73,85,10,13,13,7
+2019,86,Round 10,2019-05-25,Carrara Stadium,Gold Coast,Geelong,64,91,9,13,10,13
+2019,87,Round 10,2019-05-25,MCG,Richmond,Essendon,73,50,10,6,13,14
+2019,88,Round 10,2019-05-26,MCG,Melbourne,Greater Western Sydney,68,94,10,14,8,10
+2019,89,Round 10,2019-05-26,Docklands Stadium,St Kilda,Carlton,68,55,9,8,14,7
+2019,90,Round 10,2019-05-26,Perth Stadium,Fremantle,Brisbane Lions,73,72,10,10,13,12
+2019,91,Round 11,2019-05-31,Docklands Stadium,North Melbourne,Richmond,99,62,15,9,9,8
+2019,92,Round 11,2019-06-01,MCG,Collingwood,Fremantle,75,79,11,11,9,13
+2019,93,Round 11,2019-06-01,Sydney Showground Stadium,Greater Western Sydney,Gold Coast,126,43,19,6,12,7
+2019,94,Round 11,2019-06-01,Kardinia Park,Geelong,Sydney,85,63,13,8,7,15
+2019,95,Round 11,2019-06-01,Gabba,Brisbane Lions,Hawthorn,85,66,12,10,13,6
+2019,96,Round 11,2019-06-01,Marrara Oval,Melbourne,Adelaide,88,90,12,14,16,6
+2019,97,Round 11,2019-06-02,Jiangwan Stadium,St Kilda,Port Adelaide,69,139,9,22,15,7
+2019,98,Round 11,2019-06-02,MCG,Essendon,Carlton,74,33,11,4,8,9
+2019,99,Round 11,2019-06-02,Perth Stadium,West Coast,Western Bulldogs,133,72,21,10,7,12
+2019,100,Round 12,2019-06-07,MCG,Richmond,Geelong,37,104,5,16,7,8
+2019,101,Round 12,2019-06-08,Docklands Stadium,Carlton,Brisbane Lions,78,63,11,9,12,9
+2019,102,Round 12,2019-06-08,Carrara Stadium,Gold Coast,North Melbourne,72,99,11,14,6,15
+2019,103,Round 12,2019-06-08,Adelaide Oval,Adelaide,Greater Western Sydney,82,61,12,9,10,7
+2019,104,Round 12,2019-06-09,SCG,Sydney,West Coast,116,71,18,10,8,11
+2019,105,Round 12,2019-06-10,MCG,Collingwood,Melbourne,98,57,15,7,8,15
+2019,106,Round 13,2019-06-13,Adelaide Oval,Adelaide,Richmond,101,68,15,9,11,14
+2019,107,Round 13,2019-06-14,Docklands Stadium,Essendon,Hawthorn,96,77,14,11,12,11
+2019,108,Round 13,2019-06-15,Riverway Stadium,Gold Coast,St Kilda,76,80,11,11,10,14
+2019,109,Round 13,2019-06-15,Perth Stadium,Fremantle,Port Adelaide,100,79,15,12,10,7
+2019,110,Round 13,2019-06-15,Docklands Stadium,Carlton,Western Bulldogs,100,103,15,15,10,13
+2019,111,Round 13,2019-06-16,Bellerive Oval,North Melbourne,Greater Western Sydney,68,91,10,14,8,7
+2019,112,Round 14,2019-06-20,Perth Stadium,West Coast,Essendon,106,71,14,11,22,5
+2019,113,Round 14,2019-06-21,SCG,Sydney,Hawthorn,82,63,12,9,10,9
+2019,114,Round 14,2019-06-22,MCG,Melbourne,Fremantle,85,71,13,11,7,5
+2019,115,Round 14,2019-06-22,Docklands Stadium,St Kilda,Brisbane Lions,59,115,8,17,11,13
+2019,116,Round 14,2019-06-22,Adelaide Oval,Port Adelaide,Geelong,67,56,9,8,13,8
+2019,117,Round 14,2019-06-23,Docklands Stadium,Western Bulldogs,Collingwood,73,82,10,13,13,4
+2019,118,Round 15,2019-06-27,Docklands Stadium,Essendon,Greater Western Sydney,77,71,12,10,5,11
+2019,119,Round 15,2019-06-28,Kardinia Park,Geelong,Adelaide,96,69,14,10,12,9
+2019,120,Round 15,2019-06-29,MCG,Hawthorn,West Coast,71,77,9,11,17,11
+2019,121,Round 15,2019-06-29,SCG,Sydney,Gold Coast,93,51,14,7,9,9
+2019,122,Round 15,2019-06-29,Docklands Stadium,Collingwood,North Melbourne,37,81,5,11,7,15
+2019,123,Round 15,2019-06-29,Adelaide Oval,Port Adelaide,Western Bulldogs,41,66,5,10,11,6
+2019,124,Round 15,2019-06-30,Docklands Stadium,St Kilda,Richmond,70,103,10,16,10,7
+2019,125,Round 15,2019-06-30,Gabba,Brisbane Lions,Melbourne,107,74,15,11,17,8
+2019,126,Round 15,2019-06-30,Perth Stadium,Fremantle,Carlton,75,79,11,11,9,13
+2019,127,Round 16,2019-07-05,MCG,Hawthorn,Collingwood,67,63,9,9,13,9
+2019,128,Round 16,2019-07-06,MCG,Essendon,Sydney,76,66,11,9,10,12
+2019,129,Round 16,2019-07-06,Carrara Stadium,Gold Coast,Richmond,58,150,9,23,4,12
+2019,130,Round 16,2019-07-06,Adelaide Oval,Adelaide,Port Adelaide,44,101,5,15,14,11
+2019,131,Round 16,2019-07-06,Docklands Stadium,Western Bulldogs,Geelong,71,55,10,7,11,13
+2019,132,Round 16,2019-07-06,Perth Stadium,Fremantle,West Coast,31,122,2,19,19,8
+2019,133,Round 16,2019-07-07,MCG,Carlton,Melbourne,100,105,15,15,10,15
+2019,134,Round 16,2019-07-07,Bellerive Oval,North Melbourne,St Kilda,112,73,17,11,10,7
+2019,135,Round 16,2019-07-07,Sydney Showground Stadium,Greater Western Sydney,Brisbane Lions,74,94,11,14,8,10
+2019,136,Round 17,2019-07-12,Perth Stadium,West Coast,Collingwood,77,78,12,11,5,12
+2019,137,Round 17,2019-07-13,SCG,Sydney,Carlton,62,69,8,9,14,15
+2019,138,Round 17,2019-07-13,York Park,Hawthorn,Fremantle,84,53,12,8,12,5
+2019,139,Round 17,2019-07-13,Docklands Stadium,Essendon,North Melbourne,86,81,12,12,14,9
+2019,140,Round 17,2019-07-13,Carrara Stadium,Gold Coast,Adelaide,56,151,8,23,8,13
+2019,141,Round 17,2019-07-13,Kardinia Park,Geelong,St Kilda,84,57,12,8,12,9
+2019,142,Round 17,2019-07-14,MCG,Richmond,Greater Western Sydney,94,67,13,9,16,13
+2019,143,Round 17,2019-07-14,Docklands Stadium,Western Bulldogs,Melbourne,74,66,10,9,14,12
+2019,144,Round 17,2019-07-14,Adelaide Oval,Port Adelaide,Brisbane Lions,49,97,6,14,13,13
+2019,145,Round 18,2019-07-19,Adelaide Oval,Adelaide,Essendon,75,96,10,15,15,6
+2019,146,Round 18,2019-07-20,MCG,Richmond,Port Adelaide,101,63,15,9,11,9
+2019,147,Round 18,2019-07-20,Docklands Stadium,Carlton,Gold Coast,99,75,15,11,9,9
+2019,148,Round 18,2019-07-20,Sydney Showground Stadium,Greater Western Sydney,Collingwood,122,75,19,11,8,9
+2019,149,Round 18,2019-07-20,Gabba,Brisbane Lions,North Melbourne,87,75,12,12,15,3
+2019,150,Round 18,2019-07-20,Perth Stadium,Fremantle,Sydney,52,51,7,7,10,9
+2019,151,Round 18,2019-07-21,MCG,Geelong,Hawthorn,61,85,8,12,13,13
+2019,152,Round 18,2019-07-21,Traeger Park,Melbourne,West Coast,78,91,11,14,12,7
+2019,153,Round 18,2019-07-21,Docklands Stadium,St Kilda,Western Bulldogs,116,89,17,14,14,5
+2019,154,Round 19,2019-07-26,MCG,Collingwood,Richmond,66,98,9,14,12,14
+2019,155,Round 19,2019-07-27,York Park,Hawthorn,Brisbane Lions,60,87,7,13,18,9
+2019,156,Round 19,2019-07-27,MCG,Carlton,Adelaide,87,60,13,9,9,6
+2019,157,Round 19,2019-07-27,Perth Stadium,West Coast,North Melbourne,121,72,18,10,13,12
+2019,158,Round 19,2019-07-27,Docklands Stadium,St Kilda,Melbourne,104,85,15,13,14,7
+2019,159,Round 19,2019-07-27,Adelaide Oval,Port Adelaide,Greater Western Sydney,55,56,7,8,13,8
+2019,160,Round 19,2019-07-28,Docklands Stadium,Western Bulldogs,Fremantle,113,66,16,9,17,12
+2019,161,Round 19,2019-07-28,SCG,Sydney,Geelong,80,107,12,16,8,11
+2019,162,Round 19,2019-07-28,Carrara Stadium,Gold Coast,Essendon,96,106,15,15,6,16
+2019,163,Round 20,2019-08-02,Docklands Stadium,North Melbourne,Hawthorn,86,64,12,9,14,10
+2019,164,Round 20,2019-08-03,Docklands Stadium,Essendon,Port Adelaide,67,126,9,19,13,12
+2019,165,Round 20,2019-08-03,Sydney Showground Stadium,Greater Western Sydney,Sydney,83,81,12,12,11,9
+2019,166,Round 20,2019-08-03,Perth Stadium,Fremantle,Geelong,95,61,14,9,11,7
+2019,167,Round 20,2019-08-03,MCG,Melbourne,Richmond,60,93,9,13,6,15
+2019,168,Round 20,2019-08-03,Adelaide Oval,Adelaide,St Kilda,92,70,14,10,8,10
+2019,169,Round 20,2019-08-04,MCG,Collingwood,Gold Coast,120,51,18,8,12,3
+2019,170,Round 20,2019-08-04,Docklands Stadium,Carlton,West Coast,75,99,11,15,9,9
+2019,171,Round 20,2019-08-04,Gabba,Brisbane Lions,Western Bulldogs,98,80,14,11,14,14
+2019,172,Round 21,2019-08-09,Manuka Oval,Greater Western Sydney,Hawthorn,29,85,4,13,5,7
+2019,173,Round 21,2019-08-10,MCG,Melbourne,Collingwood,53,70,7,10,11,10
+2019,174,Round 21,2019-08-10,Adelaide Oval,Port Adelaide,Sydney,103,56,15,7,13,14
+2019,175,Round 21,2019-08-10,Gabba,Brisbane Lions,Gold Coast,144,53,22,8,12,5
+2019,176,Round 21,2019-08-10,Docklands Stadium,Essendon,Western Bulldogs,33,137,4,21,9,11
+2019,177,Round 21,2019-08-10,Kardinia Park,Geelong,North Melbourne,69,14,9,1,15,8
+2019,178,Round 21,2019-08-11,Docklands Stadium,St Kilda,Fremantle,72,69,10,10,12,9
+2019,179,Round 21,2019-08-11,MCG,Richmond,Carlton,73,45,11,6,7,9
+2019,180,Round 21,2019-08-11,Perth Stadium,West Coast,Adelaide,90,80,13,12,12,8
+2019,181,Round 22,2019-08-16,MCG,Melbourne,Sydney,42,95,5,15,12,5
+2019,182,Round 22,2019-08-17,MCG,Carlton,St Kilda,78,68,11,10,12,8
+2019,183,Round 22,2019-08-17,Gabba,Brisbane Lions,Geelong,75,74,10,10,15,14
+2019,184,Round 22,2019-08-17,Adelaide Oval,Adelaide,Collingwood,48,114,6,17,12,12
+2019,185,Round 22,2019-08-17,Docklands Stadium,North Melbourne,Port Adelaide,144,58,22,8,12,10
+2019,186,Round 22,2019-08-17,Perth Stadium,Fremantle,Essendon,55,87,7,13,13,9
+2019,187,Round 22,2019-08-18,MCG,Richmond,West Coast,88,82,13,13,10,4
+2019,188,Round 22,2019-08-18,Sydney Showground Stadium,Greater Western Sydney,Western Bulldogs,65,126,9,19,11,12
+2019,189,Round 22,2019-08-18,Docklands Stadium,Hawthorn,Gold Coast,118,48,18,7,10,6
+2019,190,Round 23,2019-08-23,MCG,Collingwood,Essendon,76,65,10,10,16,5
+2019,191,Round 23,2019-08-24,SCG,Sydney,St Kilda,109,64,17,8,7,16
+2019,192,Round 23,2019-08-24,Bellerive Oval,North Melbourne,Melbourne,88,83,13,12,10,11
+2019,193,Round 23,2019-08-24,Kardinia Park,Geelong,Carlton,129,61,19,8,15,13
+2019,194,Round 23,2019-08-24,Carrara Stadium,Gold Coast,Greater Western Sydney,55,127,7,20,13,7
+2019,195,Round 23,2019-08-24,Perth Stadium,West Coast,Hawthorn,67,105,9,16,13,9
+2019,196,Round 23,2019-08-25,Eureka Stadium,Western Bulldogs,Adelaide,121,87,18,13,13,9
+2019,197,Round 23,2019-08-25,MCG,Richmond,Brisbane Lions,82,55,12,8,10,7
+2019,198,Round 23,2019-08-25,Adelaide Oval,Port Adelaide,Fremantle,110,67,15,10,20,7
