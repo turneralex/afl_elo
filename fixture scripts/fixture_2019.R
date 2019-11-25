@@ -94,5 +94,5 @@ afl_fixture_2019 %>%
     write_csv(here::here("fixtures", "afl_fixture_2019.csv"))
 
 afl_venues_2019 %>%
-    unnest(cols = c(teams)) %>%
+    unnest(cols = teams) %>%
     write_csv(here::here("venues", "afl_venues_2019.csv"))

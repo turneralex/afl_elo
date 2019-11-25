@@ -6,7 +6,7 @@ is_home <- function(season_year, game_venue, game_away_team, data) {
         pull(location) 
     
     away_team_location <- data %>% 
-        unnest() %>% 
+        unnest(cols = teams) %>% 
         filter(year == season_year & team == game_away_team) %>% 
         pull(location) %>% 
         unique()

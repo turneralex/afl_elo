@@ -17,4 +17,4 @@ afl_venues_all <- map_dfr(
         col_types = "cccc"
     )
 ) %>% 
-    nest(team)
+    nest(teams = team)
