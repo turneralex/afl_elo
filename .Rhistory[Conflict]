@@ -1,0 +1,512 @@
+mutate(season = "2010",
+match_id = 1:nrow(.),
+date = date %>%
+str_trunc(width = (nchar(.) - 10), side = "right", ellipsis = "") %>%
+str_remove(".*, ") %>%
+paste(., "2010") %>%
+lubridate::dmy(),
+home_team = X2 %>% str_remove(" [:digit:].*") %>% str_trim(),
+away_team = X4 %>% str_remove(" [:digit:].*") %>% str_trim(),
+home_score = X2 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
+away_score = X4 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
+home_goals = X2 %>% str_remove_all("[:alpha:]* |\\..*") %>% as.integer(),
+away_goals = X4 %>% str_remove_all("[:alpha:]* |\\..*") %>% as.integer(),
+home_behinds = home_score - (home_goals * 6),
+away_behinds = away_score - (away_goals * 6),
+venue = venue %>% str_remove(" [(].*")) %>%
+select(season, match_id, round, date, venue:away_behinds)
+afl_fixture_2010 <- afl_fixture_2010 %>%
+mutate(
+venue = case_when(
+venue == "Etihad Stadium"  ~ "Docklands Stadium",
+venue == "Skilled Stadium" ~ "Kardinia Park",
+venue == "Aurora Stadium"  ~ "York Park",
+venue == "TIO Stadium"     ~ "Marrara Oval",
+venue == "ANZ Stadium"     ~ "Stadium Australia",
+venue == "AAMI Stadium"    ~ "Football Park",
+T                          ~ venue
+)
+)
+afl_venues_2010 <- tibble(venue = afl_fixture_2010$venue %>% unique()) %>%
+mutate(
+location = case_when(
+venue == "Football Park"                      ~ "SA",
+venue == "Gabba"                              ~ "QLD",
+venue == "Manuka Oval"                        ~ "ACT",
+venue == "Subiaco Oval"                       ~ "WA",
+venue == "SCG" | venue == "Stadium Australia" ~ "NSW",
+venue == "York Park"                          ~ "TAS",
+venue == "Kardinia Park"                      ~ "GEE",
+venue == "Marrara Oval"                       ~ "NT",
+T                                             ~ "VIC"
+)
+)
+venues_teams_2010 <- map(
+unique(afl_fixture_2010$venue),
+~ afl_fixture_2010 %>%
+filter(venue == .x) %>%
+distinct(home_team) %>%
+select(team = home_team)
+) %>%
+set_names(unique(afl_fixture_2010$venue)) %>%
+enframe(name = "venue", value = "teams") %>%
+mutate(venue = venue)
+afl_venues_2010 <- afl_venues_2010 %>%
+left_join(venues_teams_2010, by = "venue") %>%
+mutate(year = "2010") %>%
+select(year, everything())
+afl_fixture_2010 %>%
+write_csv(here::here("fixtures", "afl_fixture_2010.csv"))
+afl_venues_2010 %>%
+unnest() %>%
+write_csv(here::here("venues", "afl_venues_2010.csv"))
+library(tidyverse)
+library(rvest)
+# wikipedia url
+fixture_url_2011 <- "https://en.wikipedia.org/wiki/2011_AFL_season"
+# import data
+fixture_raw_2011 <- map(
+3:26,
+~ fixture_url_2011 %>%
+read_html() %>%
+html_nodes(xpath = paste("//*[@id='mw-content-text']/div/table[", .x, "]")) %>%
+html_table() %>%
+magrittr::extract2(1) %>%
+as_tibble() %>%
+mutate(round = paste("Round", (.x - 2))) %>%
+select(round, everything())
+)
+afl_fixture_2011 <- fixture_raw_2011 %>%
+map_df(bind_rows)
+afl_fixture_2011 <- afl_fixture_2011 %>%
+filter(X3 %>% str_detect("def\\.|def\\. by|drew with"))
+afl_fixture_2011 <- afl_fixture_2011 %>%
+slice(-17) %>%
+select(round, date = X1, X2, X4, venue = X5) %>%
+mutate(season = "2011",
+match_id = 1:nrow(.),
+date = date %>%
+str_trunc(width = (nchar(.) - 10), side = "right", ellipsis = "") %>%
+str_remove(".*, ") %>%
+paste(., "2011") %>%
+lubridate::dmy(),
+home_team = X2 %>% str_remove(" [:digit:].*") %>% str_trim(),
+away_team = X4 %>% str_remove(" [:digit:].*") %>% str_trim(),
+home_score = X2 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
+away_score = X4 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
+home_goals = X2 %>% str_remove_all("[:alpha:]* |\\..*") %>% as.integer(),
+away_goals = X4 %>% str_remove_all("[:alpha:]* |\\..*") %>% as.integer(),
+home_behinds = home_score - (home_goals * 6),
+away_behinds = away_score - (away_goals * 6),
+venue = venue %>% str_remove(" [(].*")) %>%
+select(season, match_id, round, date, venue:away_behinds)
+afl_fixture_2011 <- afl_fixture_2011 %>%
+mutate(
+venue = case_when(
+venue == "Etihad Stadium"    ~ "Docklands Stadium",
+venue == "Skilled Stadium"   ~ "Kardinia Park",
+venue == "Aurora Stadium"    ~ "York Park",
+venue == "Metricon Stadium"  ~ "Carrara Stadium",
+venue == "TIO Stadium"       ~ "Marrara Oval",
+venue == "Patersons Stadium" ~ "Subiaco Oval",
+venue == "ANZ Stadium"       ~ "Stadium Australia",
+venue == "AAMI Stadium"      ~ "Football Park",
+venue == "The Gabba"         ~ "Gabba",
+T                            ~ venue
+)
+)
+afl_venues_2011 <- tibble(venue = afl_fixture_2011$venue %>% unique()) %>%
+mutate(
+location = case_when(
+venue == "Football Park" | venue == "Adelaide Oval"                         ~ "SA",
+venue == "Cazaly's Stadium" | venue == "Gabba" | venue == "Carrara Stadium" ~ "QLD",
+venue == "Manuka Oval"                                                      ~ "ACT",
+venue == "Subiaco Oval"                                                     ~ "WA",
+venue == "SCG" | venue == "Stadium Australia"                               ~ "NSW",
+venue == "York Park"                                                        ~ "TAS",
+venue == "Kardinia Park"                                                    ~ "GEE",
+venue == "Marrara Oval"                                                     ~ "NT",
+T                                                                           ~ "VIC"
+)
+)
+venues_teams_2011 <- map(
+unique(afl_fixture_2011$venue),
+~ afl_fixture_2011 %>%
+filter(venue == .x) %>%
+distinct(home_team) %>%
+select(team = home_team)
+) %>%
+set_names(unique(afl_fixture_2011$venue)) %>%
+enframe(name = "venue", value = "teams") %>%
+mutate(venue = venue)
+afl_venues_2011 <- afl_venues_2011 %>%
+left_join(venues_teams_2011, by = "venue") %>%
+mutate(year = "2011") %>%
+select(year, everything())
+afl_fixture_2011 %>%
+write_csv(here::here("fixtures", "afl_fixture_2011.csv"))
+afl_venues_2011 %>%
+unnest() %>%
+write_csv(here::here("venues", "afl_venues_2011.csv"))
+library(tidyverse)
+library(rvest)
+# wikipedia url
+fixture_url_2012 <- "https://en.wikipedia.org/wiki/2012_AFL_season"
+# import data
+fixture_raw_2012 <- map(
+3:25,
+~ fixture_url_2012 %>%
+read_html() %>%
+html_nodes(xpath = paste("//*[@id='mw-content-text']/div/table[", .x, "]")) %>%
+html_table() %>%
+magrittr::extract2(1) %>%
+as_tibble() %>%
+mutate(round = paste("Round", (.x - 2))) %>%
+select(round, everything())
+)
+afl_fixture_2012 <- fixture_raw_2012 %>%
+map_df(bind_rows)
+afl_fixture_2012 <- afl_fixture_2012 %>%
+filter(X3 %>% str_detect("def\\.|def\\. by|drew with"))
+afl_fixture_2012 <- afl_fixture_2012 %>%
+select(round, date = X1, X2, X4, venue = X5) %>%
+mutate(season = "2012",
+match_id = 1:nrow(.),
+date = date %>%
+str_trunc(width = (nchar(.) - 10), side = "right", ellipsis = "") %>%
+str_remove(".*, ") %>%
+paste(., "2012") %>%
+lubridate::dmy(),
+home_team = X2 %>% str_remove(" [:digit:].*") %>% str_trim(),
+away_team = X4 %>% str_remove(" [:digit:].*") %>% str_trim(),
+home_score = X2 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
+away_score = X4 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
+home_goals = X2 %>% str_remove_all("[:alpha:]* |\\..*") %>% as.integer(),
+away_goals = X4 %>% str_remove_all("[:alpha:]* |\\..*") %>% as.integer(),
+home_behinds = home_score - (home_goals * 6),
+away_behinds = away_score - (away_goals * 6),
+venue = venue %>% str_remove(" [(].*")) %>%
+select(season, match_id, round, date, venue:away_behinds)
+afl_fixture_2012 <- afl_fixture_2012 %>%
+mutate(
+venue = case_when(
+venue == "Etihad Stadium"    ~ "Docklands Stadium",
+venue == "Blacktown ISP"     ~ "Blacktown International Sportspark",
+venue == "Blundstone Arena"  ~ "Bellerive Oval",
+venue == "Simonds Stadium"   ~ "Kardinia Park",
+venue == "Škoda Stadium"     ~ "Sydney Showground Stadium",
+venue == "Aurora Stadium"    ~ "York Park",
+venue == "Metricon Stadium"  ~ "Carrara Stadium",
+venue == "TIO Stadium"       ~ "Marrara Oval",
+venue == "Patersons Stadium" ~ "Subiaco Oval",
+venue == "ANZ Stadium"       ~ "Stadium Australia",
+venue == "AAMI Stadium"      ~ "Football Park",
+venue == "The Gabba"         ~ "Gabba",
+T                            ~ venue
+)
+)
+afl_venues_2012 <- tibble(venue = afl_fixture_2012$venue %>% unique()) %>%
+mutate(
+location = case_when(
+venue == "Football Park"                                                                                                             ~ "SA",
+venue == "Cazaly's Stadium" | venue == "Gabba" | venue == "Carrara Stadium"                                                          ~ "QLD",
+venue == "Manuka Oval"                                                                                                               ~ "ACT",
+venue == "Subiaco Oval"                                                                                                              ~ "WA",
+venue == "SCG" | venue == "Sydney Showground Stadium" | venue == "Stadium Australia" | venue == "Blacktown International Sportspark" ~ "NSW",
+venue == "Bellerive Oval" | venue == "York Park"                                                                                     ~ "TAS",
+venue == "Kardinia Park"                                                                                                             ~ "GEE",
+venue == "Marrara Oval"                                                                                                              ~ "NT",
+T                                                                                                                                    ~ "VIC"
+)
+)
+venues_teams_2012 <- map(
+unique(afl_fixture_2012$venue),
+~ afl_fixture_2012 %>%
+filter(venue == .x) %>%
+distinct(home_team) %>%
+select(team = home_team)
+) %>%
+set_names(unique(afl_fixture_2012$venue)) %>%
+enframe(name = "venue", value = "teams") %>%
+mutate(venue = venue)
+afl_venues_2012 <- afl_venues_2012 %>%
+left_join(venues_teams_2012, by = "venue") %>%
+mutate(year = "2012") %>%
+select(year, everything())
+afl_fixture_2012 %>%
+write_csv(here::here("fixtures", "afl_fixture_2012.csv"))
+afl_venues_2012 %>%
+unnest() %>%
+write_csv(here::here("venues", "afl_venues_2012.csv"))
+library(tidyverse)
+library(rvest)
+# wikipedia url
+fixture_url_2013 <- "https://en.wikipedia.org/wiki/2013_AFL_season"
+# import data
+fixture_raw_2013 <- map(
+4:26,
+~ fixture_url_2013 %>%
+read_html() %>%
+html_nodes(xpath = paste("//*[@id='mw-content-text']/div/table[", .x, "]")) %>%
+html_table() %>%
+magrittr::extract2(1) %>%
+as_tibble() %>%
+mutate(round = paste("Round", (.x - 3))) %>%
+select(round, everything())
+)
+afl_fixture_2013 <- fixture_raw_2013 %>%
+map_df(bind_rows)
+afl_fixture_2013 <- afl_fixture_2013 %>%
+filter(X3 %>% str_detect("def\\.|def\\. by|drew with"))
+afl_fixture_2013 <- afl_fixture_2013 %>%
+select(round, date = X1, X2, X4, venue = X5) %>%
+mutate(season = "2013",
+match_id = 1:nrow(.),
+date = date %>%
+str_trunc(width = (nchar(.) - 10), side = "right", ellipsis = "") %>%
+str_remove(".*, ") %>%
+paste(., "2013") %>%
+lubridate::dmy(),
+home_team = X2 %>% str_remove(" [:digit:].*") %>% str_trim(),
+away_team = X4 %>% str_remove(" [:digit:].*") %>% str_trim(),
+home_score = X2 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
+away_score = X4 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
+home_goals = X2 %>% str_remove_all("[:alpha:]* |\\..*") %>% as.integer(),
+away_goals = X4 %>% str_remove_all("[:alpha:]* |\\..*") %>% as.integer(),
+home_behinds = home_score - (home_goals * 6),
+away_behinds = away_score - (away_goals * 6),
+venue = venue %>% str_remove(" [(].*")) %>%
+select(season, match_id, round, date, venue:away_behinds)
+afl_fixture_2013 <- afl_fixture_2013 %>%
+mutate(
+venue = case_when(
+venue == "Etihad Stadium"          ~ "Docklands Stadium",
+venue == "Blundstone Arena"        ~ "Bellerive Oval",
+venue == "Simonds Stadium"         ~ "Kardinia Park",
+venue == "Škoda Stadium"           ~ "Sydney Showground Stadium",
+venue == "Aurora Stadium"          ~ "York Park",
+venue == "Metricon Stadium"        ~ "Carrara Stadium",
+venue == "TIO Stadium"             ~ "Marrara Oval",
+venue == "Patersons Stadium"       ~ "Subiaco Oval",
+venue == "ANZ Stadium"             ~ "Stadium Australia",
+venue == "StarTrack Oval Canberra" ~ "Manuka Oval",
+venue == "Westpac Stadium"         ~ "Wellington Regional Stadium",
+venue == "AAMI Stadium"            ~ "Football Park",
+T                                  ~ venue
+)
+)
+afl_venues_2013 <- tibble(venue = afl_fixture_2013$venue %>% unique()) %>%
+mutate(
+location = case_when(
+venue == "Football Park"                                                             ~ "SA",
+venue == "Cazaly's Stadium" | venue == "Gabba" | venue == "Carrara Stadium"          ~ "QLD",
+venue == "Manuka Oval"                                                               ~ "ACT",
+venue == "Subiaco Oval"                                                              ~ "WA",
+venue == "SCG" | venue == "Sydney Showground Stadium" | venue == "Stadium Australia" ~ "NSW",
+venue == "Bellerive Oval" | venue == "York Park"                                     ~ "TAS",
+venue == "Kardinia Park"                                                             ~ "GEE",
+venue == "Marrara Oval"                                                              ~ "NT",
+venue == "Wellington Regional Stadium"                                               ~ "Other",
+T                                                                                    ~ "VIC"
+)
+)
+venues_teams_2013 <- map(
+unique(afl_fixture_2013$venue),
+~ afl_fixture_2013 %>%
+filter(venue == .x) %>%
+distinct(home_team) %>%
+select(team = home_team)
+) %>%
+set_names(unique(afl_fixture_2013$venue)) %>%
+enframe(name = "venue", value = "teams") %>%
+mutate(venue = venue)
+afl_venues_2013 <- afl_venues_2013 %>%
+left_join(venues_teams_2013, by = "venue") %>%
+mutate(year = "2013") %>%
+select(year, everything())
+afl_fixture_2013 %>%
+write_csv(here::here("fixtures", "afl_fixture_2013.csv"))
+afl_venues_2013 %>%
+unnest() %>%
+write_csv(here::here("venues", "afl_venues_2013.csv"))
+library(tidyverse)
+wd <- getwd()
+afl_fixture_all <- map_dfr(
+2014:2019,
+~ read_csv(
+paste0(wd, "/fixtures/afl_fixture_", .x, ".csv"),
+col_types = "cicDccciiiiii"
+)
+)
+afl_venues_all <- map_dfr(
+2014:2019,
+~ read_csv(
+paste0(wd, "/venues/afl_venues_", .x, ".csv"),
+col_types = "cccc"
+)
+) %>%
+nest(team)
+library(tidyverse)
+library(rvest)
+# wikipedia url
+fixture_url_2019 <- "https://en.wikipedia.org/wiki/2019_AFL_season"
+# import data
+fixture_raw_2019 <- map(
+3:25,
+~ fixture_url_2019 %>%
+read_html() %>%
+html_nodes(xpath = paste("//*[@id='mw-content-text']/div/table[", .x, "]")) %>%
+html_table() %>%
+magrittr::extract2(1) %>%
+as_tibble() %>%
+mutate(round = paste("Round", (.x - 2))) %>%
+select(round, everything())
+)
+afl_fixture_2019 <- fixture_raw_2019 %>%
+map_df(bind_rows) %>%
+filter(X3 %>% str_detect("def\\.|def\\. by|drew with|vs\\.")) %>%
+filter(X1 %>% str_length() < 50) %>% # get rid of text row
+select(round, date = X1, home_team = X2, away_team = X4, venue = X5) %>%
+mutate(season = "2019",
+match_id = 1:nrow(.),
+date = date %>%
+str_trunc(width = (nchar(.) - 10), side = "right", ellipsis = "") %>%
+str_remove(".*, ") %>%
+paste(., "2019") %>%
+lubridate::dmy(),
+home_team = home_team %>% str_remove(" [:digit:].*") %>% str_trim(),
+away_team = away_team %>% str_remove(" [:digit:].*") %>% str_trim(),
+venue = venue %>% str_remove(" [(].*"),
+home_score = NA,
+away_score = NA,
+home_goals = NA,
+away_goals = NA,
+home_behinds = NA,
+away_behinds = NA) %>%
+select(season, match_id, round, date, venue, home_team:away_behinds)
+afl_fixture_2019 <- afl_fixture_2019 %>%
+mutate(
+venue = case_when(
+venue == "Marvel Stadium"                                           ~ "Docklands Stadium",
+venue == "UNSW Canberra Oval"                                       ~ "Manuka Oval",
+venue == "Optus Stadium"                                            ~ "Perth Stadium",
+venue == "Blundstone Arena"                                         ~ "Bellerive Oval",
+venue == "GMHBA Stadium"                                            ~ "Kardinia Park",
+venue == "GIANTS Stadium"                                           ~ "Sydney Showground Stadium",
+venue == "University of Tasmania Stadium" | venue == "UTAS Stadium" ~ "York Park",
+venue == "Mars Stadium"                                             ~ "Eureka Stadium",
+venue == "TIO Traeger Park"                                         ~ "Traeger Park",
+venue == "Metricon Stadium"                                         ~ "Carrara Stadium",
+venue == "TIO Stadium"                                              ~ "Marrara Oval",
+venue == "The Gabba"                                                ~ "Gabba",
+T                                                                   ~ venue
+)
+)
+afl_venues_2019 <- tibble(venue = afl_fixture_2019$venue %>% unique()) %>%
+mutate(
+location = case_when(
+venue == "Adelaide Oval"                                                    ~ "SA",
+venue == "Riverway Stadium" | venue == "Gabba" | venue == "Carrara Stadium" ~ "QLD",
+venue == "Manuka Oval"                                                      ~ "ACT",
+venue == "Perth Stadium"                                                    ~ "WA",
+venue == "SCG" | venue == "Sydney Showground Stadium"                       ~ "NSW",
+venue == "Bellerive Oval" | venue == "York Park"                            ~ "TAS",
+venue == "Kardinia Park"                                                    ~ "GEE",
+venue == "Jiangwan Stadium"                                                 ~ "Other",
+venue == "Traeger Park" | venue == "Marrara Oval"                           ~ "NT",
+T                                                                           ~ "VIC"
+)
+)
+venues_teams_2019 <- map(
+unique(afl_fixture_2019$venue),
+~ afl_fixture_2019 %>%
+filter(venue == .x) %>%
+distinct(home_team) %>%
+select(team = home_team)
+) %>%
+set_names(unique(afl_fixture_2019$venue)) %>%
+enframe(name = "venue", value = "teams") %>%
+mutate(venue = venue)
+afl_venues_2019 <- afl_venues_2019 %>%
+left_join(venues_teams_2019, by = "venue") %>%
+mutate(year = "2019") %>%
+select(year, everything())
+# afl_fixture_2019 %>%
+#     write_csv(here::here("fixtures", "afl_fixture_2019.csv"))
+#
+# afl_venues_2019 %>%
+#     unnest() %>%
+#     write_csv(here::here("venues", "afl_venues_2019.csv"))
+source("./functions_general.R")
+library(tidyverse)
+library(elo)
+afl_elo <- afl_fixture_all %>%
+filter(season != "2019") %>%
+mutate(home_score_adjusted = home_score / (home_score + away_score),
+hga_app = pmap_int(list(season, venue, away_team), is_home, data = afl_venues_all))
+parameter_optim <- function(data = afl_elo, par) {
+elo <- elo.run(
+home_score_adjusted ~ adjust(home_team, par[2] * hga_app) + away_team + regress(season, 1500, par[3]),
+k = par[1],
+data = data
+) %>%
+as_tibble()
+abs(elo$p.A - elo$wins.A) %>%
+sum()
+}
+elo_par <- optim(
+par = c(50, 50, 0.5),
+lower = c(-Inf, -Inf, 0),
+upper = c(Inf, Inf, 1),
+parameter_optim,
+data = afl_elo,
+method = "L-BFGS-B"
+) %>%
+purrr::pluck("par") %>%
+set_names(c("k", "hga", "regress"))
+elo_par %>%
+parameter_optim(data = afl_elo)
+source("./functions_general.R")
+library(tidyverse)
+library(elo)
+rounds_so_far <- 1:16
+afl_fixture_2019 <- map_dfr(
+rounds_so_far,
+~ afl_fixture_2019 %>%
+filter(round == paste("Round", .x)) %>%
+mutate(
+home_score = replace(home_score, .$round == paste("Round", .x), get_round_scores(2019, round = .x) %>% pull(home_score)),
+away_score = replace(away_score, .$round == paste("Round", .x), get_round_scores(2019, round = .x) %>% pull(away_score))
+)
+) %>%
+bind_rows(
+afl_fixture_2019 %>%
+filter(!(round %in% paste("Round", rounds_so_far)))
+)
+afl_elo <- bind_rows(
+afl_elo,
+afl_fixture_2019 %>%
+filter(round %in% paste("Round", rounds_so_far)) %>%
+mutate(home_score_adjusted = home_score / (home_score + away_score),
+hga_app = pmap_int(list(season, venue, away_team), is_home, data = afl_venues_all))
+)
+elo_model <- elo.run(
+home_score_adjusted ~ adjust(home_team, hga_app * elo_par["hga"]) + away_team + regress(season, 1500, elo_par["regress"]),
+k = elo_par["k"],
+data = afl_elo
+)
+elo_model %>%
+final.elos() %>%
+sort(decreasing = T) %>%
+enframe()
+elo_model %>%
+predict(
+newdata = afl_fixture_2019 %>%
+filter(round == paste("Round", length(rounds_so_far) + 1)) %>%
+mutate(hga_app = pmap_int(list(season, venue, away_team), is_home, data = afl_venues_all))
+) %>%
+set_names(
+afl_fixture_2019 %>%
+filter(round == paste("Round", length(rounds_so_far) + 1)) %>%
+pull(home_team)
+)
