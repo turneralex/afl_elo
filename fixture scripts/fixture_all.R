@@ -1,6 +1,6 @@
 library(tidyverse)
 
-wd <- getwd()
+wd <- here::here()
 
 afl_fixture_all <- map_dfr(
     2010:2019, 
