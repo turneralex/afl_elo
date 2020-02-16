@@ -14,8 +14,6 @@ is_home <- function(season_year, game_venue, game_away_team, data) {
     as.integer(!(location %in% away_team_location))
 }
 
-is_home("2018", "Cazaly's Stadium", "Western Bulldogs", afl_venues_all)
-
 get_round_scores <- function(season, round) {
     library(tidyverse)
     library(rvest)
@@ -38,5 +36,3 @@ get_round_scores <- function(season, round) {
                   home_behinds = home_score - (home_goals * 6),
                   away_behinds = away_score - (away_goals * 6))
 }
-
-get_round_scores(2019, 1)    

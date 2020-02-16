@@ -1,10 +1,10 @@
+source(here::here("fixture scripts/fixture_all.R"))
 source("./functions_general.R")
 
 library(tidyverse)
 library(elo)
 
 afl_elo <- afl_fixture_all %>% 
-    filter(season != "2019") %>% 
     mutate(home_score_adjusted = home_score / (home_score + away_score),
            hga_app = pmap_int(list(season, venue, away_team), is_home, data = afl_venues_all))
 
@@ -30,6 +30,3 @@ elo_par <- optim(
 ) %>% 
     purrr::pluck("par") %>% 
     set_names(c("k", "hga", "regress"))
-
-elo_par %>% 
-    parameter_optim(data = afl_elo)

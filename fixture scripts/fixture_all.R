@@ -1,11 +1,14 @@
 library(tidyverse)
 
-wd <- here::here()
-
 afl_fixture_all <- map_dfr(
     2010:2019, 
     ~ read_csv(
-        paste0(wd, "/fixtures/afl_fixture_", .x, ".csv"),
+        paste0(
+            here::here(), 
+            "/fixtures/afl_fixture_", 
+            .x, 
+            ".csv"
+        ),
         col_types = "cicDccciiiiii"
     )
 )
@@ -13,7 +16,12 @@ afl_fixture_all <- map_dfr(
 afl_venues_all <- map_dfr(
     2010:2019, 
     ~ read_csv(
-        paste0(wd, "/venues/afl_venues_", .x, ".csv"),
+        paste0(
+            here::here(), 
+            "/venues/afl_venues_", 
+            .x, 
+            ".csv"
+        ),
         col_types = "cccc"
     )
 ) %>% 
