@@ -1,7 +1,7 @@
 source(here::here("fixture scripts/fixture_all.R"))
 source(here::here("fixture scripts/fixture_2020.R"))
-source("./elo_optim.R")
-source("./functions_general.R")
+source(here::here("elo update/elo_optim.R"))
+source(here::here("elo update/functions_general.R"))
 
 library(tidyverse)
 library(elo)

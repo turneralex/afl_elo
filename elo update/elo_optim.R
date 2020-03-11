@@ -1,5 +1,5 @@
 source(here::here("fixture scripts/fixture_all.R"))
-source("./functions_general.R")
+source(here::here("elo update/functions_general.R"))
 
 library(tidyverse)
 library(elo)
