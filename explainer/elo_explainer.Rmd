@@ -58,7 +58,7 @@ library(fitzRoy)
 library(lubridate)
 
 results <- get_match_results() %>% 
-    filter(year(Date) %in% 2014:2018 & Round %in% map_chr(1:23, ~ paste0("R", .))) %>% 
+    filter(year(Date) %in% 2010:2019 & Round %in% map_chr(1:23, ~ paste0("R", .))) %>% 
     select(Home.Points, Away.Points) %>% 
     mutate(margin = Home.Points - Away.Points,
            share_of_scoring = Home.Points / (Home.Points + Away.Points)) 
@@ -67,7 +67,7 @@ sos_hist <- results %>%
     ggplot(aes(share_of_scoring)) +
     geom_histogram() +
     labs(title = "AFL Home Team Share of Scoring Histogram",
-         subtitle = "The share of total points for every home team 2014-2018 inclusive",
+         subtitle = "The share of total points for every home team 2010-2019 inclusive",
          x = "Share of Scoring",
          y = "Frequency")
 
@@ -82,12 +82,7 @@ margin_hist <- results %>%
 cowplot::plot_grid(margin_hist, sos_hist, ncol = 1)
 ```
 
-```{r}
-
-```
-
-
-One thing about this approach that may be seen as a drawback brings me back to a previous point about expected results and their interpretations as probabilities. When optimising the parameters for my Elo model (more on that later) I used AFL regular season data from 2014 to 2018 inclusive. During this entire period of 990 matches the highest expected home team outcome was 0.71 and the lowest 0.33. Even a person with a weak grasp of probability can see that during that period some home teams were well over a 71% chance of winning. One simply needs to look at betting markets to see teams are routinely given ~80% chance of winning. This stems from the fact that share of scoring simply never really gets near 0 or 1. The highest home team result for the period is 0.871 (but only 10 results are above 0.8) and the lowest is 0.168 (but only 3 are below 0.2). As a result, the model never predicts results this extreme despite the fact they are not extreme when being considered as probabilities. Because of all this, I am not considering the expected outcomes as probabilities but instead as its prediction for that team's share of total scoring. 
+One thing about this approach that may be seen as a drawback brings me back to a previous point about expected results and their interpretations as probabilities. When optimising the parameters for my Elo model (more on that later) I used AFL regular season data from 2014 to 2018 inclusive. During this entire period of 1,947 matches the highest expected home team outcome was 0.73 and the lowest 0.30. Even a person with a weak grasp of probability can see that during that period some home teams were well over a 73% chance of winning. One simply needs to look at betting markets to see teams are routinely given ~80% chance of winning. This stems from the fact that share of scoring simply never really gets near 0 or 1. The highest home team result for the period is 0.871 (but only 22 results are above 0.8) and the lowest is 0.12 (but only 5 are below 0.2). As a result, the model never predicts results this extreme despite the fact they are not extreme when being considered as probabilities. Because of all this, I am not considering the expected outcomes as probabilities but instead as its prediction for that team's share of total scoring. 
 
 ## How it works - updating the ratings 
 
@@ -105,17 +100,17 @@ One thing about this Elo system is it will punish teams for poorer than expected
 
 ## How it works - K value
 
-The first of three parameters that are part of this Elo system is the $K$ value, which takes a value of ~67. This value indicates how responsive the system should be to match results. Higher $K$ values will mean the team ratings bounce around as greater weight should be placed on recent performances and vice versa for low K values. This $K$ value is fairly typical for a sport like the AFL.
+The first of three parameters that are part of this Elo system is the $K$ value, which takes a value of ~68. This value indicates how responsive the system should be to match results. Higher $K$ values will mean the team ratings bounce around as greater weight should be placed on recent performances and vice versa for low K values. This $K$ value is fairly typical for a sport like the AFL.
 
 ## How it works - home ground advantage & regression to the mean
 
-Along with the $K$ value, there are two other parameters in this Elo model; the first being home ground advantage ($HGA$). There are obviously many ways to approach home ground advantage and I have opted to keep it simple for my first season doing this. In this model, a home team will have $HGA$ applied if the visiting team's home ground(s) are not in the same state (with Geelong being considered as separate from Victoria). In coming years I will probably tweak this so teams playing overseas get no $HGA$ and possibly strip teams like Melbourne of $HGA$ when playing in the Northern Territory. This Elo model has a $HGA$ value of ~19 and this value is added to the rating of the home team to improve their expected result (see the previous Elo formula for expected result). 
+Along with the $K$ value, there are two other parameters in this Elo model; the first being home ground advantage ($HGA$). There are obviously many ways to approach home ground advantage and I have opted to keep it simple for my first season doing this. In this model, a home team will have $HGA$ applied if the visiting team's home ground(s) are not in the same state (with Geelong being considered as separate from Victoria). In coming years I will probably tweak this so teams playing overseas get no $HGA$ and possibly strip teams like Melbourne of $HGA$ when playing in the Northern Territory. This Elo model has a $HGA$ value of ~20 and this value is added to the rating of the home team to improve their expected result (see the previous Elo formula for expected result). 
 
-The other parameter is [__regression to the mean__](https://en.wikipedia.org/wiki/Regression_toward_the_mean) ($RTM$) and this tells us how much the rating of each should regress back to mean of 1500 at the end of each season. This takes a value of ~0.36. 
+The other parameter is [__regression to the mean__](https://en.wikipedia.org/wiki/Regression_toward_the_mean) ($RTM$) and this tells us how much the rating of each should regress back to mean of 1500 at the end of each season. This takes a value of ~0.37. 
 
 ## How it works - parameter optimisation
 
-These three parameters, $K$, $HGA$ and $RTM$, all have to be optimised for Elo to do a decent job. Again, I have kept this simple and looked to minimise the [__mean absolute error__](https://en.wikipedia.org/wiki/Mean_absolute_error) between the expected and actual results. In other words, the model is optimised to predict share of scoring as well as possible. The data used for this optimisation was AFL regular season data from 2014 to 2018 inclusive, with initial ratings of 1500 given to each team for Round 1, 2014.
+These three parameters, $K$, $HGA$ and $RTM$, all have to be optimised for Elo to do a decent job. Again, I have kept this simple and looked to minimise the [__mean absolute error__](https://en.wikipedia.org/wiki/Mean_absolute_error) between the expected and actual results. In other words, the model is optimised to predict share of scoring as well as possible. The data used for this optimisation was AFL regular season data from 2010 to 2019 inclusive, with initial ratings of 1500 given to each team for Round 1, 2010.
 
 ## That's it
 
