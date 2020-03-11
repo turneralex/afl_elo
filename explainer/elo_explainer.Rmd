@@ -75,7 +75,7 @@ margin_hist <- results %>%
     ggplot(aes(margin)) +
     geom_histogram() +
     labs(title = "AFL Home Team Margin Histogram",
-         subtitle = "The margin for every home team 2014-2018 inclusive",
+         subtitle = "The margin for every home team 2010-2019 inclusive",
          x = "Margin",
          y = "Frequency")
 
