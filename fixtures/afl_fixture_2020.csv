@@ -1,0 +1,46 @@
+season,match_id,round,date,venue,home_team,away_team,home_score,away_score,home_goals,away_goals,home_behinds,away_behinds
+2020,1,Round 1,2020-03-19,MCG,Richmond,Carlton,NA,NA,NA,NA,NA,NA
+2020,1,Round 1,2020-03-20,Docklands Stadium,Western Bulldogs,Collingwood,NA,NA,NA,NA,NA,NA
+2020,1,Round 1,2020-03-21,Docklands Stadium,Essendon,Fremantle,NA,NA,NA,NA,NA,NA
+2020,1,Round 1,2020-03-21,Adelaide Oval,Adelaide,Sydney,NA,NA,NA,NA,NA,NA
+2020,1,Round 1,2020-03-21,Carrara Stadium,Gold Coast,Port Adelaide,NA,NA,NA,NA,NA,NA
+2020,1,Round 1,2020-03-21,Sydney Showground Stadium,Greater Western Sydney,Geelong,NA,NA,NA,NA,NA,NA
+2020,1,Round 1,2020-03-22,Docklands Stadium,North Melbourne,St Kilda,NA,NA,NA,NA,NA,NA
+2020,1,Round 1,2020-03-22,MCG,Hawthorn,Brisbane Lions,NA,NA,NA,NA,NA,NA
+2020,1,Round 1,2020-03-22,Perth Stadium,West Coast,Melbourne,NA,NA,NA,NA,NA,NA
+2020,1,Round 2,2020-06-11,MCG,Collingwood,Richmond,NA,NA,NA,NA,NA,NA
+2020,1,Round 2,2020-06-12,Kardinia Park,Geelong,Hawthorn,NA,NA,NA,NA,NA,NA
+2020,1,Round 2,2020-06-13,Gabba,Brisbane Lions,Fremantle,NA,NA,NA,NA,NA,NA
+2020,1,Round 2,2020-06-13,Docklands Stadium,Carlton,Melbourne,NA,NA,NA,NA,NA,NA
+2020,1,Round 2,2020-06-13,Adelaide Oval,Port Adelaide,Adelaide,NA,NA,NA,NA,NA,NA
+2020,1,Round 2,2020-06-13,Carrara Stadium,Gold Coast,West Coast,NA,NA,NA,NA,NA,NA
+2020,1,Round 2,2020-06-14,Sydney Showground Stadium,Greater Western Sydney,North Melbourne,NA,NA,NA,NA,NA,NA
+2020,1,Round 2,2020-06-14,SCG,Sydney,Essendon,NA,NA,NA,NA,NA,NA
+2020,1,Round 2,2020-06-14,Docklands Stadium,St Kilda,Western Bulldogs,NA,NA,NA,NA,NA,NA
+2020,1,Round 3,2020-06-18,MCG,Richmond,Hawthorn,NA,NA,NA,NA,NA,NA
+2020,1,Round 3,2020-06-19,Docklands Stadium,Western Bulldogs,Greater Western Sydney,NA,NA,NA,NA,NA,NA
+2020,1,Round 3,2020-06-20,Docklands Stadium,North Melbourne,Sydney,NA,NA,NA,NA,NA,NA
+2020,1,Round 3,2020-06-20,MCG,Collingwood,St Kilda,NA,NA,NA,NA,NA,NA
+2020,1,Round 3,2020-06-20,Gabba,Brisbane Lions,West Coast,NA,NA,NA,NA,NA,NA
+2020,1,Round 3,2020-06-20,Kardinia Park,Geelong,Carlton,NA,NA,NA,NA,NA,NA
+2020,1,Round 3,2020-06-21,Carrara Stadium,Gold Coast,Adelaide,NA,NA,NA,NA,NA,NA
+2020,1,Round 3,2020-06-21,MCG,Essendon,Melbourne,NA,NA,NA,NA,NA,NA
+2020,1,Round 3,2020-06-21,Carrara Stadium,Fremantle,Port Adelaide,NA,NA,NA,NA,NA,NA
+2020,1,Round 4,2020-06-25,SCG,Sydney,Western Bulldogs,NA,NA,NA,NA,NA,NA
+2020,1,Round 4,2020-06-26,Sydney Showground Stadium,Greater Western Sydney,Collingwood,NA,NA,NA,NA,NA,NA
+2020,1,Round 4,2020-06-27,Carrara Stadium,Port Adelaide,West Coast,NA,NA,NA,NA,NA,NA
+2020,1,Round 4,2020-06-27,Docklands Stadium,St Kilda,Richmond,NA,NA,NA,NA,NA,NA
+2020,1,Round 4,2020-06-27,MCG,Essendon,Carlton,NA,NA,NA,NA,NA,NA
+2020,1,Round 4,2020-06-27,Carrara Stadium,Gold Coast,Fremantle,NA,NA,NA,NA,NA,NA
+2020,1,Round 4,2020-06-28,Gabba,Brisbane Lions,Adelaide,NA,NA,NA,NA,NA,NA
+2020,1,Round 4,2020-06-28,MCG,Melbourne,Geelong,NA,NA,NA,NA,NA,NA
+2020,1,Round 4,2020-06-28,Docklands Stadium,Hawthorn,North Melbourne,NA,NA,NA,NA,NA,NA
+2020,1,Round 5,2020-07-02,Carrara Stadium,West Coast,Richmond,NA,NA,NA,NA,NA,NA
+2020,1,Round 5,2020-07-03,MCG,Collingwood,Essendon,NA,NA,NA,NA,NA,NA
+2020,1,Round 5,2020-07-04,MCG,Carlton,St Kilda,NA,NA,NA,NA,NA,NA
+2020,1,Round 5,2020-07-04,Kardinia Park,Geelong,Gold Coast,NA,NA,NA,NA,NA,NA
+2020,1,Round 5,2020-07-04,Docklands Stadium,Western Bulldogs,North Melbourne,NA,NA,NA,NA,NA,NA
+2020,1,Round 5,2020-07-04,Gabba,Brisbane Lions,Port Adelaide,NA,NA,NA,NA,NA,NA
+2020,1,Round 5,2020-07-05,Carrara Stadium,Adelaide,Fremantle,NA,NA,NA,NA,NA,NA
+2020,1,Round 5,2020-07-05,SCG,Sydney,Melbourne,NA,NA,NA,NA,NA,NA
+2020,1,Round 5,2020-07-05,Sydney Showground Stadium,Greater Western Sydney,Hawthorn,NA,NA,NA,NA,NA,NA

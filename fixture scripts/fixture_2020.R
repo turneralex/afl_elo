@@ -73,9 +73,9 @@ afl_venues_2020 <- afl_venues_2020 %>%
     mutate(year = "2020") %>% 
     select(year, everything())
 
-# afl_fixture_2020 %>%
-#     write_csv(here::here("fixtures", "afl_fixture_2020.csv"))
+afl_fixture_2020 %>%
+    write_csv(here::here("fixtures", "afl_fixture_2020.csv"))
 
-# afl_venues_2020 %>%
-#     unnest(cols = teams) %>%
-#     write_csv(here::here("venues", "afl_venues_2020.csv"))
+afl_venues_2020 %>%
+    unnest(cols = teams) %>%
+    write_csv(here::here("venues", "afl_venues_2020.csv"))

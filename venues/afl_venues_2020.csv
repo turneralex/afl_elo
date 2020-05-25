@@ -2,31 +2,24 @@ year,venue,location,team
 2020,MCG,VIC,Richmond
 2020,MCG,VIC,Hawthorn
 2020,MCG,VIC,Collingwood
+2020,MCG,VIC,Essendon
 2020,MCG,VIC,Melbourne
 2020,MCG,VIC,Carlton
-2020,MCG,VIC,Geelong
-2020,MCG,VIC,Essendon
 2020,Docklands Stadium,VIC,Western Bulldogs
 2020,Docklands Stadium,VIC,Essendon
 2020,Docklands Stadium,VIC,North Melbourne
 2020,Docklands Stadium,VIC,Carlton
 2020,Docklands Stadium,VIC,St Kilda
 2020,Docklands Stadium,VIC,Hawthorn
-2020,Docklands Stadium,VIC,Collingwood
-2020,Docklands Stadium,VIC,Richmond
 2020,Adelaide Oval,SA,Adelaide
 2020,Adelaide Oval,SA,Port Adelaide
 2020,Carrara Stadium,QLD,Gold Coast
-2020,Sydney Showground,VIC,Greater Western Sydney
+2020,Carrara Stadium,QLD,Fremantle
+2020,Carrara Stadium,QLD,Port Adelaide
+2020,Carrara Stadium,QLD,West Coast
+2020,Carrara Stadium,QLD,Adelaide
+2020,Sydney Showground Stadium,NSW,Greater Western Sydney
 2020,Perth Stadium,WA,West Coast
-2020,Perth Stadium,WA,Fremantle
-2020,SCG,NSW,Sydney
-2020,Gabba,QLD,Brisbane Lions
 2020,Kardinia Park,GEE,Geelong
-2020,Manuka Oval,ACT,Greater Western Sydney
-2020,Bellerive Oval,TAS,North Melbourne
-2020,York Park,TAS,Hawthorn
-2020,Eureka Stadium,VIC,Western Bulldogs
-2020,Traeger Park,NT,Melbourne
-2020,Jiangwan Stadium,Other,St Kilda
-2020,Marrara Oval,NT,Gold Coast
+2020,Gabba,QLD,Brisbane Lions
+2020,SCG,NSW,Sydney
