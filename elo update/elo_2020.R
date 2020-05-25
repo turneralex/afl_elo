@@ -59,13 +59,15 @@ elo_model %>%
         afl_fixture_2020 %>%
             filter(round == paste("Round", rounds_so_far + 1)) %>%
             pull(home_team)
-    ) 
+    ) %>% 
+    enframe()
 
-elo_regress <- elo_model %>% 
-    final.elos(regressed = T) 
-
-afl_fixture_2020 %>% 
-    filter(round == "Round 1") %>% 
-    mutate(hga_app = pmap_int(list(season, venue, away_team), is_home, data = afl_venues_all)) %>% 
-    select(home_team, away_team, hga_app) %>% 
-    mutate(elo_pred = elo.prob(elo_regress[home_team], elo_regress[away_team], adjust.A = hga_app * elo_par["hga"]))
+# tips for round 1 (different to other rounds, due to regression to the mean)
+# elo_regress <- elo_model %>%
+#     final.elos(regressed = T)
+# 
+# afl_fixture_2020 %>%
+#     filter(round == "Round 2") %>%
+#     mutate(hga_app = pmap_int(list(season, venue, away_team), is_home, data = afl_venues_all)) %>%
+#     select(home_team, away_team, hga_app) %>%
+#     mutate(elo_pred = elo.prob(elo_regress[home_team], elo_regress[away_team], adjust.A = hga_app * elo_par["hga"]))

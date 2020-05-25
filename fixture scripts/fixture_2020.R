@@ -34,7 +34,7 @@ afl_fixture_2020 <- afl_fixture_2020 %>%
         venue = case_when(
             venue == "M.C.G."            ~ "MCG",
             venue == "Docklands"         ~ "Docklands Stadium",
-            venue == "Syndey Showground" ~ "Sydney Showground Stadium",
+            venue == "Sydney Showground" ~ "Sydney Showground Stadium",
             venue == "S.C.G."            ~ "SCG",
             venue == "Carrara"           ~ "Carrara Stadium",
             T                            ~ venue
