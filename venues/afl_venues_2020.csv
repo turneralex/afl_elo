@@ -4,7 +4,6 @@ year,venue,location,team
 2020,MCG,VIC,Collingwood
 2020,MCG,VIC,Essendon
 2020,MCG,VIC,Melbourne
-2020,MCG,VIC,Carlton
 2020,Docklands Stadium,VIC,Western Bulldogs
 2020,Docklands Stadium,VIC,Essendon
 2020,Docklands Stadium,VIC,North Melbourne
@@ -18,8 +17,31 @@ year,venue,location,team
 2020,Carrara Stadium,QLD,Port Adelaide
 2020,Carrara Stadium,QLD,West Coast
 2020,Carrara Stadium,QLD,Adelaide
+2020,Carrara Stadium,QLD,Essendon
+2020,Carrara Stadium,QLD,Carlton
+2020,Carrara Stadium,QLD,Richmond
+2020,Carrara Stadium,QLD,Melbourne
+2020,Carrara Stadium,QLD,Western Bulldogs
+2020,Carrara Stadium,QLD,North Melbourne
 2020,Sydney Showground Stadium,NSW,Greater Western Sydney
+2020,Sydney Showground Stadium,NSW,Collingwood
+2020,Sydney Showground Stadium,NSW,Melbourne
+2020,Sydney Showground Stadium,NSW,Hawthorn
 2020,Perth Stadium,WA,West Coast
+2020,Perth Stadium,WA,Geelong
+2020,Perth Stadium,WA,Fremantle
+2020,Perth Stadium,WA,Carlton
+2020,Perth Stadium,WA,Sydney
 2020,Kardinia Park,GEE,Geelong
 2020,Gabba,QLD,Brisbane Lions
+2020,Gabba,QLD,West Coast
+2020,Gabba,QLD,Richmond
+2020,Gabba,QLD,Carlton
+2020,Gabba,QLD,North Melbourne
+2020,Gabba,QLD,Melbourne
+2020,Gabba,QLD,St Kilda
+2020,Gabba,QLD,Geelong
+2020,Gabba,QLD,Collingwood
 2020,SCG,NSW,Sydney
+2020,SCG,NSW,Geelong
+2020,Bellerive Oval,TAS,North Melbourne

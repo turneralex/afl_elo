@@ -1,12 +1,12 @@
-source(here::here("fixture scripts/fixture_all.R"))
 source(here::here("fixture scripts/fixture_2020.R"))
+source(here::here("fixture scripts/fixture_all.R"))
 source(here::here("elo update/elo_optim.R"))
 source(here::here("elo update/functions_general.R"))
 
 library(tidyverse)
 library(elo)
 
-rounds_so_far <- 1
+rounds_so_far <- 8
 
 results_2020 <- fitzRoy::get_match_results() %>% 
     filter(lubridate::year(Date) == 2020,
@@ -47,7 +47,17 @@ elo_model <- elo.run(
 elo_model %>% 
     final.elos(regressed = T) %>% 
     sort(decreasing = T) %>% 
-    enframe()
+    enframe() %>% 
+    mutate(plus_minus = value - mean(value)) %>% 
+    ggplot(aes(fct_reorder(name, plus_minus), plus_minus)) +
+    geom_col() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# check home games
+afl_fixture_2020 %>%
+    filter(round == paste("Round", rounds_so_far + 1)) %>%
+    mutate(hga_app = pmap_int(list(season, venue, away_team), is_home, data = afl_venues_all)) %>%
+    select(home_team, away_team, hga_app, venue) 
 
 elo_model %>%
     predict(

@@ -1,3 +1,5 @@
+# devtools::install_github("jimmyday12/fitzRoy")
+
 library(tidyverse)
 
 afl_fixture_2020 <- fitzRoy::get_fixture(season = 2020) %>% 
