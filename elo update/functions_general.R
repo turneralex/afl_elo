@@ -1,3 +1,14 @@
+score_expected <- function(elo, elo_opp, hga_app = 1, hga = 0) {
+    x <- -(elo - elo_opp + (hga_app * hga))
+    1 / (1 + 10^(x / 400))
+}
+
+elo_update <- function(elo, elo_opp, score_adjusted, score_expected, k = 70, regress = 0.5, regress_app = 0) {
+    x <- elo + k * (score_adjusted - score_expected)
+    y <- (1500 * regress * regress_app) + ((1 - regress * regress_app) * x)
+    y
+}
+
 is_home <- function(season_year, game_venue, game_away_team, data) {
     library(tidyverse)
     
@@ -14,25 +25,25 @@ is_home <- function(season_year, game_venue, game_away_team, data) {
     as.integer(!(location %in% away_team_location))
 }
 
-get_round_scores <- function(season, round) {
-    library(tidyverse)
-    library(rvest)
-    
-    fixture_url <- paste0("https://en.wikipedia.org/wiki/", season, "_AFL_season")
-    round <- round + 2
-    
-    fixture_url %>% 
-        read_html() %>% 
-        html_nodes(xpath = paste("//*[@id='mw-content-text']/div/table[", round, "]")) %>% 
-        html_table() %>% 
-        magrittr::extract2(1) %>% 
-        as_tibble() %>% 
-        filter(X3 %>% str_detect("def\\.|def\\. by|drew with")) %>% 
-        select(X2, X4) %>% 
-        transmute(home_score = X2 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
-                  away_score = X4 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
-                  home_goals = X2 %>% str_remove_all("[:alpha:]* |\\..*") %>% as.integer(),
-                  away_goals = X4 %>% str_remove_all("[:alpha:]* |\\..*") %>% as.integer(),
-                  home_behinds = home_score - (home_goals * 6),
-                  away_behinds = away_score - (away_goals * 6))
-}
+# get_round_scores <- function(season, round) {
+#     library(tidyverse)
+#     library(rvest)
+#     
+#     fixture_url <- paste0("https://en.wikipedia.org/wiki/", season, "_AFL_season")
+#     round <- round + 2
+#     
+#     fixture_url %>% 
+#         read_html() %>% 
+#         html_nodes(xpath = paste("//*[@id='mw-content-text']/div/table[", round, "]")) %>% 
+#         html_table() %>% 
+#         magrittr::extract2(1) %>% 
+#         as_tibble() %>% 
+#         filter(X3 %>% str_detect("def\\.|def\\. by|drew with")) %>% 
+#         select(X2, X4) %>% 
+#         transmute(home_score = X2 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
+#                   away_score = X4 %>% str_remove_all(".*[(]|[)]") %>% as.integer(),
+#                   home_goals = X2 %>% str_remove_all("[:alpha:]* |\\..*") %>% as.integer(),
+#                   away_goals = X4 %>% str_remove_all("[:alpha:]* |\\..*") %>% as.integer(),
+#                   home_behinds = home_score - (home_goals * 6),
+#                   away_behinds = away_score - (away_goals * 6))
+# }
