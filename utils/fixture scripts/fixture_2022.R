@@ -19,7 +19,12 @@ afl_fixture_2022 <- fitzRoy::fetch_fixture_footywire(season = 2022) %>%
             T                        ~ Away.Team
         ),
     ) %>% 
-    filter(Round != "Round 24") %>% 
+    filter(
+        Round %in% paste(
+            "Round",
+            1:23
+        )
+    ) %>% 
     select(Season, match_id, Round, Date, Venue, Home.Team, Away.Team)
 
 colnames(afl_fixture_2022) <- colnames(afl_fixture_2022) %>% 
@@ -135,10 +140,10 @@ afl_venues_2022 <- afl_venues_2022 %>%
     select(year, everything())
 
 afl_fixture_2022 %>%
-    write_csv(here::here("fixtures", "afl_fixture_2022.csv"))
+    write_csv(here::here("files/fixtures", "afl_fixture_2022.csv"))
 
 afl_venues_2022 %>%
     unnest(cols = teams) %>%
-    write_csv(here::here("venues", "afl_venues_2022.csv"))
+    write_csv(here::here("files/venues", "afl_venues_2022.csv"))
 
 rm(results_2022)

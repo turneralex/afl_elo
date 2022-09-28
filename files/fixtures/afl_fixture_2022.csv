@@ -57,8 +57,8 @@ season,match_id,round,date,venue,home_team,away_team,home_goals,home_behinds,hom
 2022,56,Round 7,2022-04-30,Adelaide Oval,Adelaide,Greater Western Sydney,8,6,54,17,11,113
 2022,57,Round 7,2022-04-30,Kardinia Park,Geelong,Fremantle,10,6,66,10,9,69
 2022,58,Round 7,2022-04-30,MCG,Melbourne,Hawthorn,13,13,91,11,15,81
-2022,59,Round 7,2022-04-30,Cazaly's Stadium,St Kilda,Port Adelaide,4,18,42,5,13,43
-2022,60,Round 7,2022-04-30,Docklands Stadium,Carlton,North Melbourne,17,12,114,10,4,64
+2022,59,Round 7,2022-04-30,Docklands Stadium,Carlton,North Melbourne,17,12,114,10,4,64
+2022,60,Round 7,2022-04-30,Cazaly's Stadium,St Kilda,Port Adelaide,4,18,42,5,13,43
 2022,61,Round 7,2022-05-01,MCG,Collingwood,Gold Coast,17,13,115,14,6,90
 2022,62,Round 7,2022-05-01,Docklands Stadium,Western Bulldogs,Essendon,16,7,103,10,11,71
 2022,63,Round 7,2022-05-01,SCG,Sydney,Brisbane Lions,13,11,89,17,11,113
@@ -81,8 +81,8 @@ season,match_id,round,date,venue,home_team,away_team,home_goals,home_behinds,hom
 2022,80,Round 9,2022-05-15,Perth Stadium,West Coast,Melbourne,5,8,38,16,16,112
 2022,81,Round 9,2022-05-15,Sydney Showground Stadium,Greater Western Sydney,Carlton,11,9,75,15,15,105
 2022,82,Round 10,2022-05-20,Docklands Stadium,Carlton,Sydney,15,12,102,13,9,87
-2022,83,Round 10,2022-05-21,Eureka Stadium,Western Bulldogs,Gold Coast,15,16,106,13,9,87
-2022,84,Round 10,2022-05-21,Kardinia Park,Geelong,Port Adelaide,11,16,82,7,5,47
+2022,83,Round 10,2022-05-21,Kardinia Park,Geelong,Port Adelaide,11,16,82,7,5,47
+2022,84,Round 10,2022-05-21,Eureka Stadium,Western Bulldogs,Gold Coast,15,16,106,13,9,87
 2022,85,Round 10,2022-05-21,Docklands Stadium,North Melbourne,Melbourne,8,5,53,14,16,100
 2022,86,Round 10,2022-05-21,Adelaide Oval,Adelaide,St Kilda,9,15,69,14,6,90
 2022,87,Round 10,2022-05-21,MCG,Richmond,Essendon,11,14,80,7,6,48
@@ -153,8 +153,8 @@ season,match_id,round,date,venue,home_team,away_team,home_goals,home_behinds,hom
 2022,152,Round 18,2022-07-17,Traeger Park,Melbourne,Port Adelaide,12,11,83,10,9,69
 2022,153,Round 18,2022-07-17,Docklands Stadium,Essendon,Gold Coast,14,19,103,8,7,55
 2022,154,Round 19,2022-07-22,Docklands Stadium,Richmond,Fremantle,7,10,52,7,10,52
-2022,155,Round 19,2022-07-23,Bellerive Oval,North Melbourne,Hawthorn,11,9,75,19,7,121
-2022,156,Round 19,2022-07-23,SCG,Sydney,Adelaide,17,16,118,12,13,85
+2022,155,Round 19,2022-07-23,SCG,Sydney,Adelaide,17,16,118,12,13,85
+2022,156,Round 19,2022-07-23,Bellerive Oval,North Melbourne,Hawthorn,11,9,75,19,7,121
 2022,157,Round 19,2022-07-23,Adelaide Oval,Port Adelaide,Geelong,14,10,94,16,10,106
 2022,158,Round 19,2022-07-23,Gabba,Brisbane Lions,Gold Coast,16,14,110,14,9,93
 2022,159,Round 19,2022-07-23,Docklands Stadium,Western Bulldogs,Melbourne,17,8,110,15,10,100
@@ -197,5 +197,3 @@ season,match_id,round,date,venue,home_team,away_team,home_goals,home_behinds,hom
 2022,196,Round 23,2022-08-21,York Park,Hawthorn,Western Bulldogs,10,4,64,12,15,87
 2022,197,Round 23,2022-08-21,MCG,Carlton,Collingwood,10,14,74,11,9,75
 2022,198,Round 23,2022-08-21,Docklands Stadium,St Kilda,Sydney,11,8,74,13,10,88
-2022,199,Round 25,2022-09-09,MCG,Melbourne,Brisbane Lions,NA,NA,NA,NA,NA,NA
-2022,200,Round 25,2022-09-10,MCG,Collingwood,Fremantle,NA,NA,NA,NA,NA,NA
