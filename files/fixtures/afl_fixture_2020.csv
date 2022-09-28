@@ -1,0 +1,154 @@
+season,match_id,round,date,venue,home_team,away_team,home_goals,home_behinds,home_score,away_goals,away_behinds,away_score
+2020,1,Round 1,2020-03-19,MCG,Richmond,Carlton,16,9,105,12,9,81
+2020,2,Round 1,2020-03-20,Docklands Stadium,Western Bulldogs,Collingwood,5,4,34,13,8,86
+2020,3,Round 1,2020-03-21,Docklands Stadium,Essendon,Fremantle,9,9,63,8,9,57
+2020,4,Round 1,2020-03-21,Adelaide Oval,Adelaide,Sydney,11,5,71,11,8,74
+2020,5,Round 1,2020-03-21,Carrara Stadium,Gold Coast,Port Adelaide,4,5,29,10,16,76
+2020,6,Round 1,2020-03-21,Sydney Showground Stadium,Greater Western Sydney,Geelong,17,3,105,11,7,73
+2020,7,Round 1,2020-03-22,Docklands Stadium,North Melbourne,St Kilda,8,8,56,7,12,54
+2020,8,Round 1,2020-03-22,MCG,Hawthorn,Brisbane Lions,14,6,90,9,8,62
+2020,9,Round 1,2020-03-22,Perth Stadium,West Coast,Melbourne,12,6,78,7,9,51
+2020,10,Round 2,2020-06-11,MCG,Collingwood,Richmond,5,6,36,5,6,36
+2020,11,Round 2,2020-06-12,Kardinia Park,Geelong,Hawthorn,17,6,108,7,5,47
+2020,12,Round 2,2020-06-13,Gabba,Brisbane Lions,Fremantle,12,9,81,10,9,69
+2020,13,Round 2,2020-06-13,Docklands Stadium,Carlton,Melbourne,7,11,53,8,6,54
+2020,14,Round 2,2020-06-13,Adelaide Oval,Port Adelaide,Adelaide,17,8,110,5,5,35
+2020,15,Round 2,2020-06-13,Carrara Stadium,Gold Coast,West Coast,14,6,90,6,10,46
+2020,16,Round 2,2020-06-14,Sydney Showground Stadium,Greater Western Sydney,North Melbourne,8,12,60,12,8,80
+2020,17,Round 2,2020-06-14,SCG,Sydney,Essendon,11,7,73,12,7,79
+2020,18,Round 2,2020-06-14,Docklands Stadium,St Kilda,Western Bulldogs,14,4,88,7,7,49
+2020,19,Round 3,2020-06-18,MCG,Richmond,Hawthorn,5,9,39,11,5,71
+2020,20,Round 3,2020-06-19,Docklands Stadium,Western Bulldogs,Greater Western Sydney,8,9,57,4,9,33
+2020,21,Round 3,2020-06-20,Docklands Stadium,North Melbourne,Sydney,8,12,60,10,11,71
+2020,22,Round 3,2020-06-20,MCG,Collingwood,St Kilda,12,9,81,5,7,37
+2020,23,Round 3,2020-06-20,Kardinia Park,Geelong,Carlton,11,11,77,12,7,79
+2020,24,Round 3,2020-06-20,Gabba,Brisbane Lions,West Coast,10,14,74,6,8,44
+2020,25,Round 3,2020-06-21,Carrara Stadium,Gold Coast,Adelaide,12,10,82,4,5,29
+2020,26,Round 3,2020-06-21,Carrara Stadium,Fremantle,Port Adelaide,6,5,41,10,10,70
+2020,27,Round 4,2020-06-25,SCG,Sydney,Western Bulldogs,5,9,39,10,7,67
+2020,28,Round 4,2020-06-26,Sydney Showground Stadium,Greater Western Sydney,Collingwood,10,6,66,9,10,64
+2020,29,Round 4,2020-06-27,Carrara Stadium,Port Adelaide,West Coast,13,11,89,6,5,41
+2020,30,Round 4,2020-06-27,Docklands Stadium,St Kilda,Richmond,15,3,93,10,7,67
+2020,31,Round 4,2020-06-27,Carrara Stadium,Gold Coast,Fremantle,10,4,64,8,3,51
+2020,32,Round 4,2020-06-27,MCG,Essendon,Carlton,8,3,51,7,10,52
+2020,33,Round 4,2020-06-28,Gabba,Brisbane Lions,Adelaide,10,23,83,7,4,46
+2020,34,Round 4,2020-06-28,MCG,Melbourne,Geelong,6,8,44,7,5,47
+2020,35,Round 4,2020-06-28,Docklands Stadium,Hawthorn,North Melbourne,8,10,58,8,6,54
+2020,36,Round 5,2020-07-02,Docklands Stadium,Carlton,St Kilda,8,7,55,11,7,73
+2020,37,Round 5,2020-07-03,MCG,Collingwood,Essendon,7,6,48,10,3,63
+2020,38,Round 5,2020-07-04,Carrara Stadium,West Coast,Sydney,11,11,77,6,7,43
+2020,39,Round 5,2020-07-04,Kardinia Park,Geelong,Gold Coast,13,11,89,8,4,52
+2020,40,Round 5,2020-07-04,Gabba,Brisbane Lions,Port Adelaide,12,13,85,6,12,48
+2020,41,Round 5,2020-07-04,Docklands Stadium,Western Bulldogs,North Melbourne,13,9,87,5,8,38
+2020,42,Round 5,2020-07-05,Carrara Stadium,Adelaide,Fremantle,4,10,34,8,6,54
+2020,43,Round 5,2020-07-05,MCG,Melbourne,Richmond,8,4,52,12,7,79
+2020,44,Round 5,2020-07-05,Sydney Showground Stadium,Greater Western Sydney,Hawthorn,13,5,83,7,7,49
+2020,45,Round 6,2020-07-09,SCG,Geelong,Brisbane Lions,11,7,73,6,10,46
+2020,46,Round 6,2020-07-10,Sydney Showground Stadium,Collingwood,Hawthorn,8,11,59,3,9,27
+2020,47,Round 6,2020-07-11,Carrara Stadium,Fremantle,St Kilda,12,7,79,11,7,73
+2020,48,Round 6,2020-07-11,Gabba,West Coast,Adelaide,10,7,67,5,4,34
+2020,49,Round 6,2020-07-11,Sydney Showground Stadium,Melbourne,Gold Coast,12,8,80,9,9,63
+2020,50,Round 6,2020-07-11,Carrara Stadium,Essendon,North Melbourne,9,13,67,7,11,53
+2020,51,Round 6,2020-07-12,Carrara Stadium,Port Adelaide,Greater Western Sydney,9,9,63,6,10,46
+2020,52,Round 6,2020-07-12,Gabba,Richmond,Sydney,4,10,34,3,8,26
+2020,53,Round 6,2020-07-12,Carrara Stadium,Carlton,Western Bulldogs,16,7,103,7,9,51
+2020,54,Round 7,2020-07-16,Perth Stadium,Geelong,Collingwood,5,5,35,8,9,57
+2020,55,Round 7,2020-07-17,Carrara Stadium,Essendon,Western Bulldogs,7,9,51,14,9,93
+2020,56,Round 7,2020-07-18,Sydney Showground Stadium,Greater Western Sydney,Brisbane Lions,10,8,68,13,10,88
+2020,57,Round 7,2020-07-18,SCG,Sydney,Gold Coast,9,6,60,13,14,92
+2020,58,Round 7,2020-07-18,Carrara Stadium,Richmond,North Melbourne,11,11,77,2,11,23
+2020,59,Round 7,2020-07-19,Gabba,Carlton,Port Adelaide,9,7,61,9,10,64
+2020,60,Round 7,2020-07-19,Sydney Showground Stadium,Hawthorn,Melbourne,7,6,48,14,7,91
+2020,61,Round 7,2020-07-19,Perth Stadium,Fremantle,West Coast,5,2,32,9,8,62
+2020,62,Round 7,2020-07-20,Adelaide Oval,Adelaide,St Kilda,8,7,55,12,6,78
+2020,63,Round 8,2020-07-23,Carrara Stadium,Gold Coast,Western Bulldogs,6,10,46,7,9,51
+2020,64,Round 8,2020-07-24,Sydney Showground Stadium,Greater Western Sydney,Richmond,9,8,62,6,14,50
+2020,65,Round 8,2020-07-25,Gabba,North Melbourne,Carlton,9,3,57,9,10,64
+2020,66,Round 8,2020-07-25,SCG,Sydney,Hawthorn,9,6,60,7,11,53
+2020,67,Round 8,2020-07-25,Adelaide Oval,Port Adelaide,St Kilda,6,8,44,12,1,73
+2020,68,Round 8,2020-07-26,Adelaide Oval,Adelaide,Essendon,8,11,59,9,8,62
+2020,69,Round 8,2020-07-26,Perth Stadium,West Coast,Collingwood,18,3,111,6,9,45
+2020,70,Round 8,2020-07-26,Carrara Stadium,Melbourne,Brisbane Lions,7,7,49,7,11,53
+2020,71,Round 8,2020-07-27,Perth Stadium,Fremantle,Geelong,2,4,16,6,12,48
+2020,72,Round 9,2020-07-29,Carrara Stadium,Western Bulldogs,Richmond,7,7,49,13,12,90
+2020,73,Round 9,2020-07-30,Gabba,Melbourne,Port Adelaide,4,8,32,12,11,83
+2020,74,Round 9,2020-07-31,Perth Stadium,Carlton,Hawthorn,9,4,58,14,5,89
+2020,75,Round 9,2020-07-31,Carrara Stadium,Essendon,Brisbane Lions,3,10,28,14,7,91
+2020,76,Round 9,2020-08-01,Carrara Stadium,North Melbourne,Adelaide,19,5,119,7,8,50
+2020,77,Round 9,2020-08-01,Gabba,St Kilda,Sydney,15,11,101,6,12,48
+2020,78,Round 9,2020-08-01,Perth Stadium,West Coast,Geelong,11,7,73,10,4,64
+2020,79,Round 9,2020-08-02,Carrara Stadium,Gold Coast,Greater Western Sydney,4,11,35,9,7,61
+2020,80,Round 9,2020-08-02,Perth Stadium,Fremantle,Collingwood,10,1,61,7,7,49
+2020,81,Round 10,2020-08-03,Adelaide Oval,Port Adelaide,Western Bulldogs,8,7,55,5,12,42
+2020,82,Round 10,2020-08-04,Carrara Stadium,Richmond,Brisbane Lions,12,10,82,4,17,41
+2020,83,Round 10,2020-08-05,Gabba,Geelong,North Melbourne,13,12,90,9,3,57
+2020,84,Round 10,2020-08-05,Adelaide Oval,Adelaide,Melbourne,5,7,37,13,10,88
+2020,85,Round 10,2020-08-06,Gabba,Collingwood,Sydney,6,14,50,6,5,41
+2020,86,Round 10,2020-08-06,Carrara Stadium,Gold Coast,St Kilda,11,8,74,12,6,78
+2020,87,Round 10,2020-08-07,Carrara Stadium,Essendon,Greater Western Sydney,8,7,55,8,11,59
+2020,88,Round 11,2020-08-08,Adelaide Oval,Port Adelaide,Richmond,13,15,93,11,6,72
+2020,89,Round 11,2020-08-08,Gabba,Brisbane Lions,Western Bulldogs,14,12,96,11,6,72
+2020,90,Round 11,2020-08-09,Perth Stadium,West Coast,Carlton,11,6,72,7,8,50
+2020,91,Round 11,2020-08-09,Adelaide Oval,Melbourne,North Melbourne,13,14,92,5,5,35
+2020,92,Round 11,2020-08-10,Gabba,St Kilda,Geelong,4,10,34,14,9,93
+2020,93,Round 11,2020-08-10,Perth Stadium,Fremantle,Hawthorn,7,6,48,4,8,32
+2020,94,Round 11,2020-08-11,Adelaide Oval,Adelaide,Collingwood,5,8,38,10,2,62
+2020,95,Round 11,2020-08-12,Carrara Stadium,Gold Coast,Essendon,11,7,73,11,7,73
+2020,96,Round 12,2020-08-13,Perth Stadium,Sydney,Greater Western Sydney,10,6,66,3,7,25
+2020,97,Round 12,2020-08-14,Gabba,Geelong,Port Adelaide,14,7,91,4,7,31
+2020,98,Round 12,2020-08-15,Bellerive Oval,North Melbourne,Brisbane Lions,8,4,52,7,11,53
+2020,99,Round 12,2020-08-15,Gabba,Melbourne,Collingwood,16,4,100,6,8,44
+2020,100,Round 12,2020-08-15,Perth Stadium,Fremantle,Carlton,5,6,36,5,10,40
+2020,101,Round 12,2020-08-16,Carrara Stadium,Western Bulldogs,Adelaide,16,15,111,8,6,54
+2020,102,Round 12,2020-08-16,Gabba,St Kilda,Essendon,10,8,68,5,3,33
+2020,103,Round 12,2020-08-16,Perth Stadium,West Coast,Hawthorn,12,9,81,7,7,49
+2020,104,Round 12,2020-08-17,Gabba,Richmond,Gold Coast,8,5,53,4,8,32
+2020,105,Round 13,2020-08-21,Marrara Oval,Gold Coast,Carlton,4,3,27,7,18,60
+2020,106,Round 13,2020-08-22,Carrara Stadium,Western Bulldogs,Melbourne,12,8,80,7,10,52
+2020,107,Round 13,2020-08-22,Adelaide Oval,Port Adelaide,Hawthorn,9,14,68,9,4,58
+2020,108,Round 13,2020-08-22,Perth Stadium,Fremantle,Sydney,7,8,50,2,7,19
+2020,109,Round 13,2020-08-22,Marrara Oval,Essendon,Richmond,10,1,61,10,13,73
+2020,110,Round 13,2020-08-23,Adelaide Oval,Adelaide,Geelong,5,7,37,9,11,65
+2020,111,Round 13,2020-08-23,Gabba,Brisbane Lions,St Kilda,6,14,50,7,6,48
+2020,112,Round 13,2020-08-23,Perth Stadium,West Coast,Greater Western Sydney,9,7,61,7,7,49
+2020,113,Round 13,2020-08-24,Gabba,Collingwood,North Melbourne,10,5,65,5,5,35
+2020,114,Round 14,2020-08-27,Adelaide Oval,Hawthorn,Essendon,10,11,71,13,9,87
+2020,115,Round 14,2020-08-27,Carrara Stadium,Richmond,West Coast,14,4,88,9,7,61
+2020,116,Round 14,2020-08-28,Carrara Stadium,Western Bulldogs,Geelong,9,7,61,10,12,72
+2020,117,Round 14,2020-08-29,Adelaide Oval,Port Adelaide,Sydney,11,7,73,7,5,47
+2020,118,Round 14,2020-08-29,Perth Stadium,Fremantle,Greater Western Sydney,8,5,53,14,7,91
+2020,119,Round 14,2020-08-29,Traeger Park,Melbourne,St Kilda,8,4,52,7,7,49
+2020,120,Round 14,2020-08-30,Gabba,Carlton,Collingwood,7,6,48,10,12,72
+2020,121,Round 14,2020-08-30,Carrara Stadium,Gold Coast,North Melbourne,12,19,91,4,4,28
+2020,122,Round 15,2020-09-01,Adelaide Oval,Hawthorn,Adelaide,7,6,48,12,11,83
+2020,123,Round 15,2020-09-01,Gabba,West Coast,Essendon,9,6,60,6,9,45
+2020,124,Round 15,2020-09-02,Carrara Stadium,Richmond,Fremantle,8,8,56,4,5,29
+2020,125,Round 15,2020-09-03,Cazaly's Stadium,Sydney,Melbourne,10,7,67,6,10,46
+2020,126,Round 15,2020-09-03,Carrara Stadium,Greater Western Sydney,Carlton,6,12,48,5,9,39
+2020,127,Round 15,2020-09-04,Gabba,Brisbane Lions,Collingwood,6,6,42,5,4,34
+2020,128,Round 16,2020-09-05,Carrara Stadium,North Melbourne,Port Adelaide,6,6,42,11,12,78
+2020,129,Round 16,2020-09-06,Carrara Stadium,St Kilda,Hawthorn,11,14,80,9,12,66
+2020,130,Round 16,2020-09-06,Gabba,Geelong,Essendon,17,6,108,5,12,42
+2020,131,Round 16,2020-09-06,Carrara Stadium,Western Bulldogs,West Coast,6,13,49,7,5,47
+2020,132,Round 16,2020-09-07,Cazaly's Stadium,Melbourne,Fremantle,4,9,33,6,11,47
+2020,133,Round 16,2020-09-08,Adelaide Oval,Adelaide,Greater Western Sydney,8,11,59,7,5,47
+2020,134,Round 16,2020-09-08,Carrara Stadium,Carlton,Sydney,8,9,57,8,4,52
+2020,135,Round 16,2020-09-09,Gabba,Brisbane Lions,Gold Coast,13,10,88,6,7,43
+2020,136,Round 17,2020-09-10,Gabba,St Kilda,West Coast,6,14,50,9,11,65
+2020,137,Round 17,2020-09-11,Carrara Stadium,Geelong,Richmond,4,7,31,7,15,57
+2020,138,Round 17,2020-09-12,Carrara Stadium,North Melbourne,Fremantle,5,5,35,15,9,99
+2020,139,Round 17,2020-09-12,Adelaide Oval,Port Adelaide,Essendon,11,13,79,4,5,29
+2020,140,Round 17,2020-09-12,Gabba,Greater Western Sydney,Melbourne,11,8,74,12,7,79
+2020,141,Round 17,2020-09-13,Carrara Stadium,Carlton,Adelaide,8,8,56,10,12,72
+2020,142,Round 17,2020-09-13,Adelaide Oval,Hawthorn,Western Bulldogs,6,4,40,11,10,76
+2020,143,Round 17,2020-09-13,Cazaly's Stadium,Sydney,Brisbane Lions,6,5,41,11,7,73
+2020,144,Round 17,2020-09-14,Gabba,Collingwood,Gold Coast,10,8,68,6,10,46
+2020,145,Round 18,2020-09-17,Carrara Stadium,North Melbourne,West Coast,4,10,34,7,7,49
+2020,146,Round 18,2020-09-18,Gabba,St Kilda,Greater Western Sydney,12,10,82,3,12,30
+2020,147,Round 18,2020-09-19,Carrara Stadium,Essendon,Melbourne,7,7,49,10,8,68
+2020,148,Round 18,2020-09-19,Adelaide Oval,Adelaide,Richmond,4,9,33,12,5,77
+2020,149,Round 18,2020-09-19,Gabba,Brisbane Lions,Carlton,11,12,78,10,1,61
+2020,150,Round 18,2020-09-20,Adelaide Oval,Hawthorn,Gold Coast,17,6,108,8,9,57
+2020,151,Round 18,2020-09-20,Carrara Stadium,Sydney,Geelong,9,9,63,10,9,69
+2020,152,Round 18,2020-09-20,Cazaly's Stadium,Fremantle,Western Bulldogs,6,8,44,11,8,74
+2020,153,Round 18,2020-09-21,Gabba,Collingwood,Port Adelaide,7,3,45,9,7,61
