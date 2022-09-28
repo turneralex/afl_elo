@@ -17,15 +17,10 @@ afl_fixture_2020 <- fitzRoy::get_fixture(season = 2020) %>%
             Away.Team == "Footscray" ~ "Western Bulldogs",
             Away.Team == "GWS"       ~ "Greater Western Sydney",
             T                        ~ Away.Team
-        ),
-        home_score = NA,
-        away_score = NA,
-        home_goals = NA,
-        away_goals = NA,
-        home_behinds = NA,
-        away_behinds = NA
+        )
     ) %>% 
-    select(Season, match_id, Round, Date, Venue, Home.Team, Away.Team, home_score:away_behinds)
+    select(Season, match_id, Round, Date, Venue, Home.Team, Away.Team) %>% 
+    filter(str_remove(Round, "Round ") %in% as.character(1:18))
 
 colnames(afl_fixture_2020) <- colnames(afl_fixture_2020) %>% 
     tolower() %>% 
@@ -46,17 +41,17 @@ afl_fixture_2020 <- afl_fixture_2020 %>%
 afl_venues_2020 <- tibble(venue = afl_fixture_2020$venue %>% unique()) %>%
     mutate(
         location = case_when(
-            venue == "Adelaide Oval"                              ~ "SA",
-            venue == "Gabba" | venue == "Carrara Stadium"         ~ "QLD",
-            venue == "Manuka Oval"                                ~ "ACT",
-            venue == "Perth Stadium"                              ~ "WA",
-            venue == "SCG" | venue == "Sydney Showground Stadium" ~ "NSW",
-            venue == "Bellerive Oval" | venue == "York Park"      ~ "TAS",
-            venue == "Kardinia Park"                              ~ "GEE",
-            venue == "Jiangwan Stadium"                           ~ "Other",
-            venue == "Traeger Park" | venue == "Marrara Oval"     ~ "NT",
-            T                                                     ~ "VIC"
-        ) 
+            venue == "Adelaide Oval"                                                    ~ "SA",
+            venue == "Gabba" | venue == "Carrara Stadium" | venue == "Cazaly's Stadium" ~ "QLD",
+            venue == "Manuka Oval"                                                      ~ "ACT",
+            venue == "Perth Stadium"                                                    ~ "WA",
+            venue == "SCG" | venue == "Sydney Showground Stadium"                       ~ "NSW",
+            venue == "Bellerive Oval" | venue == "York Park"                            ~ "TAS",
+            venue == "Kardinia Park"                                                    ~ "GEE",
+            venue == "Jiangwan Stadium"                                                 ~ "Other",
+            venue == "Traeger Park" | venue == "Marrara Oval"                           ~ "NT",
+            T                                                                           ~ "VIC"
+        )  
     )
 
 venues_teams_2020 <- map(

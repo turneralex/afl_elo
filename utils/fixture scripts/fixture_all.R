@@ -1,24 +1,25 @@
 library(tidyverse)
 
 afl_fixture_all <- map_dfr(
-    2010:2019, 
+    2010:2022, 
     ~ read_csv(
         paste0(
             here::here(), 
-            "/fixtures/afl_fixture_", 
+            "/files/fixtures/afl_fixture_", 
             .x, 
             ".csv"
         ),
         col_types = "cicDccciiiiii"
     )
-)
+) %>% 
+    mutate(match_id = 1:nrow(.))
 
 afl_venues_all <- map_dfr(
-    2010:2020, 
+    2010:2022, 
     ~ read_csv(
         paste0(
             here::here(), 
-            "/venues/afl_venues_", 
+            "/files/venues/afl_venues_", 
             .x, 
             ".csv"
         ),

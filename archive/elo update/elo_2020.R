@@ -6,7 +6,7 @@ source(here::here("elo update/functions_general.R"))
 library(tidyverse)
 library(elo)
 
-rounds_so_far <- 8
+rounds_so_far <- 11
 
 results_2020 <- fitzRoy::get_match_results() %>% 
     filter(lubridate::year(Date) == 2020,
