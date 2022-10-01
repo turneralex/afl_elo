@@ -4,7 +4,6 @@ score_expected <- function(elo, elo_opp, hga_app, hga) {
 }
 
 elo_update <- function(elo, elo_opp, score_adjusted, score_expected, k, regress, regress_app) {
-    # mov <- log(score_adjusted + 1) * (2.2 / (((elo - elo_opp) * 0.001) + 2.2))
     x <- elo + k * (score_adjusted - score_expected)
     y <- (1500 * regress * regress_app) + ((1 - regress * regress_app) * x)
     y
@@ -50,6 +49,23 @@ is_home <- function(season_year, game_venue, game_home_team, game_away_team, dat
     } else {
         as.integer(!(location %in% away_team_location)) * as.integer(location %in% home_team_location)
     }
+    
+}
+
+change_team_name <- function(team) {
+    library(tidyverse)
+    
+    case_when(
+        team == "Adelaide Crows"    ~ "Adelaide",
+        team == "Brisbane Lions"    ~ "Brisbane",
+        team == "Geelong Cats"      ~ "Geelong",
+        team == "Gold Coast Suns"   ~ "Gold Coast",
+        team == "GWS Giants"        ~ "GWS",
+        team == "Sydney Swans"      ~ "Sydney",
+        team == "West Coast Eagles" ~ "West Coast",
+        team == "Footscray"         ~ "Western Bulldogs",
+        T                           ~ team
+    )
     
 }
 

@@ -12,7 +12,19 @@ afl_fixture_all <- map_dfr(
         col_types = "cicDccciiiiii"
     )
 ) %>% 
-    mutate(match_id = 1:nrow(.))
+    mutate(
+        match_id = 1:nrow(.),
+        home_team = case_when(
+            home_team == "Greater Western Sydney" ~ "GWS",
+            home_team == "Brisbane Lions"         ~ "Brisbane",
+            T                                     ~ home_team
+        ),
+        away_team = case_when(
+            away_team == "Greater Western Sydney" ~ "GWS",
+            away_team == "Brisbane Lions"         ~ "Brisbane",
+            T                                     ~ away_team
+        )
+    )
 
 afl_venues_all <- map_dfr(
     2010:2022, 
@@ -26,4 +38,11 @@ afl_venues_all <- map_dfr(
         col_types = "cccc"
     )
 ) %>% 
+    mutate(
+        team = case_when(
+            team == "Greater Western Sydney" ~ "GWS",
+            team == "Brisbane Lions"         ~ "Brisbane",
+            T                                ~ team
+        )
+    ) %>% 
     nest(teams = team)
