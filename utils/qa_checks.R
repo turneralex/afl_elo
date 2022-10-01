@@ -5,6 +5,35 @@ afl_elo
 afl_elo %>% 
     skimr::skim()
 
+# which venues teams were home at
+
+map(
+    afl_venues_all$venue %>% 
+        unique() %>% 
+        sort(),
+    ~ afl_venues_all %>% 
+        unnest(cols = teams) %>% 
+        filter(
+            venue == .x
+            & !(year %in% c(2020, 2021)) 
+        ) %>% 
+        distinct(venue, location, team)
+)
+
+afl_venues_all %>% 
+    unnest(cols = teams) %>% 
+    filter(
+        venue == "Perth Stadium"
+        & team == "Gold Coast"
+    )
+
+afl_venues_all %>% 
+    unnest(cols = teams) %>% 
+    filter(
+        venue == "Cazaly's Stadium"
+        & team == "Richmond"
+    )
+
 # unique locations
 
 afl_elo %>% 
