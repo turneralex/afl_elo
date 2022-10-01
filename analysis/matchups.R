@@ -11,7 +11,8 @@ colnames(afl_stats_all) <- colnames(afl_stats_all) %>%
     str_replace_all("[.]", "_")
 
 afl_stats_all %>% 
-    skim()
+    skim() %>% 
+    print()
 
 team_stats <- afl_stats_all %>% 
     filter(
@@ -179,7 +180,15 @@ colnames(afl_ladder_all) <- colnames(afl_ladder_all) %>%
     str_replace_all("[.]", "_")
 
 afl_ladder_all %>% 
-    skim()
+    skim() %>% 
+    print()
+
+paste(
+    "latest round available for afltables ladder:",
+    afl_ladder_all %>% 
+        pull(round_number) %>% 
+        max()
+) 
 
 afl_ladder <- afl_ladder_all %>% 
     mutate(
@@ -190,7 +199,8 @@ afl_ladder <- afl_ladder_all %>%
     ) %>% 
     select(team, ladder_position) 
 
-afl_ladder
+afl_ladder %>% 
+    print()
 
 team_stats <- team_stats %>% 
     inner_join(
