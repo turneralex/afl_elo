@@ -4,23 +4,7 @@ library(ggradar)
 library(skimr)
 library(fitzRoy)
 
-source(here::here("run/update.R"))
-
-season <- 2022
-rounds_so_far <- 10
-finals_so_far <- c(
-    # "Finals Week 1"
-    # "Semi Finals", 
-    # "Preliminary Finals", 
-    # "Grand Final"
-)
-round_next <- 11
-round_name <- "Round 11"
-
-afl_stats_all <- fetch_player_stats_afl(season = season) 
-
-afl_stats_all %>% 
-    glimpse()
+afl_stats_all <- fetch_player_stats_afl(season = current_season) 
 
 colnames(afl_stats_all) <- colnames(afl_stats_all) %>% 
     tolower() %>% 
@@ -28,9 +12,6 @@ colnames(afl_stats_all) <- colnames(afl_stats_all) %>%
 
 afl_stats_all %>% 
     skim()
-
-afl_stats_all %>% 
-    head()
 
 team_stats <- afl_stats_all %>% 
     filter(
@@ -99,15 +80,15 @@ team_stats <- afl_stats_all %>%
             0
         ) %>% 
             sum(),
-        pa_home = if_else(
+        tackles_home = if_else(
             team_name == home_team_club_name,
-            extendedstats_pressureacts,
+            tackles,
             0
         ) %>% 
             sum(),
-        pa_away = if_else(
+        tackles_away = if_else(
             team_name == away_team_club_name,
-            extendedstats_pressureacts,
+            tackles,
             0
         ) %>% 
             sum()
@@ -163,15 +144,15 @@ team_stats <- afl_stats_all %>%
         ),
         cp_diff = cp_total - cp_opp_total,
         
-        pa_total = sum(extendedstats_pressureacts),
-        pa_opp_total = mean(
+        tackles_total = sum(tackles),
+        tackles_opp_total = mean(
             if_else(
                 team_name == home_team_club_name,
-                pa_away,
-                pa_home
+                tackles_away,
+                tackles_home
             )
         ),
-        pa_diff = pa_total - pa_opp_total
+        tackles_diff = tackles_total - tackles_opp_total
     ) %>% 
     rename(team = team_name) %>% 
     group_by(team) %>% 
@@ -181,32 +162,17 @@ team_stats <- afl_stats_all %>%
         mi50_diff_mean = mean(mi50_diff),
         turn_diff_mean = mean(-turn_diff),
         cp_diff_mean = mean(cp_diff),
-        pa_diff_mean = mean(pa_diff)
+        tackles_diff_mean = mean(tackles_diff)
     ) %>% 
     mutate(
-        team_afl_tables = case_when(
-            team == "Adelaide Crows"    ~ "Adelaide",
-            team == "Western Bulldogs"  ~ "Footscray",
-            team == "Geelong Cats"      ~ "Geelong",
-            team == "Gold Coast Suns"   ~ "Gold Coast",
-            team == "GWS Giants"        ~ "GWS",
-            team == "Sydney Swans"      ~ "Sydney",
-            team == "West Coast Eagles" ~ "West Coast",
-            T                           ~ team
-        )
+        team = change_team_name(team)
     ) %>% 
     mutate_at(
-        vars(score_shots_diff_mean:pa_diff_mean), 
+        vars(score_shots_diff_mean:tackles_diff_mean), 
         rescale
     )
 
-team_stats %>% 
-    head()
-
-afl_ladder_all <- fetch_ladder_afltables(season = season)
-
-afl_ladder_all %>% 
-    glimpse()
+afl_ladder_all <- fetch_ladder_afltables(season = current_season)
 
 colnames(afl_ladder_all) <- colnames(afl_ladder_all) %>% 
     tolower() %>% 
@@ -216,6 +182,9 @@ afl_ladder_all %>%
     skim()
 
 afl_ladder <- afl_ladder_all %>% 
+    mutate(
+        team = change_team_name(team)
+    ) %>% 
     filter(
         round_number == rounds_so_far
     ) %>% 
@@ -226,42 +195,25 @@ afl_ladder
 team_stats <- team_stats %>% 
     inner_join(
         afl_ladder,
-        by = c("team_afl_tables" = "team")
+        by = "team"
     ) %>% 
     mutate(
         team_position = case_when(
             ladder_position == 1 ~ paste0(ladder_position, "st: ", team),
             ladder_position == 2 ~ paste0(ladder_position, "nd: ", team),
             ladder_position == 3 ~ paste0(ladder_position, "rd: ", team),
-            T ~                    paste0(ladder_position, "th: ", team)
+            T                    ~ paste0(ladder_position, "th: ", team)
         )
     ) 
 
 afl_elo_pred <- afl_elo %>% 
     filter(season == current_season, 
            round == paste("Round", rounds_so_far + 1)) %>% 
-    mutate(
-        team_afl_tables = case_when(
-            team == "Western Bulldogs"       ~ "Footscray",
-            team == "Greater Western Sydney" ~ "GWS",
-            T                                ~ team
-        )
-    ) %>% 
     inner_join(
         afl_ladder,
-        by = c("team_afl_tables" = "team")
+        by = "team"
     ) %>% 
     mutate(
-        team_chart = team,
-        team = case_when(
-            team == "Adelaide"               ~ "Adelaide Crows",
-            team == "Geelong"                ~ "Geelong Cats",
-            team == "Gold Coast"             ~ "Gold Coast Suns",
-            team == "Greater Western Sydney" ~ "GWS Giants",
-            team == "Sydney"                 ~ "Sydney Swans",
-            team == "West Coast"             ~ "West Coast Eagles",
-            T                                ~ team
-        ),
         elo_rank = case_when(
             rank(-start_elo) == 1 ~ paste0(rank(-start_elo), "st"),
             rank(-start_elo) == 2 ~ paste0(rank(-start_elo), "nd"),
@@ -277,7 +229,6 @@ afl_elo_pred <- afl_elo %>%
     ) %>% 
     group_by(match_id) %>%
     mutate(
-        away_team_chart = lead(team_chart),
         away_team = lead(team),
         away_elo = lead(start_elo),
         away_ladder_position = lead(ladder_position),
@@ -286,8 +237,6 @@ afl_elo_pred <- afl_elo %>%
     slice(1) %>%
     ungroup() %>%
     select(
-        home_team_chart = team_chart,
-        away_team_chart = away_team_chart,
         location, 
         home_team = team, 
         away_team, 
@@ -323,26 +272,11 @@ afl_elo_pred <- afl_elo %>%
             "Ladder position\n",
             home_ladder_position, " vs. ", away_ladder_position,
             "\n\nElo ranking\n",
-            home_elo_rank, " vs. ", away_elo_rank,
-            "\n\nElo rating\n",
-            round(home_elo), " vs. ", round(away_elo), 
-            "\n\nHome ground advantage: +", round(hga),
-            "\nPredicted winner: ",
-            pred_winner
+            home_elo_rank, " (", round(home_elo), ") vs. ", away_elo_rank, " (", round(away_elo), ")",
+            "\nHGA: +", round(hga), ", predicted winner: ", pred_winner
         )
     ) %>% 
-    select(home_team_chart, away_team_chart, home_team, away_team, venue, matchup)
-
-afl_elo_pred
-
-dir.create(
-    paste0(
-        here::here("files/charts/"),
-        season,
-        "_",
-        round_name
-    )
-)
+    select(home_team, away_team, venue, matchup)
 
 charts <- map(
     1:nrow(afl_elo_pred),
@@ -350,7 +284,7 @@ charts <- map(
         inner_join(
             afl_elo_pred %>% 
                 slice(.x) %>% 
-                select(3:4) %>% 
+                select(home_team:away_team) %>% 
                 pivot_longer(
                     cols = 1:2,
                     names_to = "home_away",
@@ -363,20 +297,11 @@ charts <- map(
             by = "team"
         ) %>%
         mutate(
-            team = case_when(
-                team == "Adelaide Crows"    ~ "Adelaide",
-                team == "Geelong Cats"      ~ "Geelong",
-                team == "Gold Coast Suns"   ~ "Gold Coast",
-                team == "GWS Giants"        ~ "Greater Western Sydney",
-                team == "Sydney Swans"      ~ "Sydney",
-                team == "West Coast Eagles" ~ "West Coast",
-                T                           ~ team
-            ),
             team = fct_reorder(
                 team,
                 team_home
             )
-        ) %>% 
+        ) %>%
         select(
             Team = team, 
             `Scoring shots` = score_shots_diff_mean, 
@@ -384,7 +309,7 @@ charts <- map(
             `Marks inside 50` = mi50_diff_mean,
             `Turnovers` = turn_diff_mean, 
             `Contested\npossessions` = cp_diff_mean, 
-            `Pressure acts` = pa_diff_mean
+            `Tackles` = tackles_diff_mean
         ) %>% 
         ggradar(values.radar = c(NA, NA, NA),
                 axis.label.size = 5,
@@ -399,22 +324,18 @@ charts <- map(
             " vs. ",
             as.character(afl_elo_pred[.x, 2]),
             " @ ",
-            as.character(afl_elo_pred[.x, 5])
+            as.character(afl_elo_pred[.x, 3])
            ),
             subtitle = paste0(
-                afl_elo_pred[.x, 6],
-                "\n\nTeam strengths & weaknesses*"
+                afl_elo_pred[.x, 4],
+                "\n\nTeam differentials vs. opponents - closer to the outside indicates greater strength"
             ),
-            caption = "*Closer to the outside indicates greater strength
-                       *Touching the outer circle represents top of the league, touching the inner circle represents bottom of the league
-                       Source: AFL website. Created by: footycharts") +
+            caption = "Created by: footycharts. Source: AFL website") +
         theme(plot.title = element_text(size = 20, hjust = 0.5), 
               plot.subtitle = element_text(size = 15, hjust = 0.5),
               legend.position = "bottom",
               plot.caption = element_text(size = 10)) 
 )
-
-charts
 
 map2(
     charts,
@@ -431,12 +352,12 @@ map2(
         ),
         path = paste0(
             here::here("files/charts/"),
-            season,
+            current_season,
             "_",
             round_name
         ),
-        width = 1080,
-        height = 1080,
-        units = "mm"
+        width = 25,
+        height = 25,
+        units = "cm"
     )
 )

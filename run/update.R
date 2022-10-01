@@ -1,4 +1,4 @@
-source(here::here("utils/fixture scripts/fixture_2022.R"))
+# source(here::here("utils/fixture scripts/fixture_2022.R"))
 source(here::here("utils/fixture scripts/fixture_all.R"))
 source(here::here("utils/functions_general.R"))
 
@@ -6,8 +6,6 @@ elo_par <- read_csv(
     here::here("files/params/elo_par_score_shots.csv")
 ) %>% 
     deframe() 
-
-current_season <- "2022"
 
 afl_elo <- afl_fixture_all %>% 
     convert_elo_df() %>% 
