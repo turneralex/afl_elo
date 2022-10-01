@@ -21,18 +21,6 @@ team_stats <- afl_stats_all %>%
     ) %>% 
     group_by(round_roundnumber, home_team_club_name, away_team_club_name) %>% 
     mutate(
-        score_shots_home = if_else(
-            team_name == home_team_club_name,
-            goals + behinds,
-            0
-        ) %>% 
-            sum(),
-        score_shots_away = if_else(
-            team_name == away_team_club_name,
-            goals + behinds,
-            0
-        ) %>% 
-            sum(),
         i50_home = if_else(
             team_name == home_team_club_name,
             inside50s,
@@ -81,6 +69,18 @@ team_stats <- afl_stats_all %>%
             0
         ) %>% 
             sum(),
+        clear_home = if_else(
+            team_name == home_team_club_name,
+            clearances_totalclearances,
+            0
+        ) %>% 
+            sum(),
+        clear_away = if_else(
+            team_name == away_team_club_name,
+            clearances_totalclearances,
+            0
+        ) %>% 
+            sum(),
         tackles_home = if_else(
             team_name == home_team_club_name,
             tackles,
@@ -96,15 +96,6 @@ team_stats <- afl_stats_all %>%
     ) %>% 
     group_by(round_name, team_name) %>% 
     summarise(
-        score_shots_total = sum(goals + behinds),
-        score_shots_opp_total = mean(
-            if_else(
-                team_name == home_team_club_name,
-                score_shots_away,
-                score_shots_home
-            )
-        ),
-        score_shots_diff = score_shots_total - score_shots_opp_total,
         i50_total = sum(inside50s),
         i50_opp_total = mean(
             if_else(
@@ -145,6 +136,16 @@ team_stats <- afl_stats_all %>%
         ),
         cp_diff = cp_total - cp_opp_total,
         
+        clear_total = sum(clearances_totalclearances),
+        clear_opp_total = mean(
+            if_else(
+                team_name == home_team_club_name,
+                clear_away,
+                clear_home
+            )
+        ),
+        clear_diff = clear_total - clear_opp_total,
+        
         tackles_total = sum(tackles),
         tackles_opp_total = mean(
             if_else(
@@ -158,18 +159,18 @@ team_stats <- afl_stats_all %>%
     rename(team = team_name) %>% 
     group_by(team) %>% 
     summarise(
-        score_shots_diff_mean = mean(score_shots_diff),
         i50_diff_mean = mean(i50_diff),
         mi50_diff_mean = mean(mi50_diff),
         turn_diff_mean = mean(-turn_diff),
         cp_diff_mean = mean(cp_diff),
+        clear_diff_mean = mean(clear_diff),
         tackles_diff_mean = mean(tackles_diff)
     ) %>% 
     mutate(
         team = change_team_name(team)
     ) %>% 
     mutate_at(
-        vars(score_shots_diff_mean:tackles_diff_mean), 
+        vars(i50_diff_mean:tackles_diff_mean), 
         rescale
     )
 
@@ -314,11 +315,11 @@ charts <- map(
         ) %>%
         select(
             Team = team, 
-            `Scoring shots` = score_shots_diff_mean, 
             `Inside 50s` = i50_diff_mean, 
-            `Marks inside 50` = mi50_diff_mean,
+            `Marks inside 50` = mi50_diff_mean, 
             `Turnovers` = turn_diff_mean, 
-            `Contested\npossessions` = cp_diff_mean, 
+            `Contested possessions` = cp_diff_mean, 
+            `Clearances` = clear_diff_mean, 
             `Tackles` = tackles_diff_mean
         ) %>% 
         ggradar(values.radar = c(NA, NA, NA),
