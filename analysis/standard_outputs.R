@@ -46,9 +46,7 @@ afl_elo_rank <- afl_elo %>%
             ": ",
             team
         )
-    ) 
-
-afl_elo_rank
+    )
 
 # current elo ratings
 
