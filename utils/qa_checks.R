@@ -20,6 +20,8 @@ map(
         distinct(venue, location, team)
 )
 
+# check potential errors
+
 afl_venues_all %>% 
     unnest(cols = teams) %>% 
     filter(
@@ -92,7 +94,8 @@ afl_elo %>%
         | score_expected == score_expected_min
         | score_adjusted == score_adjusted_max
         | score_expected == score_expected_max
-    )
+    ) %>% 
+    select(-score_adjusted_min, -score_expected_min, -score_adjusted_max, -score_expected_max)
 
 # histogram of score adjusted & expected
 
