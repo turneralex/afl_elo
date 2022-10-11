@@ -119,4 +119,14 @@ elo_par <- optim(
 elo_par %>%     
     enframe() %>% 
     rename(param = name) %>% 
-    write_csv(here::here("params", "elo_par_score_shots_2022.csv"))
+    write_csv(
+        here::here(
+            "files",
+            "params",
+            paste0(
+                "elo_par_score_shots_",
+                Sys.Date(),
+                ".csv"
+            )
+        )
+    )
