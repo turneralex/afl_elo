@@ -144,10 +144,11 @@ team_stats_base %>%
             -defense_avg$spi50_opp_mean, 
             label = "League average")
     ) +
+    scale_x_continuous(labels = ~ abs(.x)) +
     scale_y_continuous(labels = ~ abs(.x)) +
     labs(title = paste0("Team defensive indicators - Round ", rounds_so_far),
          subtitle = paste("Season:", current_season),
-         x = "Opposition nside 50s\n(More sustainable)",
+         x = "Opposition side 50s\n(More sustainable)",
          y = "Opposotion scores per inside 50\n(Less sustainable)",
          caption = "Created by: footycharts. Source: AFL website") +
     theme(axis.text = element_text(size = 15),
