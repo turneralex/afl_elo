@@ -14,7 +14,7 @@ afl_stats_all %>%
     skim() %>% 
     print()
 
-team_stats <- afl_stats_all %>% 
+team_stats_base <- afl_stats_all %>% 
     filter(
         round_roundnumber %in% 1:rounds_so_far
         & !(round_name %in% finals_so_far)
@@ -159,18 +159,20 @@ team_stats <- afl_stats_all %>%
     rename(team = team_name) %>% 
     group_by(team) %>% 
     summarise(
-        i50_diff_mean = mean(i50_diff),
-        mi50_diff_mean = mean(mi50_diff),
+        score_shots_mean = mean(score_shots_total),
+        score_shots_opp_mean = mean(-score_shots_opp_total),
+        i50_mean = mean(i50_total),
+        i50_opp_mean = mean(-i50_opp_total),
         turn_diff_mean = mean(-turn_diff),
-        cp_diff_mean = mean(cp_diff),
-        clear_diff_mean = mean(clear_diff),
-        tackles_diff_mean = mean(tackles_diff)
+        cp_diff_mean = mean(cp_diff)
     ) %>% 
     mutate(
         team = change_team_name(team)
-    ) %>% 
+    ) 
+
+team_stats <- team_stats_base %>% 
     mutate_at(
-        vars(i50_diff_mean:tackles_diff_mean), 
+        vars(score_shots_mean:cp_diff_mean), 
         rescale
     )
 
@@ -315,12 +317,12 @@ charts <- map(
         ) %>%
         select(
             Team = team, 
-            `Inside 50s` = i50_diff_mean, 
-            `Marks inside 50` = mi50_diff_mean, 
-            `Turnovers` = turn_diff_mean, 
-            `Contested possessions` = cp_diff_mean, 
-            `Clearances` = clear_diff_mean, 
-            `Tackles` = tackles_diff_mean
+            `Scoring shots` = score_shots_mean, 
+            `Opposition\nscoring shots` = score_shots_opp_mean, 
+            `Inside 50s` = i50_mean, 
+            `Opposition\ninside 50s` = i50_opp_mean,
+            `Turnover\ndifferential` = turn_diff_mean, 
+            `Contested\npossession\ndifferential` = cp_diff_mean
         ) %>% 
         ggradar(values.radar = c(NA, NA, NA),
                 axis.label.size = 5,
@@ -339,7 +341,7 @@ charts <- map(
            ),
             subtitle = paste0(
                 afl_elo_pred[.x, 4],
-                "\n\nTeam differentials vs. opponents - closer to the outside indicates greater strength"
+                "\n\nTeam strengths & weaknesses - closer to the outside indicates greater strength"
             ),
             caption = "Created by: footycharts. Source: AFL website") +
         theme(plot.title = element_text(size = 20, hjust = 0.5), 

@@ -75,6 +75,87 @@ rank_elo <- afl_elo_rank %>%
           axis.text.y = element_text(size = 15),
           legend.position = "none")
 
+# team offense
+
+offense_avg <- team_stats_base %>% 
+    mutate(
+        spi50_mean = score_shots_mean / i50_mean,
+    ) %>%
+    summarise(
+        i50_mean = mean(i50_mean),
+        spi50_mean = mean(spi50_mean)
+    )
+
+team_stats_base %>% 
+    mutate(
+        spi50_mean = score_shots_mean / i50_mean,
+    ) %>% 
+    ggplot(aes(i50_mean, spi50_mean, label = team)) +
+    geom_vline(xintercept = offense_avg$i50_mean, colour = "firebrick1", alpha = 0.5, linetype = "dashed") +
+    geom_hline(yintercept = offense_avg$spi50_mean, colour = "firebrick1", alpha = 0.5, linetype = "dashed") +
+    geom_text() +
+    geom_label(
+        aes(offense_avg$i50_mean, 
+            min(team_stats_base$score_shots_mean / team_stats_base$i50_mean), 
+            label = "League average")
+    ) +
+    geom_label(
+        aes(min(team_stats_base$i50_mean), 
+            offense_avg$spi50_mean, 
+            label = "League average")
+    ) +
+    labs(title = paste0("Team offensive indicators - Round ", rounds_so_far),
+         subtitle = paste("Season:", current_season),
+         x = "Inside 50s\n(More sustainable)",
+         y = "Scores per inside 50\n(Less sustainable)",
+         caption = "Created by: footycharts. Source: AFL website") +
+    theme(axis.text = element_text(size = 15),
+          axis.title = element_text(size = 15), 
+          plot.title = element_text(size = 20), 
+          plot.subtitle = element_text(size = 15),
+          plot.caption = element_text(size = 10))
+
+# team defense
+
+defense_avg <- team_stats_base %>% 
+    mutate(
+        spi50_opp_mean = score_shots_opp_mean / i50_opp_mean,
+    ) %>%
+    summarise(
+        i50_opp_mean = mean(i50_opp_mean),
+        spi50_opp_mean = mean(spi50_opp_mean)
+    )
+
+team_stats_base %>% 
+    mutate(
+        spi50_opp_mean = score_shots_opp_mean / i50_opp_mean,
+    ) %>% 
+    ggplot(aes(i50_opp_mean, -spi50_opp_mean, label = team)) +
+    geom_vline(xintercept = defense_avg$i50_opp_mean, colour = "firebrick1", alpha = 0.5, linetype = "dashed") +
+    geom_hline(yintercept = -defense_avg$spi50_opp_mean, colour = "firebrick1", alpha = 0.5, linetype = "dashed") +
+    geom_text() +
+    geom_label(
+        aes(defense_avg$i50_opp_mean, 
+            -max(team_stats_base$score_shots_opp_mean / team_stats_base$i50_opp_mean), 
+            label = "League average")
+    ) +
+    geom_label(
+        aes(min(team_stats_base$i50_opp_mean), 
+            -defense_avg$spi50_opp_mean, 
+            label = "League average")
+    ) +
+    scale_y_continuous(labels = ~ abs(.x)) +
+    labs(title = paste0("Team defensive indicators - Round ", rounds_so_far),
+         subtitle = paste("Season:", current_season),
+         x = "Opposition nside 50s\n(More sustainable)",
+         y = "Opposotion scores per inside 50\n(Less sustainable)",
+         caption = "Created by: footycharts. Source: AFL website") +
+    theme(axis.text = element_text(size = 15),
+          axis.title = element_text(size = 15), 
+          plot.title = element_text(size = 20), 
+          plot.subtitle = element_text(size = 15),
+          plot.caption = element_text(size = 10))
+
 map2(
     list(
         trended_elo,
