@@ -18,7 +18,7 @@ dir.create(
     )
 )
 
-source(here::here("run/update.R"))
+source(here::here("run/run.R"))
 source(here::here("analysis/matchups.R"))
 source(here::here("analysis/standard_outputs.R"))
 

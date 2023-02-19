@@ -21,6 +21,18 @@ team_stats_base <- afl_stats_all %>%
     ) %>% 
     group_by(round_roundnumber, home_team_club_name, away_team_club_name) %>% 
     mutate(
+        score_shots_home = if_else(
+            team_name == home_team_club_name,
+            goals + behinds,
+            0
+        ) %>% 
+            sum(),
+        score_shots_away = if_else(
+            team_name == away_team_club_name,
+            goals + behinds,
+            0
+        ) %>% 
+            sum(),
         i50_home = if_else(
             team_name == home_team_club_name,
             inside50s,
@@ -96,6 +108,14 @@ team_stats_base <- afl_stats_all %>%
     ) %>% 
     group_by(round_name, team_name) %>% 
     summarise(
+        score_shots_total = sum(goals + behinds),
+        score_shots_opp_total = mean(
+            if_else(
+                team_name == home_team_club_name,
+                score_shots_away,
+                score_shots_home
+            )
+        ),
         i50_total = sum(inside50s),
         i50_opp_total = mean(
             if_else(
