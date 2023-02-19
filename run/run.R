@@ -1,9 +1,15 @@
-# source(here::here("utils/fixture scripts/fixture_2022.R"))
+# source(here::here("utils/fixture scripts/fixture_2023.R"))
 source(here::here("utils/fixture scripts/fixture_all.R"))
 source(here::here("utils/functions_general.R"))
 
+files <- list.files("./files/params")
+
 elo_par <- read_csv(
-    here::here("files/params/elo_par_score_shots.csv")
+    here::here(
+        "files",
+        "params",
+        files[files != "archive"]
+    )
 ) %>% 
     deframe() 
 
