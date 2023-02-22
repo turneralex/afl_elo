@@ -302,11 +302,11 @@ afl_elo_pred <- afl_elo %>%
             away_team
         ),
         matchup = paste0(
-            "Ladder position\n",
+            "HGA: +", round(hga), ", predicted winner: ", pred_winner,
+            "\n\nLadder position\n",
             home_ladder_position, " vs. ", away_ladder_position,
-            "\n\nElo ranking\n",
-            home_elo_rank, " (", round(home_elo), ") vs. ", away_elo_rank, " (", round(away_elo), ")",
-            "\nHGA: +", round(hga), ", predicted winner: ", pred_winner
+            "\nElo ranking\n",
+            home_elo_rank, " (", round(home_elo), ") vs. ", away_elo_rank, " (", round(away_elo), ")"
         )
     ) %>% 
     select(home_team, away_team, venue, matchup)
