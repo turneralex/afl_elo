@@ -2,7 +2,10 @@
 source(here::here("utils/fixture scripts/fixture_all.R"))
 source(here::here("utils/functions_general.R"))
 
-files <- list.files("./files/params")
+files <- list.files(
+    "./files/params",
+    pattern = "csv"
+)
 
 elo_par <- read_csv(
     here::here(
