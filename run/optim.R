@@ -3,17 +3,21 @@ source(here::here("utils/functions_general.R"))
 
 library(tidyverse)
 
-seasons_exclude <- c(
-    "2010", 
-    "2020", 
-    "2021"
-)
+seasons_exclude <- 2010
+seasons_remove_hga <- 2020:2021
 
 afl_elo <- afl_fixture_all %>% 
     filter(
         !(season %in% seasons_exclude)
     ) %>%
-    convert_elo_df()
+    convert_elo_df() %>% 
+    mutate(
+        hga_app = if_else(
+            season %in% seasons_remove_hga,
+            as.integer(0),
+            hga_app
+        )
+    )
 
 parameter_optim <- function(elo_df, par) {
     
@@ -119,4 +123,4 @@ elo_par <- optim(
 elo_par %>%     
     enframe() %>% 
     rename(param = name) %>% 
-    write_csv(here::here("params", "elo_par_score_shots_2022.csv"))
+    write_csv(here::here("files/params", "elo_par_2023_2.csv"))
