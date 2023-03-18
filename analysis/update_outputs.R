@@ -1,5 +1,5 @@
 current_season <- 2022
-rounds_so_far <- 10
+rounds_so_far <- 13
 finals_so_far <- c(
     # "Finals Week 1"
     # "Semi Finals", 
@@ -18,7 +18,7 @@ dir.create(
     )
 )
 
-source(here::here("run/update.R"))
+source(here::here("run/run.R"))
 source(here::here("analysis/matchups.R"))
 source(here::here("analysis/standard_outputs.R"))
 

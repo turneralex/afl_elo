@@ -1,13 +1,14 @@
-source(here::here("run/update.R"))
+source(here::here("run/run.R"))
 
 library(viridis)
 
+current_season <- 2022
 rounds_so_far <- 23
 
 afl_elo %>% 
     filter(
-        (season == "2021" & round == "Round 23")
-        | (season == "2022" & round == paste("Round", rounds_so_far))
+        (season == current_season - 1 & round == "Round 23")
+        | (season == current_season & round == paste("Round", rounds_so_far))
     ) %>% 
     group_by(team) %>% 
     mutate(
@@ -16,11 +17,11 @@ afl_elo %>%
         elo_change = new_elo - lag(new_elo)
     ) %>% 
     ungroup() %>% 
-    filter(season == "2022") %>% 
+    filter(season == current_season) %>% 
     ggplot(aes(fct_reorder(team, elo_change), elo_change, fill = elo_change)) +
     geom_col(colour = "black") +
     geom_text(aes(fct_reorder(team, elo_change),
-                  y = elo_change + if_else(elo_change > 0, 6, -6),
+                  y = elo_change + if_else(elo_change > 0, 2, -2),
                   label = if_else(
                       elo_change > 0,
                       paste0(
