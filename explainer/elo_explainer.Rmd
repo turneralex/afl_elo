@@ -114,16 +114,16 @@ One thing about this Elo system is it will punish teams for poorer than expected
 
 ## How it works - K value
 
-The first of three parameters that are part of this Elo system is the $K$ value, which takes a value of ~80. This value indicates how responsive the system should be to match results. Higher $K$ values will mean the team ratings bounce around as greater weight should be placed on recent performances and vice versa for low $K$ values. This $K$ value is fairly typical for a sport like the AFL.
+The first of three parameters that are part of this Elo system is the $K$ value, which takes a value of ~77. This value indicates how responsive the system should be to match results. Higher $K$ values will mean the team ratings bounce around as greater weight should be placed on recent performances and vice versa for low $K$ values. This $K$ value is fairly typical for a sport like the AFL.
 
 ## How it works - home ground advantage & regression to the mean
 
 Along with the $K$ value, there are two other parameters in this Elo model; the first being home ground advantage ($HGA$). There are obviously many ways to approach home ground advantage and I have opted for a state-based approach. In this model, a home team will have $HGA$ applied if they have played 2 more or home games in the state where the game is being played __**and**__ the visiting team has not played 2 or more home games in that state (with Geelong being considered as separate from Victoria). The reason the 2 or more games filter is twofold. Firstly, it removes home ground advantage in cases where teams host 1 game in a certain state, like Melbourne hosting a game in the NT. Secondly, it means that if teams host 1 game in a state where other teams play, like St Kilda hosting a game in QLD, then if they have to travel back to that state for an away game home ground advantage will be applied. 
 
-The other parameter is [__regression to the mean__](https://en.wikipedia.org/wiki/Regression_toward_the_mean) ($RTM$) and this tells us how much the rating of each should regress back to mean of 1500 at the end of each season. This takes a value of ~0.5. 
+The other parameter is [__regression to the mean__](https://en.wikipedia.org/wiki/Regression_toward_the_mean) ($RTM$) and this tells us how much the rating of each should regress back to mean of 1500 at the end of each season. This takes a value of ~0.44. 
 
 ## How it works - parameter optimisation
 
-These three parameters, $K$, $HGA$ and $RTM$, all have to be optimised for Elo to do a decent job. Again, I have kept this simple and looked to minimise the [__mean absolute error__](https://en.wikipedia.org/wiki/Mean_absolute_error) between the expected and actual results. In other words, the model is optimised to predict share of scoring shots as well as possible. The data used for this optimisation was AFL regular season data from 2011 to 2019 inclusive and 2022, with initial ratings of 1500 given to each team for Round 1, 2011. 2020 and 2021 are excluded because of Covid wreaking havoc on the fixtures. I have not used more data as my optimisation process is quite slow and I don't want to kill my laptop. 
+These three parameters, $K$, $HGA$ and $RTM$, all have to be optimised for Elo to do a decent job. Again, I have kept this simple and looked to minimise the [__mean absolute error__](https://en.wikipedia.org/wiki/Mean_absolute_error) between the expected and actual results. In other words, the model is optimised to predict share of scoring shots as well as possible. The data used for this optimisation was AFL regular season data from 2011 to 2022 inclusive, with initial ratings of 1500 given to each team for Round 1, 2011. 2020 and 2021 are excluded for $HGA$ optimisation due to Covid wreaking havoc on the fixtures. I have not used more data as my optimisation process is quite slow and I don't want to kill my laptop. 
 
 ## That's it

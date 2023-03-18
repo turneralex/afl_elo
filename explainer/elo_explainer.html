@@ -462,7 +462,7 @@ reason to view them more favourably.</p>
 <h2>How it works - K value</h2>
 <p>The first of three parameters that are part of this Elo system is the
 <span class="math inline">\(K\)</span> value, which takes a value of
-~80. This value indicates how responsive the system should be to match
+~77. This value indicates how responsive the system should be to match
 results. Higher <span class="math inline">\(K\)</span> values will mean
 the team ratings bounce around as greater weight should be placed on
 recent performances and vice versa for low <span class="math inline">\(K\)</span> values. This <span class="math inline">\(K\)</span> value is fairly typical for a sport
@@ -489,7 +489,7 @@ applied.</p>
 <p>The other parameter is <a href="https://en.wikipedia.org/wiki/Regression_toward_the_mean"><strong>regression
 to the mean</strong></a> (<span class="math inline">\(RTM\)</span>) and
 this tells us how much the rating of each should regress back to mean of
-1500 at the end of each season. This takes a value of ~0.5.</p>
+1500 at the end of each season. This takes a value of ~0.44.</p>
 </div>
 <div id="how-it-works---parameter-optimisation" class="section level2">
 <h2>How it works - parameter optimisation</h2>
@@ -499,11 +499,12 @@ the <a href="https://en.wikipedia.org/wiki/Mean_absolute_error"><strong>mean
 absolute error</strong></a> between the expected and actual results. In
 other words, the model is optimised to predict share of scoring shots as
 well as possible. The data used for this optimisation was AFL regular
-season data from 2011 to 2019 inclusive and 2022, with initial ratings
-of 1500 given to each team for Round 1, 2011. 2020 and 2021 are excluded
-because of Covid wreaking havoc on the fixtures. I have not used more
-data as my optimisation process is quite slow and I don’t want to kill
-my laptop.</p>
+season data from 2011 to 2022 inclusive, with initial ratings of 1500
+given to each team for Round 1, 2011. 2020 and 2021 are excluded for
+<span class="math inline">\(HGA\)</span> optimisation due to Covid
+wreaking havoc on the fixtures. I have not used more data as my
+optimisation process is quite slow and I don’t want to kill my
+laptop.</p>
 </div>
 <div id="thats-it" class="section level2">
 <h2>That’s it</h2>
