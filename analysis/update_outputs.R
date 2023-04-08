@@ -1,5 +1,9 @@
-current_season <- 2022
-rounds_so_far <- 13
+library(dplyr)
+
+# current season & round
+
+current_season <- "2023"
+rounds_so_far <- 3
 finals_so_far <- c(
     # "Finals Week 1"
     # "Semi Finals", 
@@ -9,24 +13,54 @@ finals_so_far <- c(
 round_next <- rounds_so_far + 1
 round_name <- paste("Round", round_next)
 
+# create folder for charts
+
 dir.create(
-    paste0(
-        here::here("files/charts/"),
-        current_season,
-        "_",
-        round_name
+    path = here::here(
+        "files", 
+        "charts",
+        paste0(
+            current_season,
+            "_",
+            round_name
+        )
     )
 )
 
-source(here::here("run/run.R"))
-source(here::here("analysis/matchups.R"))
-source(here::here("analysis/standard_outputs.R"))
+# run the elo model
+
+source(
+    here::here(
+        "run", 
+        "run.R"
+    )
+) 
+
+# create matchup charts
+
+source(
+    here::here(
+        "analysis", 
+        "matchups.R"
+    )
+) 
+
+# create rank, trend & offensive / defensive charts
+
+source(
+    here::here(
+        "analysis", 
+        "standard_outputs.R"
+    )
+) 
 
 # correct tips so far
 
-correct_tips <- afl_fixture_all %>% 
-    filter(season == current_season, 
-           round %in% paste("Round", 1:rounds_so_far)) %>% 
+afl_fixture_all %>% 
+    filter(
+        season == current_season
+        & round %in% paste("Round", 1:rounds_so_far)
+    ) %>% 
     select(-match_id) %>% 
     inner_join(
         afl_elo,
@@ -42,5 +76,3 @@ correct_tips <- afl_fixture_all %>%
     ) %>% 
     pull(correct_tip) %>% 
     sum()
-
-correct_tips

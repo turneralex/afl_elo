@@ -1,61 +1,94 @@
-# devtools::install_github("jimmyday12/fitzRoy")
+library(dplyr)
 
-library(tidyverse)
+focus_season <- "2023"
 
-afl_fixture_2023 <- fitzRoy::fetch_fixture_footywire(season = 2023) %>% 
+# read in fixture
+
+afl_fixture <- fitzRoy::fetch_fixture_footywire(season = focus_season) %>% 
     mutate(
         Date = lubridate::as_date(Date),
         Season = as.character(Season),
         match_id = Season.Game,
         Round = paste("Round", Round),
-        Home.Team = case_when(
-            Home.Team == "Footscray" ~ "Western Bulldogs",
-            Home.Team == "GWS"       ~ "Greater Western Sydney",
-            T                        ~ Home.Team
-        ),
-        Away.Team = case_when(
-            Away.Team == "Footscray" ~ "Western Bulldogs",
-            Away.Team == "GWS"       ~ "Greater Western Sydney",
-            T                        ~ Away.Team
-        ),
+        Home.Team = change_team_name(Home.Team),
+        Away.Team = change_team_name(Away.Team),
     ) %>% 
-    select(Season, match_id, Round, Date, Venue, Home.Team, Away.Team)
-
-colnames(afl_fixture_2023) <- colnames(afl_fixture_2023) %>% 
-    tolower() %>% 
-    str_replace("\\.", "_")
-
-afl_fixture_2023 <- afl_fixture_2023 %>% 
-    mutate(
-        venue = case_when(
-            venue == "M.C.G."            ~ "MCG",
-            venue == "Docklands"         ~ "Docklands Stadium",
-            venue == "Sydney Showground" ~ "Sydney Showground Stadium",
-            venue == "S.C.G."            ~ "SCG",
-            venue == "Carrara"           ~ "Carrara Stadium",
-            T                            ~ venue
-        ) 
-    ) 
-
-results_2023 <- fitzRoy::fetch_results_afl(season = 2023) %>% 
-    filter(
-        !(round.name %in% c("Finals Week 1", "Semi Finals", "Preliminary Finals", "Grand Final"))
+    select(
+        Season, 
+        match_id, 
+        Round, 
+        Date, 
+        Venue, 
+        Home.Team, 
+        Away.Team
     )
 
-afl_fixture_2023 <- afl_fixture_2023 %>% 
-    mutate(season = "2023", match_id = 1:nrow(.)) %>% 
+# update column names
+
+afl_fixture <- afl_fixture %>% 
+    rename_with(
+        .fn = ~ .x %>% 
+            tolower() %>% 
+            stringr::str_replace(
+                pattern = "\\.", 
+                replacement = "_"
+            )
+    )
+
+# update venue names
+
+afl_fixture <- afl_fixture %>% 
+    mutate(
+        venue = change_venue_name(venue)
+    ) 
+
+# get results for current season
+
+afl_results <- fitzRoy::fetch_results_afl(season = focus_season) %>% 
+    filter(
+        !(
+            round.name %in% c(
+                "Finals Week 1", 
+                "Semi Finals", 
+                "Preliminary Finals", 
+                "Grand Final"
+            )
+        )
+    )
+
+# available results check
+
+if (exists("rounds_so_far")) {
+    
+    message(
+        paste0(
+            "results available for round ",
+            rounds_so_far,
+            ":"
+        )
+    )
+    
+    print(
+        afl_results %>% 
+            filter(
+                round.roundNumber == rounds_so_far
+            ) %>% 
+            select(match.name)
+    )
+    
+}
+
+# add results
+
+afl_fixture <- afl_fixture %>% 
+    mutate(
+        season = focus_season, 
+        match_id = 1:nrow(.)
+    ) %>% 
     left_join(
-        results_2023 %>% 
+        afl_results %>% 
             mutate(
-                home_team = case_when(
-                    match.homeTeam.name == "Geelong Cats"      ~ "Geelong",
-                    match.homeTeam.name == "GWS Giants"        ~ "Greater Western Sydney",
-                    match.homeTeam.name == "Gold Coast Suns"   ~ "Gold Coast",
-                    match.homeTeam.name == "Sydney Swans"      ~ "Sydney",
-                    match.homeTeam.name == "Adelaide Crows"    ~ "Adelaide",
-                    match.homeTeam.name == "West Coast Eagles" ~ "West Coast",
-                    T                                          ~ match.homeTeam.name
-                )
+                home_team = change_team_name(match.homeTeam.name)
             ) %>% 
             select(
                 round = round.name,
@@ -70,73 +103,73 @@ afl_fixture_2023 <- afl_fixture_2023 %>%
         by = c("round", "home_team")
     )
 
-# results_2023 <- fitzRoy::fetch_results_afltables(season = 2023) %>%
-#     filter(
-#         !(round %in% c("EF", "QF", "SF", "PF", "GF"))
-#     )
-# 
-# afl_fixture_2023 <- afl_fixture_2023 %>% 
-#     mutate(season = "2023", match_id = 1:nrow(.)) %>% 
-#     left_join(
-#         results_2023 %>% 
-#             mutate(
-#                 home_team = case_when(
-#                     Home.Team == "Footscray" ~ "Western Bulldogs",
-#                     Home.Team == "GWS"       ~ "Greater Western Sydney",
-#                     T                        ~ Home.Team
-#                 ),
-#                 round = paste("Round", str_replace(Round, "R", ""))
-#             ) %>% 
-#             select(
-#                 round,
-#                 home_team,
-#                 home_goals = Home.Goals,
-#                 home_behinds = Home.Behinds,
-#                 home_score = Home.Points,
-#                 away_goals = Away.Goals,
-#                 away_behinds = Away.Behinds,
-#                 away_score = Away.Points
-#             ),
-#         by = c("round", "home_team")
-#     )
+# add location
 
-afl_venues_2023 <- tibble(venue = afl_fixture_2023$venue %>% unique()) %>%
+afl_venues <- afl_fixture %>% 
+    distinct(venue) %>% 
     mutate(
-        location = case_when(
-            venue == "Adelaide Oval"                                                             ~ "SA",
-            venue == "Gabba" | venue == "Carrara Stadium" | venue == "Cazaly's Stadium"          ~ "QLD",
-            venue == "Manuka Oval"                                                               ~ "ACT",
-            venue == "Perth Stadium"                                                             ~ "WA",
-            venue == "SCG" | venue == "Sydney Showground Stadium" | venue == "Stadium Australia" ~ "NSW",
-            venue == "Bellerive Oval" | venue == "York Park"                                     ~ "TAS",
-            venue == "Kardinia Park"                                                             ~ "GEE",
-            venue == "Jiangwan Stadium"                                                          ~ "Other",
-            venue == "Traeger Park" | venue == "Marrara Oval"                                    ~ "NT",
-            T                                                                                    ~ "VIC"
-        )  
+        location = venue_location(venue)
     )
 
-venues_teams_2023 <- map(
-    unique(afl_fixture_2023$venue),
-    ~ afl_fixture_2023 %>% 
+# create table of teams & home venues
+
+venues_teams <- purrr::map(
+    .x = afl_fixture %>% 
+        distinct(venue) %>% 
+        pull(),
+    ~ afl_fixture %>% 
         filter(venue == .x) %>% 
         distinct(home_team) %>% 
         select(team = home_team)
 ) %>% 
-    set_names(unique(afl_fixture_2023$venue)) %>% 
-    enframe(name = "venue", value = "teams") %>% 
+    purrr::set_names(
+        nm = afl_fixture %>% 
+            distinct(venue) %>% 
+            pull()
+    ) %>% 
+    tibble::enframe(
+        name = "venue", 
+        value = "teams"
+    ) %>% 
     mutate(venue = venue)
 
-afl_venues_2023 <- afl_venues_2023 %>% 
-    left_join(venues_teams_2023, by = "venue") %>% 
-    mutate(year = "2023") %>% 
+# add location
+
+afl_venues <- afl_venues %>% 
+    left_join(
+        venues_teams, 
+        by = "venue"
+    ) %>% 
+    mutate(year = focus_season) %>% 
     select(year, everything())
 
-afl_fixture_2023 %>%
-    write_csv(here::here("fixtures", "afl_fixture_2023.csv"))
+# write files
 
-afl_venues_2023 %>%
-    unnest(cols = teams) %>%
-    write_csv(here::here("venues", "afl_venues_2023.csv"))
+afl_fixture %>%
+    readr::write_csv(
+        here::here(
+            "files", 
+            "fixtures", 
+            paste0(
+                "afl_fixture_",
+                focus_season,
+                ".csv"
+            )
+        )
+    )
 
-rm(results_2023)
+afl_venues %>%
+    tidyr::unnest(cols = teams) %>%
+    readr::write_csv(
+        here::here(
+            "files", 
+            "venues", 
+            paste0(
+                "afl_venues_",
+                focus_season,
+                ".csv"
+            )
+        )
+    )
+
+rm(afl_results)

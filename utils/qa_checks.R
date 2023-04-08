@@ -1,18 +1,28 @@
-source(here::here("run/update.R"))
+source(
+    here::here(
+        "run",
+        "run.R"
+    )
+)
 
-afl_elo
+library(dplyr)
+library(ggplot2)
+
+afl_elo %>% 
+    glimpse()
 
 afl_elo %>% 
     skimr::skim()
 
 # which venues teams were home at
 
-map(
-    afl_venues_all$venue %>% 
-        unique() %>% 
+purrr::map(
+    .x = afl_venues_all %>% 
+        distinct(venue) %>% 
+        pull() %>% 
         sort(),
     ~ afl_venues_all %>% 
-        unnest(cols = teams) %>% 
+        tidyr::unnest(cols = teams) %>% 
         filter(
             venue == .x
             & !(year %in% c(2020, 2021)) 
@@ -23,14 +33,14 @@ map(
 # check potential errors
 
 afl_venues_all %>% 
-    unnest(cols = teams) %>% 
+    tidyr::unnest(cols = teams) %>% 
     filter(
         venue == "Perth Stadium"
         & team == "Gold Coast"
     )
 
 afl_venues_all %>% 
-    unnest(cols = teams) %>% 
+    tidyr::unnest(cols = teams) %>% 
     filter(
         venue == "Cazaly's Stadium"
         & team == "Richmond"
@@ -53,7 +63,10 @@ afl_elo %>%
 # team games per season
 
 afl_elo %>% 
-    group_by(season, team) %>% 
+    group_by(
+        season, 
+        team
+    ) %>% 
     summarise(
         games = n() 
     ) %>% 
@@ -63,7 +76,12 @@ afl_elo %>%
 # max & min team ratings
 
 afl_elo %>% 
-    select(season, round, team, start_elo) %>% 
+    select(
+        season, 
+        round, 
+        team, 
+        start_elo
+    ) %>% 
     mutate(
         rating_min = min(start_elo),
         rating_max = max(start_elo)
@@ -76,13 +94,19 @@ afl_elo %>%
 # histogram of ratings
 
 afl_elo %>% 
-    ggplot(aes(start_elo)) +
+    ggplot(aes(x = start_elo)) +
     geom_histogram(binwidth = 1) 
 
 # min & max score adjusted & expected
 
 afl_elo %>% 
-    select(season, round, team, score_adjusted, score_expected) %>% 
+    select(
+        season, 
+        round, 
+        team, 
+        score_adjusted, 
+        score_expected
+    ) %>% 
     mutate(
         score_adjusted_min = min(score_adjusted),
         score_expected_min = min(score_expected),
@@ -95,15 +119,20 @@ afl_elo %>%
         | score_adjusted == score_adjusted_max
         | score_expected == score_expected_max
     ) %>% 
-    select(-score_adjusted_min, -score_expected_min, -score_adjusted_max, -score_expected_max)
+    select(
+        -score_adjusted_min, 
+        -score_expected_min, 
+        -score_adjusted_max, 
+        -score_expected_max
+    )
 
 # histogram of score adjusted & expected
 
 afl_elo %>% 
     select(score_adjusted, score_expected) %>% 
-    pivot_longer(
+    tidyr::pivot_longer(
         cols = everything()
     ) %>% 
-    ggplot(aes(value)) +
+    ggplot(aes(x = value)) +
     geom_histogram(binwidth = 0.01) +
     facet_grid(name ~ .)
