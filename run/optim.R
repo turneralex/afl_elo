@@ -1,16 +1,100 @@
-source(here::here("utils/fixture scripts/fixture_all.R"))
-source(here::here("utils/functions_general.R"))
+source(
+    here::here(
+        "utils", 
+        "functions_general.R"
+    )
+)
+source(
+    here::here(
+        "utils", 
+        "fixture scripts", 
+        "fixture_all.R"
+    )
+)
 
-library(tidyverse)
+library(dplyr)
 
-seasons_exclude <- 2010
-seasons_remove_hga <- 2020:2021
+par_file_name <- "elo_par"
+seasons_exclude <- "2010"
+seasons_remove_hga <- c("2020", "2021")
 
 afl_elo <- afl_fixture_all %>% 
     filter(
         !(season %in% seasons_exclude)
     ) %>%
-    convert_elo_df() %>% 
+    left_join(
+        afl_venues_all %>% 
+            select(
+                venue, 
+                location
+            ) %>% 
+            distinct(),
+        by = "venue"
+    ) %>% 
+    mutate(
+        match_id =  1:nrow(.),
+        # share of scoring shots
+        home_score_adjusted = (home_goals + home_behinds) / (home_goals + home_behinds + away_goals + away_behinds),
+        hga_app = purrr::pmap_int(
+            .l = list(
+                season, 
+                venue, 
+                home_team, 
+                away_team
+            ), 
+            .f = is_home, 
+            data_venues = afl_venues_all, 
+            data_fixture = afl_fixture_all
+        )
+    ) %>% 
+    select(
+        season, 
+        round, 
+        match_id, 
+        venue, 
+        location, 
+        home_team, 
+        away_team, 
+        home_score_adjusted, 
+        hga_app
+    ) %>% 
+    tidyr::pivot_longer(
+        cols = c("home_team", "away_team"), 
+        names_to = c("home_away", "temp"), 
+        names_sep = "_",
+        values_to = "team"
+    ) %>% 
+    select(
+        season, 
+        round, 
+        match_id, 
+        venue, 
+        location, 
+        team, 
+        home_away, 
+        hga_app, 
+        home_score_adjusted
+    ) %>% 
+    mutate(
+        score_adjusted = if_else(
+            home_away == "away", 
+            1 - home_score_adjusted, 
+            home_score_adjusted
+        ),
+        score_expected = numeric(nrow(.)),
+        hga_app = if_else(
+            home_away == "away", 
+            as.integer(hga_app * -1), 
+            hga_app
+        ),
+        start_elo = 1500,
+        new_elo = 1500
+    ) %>% 
+    select(
+        -home_away, 
+        -home_score_adjusted
+    ) %>% 
+    # exclude certain seasons for home ground advantage
     mutate(
         hga_app = if_else(
             season %in% seasons_remove_hga,
@@ -20,6 +104,8 @@ afl_elo <- afl_fixture_all %>%
     )
 
 parameter_optim <- function(elo_df, par) {
+    
+    library(magrittr)
     
     all_games <- unique(elo_df$match_id)
     
@@ -31,13 +117,12 @@ parameter_optim <- function(elo_df, par) {
         
         row_id <- which(elo_df$match_id == i)[1]
         
-        next_season <- elo_df %>% 
-            slice(row_id:nrow(.)) %>% 
-            group_by(team) %>% 
-            mutate(season = lead(season, default = "9999")) %>% 
-            filter(team == game[1, "team"]) %>% 
-            pull(season) %>% 
-            magrittr::extract2(1)
+        next_season <- data.table::as.data.table(elo_df) %>% 
+            .[row_id:nrow(.)] %>% 
+            .[, season := lead(season, n = 1, default = "9999"), by = team] %>% 
+            .[team == game[1, "team"]] %>% 
+            .$season %>% 
+            .[1]
         
         if (current_season == next_season) {
             regress_app <- 0
@@ -65,9 +150,19 @@ parameter_optim <- function(elo_df, par) {
             hga <- par[10]
         }
         
-        score_expected_1 = score_expected(game[1, "start_elo"], game[2, "start_elo"], hga_app = game[1, "hga_app"], hga = hga)
+        score_expected_1 <- score_expected(
+            game[1, "start_elo"], 
+            game[2, "start_elo"], 
+            hga_app = game[1, "hga_app"], 
+            hga = hga
+        )
         
-        score_expected_2 = score_expected(game[2, "start_elo"], game[1, "start_elo"], hga_app = game[2, "hga_app"], hga = hga)
+        score_expected_2 <- score_expected(
+            game[2, "start_elo"], 
+            game[1, "start_elo"], 
+            hga_app = game[2, "hga_app"], 
+            hga = hga
+        )
         
         elo_df[elo_df$match_id == i, "score_expected"] <- c(score_expected_1, score_expected_2) %>%
             unlist()
@@ -95,10 +190,8 @@ parameter_optim <- function(elo_df, par) {
         elo_df[elo_df$match_id == i, "new_elo"] <- c(new_elo_1, new_elo_2) %>%
             unlist()
         
-        elo_df <- elo_df %>%
-            group_by(team) %>%
-            mutate(start_elo = lag(new_elo, default = 1500)) %>%
-            ungroup()
+        elo_df <- data.table::as.data.table(elo_df) %>%
+            .[, start_elo := lag(new_elo, n = 1, default = 1500), by = team]
         
     }
     
@@ -118,9 +211,31 @@ elo_par <- optim(
     method = "L-BFGS-B"
 ) %>% 
     purrr::pluck("par") %>% 
-    set_names(c("k", "regress", "hga_vic", "hga_nsw", "hga_qld", "hga_sa", "hga_wa", "hga_gee", "hga_tas", "hga_other"))
+    purrr::set_names(
+        nm = c(
+            "k", 
+            "regress", 
+            "hga_vic", 
+            "hga_nsw", 
+            "hga_qld", 
+            "hga_sa", 
+            "hga_wa", 
+            "hga_gee", 
+            "hga_tas", 
+            "hga_other"
+        )
+    )
 
 elo_par %>%     
     enframe() %>% 
     rename(param = name) %>% 
-    write_csv(here::here("files/params", "elo_par_2023_2.csv"))
+    write_csv(
+        here::here(
+            "files",
+            "params", 
+            paste0(
+                par_file_name,
+                ".csv"
+            )
+        )
+    )

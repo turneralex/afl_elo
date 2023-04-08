@@ -1,7 +1,11 @@
+# matchup expected result
+
 score_expected <- function(elo, elo_opp, hga_app, hga) {
     x <- -(elo - elo_opp + (hga_app * hga))
     1 / (1 + 10^(x / 400))
 }
+
+# update elo rating after game result
 
 elo_update <- function(elo, elo_opp, score_adjusted, score_expected, k, regress, regress_app) {
     x <- elo + k * (score_adjusted - score_expected)
@@ -9,19 +13,31 @@ elo_update <- function(elo, elo_opp, score_adjusted, score_expected, k, regress,
     y
 }
 
+# check if home ground advantage should apply
+
 is_home <- function(season_year, game_venue, game_home_team, game_away_team, data_venues, data_fixture) {
-    library(tidyverse)
+    
+    library(dplyr)
     
     location <- data_venues %>% 
-        filter(year == season_year & venue == game_venue) %>% 
+        filter(
+            year == season_year 
+            & venue == game_venue
+        ) %>% 
         pull(location) 
     
     away_team_location <- data_venues %>% 
-        unnest(cols = teams) %>% 
-        filter(year == season_year & team == game_away_team) %>% 
+        tidyr::unnest(cols = teams) %>% 
+        filter(
+            year == season_year 
+            & team == game_away_team
+        ) %>% 
         inner_join(
             data_fixture %>% 
-                filter(season == season_year & home_team == game_away_team) %>% 
+                filter(
+                    season == season_year 
+                    & home_team == game_away_team
+                ) %>% 
                 group_by(venue) %>% 
                 count(),
             by = "venue"
@@ -31,11 +47,17 @@ is_home <- function(season_year, game_venue, game_home_team, game_away_team, dat
         unique()
     
     home_team_location <- data_venues %>% 
-        unnest(cols = teams) %>% 
-        filter(year == season_year & team == game_home_team) %>% 
+        tidyr::unnest(cols = teams) %>% 
+        filter(
+            year == season_year 
+            & team == game_home_team
+        ) %>% 
         inner_join(
             data_fixture %>% 
-                filter(season == season_year & home_team == game_home_team) %>% 
+                filter(
+                    season == season_year 
+                    & home_team == game_home_team
+                ) %>% 
                 group_by(venue) %>% 
                 count(),
             by = "venue"
@@ -52,67 +74,73 @@ is_home <- function(season_year, game_venue, game_home_team, game_away_team, dat
     
 }
 
+# make team names consistent
+
 change_team_name <- function(team) {
-    library(tidyverse)
     
-    case_when(
-        team == "Adelaide Crows"    ~ "Adelaide",
-        team == "Brisbane Lions"    ~ "Brisbane",
-        team == "Geelong Cats"      ~ "Geelong",
-        team == "Gold Coast Suns"   ~ "Gold Coast",
-        team == "GWS Giants"        ~ "GWS",
-        team == "Sydney Swans"      ~ "Sydney",
-        team == "West Coast Eagles" ~ "West Coast",
-        team == "Footscray"         ~ "Western Bulldogs",
-        T                           ~ team
+    dplyr::case_when(
+        team == "Adelaide Crows"      ~ "Adelaide",
+        team == "Brisbane Lions"      ~ "Brisbane",
+        team == "Geelong Cats"        ~ "Geelong",
+        team == "Gold Coast Suns"     ~ "Gold Coast",
+        team %in% c(
+            "Greater Western Sydney",
+            "GWS Giants" 
+        )                             ~ "GWS",
+        team == "Sydney Swans"        ~ "Sydney",
+        team == "West Coast Eagles"   ~ "West Coast",
+        team == "Footscray"           ~ "Western Bulldogs",
+        T                             ~ team
     )
     
 }
 
-convert_elo_df <- function(fixture_df) {
-    library(tidyverse)
+# update venue names
+
+change_venue_name <- function(venue) {
     
-    fixture_df %>% 
-        left_join(
-            afl_venues_all %>% 
-                select(venue, location) %>% 
-                distinct(),
-            by = "venue"
-        ) %>% 
-        mutate(
-            match_id =  1:nrow(.),
-            # share of scoring shots
-            home_score_adjusted = (home_goals + home_behinds) / (home_goals + home_behinds + away_goals + away_behinds),
-            # share of scoring 
-            # home_score_adjusted = home_score / (home_score + away_score),
-            hga_app = pmap_int(
-                list(season, venue, home_team, away_team), 
-                is_home, 
-                data_venues = afl_venues_all, 
-                data_fixture = afl_fixture_all
-            )
-        ) %>% 
-        select(season, round, match_id, venue, location, home_team, away_team, home_score_adjusted, hga_app) %>% 
-        pivot_longer(
-            cols = c("home_team", "away_team"), 
-            names_to = c("home_away", "temp"), 
-            names_sep = "_",
-            values_to = "team"
-        ) %>% 
-        select(season, round, match_id, venue, location, team, home_away, hga_app, home_score_adjusted) %>% 
-        mutate(
-            score_adjusted = if_else(home_away == "away", 1 - home_score_adjusted, home_score_adjusted),
-            score_expected = numeric(nrow(.)),
-            hga_app = if_else(home_away == "away", as.integer(hga_app * -1), hga_app),
-            start_elo = 1500,
-            new_elo = 1500
-        ) %>% 
-        select(-home_away, -home_score_adjusted)
+    # case_when valid for season >= 2023
+    
+    dplyr::case_when(
+        venue == "M.C.G."            ~ "MCG",
+        venue == "Docklands"         ~ "Docklands Stadium",
+        venue == "Sydney Showground" ~ "Sydney Showground Stadium",
+        venue == "S.C.G."            ~ "SCG",
+        venue %in% c(
+            "Carrara",
+            "Heritage Bank Stadium"
+        )                            ~ "Carrara Stadium",
+        T                            ~ venue
+    ) 
     
 }
 
+# map venues to locations
+
+venue_location <- function(venue) {
+    
+    # case_when valid for season >= 2023
+    
+    dplyr::case_when(
+        venue == "Adelaide Oval"                                                             ~ "SA",
+        venue == "Gabba" | venue == "Carrara Stadium" | venue == "Cazaly's Stadium"          ~ "QLD",
+        venue == "Manuka Oval"                                                               ~ "ACT",
+        venue == "Perth Stadium"                                                             ~ "WA",
+        venue == "SCG" | venue == "Sydney Showground Stadium" | venue == "Stadium Australia" ~ "NSW",
+        venue == "Bellerive Oval" | venue == "York Park"                                     ~ "TAS",
+        venue == "Kardinia Park"                                                             ~ "GEE",
+        venue == "Jiangwan Stadium"                                                          ~ "Other",
+        venue == "Traeger Park" | venue == "Marrara Oval"                                    ~ "NT",
+        T                                                                                    ~ "VIC"
+    )  
+    
+}
+
+# run the elo model
+
 elo_run <- function(elo_df, k, hga_vec, regress) {
-    library(tidyverse)
+    
+    library(magrittr)
     
     all_games <- unique(elo_df$match_id)
     
@@ -124,13 +152,12 @@ elo_run <- function(elo_df, k, hga_vec, regress) {
         
         row_id <- which(elo_df$match_id == i)[1]
         
-        next_season <- elo_df %>% 
-            slice(row_id:nrow(.)) %>% 
-            group_by(team) %>% 
-            mutate(season = lead(season, default = "9999")) %>% 
-            filter(team == game[1, "team"]) %>% 
-            pull(season) %>% 
-            magrittr::extract2(1)
+        next_season <- data.table::as.data.table(elo_df) %>% 
+            .[row_id:nrow(.)] %>% 
+            .[, season := lead(season, n = 1, default = "9999"), by = team] %>% 
+            .[team == game[1, "team"]] %>% 
+            .$season %>% 
+            .[1]
         
         if (current_season == next_season) {
             regress_app <- 0
@@ -158,10 +185,20 @@ elo_run <- function(elo_df, k, hga_vec, regress) {
             hga <- hga_vec["hga_other"]
         }
         
-        score_expected_1 = score_expected(game[1, "start_elo"], game[2, "start_elo"], hga_app = game[1, "hga_app"], hga = hga) %>% 
+        score_expected_1 <- score_expected(
+            game[1, "start_elo"], 
+            game[2, "start_elo"], 
+            hga_app = game[1, "hga_app"],
+            hga = hga
+        ) %>% 
             unname()
         
-        score_expected_2 = score_expected(game[2, "start_elo"], game[1, "start_elo"], hga_app = game[2, "hga_app"], hga = hga) %>% 
+        score_expected_2 <- score_expected(
+            game[2, "start_elo"], 
+            game[1, "start_elo"], 
+            hga_app = game[2, "hga_app"], 
+            hga = hga
+        ) %>% 
             unname()
         
         elo_df[elo_df$match_id == i, "score_expected"] <- c(score_expected_1, score_expected_2) %>%
@@ -190,13 +227,11 @@ elo_run <- function(elo_df, k, hga_vec, regress) {
         elo_df[elo_df$match_id == i, "new_elo"] <- c(new_elo_1, new_elo_2) %>%
             unlist()
         
-        elo_df <- elo_df %>%
-            group_by(team) %>%
-            mutate(start_elo = lag(new_elo, default = 1500)) %>%
-            ungroup()
+        elo_df <- data.table::as.data.table(elo_df) %>%
+            .[, start_elo := lag(new_elo, n = 1, default = 1500), by = team]
         
     }
     
-    elo_df
+    dplyr::tibble(elo_df)
     
 }

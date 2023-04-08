@@ -1,48 +1,78 @@
-library(tidyverse)
+library(dplyr)
 
-afl_fixture_all <- map_dfr(
-    2010:2022, 
-    ~ read_csv(
-        paste0(
-            here::here(), 
-            "/files/fixtures/afl_fixture_", 
-            .x, 
-            ".csv"
+# available results check
+
+if (!exists("current_season")) {
+    
+    message(
+        "current_season not found, using season 2022"
+    )
+    
+    current_season <- "2022"
+    
+}
+
+# read in fixtures
+
+afl_fixture_all <- purrr::map_dfr(
+    .x = 2010:as.integer(current_season), 
+    ~ readr::read_csv(
+        here::here(
+            "files",
+            "fixtures",
+            paste0(
+                "afl_fixture_",
+                .x, 
+                ".csv"
+            )
         ),
         col_types = "cicDccciiiiii"
     )
 ) %>% 
     mutate(
         match_id = 1:nrow(.),
-        home_team = case_when(
-            home_team == "Greater Western Sydney" ~ "GWS",
-            home_team == "Brisbane Lions"         ~ "Brisbane",
-            T                                     ~ home_team
-        ),
-        away_team = case_when(
-            away_team == "Greater Western Sydney" ~ "GWS",
-            away_team == "Brisbane Lions"         ~ "Brisbane",
-            T                                     ~ away_team
-        )
+        home_team = change_team_name(home_team),
+        away_team = change_team_name(away_team)
     )
 
-afl_venues_all <- map_dfr(
-    2010:2022, 
-    ~ read_csv(
-        paste0(
-            here::here(), 
-            "/files/venues/afl_venues_", 
-            .x, 
-            ".csv"
+# available seasons check
+
+message("seasons in afl_fixture_all:")
+
+print(
+    afl_fixture_all %>% 
+        distinct(season) %>% 
+        pull()
+)
+
+# read in venues 
+
+afl_venues_all <- purrr::map_dfr(
+    .x = 2010:as.integer(current_season), 
+    ~ readr::read_csv(
+        here::here(
+            "files",
+            "venues",
+            paste0(
+                "afl_venues_", 
+                .x, 
+                ".csv"
+            )
         ),
         col_types = "cccc"
     )
 ) %>% 
     mutate(
-        team = case_when(
-            team == "Greater Western Sydney" ~ "GWS",
-            team == "Brisbane Lions"         ~ "Brisbane",
-            T                                ~ team
-        )
+        team = change_team_name(team)
     ) %>% 
-    nest(teams = team)
+    tidyr::nest(teams = team)
+
+# available seasons check
+
+message("seasons in afl_venues_all:")
+
+print(
+    afl_venues_all %>% 
+        distinct(year) %>% 
+        pull()
+)
