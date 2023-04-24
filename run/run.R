@@ -58,6 +58,7 @@ afl_elo <- afl_fixture_all %>%
         match_id =  1:nrow(.),
         # share of scoring shots
         home_score_adjusted = (home_goals + home_behinds) / (home_goals + home_behinds + away_goals + away_behinds),
+        home_margin = home_score - away_score,
         hga_app = purrr::pmap_int(
             list(season, venue, home_team, away_team), 
             is_home, 
@@ -74,6 +75,7 @@ afl_elo <- afl_fixture_all %>%
         home_team, 
         away_team, 
         home_score_adjusted, 
+        home_margin,
         hga_app
     ) %>% 
     tidyr::pivot_longer(
@@ -91,21 +93,54 @@ afl_elo <- afl_fixture_all %>%
         team, 
         home_away, 
         hga_app, 
-        home_score_adjusted
+        home_score_adjusted,
+        home_margin
     ) %>% 
     mutate(
         score_adjusted = if_else(home_away == "away", 1 - home_score_adjusted, home_score_adjusted),
         score_expected = numeric(nrow(.)),
-        hga_app = if_else(home_away == "away", as.integer(hga_app * -1), hga_app),
+        margin = if_else(home_away == "away", -home_margin, home_margin),
+        hga_app = if_else(home_away == "away", as.integer(-hga_app), hga_app),
         start_elo = 1500,
         new_elo = 1500
     ) %>% 
     select(
         -home_away, 
-        -home_score_adjusted
+        -home_score_adjusted,
+        -home_margin
     ) %>% 
     elo_run(
         k = elo_par["k"], 
         hga = elo_par[3:10], 
         regress = elo_par["regress"]
+    )
+
+# add game win % prediction
+
+afl_win_prob_model <- afl_elo %>% 
+    filter(
+        !is.na(score_adjusted)
+    ) %>% 
+    mutate(
+        win = if_else(
+            score_adjusted >= 0.5, 
+            1,
+            0
+        )
+    ) %>% 
+    glm(
+        win ~ score_expected,
+        family = binomial(link = "logit"),
+        data = .
+    )
+
+# add margin prediction
+
+afl_margin_model <- afl_elo %>% 
+    filter(
+        !is.na(score_adjusted)
+    ) %>% 
+    lm(
+        margin ~ score_expected,
+        data = .
     )

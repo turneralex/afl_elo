@@ -3,7 +3,7 @@ library(dplyr)
 # current season & round
 
 current_season <- "2023"
-rounds_so_far <- 3
+rounds_so_far <- 5
 finals_so_far <- c(
     # "Finals Week 1"
     # "Semi Finals", 
