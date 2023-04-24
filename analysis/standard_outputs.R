@@ -25,7 +25,7 @@ trended_elo <- afl_elo %>%
     ) +
     geom_hline(
         yintercept = 1500, 
-        size = 1, 
+        linewidth = 1, 
         colour = "firebrick1", 
         alpha = 0.8
     ) +
@@ -55,9 +55,9 @@ trended_elo <- afl_elo %>%
         strip.text = element_text(size = 15)
     ) 
 
-# current elo position
+# current elo position & change
 
-afl_elo_rank <- afl_elo %>% 
+afl_elo_rank_change <- afl_elo %>% 
     filter(
         season == current_season
         & round %in% paste("Round", 1:rounds_so_far)
@@ -65,39 +65,51 @@ afl_elo_rank <- afl_elo %>%
     group_by(team) %>% 
     slice(n()) %>% 
     ungroup() %>% 
-    select(team, new_elo) %>% 
-    arrange(-new_elo) %>% 
+    select(team, start_elo, new_elo) %>% 
     mutate(
-        plus_minus = new_elo - 1500,
-        elo_position = row_number(),
-        elo_position_team = paste0(
-            elo_position,
+        plus_minus_avg = new_elo - 1500,
+        plus_minus_prev = new_elo - start_elo
+    ) %>% 
+    arrange(-plus_minus_prev) %>% 
+    mutate(
+        elo_position_prev = row_number(),
+        elo_position_team_prev = paste0(
+            elo_position_prev,
             ": ",
             team
         )
-    )
+    ) %>% 
+    arrange(-plus_minus_avg) %>% 
+    mutate(
+        elo_position_avg = row_number(),
+        elo_position_team_avg = paste0(
+            elo_position_avg,
+            ": ",
+            team
+        )
+    ) 
 
 # current elo ratings
 
-rank_elo <- afl_elo_rank %>% 
+rank_elo <- afl_elo_rank_change %>% 
     ggplot(
         aes(
             x = forcats::fct_reorder(
-                .f = elo_position_team, 
-                .x = -elo_position
+                .f = elo_position_team_avg, 
+                .x = -elo_position_avg
             ), 
-            y = plus_minus, 
-            fill = plus_minus
+            y = plus_minus_avg, 
+            fill = plus_minus_avg
         )
     ) +
     geom_col(colour = "black") +
     geom_text(
         aes(
             forcats::fct_reorder(
-                .f = elo_position_team, 
-                .x = -elo_position
+                .f = elo_position_team_avg, 
+                .x = -elo_position_avg
             ), 
-            y = plus_minus + if_else(new_elo > 1500, 4, -4),
+            y = plus_minus_avg + if_else(new_elo > 1500, 4, -4),
             label = round(new_elo)
         ),
         size = 5
@@ -125,14 +137,74 @@ rank_elo <- afl_elo_rank %>%
         legend.position = "none"
     ) 
 
+# change vs. previous week
+
+change_elo <- afl_elo_rank_change %>% 
+    mutate(
+        improve_flag = if_else(
+            plus_minus_prev > 0,
+            1,
+            0
+        ) %>% 
+            factor()
+    ) %>% 
+    ggplot(
+        aes(
+            x = forcats::fct_reorder(
+                .f = team, 
+                .x = -elo_position_prev
+            ), 
+            y = plus_minus_prev, 
+            fill = improve_flag
+        )
+    ) +
+    geom_col(colour = "black") +
+    geom_text(
+        aes(
+            forcats::fct_reorder(
+                .f = team, 
+                .x = -elo_position_prev
+            ), 
+            y = plus_minus_prev + if_else(plus_minus_prev > 0, 1, -1),
+            label = round(plus_minus_prev, 1)
+        ),
+        size = 5
+    ) +
+    geom_hline(yintercept = 0) +
+    coord_flip() +
+    scale_fill_manual(values = c("firebrick1", "darkseagreen")) +
+    labs(
+        title = paste0("Team elo ratings change vs. previous week - Round ", rounds_so_far),
+        subtitle = paste("Season:", current_season),
+        x = "Team",
+        y = "Elo rating change",
+        caption = "Created by: footycharts"
+    ) +
+    theme_minimal() +
+    theme(
+        axis.text.x = element_blank(), 
+        axis.ticks.x = element_blank(),
+        axis.title = element_text(size = 20), 
+        plot.title = element_text(size = 20), 
+        plot.subtitle = element_text(size = 15),
+        plot.caption = element_text(size = 10),
+        axis.text.y = element_text(size = 15),
+        legend.position = "none"
+    ) 
+
 # save rank & trend
 
 purrr::map2(
     .x = list(
         trended_elo,
-        rank_elo
+        rank_elo,
+        change_elo
     ),
-    .y = c("trend", "rank"),
+    .y = c(
+        "trend", 
+        "rank",
+        "change"
+    ),
     ~ ggsave(
         plot = .x,
         filename = paste0(
@@ -158,7 +230,7 @@ purrr::map2(
 
 # team logos
 
-team_logos <- team_stats_base %>% 
+team_logos <- team_stats_base_adj %>% 
     select(team) %>% 
     mutate(
         logo = here::here(
@@ -175,13 +247,7 @@ team_logos <- team_stats_base %>%
 
 # team offense
 
-offense_avg <- team_stats_base %>% 
-    summarise(
-        i50_mean = mean(i50_mean),
-        score_shots_mean = mean(score_shots_mean)
-    )
-
-team_stats_base %>% 
+team_stats_base_adj %>% 
     inner_join(
         team_logos,
         by = "team"
@@ -194,20 +260,20 @@ team_stats_base %>%
         )
     ) +
     geom_vline(
-        xintercept = offense_avg$i50_mean, 
+        xintercept = 0, 
         colour = "firebrick1", 
         alpha = 0.8, 
         linetype = "dashed"
     ) +
     geom_hline(
-        yintercept = offense_avg$score_shots_mean, 
+        yintercept = 0, 
         colour = "firebrick1", 
         alpha = 0.8, 
         linetype = "dashed"
     ) +
     ggimage::geom_image() +
     labs(
-        title = paste0("Team offensive indicators - Round ", rounds_so_far),
+        title = paste0("Schedule-adjusted team offensive indicators - Round ", rounds_so_far),
         subtitle = paste("Season:", current_season),
         x = "Inside 50s",
         y = "Scoring shots*",
@@ -217,7 +283,7 @@ team_stats_base %>%
     ) +
     theme_minimal() +
     theme(
-        axis.text = element_text(size = 15),
+        axis.text = element_blank(),
         axis.title = element_text(size = 15), 
         plot.title = element_text(size = 20), 
         plot.subtitle = element_text(size = 15),
@@ -248,13 +314,7 @@ ggsave(
 
 # team defense
 
-defense_avg <- team_stats_base %>% 
-    summarise(
-        i50_opp_mean = mean(i50_opp_mean),
-        score_shots_opp_mean = mean(score_shots_opp_mean)
-    )
-
-team_stats_base %>% 
+team_stats_base_adj %>% 
     inner_join(
         team_logos,
         by = "team"
@@ -267,13 +327,13 @@ team_stats_base %>%
         )
     ) +
     geom_vline(
-        xintercept = defense_avg$i50_opp_mean, 
+        xintercept = 0, 
         colour = "firebrick1", 
         alpha = 0.8, 
         linetype = "dashed"
     ) +
     geom_hline(
-        yintercept = defense_avg$score_shots_opp_mean, 
+        yintercept = 0, 
         colour = "firebrick1", 
         alpha = 0.8, 
         linetype = "dashed"
@@ -282,7 +342,7 @@ team_stats_base %>%
     scale_x_continuous(labels = abs) +
     scale_y_continuous(labels = abs) +
     labs(
-        title = paste0("Team defensive indicators - Round ", rounds_so_far),
+        title = paste0("Schedule-adjusted team defensive indicators - Round ", rounds_so_far),
         subtitle = paste("Season:", current_season),
         x = "Oppositon inside 50s",
         y = "Oppostion scoring shots*",
@@ -292,7 +352,7 @@ team_stats_base %>%
     ) +
     theme_minimal() +
     theme(
-        axis.text = element_text(size = 15),
+        axis.text = element_blank(),
         axis.title = element_text(size = 15), 
         plot.title = element_text(size = 20), 
         plot.subtitle = element_text(size = 15),

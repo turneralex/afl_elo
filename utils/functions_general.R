@@ -122,7 +122,7 @@ venue_location <- function(venue) {
     # case_when valid for season >= 2023
     
     dplyr::case_when(
-        venue == "Adelaide Oval"                                                             ~ "SA",
+        venue == "Adelaide Oval" | venue == "Adelaide Hills" | venue == "Norwood Oval"       ~ "SA",
         venue == "Gabba" | venue == "Carrara Stadium" | venue == "Cazaly's Stadium"          ~ "QLD",
         venue == "Manuka Oval"                                                               ~ "ACT",
         venue == "Perth Stadium"                                                             ~ "WA",
