@@ -3,7 +3,7 @@ library(dplyr)
 # current season & round
 
 current_season <- "2023"
-rounds_so_far <- 5
+rounds_so_far <- 13
 finals_so_far <- c(
     # "Finals Week 1"
     # "Semi Finals", 
@@ -15,15 +15,23 @@ round_name <- paste("Round", round_next)
 
 # create folder for charts
 
+round_path <- here::here(
+    "files", 
+    "charts",
+    paste0(
+        current_season,
+        "_",
+        round_name
+    )
+)
+
+dir.create(path = round_path)
+
 dir.create(
-    path = here::here(
-        "files", 
-        "charts",
-        paste0(
-            current_season,
-            "_",
-            round_name
-        )
+    path = paste(
+        round_path,
+        "matchups",
+        sep = "/"
     )
 )
 
@@ -33,6 +41,15 @@ source(
     here::here(
         "run", 
         "run.R"
+    )
+) 
+
+# prep matchup data
+
+source(
+    here::here(
+        "analysis", 
+        "matchups_data.R"
     )
 ) 
 

@@ -1,261 +1,6 @@
 library(dplyr)
 library(ggplot2)
 
-# get player stats
-
-afl_stats <- fitzRoy::fetch_player_stats_afl(season = current_season) 
-
-# update column names
-
-afl_stats <- afl_stats %>% 
-    rename_with(
-        .fn = ~ .x %>% 
-            tolower() %>% 
-            stringr::str_replace_all(
-                pattern = "[.]", 
-                replacement = "_"
-            )
-    )
-
-# get key stats:
-# scoring shots
-# inside 50s
-# turnovers
-# contested possessions
-
-team_round_stats_base <- afl_stats %>% 
-    filter(
-        round_roundnumber %in% 1:rounds_so_far
-        & !(round_name %in% finals_so_far)
-    ) %>% 
-    group_by(
-        round_name, 
-        home_team_club_name, 
-        away_team_club_name
-    ) %>% 
-    mutate(
-        score_shots_home = if_else(
-            team_name == home_team_club_name,
-            goals + behinds,
-            0
-        ) %>% 
-            sum(),
-        score_shots_away = if_else(
-            team_name == away_team_club_name,
-            goals + behinds,
-            0
-        ) %>% 
-            sum(),
-        i50_home = if_else(
-            team_name == home_team_club_name,
-            inside50s,
-            0
-        ) %>% 
-            sum(),
-        i50_away = if_else(
-            team_name == away_team_club_name,
-            inside50s,
-            0
-        ) %>% 
-            sum(),
-        turn_home = if_else(
-            team_name == home_team_club_name,
-            turnovers,
-            0
-        ) %>% 
-            sum(),
-        turn_away = if_else(
-            team_name == away_team_club_name,
-            turnovers,
-            0
-        ) %>% 
-            sum(),
-        cp_home = if_else(
-            team_name == home_team_club_name,
-            contestedpossessions,
-            0
-        ) %>% 
-            sum(),
-        cp_away = if_else(
-            team_name == away_team_club_name,
-            contestedpossessions,
-            0
-        ) %>% 
-            sum()
-    ) %>% 
-    ungroup() %>% 
-    select(
-        round_name, 
-        home_team_club_name, 
-        away_team_club_name,
-        team_name,
-        score_shots_home,
-        score_shots_away,
-        i50_home,
-        i50_away,
-        turn_home,
-        turn_away,
-        cp_home,
-        cp_away
-    ) %>% 
-    mutate(
-        home_team_club_name = change_team_name(home_team_club_name), 
-        away_team_club_name = change_team_name(away_team_club_name),
-        team_name = change_team_name(team_name)
-    ) %>% 
-    distinct()
-
-team_stats_base <- team_round_stats_base %>% 
-    group_by(
-        round_name, 
-        team_name
-    ) %>% 
-    summarise(
-        score_shots_total = mean(
-            if_else(
-                team_name == away_team_club_name,
-                score_shots_away,
-                score_shots_home
-            )
-        ),
-        score_shots_opp_total = mean(
-            if_else(
-                team_name == home_team_club_name,
-                score_shots_away,
-                score_shots_home
-            )
-        ),
-        i50_total = mean(
-            if_else(
-                team_name == away_team_club_name,
-                i50_away,
-                i50_home
-            )
-        ),
-        i50_opp_total = mean(
-            if_else(
-                team_name == home_team_club_name,
-                i50_away,
-                i50_home
-            )
-        ),
-        
-        turn_total = mean(
-            if_else(
-                team_name == away_team_club_name,
-                turn_away,
-                turn_home
-            )
-        ),
-        turn_opp_total = mean(
-            if_else(
-                team_name == home_team_club_name,
-                turn_away,
-                turn_home
-            )
-        ),
-        
-        cp_total = mean(
-            if_else(
-                team_name == away_team_club_name,
-                cp_away,
-                cp_home
-            )
-        ),
-        cp_opp_total = mean(
-            if_else(
-                team_name == home_team_club_name,
-                cp_away,
-                cp_home
-            )
-        )
-    ) %>% 
-    rename(team = team_name) %>% 
-    group_by(team) %>% 
-    summarise(
-        score_shots_mean = mean(score_shots_total),
-        score_shots_opp_mean = mean(score_shots_opp_total),
-        i50_mean = mean(i50_total),
-        i50_opp_mean = mean(i50_opp_total),
-        turn_mean = mean(turn_total),
-        turn_opp_mean = mean(turn_opp_total),
-        cp_mean = mean(cp_total),
-        cp_opp_mean = mean(cp_opp_total)
-    ) 
-
-team_stats_base_adj <- team_round_stats_base %>% 
-    mutate(
-        team_name_opp = if_else(
-            team_name == home_team_club_name,
-            away_team_club_name,
-            home_team_club_name
-        )
-    ) %>% 
-    inner_join(
-        team_stats_base,
-        by = c(
-            "team_name_opp" = "team"
-        )
-    ) %>% 
-    mutate(
-        score_shots_home_adj = score_shots_home - score_shots_opp_mean,
-        score_shots_away_adj = score_shots_away - score_shots_opp_mean,
-        i50_home_adj = i50_home - i50_opp_mean,
-        i50_away_adj = i50_away - i50_opp_mean,
-        turn_home_adj = turn_home - turn_opp_mean,
-        turn_away_adj = turn_away - turn_opp_mean,
-        cp_home_adj = cp_home - cp_opp_mean,
-        cp_away_adj = cp_away - cp_opp_mean
-    ) %>% 
-    group_by(team_name) %>% 
-    summarise(
-        score_shots_mean = mean(
-            if_else(
-                team_name == away_team_club_name,
-                score_shots_away_adj,
-                score_shots_home_adj
-            )
-        ),
-        score_shots_opp_mean = -mean( # convert to negative 
-            if_else(
-                team_name == home_team_club_name,
-                score_shots_away_adj,
-                score_shots_home_adj
-            )
-        ),
-        i50_mean = mean(
-            if_else(
-                team_name == away_team_club_name,
-                i50_away_adj,
-                i50_home_adj
-            )
-        ),
-        i50_opp_mean = -mean( # convert to negative
-            if_else(
-                team_name == home_team_club_name,
-                i50_away_adj,
-                i50_home_adj
-            )
-        ),
-        
-        turn_diff_mean = -mean( # convert to negative
-            if_else(
-                team_name == home_team_club_name,
-                turn_home_adj - turn_away_adj,
-                turn_away_adj - turn_home_adj
-            )
-        ),
-        
-        cp_diff_mean = mean(
-            if_else(
-                team_name == home_team_club_name,
-                cp_home_adj - cp_away_adj,
-                cp_away_adj - cp_home_adj
-            )
-        )
-    ) %>% 
-    rename(team = team_name) 
-
 # scale variables to be on between 0 and 1
 
 team_stats <- team_stats_base_adj %>% 
@@ -263,11 +8,21 @@ team_stats <- team_stats_base_adj %>%
         across(
             c(
                 score_shots_mean,
-                score_shots_opp_mean,
                 i50_mean,
+                turn_mean,
+                cp_diff_mean,
+                clear_diff_mean,
+                
+                score_shots_opp_mean,
                 i50_opp_mean,
-                turn_diff_mean,
-                cp_diff_mean
+                turn_opp_mean,
+                int_mean,
+                tackles_mean,
+                
+                khb_ratio_mean,
+                up_rate_mean,
+                marks_mean,
+                mg_disp_mean
             ),
             scales::rescale
         )
@@ -349,12 +104,32 @@ afl_elo_pred <- afl_elo %>%
             T ~                    paste0(ladder_position, "th")
         )
     ) %>% 
+    modelr::add_predictions(
+        model = afl_win_prob_model,
+        var = "pred_win_prob",
+        type = "response"
+    ) %>% 
+    modelr::add_predictions(
+        model = afl_margin_model,
+        var = "pred_margin",
+        type = "response"
+    ) %>% 
+    mutate(
+        pred_margin = if_else(
+            pred_win_prob > 0.5 
+            & pred_margin < 0,
+            1,
+            pred_margin
+        )
+    ) %>% 
     group_by(match_id) %>%
     mutate(
         away_team = lead(team, n = 1),
         away_elo = lead(start_elo, n = 1),
         away_ladder_position = lead(ladder_position, n = 1),
-        away_elo_rank = lead(elo_rank, n = 1)
+        away_elo_rank = lead(elo_rank, n = 1),
+        away_pred_win_prob = lead(pred_win_prob, n = 1),
+        away_pred_margin = lead(pred_margin, n = 1)
     ) %>% 
     slice(1) %>%
     ungroup() %>%
@@ -370,17 +145,11 @@ afl_elo_pred <- afl_elo %>%
         home_elo_rank = elo_rank,
         away_elo_rank,
         home_ladder_position = ladder_position,
-        away_ladder_position
-    ) %>% 
-    modelr::add_predictions(
-        model = afl_win_prob_model,
-        var = "pred_win_prob",
-        type = "response"
-    ) %>% 
-    modelr::add_predictions(
-        model = afl_margin_model,
-        var = "pred_margin",
-        type = "response"
+        away_ladder_position,
+        pred_win_prob,
+        away_pred_win_prob,
+        pred_margin,
+        away_pred_margin
     ) %>% 
     mutate(
         game_id = row_number(),
@@ -400,22 +169,29 @@ afl_elo_pred <- afl_elo %>%
             home_team,
             away_team
         ),
-        pred_winner_win_prob = if_else(
-            elo_diff_hga > 0,
-            pred_win_prob,
-            1 - pred_win_prob
+        pred_winner_win_prob = round(
+            if_else(
+                elo_diff_hga > 0,
+                pred_win_prob,
+                away_pred_win_prob
+            ),
+            2
         ),
-        pred_winner_margin = if_else(
-            elo_diff_hga > 0,
-            pred_margin,
-            -pred_margin
+        pred_winner_margin = round(
+            if_else(
+                elo_diff_hga > 0,
+                pred_margin,
+                away_pred_margin
+            )
         ),
         matchup = paste0(
-            "Predicted winner: ", pred_winner, " by ", round(pred_winner_margin), ", with a ", round(pred_winner_win_prob * 100), "% chance of victory",
-            "\n\nLadder position\n",
-            home_ladder_position, " vs. ", away_ladder_position,
-            "\nElo ranking\n",
-            home_elo_rank, " (", round(home_elo), ", HGA: +", round(hga), ") vs. ", away_elo_rank, " (", round(away_elo), ")"
+            "Predicted winner: ", 
+            pred_winner, 
+            " by ", 
+            round(pred_winner_margin), 
+            ", with a ", 
+            round(pred_winner_win_prob * 100), 
+            "% chance of victory"
         )
     ) %>% 
     select(
@@ -430,70 +206,100 @@ afl_elo_pred <- afl_elo %>%
 
 # provide tips to squiggle
 
-afl_elo_pred %>% 
-    select(
-        pred_winner,
-        pred_winner_win_prob,
-        pred_winner_margin
-    ) %>% 
-    readr::write_csv(
-        here::here(
-            "files",
-            "predictions.csv"
-        )
-    )
-
-googledrive::drive_auth(email = T)
-
-here::here(
-    "files",
-    "predictions.csv"
-) %>%
-    googledrive::drive_upload(
-        name = "squiggle_predictions"
-    )
+# afl_elo_pred %>% 
+#     select(
+#         pred_winner,
+#         pred_winner_win_prob,
+#         pred_winner_margin
+#     ) %>% 
+#     readr::write_csv(
+#         here::here(
+#             "files",
+#             "predictions.csv"
+#         )
+#     )
+# 
+# googledrive::drive_auth(email = T)
+# 
+# here::here(
+#     "files",
+#     "predictions.csv"
+# ) %>%
+#     googledrive::drive_upload(
+#         name = "squiggle_predictions"
+#     )
 
 # create charts 
 
-charts <- purrr::map(
-    .x = 1:nrow(afl_elo_pred),
-    ~ team_stats %>% 
-        inner_join(
-            afl_elo_pred %>% 
-                slice(.x) %>% 
-                select(home_team:away_team) %>% 
-                tidyr::pivot_longer(
-                    cols = 1:2,
-                    names_to = "home_away",
-                    values_to = "team"
-                ) %>% 
-                select(team) %>% 
-                mutate(
-                    team_home = 0:1
-                ),
-            by = "team"
+# base table
+
+matchups_charts_base <- team_stats %>% 
+    inner_join(
+        afl_elo_pred %>% 
+            select(
+                home_team,
+                away_team
+            ) %>% 
+            mutate(
+                game_id = row_number()
+            ) %>% 
+            tidyr::pivot_longer(
+                -game_id,
+                names_to = "home_away",
+                values_to = "team"
+            ) %>% 
+            select(
+                game_id,
+                team
+            ) %>% 
+            mutate(
+                team_home = rep(
+                    c(0, 1),
+                    times = max(game_id)
+                )
+            ),
+        by = "team"
+    ) 
+
+# offense
+
+charts_offense <- purrr::map(
+    .x = seq(
+        from = 1,
+        to = matchups_charts_base %>% 
+            pull(game_id) %>% 
+            max(),
+        by = 1
+    ),
+    ~ matchups_charts_base %>% 
+        filter(
+            game_id == .x
         ) %>%
         mutate(
             team = forcats::fct_reorder(
                 .f = team,
                 .x = team_home
             )
-        ) %>%
+        ) %>% 
         select(
             Team = team, 
-            `Scoring shots*` = score_shots_mean, 
-            `Opposition\nscoring shots*` = score_shots_opp_mean, 
-            `Inside 50s` = i50_mean, 
-            `Opposition\ninside 50s` = i50_opp_mean,
-            `Turnover\ndifferential` = turn_diff_mean, 
-            `Contested\npossession\ndifferential` = cp_diff_mean
+            `Scoring shots*^` = score_shots_mean, 
+            `Inside 50s*` = i50_mean, 
+            `Turnovers*` = turn_mean, 
+            `Contested possession\ndifferential*` = cp_diff_mean,
+            `Clearance\ndifferential*` = clear_diff_mean
         ) %>% 
         ggradar::ggradar(
             values.radar = c(NA, NA, NA),
             axis.label.size = 5,
             axis.label.offset = 1.1,
             group.line.width = 2,
-            group.point.size = 8
+            group.point.size = 8,
+            background.circle.colour = "white",
+            axis.line.colour = "gray80",
+            gridline.min.colour = "gray80",
+            gridline.mid.colour = "gray80",
+            gridline.max.colour = "gray80"
         ) +
         scale_colour_brewer(palette = "Set2") +
         labs(
@@ -506,11 +312,136 @@ charts <- purrr::map(
                 " @ ",
                 as.character(afl_elo_pred[.x, 3])
             ),
-            subtitle = paste0(
-                afl_elo_pred[.x, 4],
-                "\n\nSchedule-adjusted team strengths & weaknesses - closer to the outside indicates greater strength"
+            subtitle = "\nTeam offensive strengths & weaknesses - closer to the outside indicates greater strength",
+            caption = "*Opposition adjusted
+                        ^Exlcudes out on the full
+                        Created by: footycharts. Source: AFL website"
+        ) +
+        theme(
+            plot.title = element_text(size = 20, hjust = 0.5),
+            plot.subtitle = element_text(size = 15, hjust = 0.5),
+            legend.position = "bottom",
+            plot.caption = element_text(size = 10)
+        )
+)
+
+# defense
+
+charts_defense <- purrr::map(
+    .x = seq(
+        from = 1,
+        to = matchups_charts_base %>% 
+            pull(game_id) %>% 
+            max(),
+        by = 1
+    ),
+    ~ matchups_charts_base %>% 
+        filter(
+            game_id == .x
+        ) %>% 
+        mutate(
+            team = forcats::fct_reorder(
+                .f = team,
+                .x = team_home
+            )
+        ) %>% 
+        select(
+            Team = team,
+            `Opposition scoring shots*^` = score_shots_opp_mean,
+            `Opposition\ninside 50s*` = i50_opp_mean,
+            `Opposition\nturnovers*` = turn_opp_mean,
+            `Intercept marks\nper opp. inside 50` = int_mean,
+            `Tackles` = tackles_mean
+        ) %>% 
+        ggradar::ggradar(
+            values.radar = c(NA, NA, NA),
+            axis.label.size = 5,
+            axis.label.offset = 1.1,
+            group.line.width = 2,
+            group.point.size = 8,
+            background.circle.colour = "white",
+            axis.line.colour = "gray80",
+            gridline.min.colour = "gray80",
+            gridline.mid.colour = "gray80",
+            gridline.max.colour = "gray80"
+        ) +
+        scale_colour_brewer(palette = "Set2") +
+        labs(
+            title = paste0(
+                round_name,
+                ": ",
+                as.character(afl_elo_pred[.x, 1]),
+                " vs. ",
+                as.character(afl_elo_pred[.x, 2]),
+                " @ ",
+                as.character(afl_elo_pred[.x, 3])
             ),
-            caption = "*Exlcudes out on the full
+            subtitle = "\nTeam defensive strengths & weaknesses - closer to the outside indicates greater strength",
+            caption = "*Opposition adjusted
+                        ^Exlcudes out on the full
+                        Created by: footycharts. Source: AFL website"
+        ) +
+        theme(
+            plot.title = element_text(size = 20, hjust = 0.5),
+            plot.subtitle = element_text(size = 15, hjust = 0.5),
+            legend.position = "bottom",
+            plot.caption = element_text(size = 10)
+        )
+)
+
+# play style
+
+charts_play_style <- purrr::map(
+    .x = seq(
+        from = 1,
+        to = matchups_charts_base %>% 
+            pull(game_id) %>% 
+            max(),
+        by = 1
+    ),
+    ~ matchups_charts_base %>% 
+        filter(
+            game_id == .x
+        )  %>%
+        mutate(
+            team = forcats::fct_reorder(
+                .f = team,
+                .x = team_home
+            )
+        ) %>% 
+        select(
+            Team = team, 
+            `Kick-handball ratio` = khb_ratio_mean, 
+            `Uncontested\npossession rate` = up_rate_mean, 
+            `Marks` = marks_mean, 
+            `Metres gained\nper disposal` = mg_disp_mean
+        ) %>% 
+        ggradar::ggradar(
+            values.radar = c(NA, NA, NA),
+            axis.label.size = 5,
+            axis.label.offset = 1.1,
+            group.line.width = 2,
+            group.point.size = 8,
+            background.circle.colour = "white",
+            axis.line.colour = "gray80",
+            gridline.min.colour = "gray80",
+            gridline.mid.colour = "gray80",
+            gridline.max.colour = "gray80"
+        ) +
+        scale_colour_brewer(palette = "Set2") +
+        labs(
+            title = paste0(
+                round_name,
+                ": ",
+                as.character(afl_elo_pred[.x, 1]),
+                " vs. ",
+                as.character(afl_elo_pred[.x, 2]),
+                " @ ",
+                as.character(afl_elo_pred[.x, 3])
+            ),
+            subtitle = "\nTeam defensive strengths & weaknesses - closer to the outside indicates greater strength",
+            caption = "*Opposition adjusted
+                        ^Exlcudes out on the full
                         Created by: footycharts. Source: AFL website"
         ) +
         theme(
@@ -523,8 +454,10 @@ charts <- purrr::map(
 
 # save charts
 
+# offense
+
 purrr::map2(
-    .x = charts,
+    .x = charts_offense,
     .y = 1:nrow(afl_elo_pred),
     ~ ggsave(
         plot = .x,
@@ -534,7 +467,7 @@ purrr::map2(
             as.character(afl_elo_pred[.y, 1]),
             " vs. ",
             as.character(afl_elo_pred[.y, 2]),
-            ".png"
+            "_1_offense.png"
         ),
         path = here::here(
             "files",
@@ -543,7 +476,70 @@ purrr::map2(
                 current_season,
                 "_",
                 round_name
-            )
+            ),
+            "matchups"
+        ),
+        width = 25,
+        height = 25,
+        units = "cm"
+    )
+)
+
+# defense
+
+purrr::map2(
+    .x = charts_defense,
+    .y = 1:nrow(afl_elo_pred),
+    ~ ggsave(
+        plot = .x,
+        filename = paste0(
+            round_name,
+            ": ",
+            as.character(afl_elo_pred[.y, 1]),
+            " vs. ",
+            as.character(afl_elo_pred[.y, 2]),
+            "_2_defense.png"
+        ),
+        path = here::here(
+            "files",
+            "charts", 
+            paste0(
+                current_season,
+                "_",
+                round_name
+            ),
+            "matchups"
+        ),
+        width = 25,
+        height = 25,
+        units = "cm"
+    )
+)
+
+# play style
+
+purrr::map2(
+    .x = charts_play_style,
+    .y = 1:nrow(afl_elo_pred),
+    ~ ggsave(
+        plot = .x,
+        filename = paste0(
+            round_name,
+            ": ",
+            as.character(afl_elo_pred[.y, 1]),
+            " vs. ",
+            as.character(afl_elo_pred[.y, 2]),
+            "_3_play_style.png"
+        ),
+        path = here::here(
+            "files",
+            "charts", 
+            paste0(
+                current_season,
+                "_",
+                round_name
+            ),
+            "matchups"
         ),
         width = 25,
         height = 25,

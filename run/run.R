@@ -47,7 +47,12 @@ elo_par <- readr::read_csv(
 
 # create elo model output
 
+seasons_exclude <- "2010"
+
 afl_elo <- afl_fixture_all %>% 
+    filter(
+        !(season %in% seasons_exclude)
+    ) %>%
     left_join(
         afl_venues_all %>% 
             select(venue, location) %>% 
@@ -115,11 +120,18 @@ afl_elo <- afl_fixture_all %>%
         regress = elo_par["regress"]
     )
 
+# add prediction variables
+
+# exclude covid seasons
+
+seasons_exclude_pred <- c("2020", "2021")
+
 # add game win % prediction
 
 afl_win_prob_model <- afl_elo %>% 
     filter(
         !is.na(score_adjusted)
+        & !(season %in% seasons_exclude_pred)
     ) %>% 
     mutate(
         win = if_else(
@@ -139,6 +151,7 @@ afl_win_prob_model <- afl_elo %>%
 afl_margin_model <- afl_elo %>% 
     filter(
         !is.na(score_adjusted)
+        & !(season %in% seasons_exclude_pred)
     ) %>% 
     lm(
         margin ~ score_expected,
