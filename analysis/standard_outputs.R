@@ -44,7 +44,7 @@ trended_elo <- afl_elo %>%
         caption = "*Average team rating: 1500
                     Created by: footycharts"
     ) +
-    theme_minimal() +
+    theme_bw() +
     theme(
         axis.text.y = element_text(size = 15), 
         axis.text.x = element_text(angle = 90, hjust = 1, vjust = 0.5),
@@ -59,13 +59,13 @@ trended_elo <- afl_elo %>%
 
 afl_elo_rank_change <- afl_elo %>% 
     filter(
-        season == current_season
-        & round %in% paste("Round", 1:rounds_so_far)
-    ) %>% 
+        !is.na(start_elo)
+        & !is.na(new_elo)
+    ) %>%
     group_by(team) %>% 
     slice(n()) %>% 
     ungroup() %>% 
-    select(team, start_elo, new_elo) %>% 
+    select(round, team, start_elo, new_elo) %>% 
     mutate(
         plus_minus_avg = new_elo - 1500,
         plus_minus_prev = new_elo - start_elo
@@ -109,14 +109,14 @@ rank_elo <- afl_elo_rank_change %>%
                 .f = elo_position_team_avg, 
                 .x = -elo_position_avg
             ), 
-            y = plus_minus_avg + if_else(new_elo > 1500, 4, -4),
+            y = plus_minus_avg + if_else(new_elo > 1500, 6, -6),
             label = round(new_elo)
         ),
         size = 5
     ) +
     geom_hline(yintercept = 0) +
     coord_flip() +
-    viridis::scale_fill_viridis(option = "magma") +
+    scale_fill_gradient(low = "white", high = "seagreen3") +
     labs(
         title = paste0("Team elo ratings - Round ", rounds_so_far),
         subtitle = paste("Season:", current_season),
@@ -125,7 +125,7 @@ rank_elo <- afl_elo_rank_change %>%
         caption = "*Average team rating: 1500
                     Created by: footycharts"
     ) +
-    theme_minimal() +
+    theme_bw() +
     theme(
         axis.text.x = element_blank(), 
         axis.ticks.x = element_blank(),
@@ -140,6 +140,9 @@ rank_elo <- afl_elo_rank_change %>%
 # change vs. previous week
 
 change_elo <- afl_elo_rank_change %>% 
+    filter(
+        round == paste("Round", rounds_so_far)
+    ) %>% 
     mutate(
         improve_flag = if_else(
             plus_minus_prev > 0,
@@ -158,21 +161,29 @@ change_elo <- afl_elo_rank_change %>%
             fill = improve_flag
         )
     ) +
-    geom_col(colour = "black") +
+    geom_col(colour = "black", alpha = 0.8) +
     geom_text(
         aes(
             forcats::fct_reorder(
                 .f = team, 
                 .x = -elo_position_prev
             ), 
-            y = plus_minus_prev + if_else(plus_minus_prev > 0, 1, -1),
-            label = round(plus_minus_prev, 1)
+            y = plus_minus_prev + if_else(plus_minus_prev > 0, 0.8, -0.8),
+            label = if_else(
+                round(plus_minus_prev, 1) > 0,
+                paste0(
+                    "+",
+                    round(plus_minus_prev, 1)
+                ),
+                round(plus_minus_prev, 1) %>% 
+                    as.character()
+            )
         ),
         size = 5
     ) +
     geom_hline(yintercept = 0) +
     coord_flip() +
-    scale_fill_manual(values = c("firebrick1", "darkseagreen")) +
+    scale_fill_manual(values = c("firebrick1", "springgreen4")) +
     labs(
         title = paste0("Team elo ratings change vs. previous week - Round ", rounds_so_far),
         subtitle = paste("Season:", current_season),
@@ -180,7 +191,7 @@ change_elo <- afl_elo_rank_change %>%
         y = "Elo rating change",
         caption = "Created by: footycharts"
     ) +
-    theme_minimal() +
+    theme_bw() +
     theme(
         axis.text.x = element_blank(), 
         axis.ticks.x = element_blank(),
@@ -281,7 +292,7 @@ team_stats_base_adj %>%
                     Lines represent league average
                     Created by: footycharts. Source: AFL website"
     ) +
-    theme_minimal() +
+    theme_bw() +
     theme(
         axis.text = element_blank(),
         axis.title = element_text(size = 15), 
@@ -338,6 +349,27 @@ team_stats_base_adj %>%
         alpha = 0.8, 
         linetype = "dashed"
     ) +
+    geom_label(
+        aes(
+            x = 0,
+            y = team_stats_base_adj %>% 
+                pull(score_shots_opp_mean) %>% 
+                min(),
+            label = "Better >"
+        ),
+        size = 5
+    ) +
+    ggtext::geom_richtext(
+        aes(
+            x = team_stats_base_adj %>% 
+                pull(i50_opp_mean) %>% 
+                min(),
+            y = 0,
+            label = "Better >"
+        ),
+        size = 5,
+        angle = 90
+    ) +
     ggimage::geom_image() +
     scale_x_continuous(labels = abs) +
     scale_y_continuous(labels = abs) +
@@ -350,7 +382,7 @@ team_stats_base_adj %>%
                     Lines represent league average
                     Created by: footycharts. Source: AFL website"
     ) +
-    theme_minimal() +
+    theme_bw() +
     theme(
         axis.text = element_blank(),
         axis.title = element_text(size = 15), 
