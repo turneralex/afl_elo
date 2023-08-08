@@ -71,25 +71,21 @@ source(
     )
 ) 
 
-# correct tips so far
+# model performance
 
-afl_fixture_all %>% 
-    filter(
-        season == current_season
-        & round %in% paste("Round", 1:rounds_so_far)
-    ) %>% 
-    select(-match_id) %>% 
-    inner_join(
-        afl_elo,
-        by = c("season", "round", "home_team" = "team")
-    ) %>% 
-    mutate(
-        correct_tip = if_else(
-            (score_expected >= 0.5 & home_score - away_score >= 0)
-            | (score_expected <= 0.5 & home_score - away_score <= 0),
-            1,
-            0
+afl_elo_pred_base %>% 
+    summarise(
+        correct_tips = sum(correct_tip, na.rm = T),
+        bits = sum(
+            if_else(
+                correct_tip == 1,
+                1 + log2(pred_winner_win_prob),
+                1 + log2(1 - pred_winner_win_prob)
+            ),
+            na.rm = T
+        ),
+        mae = mean(
+            abs(pred_winner_margin - margin),
+            na.rm = T
         )
-    ) %>% 
-    pull(correct_tip) %>% 
-    sum()
+    )

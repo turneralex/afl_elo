@@ -24,8 +24,8 @@ season,match_id,round,date,venue,home_team,away_team,home_goals,home_behinds,hom
 2023,23,Round 3,2023-04-01,Adelaide Oval,Port Adelaide,Adelaide,13,8,86,18,9,117
 2023,24,Round 3,2023-04-01,MCG,St Kilda,Essendon,14,8,92,11,8,74
 2023,25,Round 3,2023-04-02,Carrara Stadium,Gold Coast,Geelong,10,13,73,7,12,54
-2023,26,Round 3,2023-04-02,MCG,Melbourne,Sydney,21,8,134,12,12,84
-2023,27,Round 3,2023-04-02,Perth Stadium,Fremantle,West Coast,16,12,108,9,13,67
+2023,26,Round 3,2023-04-02,Perth Stadium,Fremantle,West Coast,16,12,108,9,13,67
+2023,27,Round 3,2023-04-02,MCG,Melbourne,Sydney,21,8,134,12,12,84
 2023,28,Round 4,2023-04-06,Gabba,Brisbane,Collingwood,18,8,116,11,17,83
 2023,29,Round 4,2023-04-07,Docklands Stadium,North Melbourne,Carlton,11,18,84,16,11,107
 2023,30,Round 4,2023-04-08,Adelaide Oval,Adelaide,Fremantle,17,9,111,10,12,72
@@ -113,72 +113,72 @@ season,match_id,round,date,venue,home_team,away_team,home_goals,home_behinds,hom
 2023,112,Round 13,2023-06-11,Bellerive Oval,North Melbourne,GWS,11,9,75,15,13,103
 2023,113,Round 13,2023-06-11,MCG,Carlton,Essendon,6,16,52,13,8,86
 2023,114,Round 13,2023-06-12,MCG,Melbourne,Collingwood,8,18,66,9,8,62
-2023,115,Round 14,2023-06-15,Adelaide Oval,Port Adelaide,Geelong,NA,NA,NA,NA,NA,NA
-2023,116,Round 14,2023-06-16,Gabba,Brisbane,Sydney,NA,NA,NA,NA,NA,NA
-2023,117,Round 14,2023-06-17,Sydney Showground Stadium,GWS,Fremantle,NA,NA,NA,NA,NA,NA
-2023,118,Round 14,2023-06-17,MCG,Richmond,St Kilda,NA,NA,NA,NA,NA,NA
-2023,119,Round 14,2023-06-18,MCG,Carlton,Gold Coast,NA,NA,NA,NA,NA,NA
-2023,120,Round 14,2023-06-18,Docklands Stadium,North Melbourne,Western Bulldogs,NA,NA,NA,NA,NA,NA
-2023,121,Round 15,2023-06-22,Kardinia Park,Geelong,Melbourne,NA,NA,NA,NA,NA,NA
-2023,122,Round 15,2023-06-23,Docklands Stadium,St Kilda,Brisbane,NA,NA,NA,NA,NA,NA
-2023,123,Round 15,2023-06-24,SCG,Sydney,West Coast,NA,NA,NA,NA,NA,NA
-2023,124,Round 15,2023-06-24,Perth Stadium,Fremantle,Essendon,NA,NA,NA,NA,NA,NA
-2023,125,Round 15,2023-06-25,MCG,Collingwood,Adelaide,NA,NA,NA,NA,NA,NA
-2023,126,Round 15,2023-06-25,Carrara Stadium,Gold Coast,Hawthorn,NA,NA,NA,NA,NA,NA
-2023,127,Round 16,2023-06-29,Gabba,Brisbane,Richmond,NA,NA,NA,NA,NA,NA
-2023,128,Round 16,2023-06-30,SCG,Sydney,Geelong,NA,NA,NA,NA,NA,NA
-2023,129,Round 16,2023-07-01,Adelaide Oval,Adelaide,North Melbourne,NA,NA,NA,NA,NA,NA
-2023,130,Round 16,2023-07-01,Docklands Stadium,Western Bulldogs,Fremantle,NA,NA,NA,NA,NA,NA
-2023,131,Round 16,2023-07-01,Carrara Stadium,Gold Coast,Collingwood,NA,NA,NA,NA,NA,NA
-2023,132,Round 16,2023-07-01,MCG,Essendon,Port Adelaide,NA,NA,NA,NA,NA,NA
-2023,133,Round 16,2023-07-02,MCG,Hawthorn,Carlton,NA,NA,NA,NA,NA,NA
-2023,134,Round 16,2023-07-02,Perth Stadium,West Coast,St Kilda,NA,NA,NA,NA,NA,NA
-2023,135,Round 16,2023-07-02,Traeger Park,Melbourne,GWS,NA,NA,NA,NA,NA,NA
-2023,136,Round 17,2023-07-06,MCG,Richmond,Sydney,NA,NA,NA,NA,NA,NA
-2023,137,Round 17,2023-07-07,Docklands Stadium,Western Bulldogs,Collingwood,NA,NA,NA,NA,NA,NA
-2023,138,Round 17,2023-07-08,Gabba,Brisbane,West Coast,NA,NA,NA,NA,NA,NA
-2023,139,Round 17,2023-07-08,Sydney Showground Stadium,GWS,Hawthorn,NA,NA,NA,NA,NA,NA
-2023,140,Round 17,2023-07-08,Adelaide Oval,Port Adelaide,Gold Coast,NA,NA,NA,NA,NA,NA
-2023,141,Round 17,2023-07-08,Docklands Stadium,St Kilda,Melbourne,NA,NA,NA,NA,NA,NA
-2023,142,Round 17,2023-07-09,Kardinia Park,Geelong,North Melbourne,NA,NA,NA,NA,NA,NA
-2023,143,Round 17,2023-07-09,Perth Stadium,Fremantle,Carlton,NA,NA,NA,NA,NA,NA
-2023,144,Round 17,2023-07-09,Docklands Stadium,Essendon,Adelaide,NA,NA,NA,NA,NA,NA
-2023,145,Round 18,2023-07-13,SCG,Sydney,Western Bulldogs,NA,NA,NA,NA,NA,NA
-2023,146,Round 18,2023-07-14,MCG,Melbourne,Brisbane,NA,NA,NA,NA,NA,NA
-2023,147,Round 18,2023-07-15,MCG,Collingwood,Fremantle,NA,NA,NA,NA,NA,NA
-2023,148,Round 18,2023-07-15,Carrara Stadium,Gold Coast,St Kilda,NA,NA,NA,NA,NA,NA
-2023,149,Round 18,2023-07-15,Docklands Stadium,Carlton,Port Adelaide,NA,NA,NA,NA,NA,NA
-2023,150,Round 18,2023-07-15,Adelaide Oval,Adelaide,GWS,NA,NA,NA,NA,NA,NA
-2023,151,Round 18,2023-07-15,Kardinia Park,Geelong,Essendon,NA,NA,NA,NA,NA,NA
-2023,152,Round 18,2023-07-16,Docklands Stadium,North Melbourne,Hawthorn,NA,NA,NA,NA,NA,NA
-2023,153,Round 18,2023-07-16,Perth Stadium,West Coast,Richmond,NA,NA,NA,NA,NA,NA
-2023,154,Round 19,2023-07-21,Docklands Stadium,Essendon,Western Bulldogs,NA,NA,NA,NA,NA,NA
-2023,155,Round 19,2023-07-22,MCG,Richmond,Hawthorn,NA,NA,NA,NA,NA,NA
-2023,156,Round 19,2023-07-22,Docklands Stadium,Carlton,West Coast,NA,NA,NA,NA,NA,NA
-2023,157,Round 19,2023-07-22,Gabba,Brisbane,Geelong,NA,NA,NA,NA,NA,NA
-2023,158,Round 19,2023-07-22,Perth Stadium,Fremantle,Sydney,NA,NA,NA,NA,NA,NA
-2023,159,Round 19,2023-07-22,Adelaide Oval,Port Adelaide,Collingwood,NA,NA,NA,NA,NA,NA
-2023,160,Round 19,2023-07-23,Manuka Oval,GWS,Gold Coast,NA,NA,NA,NA,NA,NA
-2023,161,Round 19,2023-07-23,MCG,Melbourne,Adelaide,NA,NA,NA,NA,NA,NA
-2023,162,Round 19,2023-07-23,Docklands Stadium,St Kilda,North Melbourne,NA,NA,NA,NA,NA,NA
-2023,163,Round 20,2023-07-28,MCG,Collingwood,Carlton,NA,NA,NA,NA,NA,NA
-2023,164,Round 20,2023-07-29,Eureka Stadium,Western Bulldogs,GWS,NA,NA,NA,NA,NA,NA
-2023,165,Round 20,2023-07-29,Kardinia Park,Geelong,Fremantle,NA,NA,NA,NA,NA,NA
-2023,166,Round 20,2023-07-29,Carrara Stadium,Gold Coast,Brisbane,NA,NA,NA,NA,NA,NA
-2023,167,Round 20,2023-07-29,Adelaide Oval,Adelaide,Port Adelaide,NA,NA,NA,NA,NA,NA
-2023,168,Round 20,2023-07-29,Docklands Stadium,Essendon,Sydney,NA,NA,NA,NA,NA,NA
-2023,169,Round 20,2023-07-30,Docklands Stadium,Hawthorn,St Kilda,NA,NA,NA,NA,NA,NA
-2023,170,Round 20,2023-07-30,Perth Stadium,West Coast,North Melbourne,NA,NA,NA,NA,NA,NA
-2023,171,Round 20,2023-07-30,MCG,Richmond,Melbourne,NA,NA,NA,NA,NA,NA
-2023,172,Round 21,2023-08-04,Docklands Stadium,Western Bulldogs,Richmond,NA,NA,NA,NA,NA,NA
-2023,173,Round 21,2023-08-05,Adelaide Oval,Adelaide,Gold Coast,NA,NA,NA,NA,NA,NA
-2023,174,Round 21,2023-08-05,Docklands Stadium,Essendon,West Coast,NA,NA,NA,NA,NA,NA
-2023,175,Round 21,2023-08-05,MCG,Hawthorn,Collingwood,NA,NA,NA,NA,NA,NA
-2023,176,Round 21,2023-08-05,Kardinia Park,Geelong,Port Adelaide,NA,NA,NA,NA,NA,NA
-2023,177,Round 21,2023-08-05,Sydney Showground Stadium,GWS,Sydney,NA,NA,NA,NA,NA,NA
-2023,178,Round 21,2023-08-06,Bellerive Oval,North Melbourne,Melbourne,NA,NA,NA,NA,NA,NA
-2023,179,Round 21,2023-08-06,Perth Stadium,Fremantle,Brisbane,NA,NA,NA,NA,NA,NA
-2023,180,Round 21,2023-08-06,Docklands Stadium,St Kilda,Carlton,NA,NA,NA,NA,NA,NA
+2023,115,Round 14,2023-06-15,Adelaide Oval,Port Adelaide,Geelong,16,14,110,11,6,72
+2023,116,Round 14,2023-06-16,Gabba,Brisbane,Sydney,13,19,97,12,9,81
+2023,117,Round 14,2023-06-17,Sydney Showground Stadium,GWS,Fremantle,16,10,106,5,6,36
+2023,118,Round 14,2023-06-17,MCG,Richmond,St Kilda,13,12,90,11,4,70
+2023,119,Round 14,2023-06-18,MCG,Carlton,Gold Coast,18,12,120,8,13,61
+2023,120,Round 14,2023-06-18,Docklands Stadium,North Melbourne,Western Bulldogs,13,6,84,15,15,105
+2023,121,Round 15,2023-06-22,Kardinia Park,Geelong,Melbourne,11,12,78,8,15,63
+2023,122,Round 15,2023-06-23,Docklands Stadium,St Kilda,Brisbane,8,8,56,12,12,84
+2023,123,Round 15,2023-06-24,SCG,Sydney,West Coast,31,19,205,5,4,34
+2023,124,Round 15,2023-06-24,Perth Stadium,Fremantle,Essendon,14,9,93,9,7,61
+2023,125,Round 15,2023-06-25,MCG,Collingwood,Adelaide,12,10,82,11,14,80
+2023,126,Round 15,2023-06-25,Carrara Stadium,Gold Coast,Hawthorn,14,17,101,5,4,34
+2023,127,Round 16,2023-06-29,Gabba,Brisbane,Richmond,20,14,134,7,11,53
+2023,128,Round 16,2023-06-30,SCG,Sydney,Geelong,6,18,54,7,12,54
+2023,129,Round 16,2023-07-01,Adelaide Oval,Adelaide,North Melbourne,21,12,138,11,6,72
+2023,130,Round 16,2023-07-01,Docklands Stadium,Western Bulldogs,Fremantle,16,6,102,11,7,73
+2023,131,Round 16,2023-07-01,Carrara Stadium,Gold Coast,Collingwood,5,12,42,18,12,120
+2023,132,Round 16,2023-07-01,MCG,Essendon,Port Adelaide,10,14,74,11,12,78
+2023,133,Round 16,2023-07-02,MCG,Hawthorn,Carlton,7,10,52,17,10,112
+2023,134,Round 16,2023-07-02,Perth Stadium,West Coast,St Kilda,12,5,77,12,13,85
+2023,135,Round 16,2023-07-02,Traeger Park,Melbourne,GWS,5,15,45,7,5,47
+2023,136,Round 17,2023-07-06,MCG,Richmond,Sydney,12,16,88,11,9,75
+2023,137,Round 17,2023-07-07,Docklands Stadium,Western Bulldogs,Collingwood,11,11,77,13,11,89
+2023,138,Round 17,2023-07-08,Gabba,Brisbane,West Coast,16,20,116,5,5,35
+2023,139,Round 17,2023-07-08,Sydney Showground Stadium,GWS,Hawthorn,12,13,85,10,12,72
+2023,140,Round 17,2023-07-08,Adelaide Oval,Port Adelaide,Gold Coast,16,10,106,11,7,73
+2023,141,Round 17,2023-07-08,Docklands Stadium,St Kilda,Melbourne,8,10,58,12,7,79
+2023,142,Round 17,2023-07-09,Kardinia Park,Geelong,North Melbourne,19,11,125,9,9,63
+2023,143,Round 17,2023-07-09,Perth Stadium,Fremantle,Carlton,6,9,45,14,14,98
+2023,144,Round 17,2023-07-09,Docklands Stadium,Essendon,Adelaide,17,13,115,15,7,97
+2023,145,Round 18,2023-07-13,SCG,Sydney,Western Bulldogs,11,12,78,11,10,76
+2023,146,Round 18,2023-07-14,MCG,Melbourne,Brisbane,16,9,105,16,8,104
+2023,147,Round 18,2023-07-15,MCG,Collingwood,Fremantle,18,5,113,10,7,67
+2023,148,Round 18,2023-07-15,Carrara Stadium,Gold Coast,St Kilda,11,11,77,8,3,51
+2023,149,Round 18,2023-07-15,Docklands Stadium,Carlton,Port Adelaide,18,14,122,10,12,72
+2023,150,Round 18,2023-07-15,Adelaide Oval,Adelaide,GWS,8,9,57,10,11,71
+2023,151,Round 18,2023-07-15,Kardinia Park,Geelong,Essendon,18,14,122,7,3,45
+2023,152,Round 18,2023-07-16,Docklands Stadium,North Melbourne,Hawthorn,6,4,40,12,16,88
+2023,153,Round 18,2023-07-16,Perth Stadium,West Coast,Richmond,8,12,60,14,14,98
+2023,154,Round 19,2023-07-21,Docklands Stadium,Essendon,Western Bulldogs,7,7,49,13,12,90
+2023,155,Round 19,2023-07-22,MCG,Richmond,Hawthorn,14,12,96,15,5,95
+2023,156,Round 19,2023-07-22,Docklands Stadium,Carlton,West Coast,21,14,140,10,9,69
+2023,157,Round 19,2023-07-22,Gabba,Brisbane,Geelong,9,10,64,7,11,53
+2023,158,Round 19,2023-07-22,Perth Stadium,Fremantle,Sydney,12,4,76,16,9,105
+2023,159,Round 19,2023-07-22,Adelaide Oval,Port Adelaide,Collingwood,12,11,83,13,7,85
+2023,160,Round 19,2023-07-23,Manuka Oval,GWS,Gold Coast,15,13,103,9,9,63
+2023,161,Round 19,2023-07-23,MCG,Melbourne,Adelaide,14,13,97,13,15,93
+2023,162,Round 19,2023-07-23,Docklands Stadium,St Kilda,North Melbourne,9,15,69,9,7,61
+2023,163,Round 20,2023-07-28,MCG,Collingwood,Carlton,10,16,76,14,9,93
+2023,164,Round 20,2023-07-29,Eureka Stadium,Western Bulldogs,GWS,10,13,73,11,12,78
+2023,165,Round 20,2023-07-29,Kardinia Park,Geelong,Fremantle,9,10,64,10,11,71
+2023,166,Round 20,2023-07-29,Carrara Stadium,Gold Coast,Brisbane,15,6,96,7,13,55
+2023,167,Round 20,2023-07-29,Adelaide Oval,Adelaide,Port Adelaide,16,16,112,9,11,65
+2023,168,Round 20,2023-07-29,Docklands Stadium,Essendon,Sydney,15,9,99,15,11,101
+2023,169,Round 20,2023-07-30,Docklands Stadium,Hawthorn,St Kilda,14,9,93,19,8,122
+2023,170,Round 20,2023-07-30,Perth Stadium,West Coast,North Melbourne,10,12,72,10,7,67
+2023,171,Round 20,2023-07-30,MCG,Richmond,Melbourne,15,8,98,20,10,130
+2023,172,Round 21,2023-08-04,Docklands Stadium,Western Bulldogs,Richmond,19,12,126,10,11,71
+2023,173,Round 21,2023-08-05,Adelaide Oval,Adelaide,Gold Coast,13,11,89,9,7,61
+2023,174,Round 21,2023-08-05,Docklands Stadium,Essendon,West Coast,10,13,73,11,6,72
+2023,175,Round 21,2023-08-05,MCG,Hawthorn,Collingwood,16,9,105,11,7,73
+2023,176,Round 21,2023-08-05,Kardinia Park,Geelong,Port Adelaide,14,13,97,12,13,85
+2023,177,Round 21,2023-08-05,Sydney Showground Stadium,GWS,Sydney,12,13,85,15,6,96
+2023,178,Round 21,2023-08-06,Bellerive Oval,North Melbourne,Melbourne,10,11,71,15,13,103
+2023,179,Round 21,2023-08-06,Perth Stadium,Fremantle,Brisbane,11,8,74,11,11,77
+2023,180,Round 21,2023-08-06,Docklands Stadium,St Kilda,Carlton,8,6,54,10,13,73
 2023,181,Round 22,2023-08-11,MCG,Collingwood,Geelong,NA,NA,NA,NA,NA,NA
 2023,182,Round 22,2023-08-12,Docklands Stadium,North Melbourne,Essendon,NA,NA,NA,NA,NA,NA
 2023,183,Round 22,2023-08-12,SCG,Sydney,Gold Coast,NA,NA,NA,NA,NA,NA
@@ -197,12 +197,12 @@ season,match_id,round,date,venue,home_team,away_team,home_goals,home_behinds,hom
 2023,196,Round 23,2023-08-20,Docklands Stadium,Western Bulldogs,West Coast,NA,NA,NA,NA,NA,NA
 2023,197,Round 23,2023-08-20,Perth Stadium,Fremantle,Port Adelaide,NA,NA,NA,NA,NA,NA
 2023,198,Round 23,2023-08-20,MCG,Melbourne,Hawthorn,NA,NA,NA,NA,NA,NA
-2023,199,Round 24,2023-08-25,MCG,Hawthorn,Fremantle,NA,NA,NA,NA,NA,NA
-2023,200,Round 24,2023-08-25,Kardinia Park,Geelong,Western Bulldogs,NA,NA,NA,NA,NA,NA
-2023,201,Round 24,2023-08-25,MCG,Essendon,Collingwood,NA,NA,NA,NA,NA,NA
-2023,202,Round 24,2023-08-25,Docklands Stadium,Carlton,GWS,NA,NA,NA,NA,NA,NA
-2023,203,Round 24,2023-08-25,Gabba,Brisbane,St Kilda,NA,NA,NA,NA,NA,NA
-2023,204,Round 24,2023-08-25,Perth Stadium,West Coast,Adelaide,NA,NA,NA,NA,NA,NA
-2023,205,Round 24,2023-08-25,Adelaide Oval,Port Adelaide,Richmond,NA,NA,NA,NA,NA,NA
-2023,206,Round 24,2023-08-25,SCG,Sydney,Melbourne,NA,NA,NA,NA,NA,NA
-2023,207,Round 24,2023-08-25,Bellerive Oval,North Melbourne,Gold Coast,NA,NA,NA,NA,NA,NA
+2023,199,Round 24,2023-08-25,SCG,Sydney,Melbourne,NA,NA,NA,NA,NA,NA
+2023,200,Round 24,2023-08-25,Bellerive Oval,North Melbourne,Gold Coast,NA,NA,NA,NA,NA,NA
+2023,201,Round 24,2023-08-25,MCG,Hawthorn,Fremantle,NA,NA,NA,NA,NA,NA
+2023,202,Round 24,2023-08-25,Kardinia Park,Geelong,Western Bulldogs,NA,NA,NA,NA,NA,NA
+2023,203,Round 24,2023-08-25,MCG,Essendon,Collingwood,NA,NA,NA,NA,NA,NA
+2023,204,Round 24,2023-08-25,Docklands Stadium,Carlton,GWS,NA,NA,NA,NA,NA,NA
+2023,205,Round 24,2023-08-25,Gabba,Brisbane,St Kilda,NA,NA,NA,NA,NA,NA
+2023,206,Round 24,2023-08-25,Perth Stadium,West Coast,Adelaide,NA,NA,NA,NA,NA,NA
+2023,207,Round 24,2023-08-25,Adelaide Oval,Port Adelaide,Richmond,NA,NA,NA,NA,NA,NA
