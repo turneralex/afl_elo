@@ -157,6 +157,7 @@ afl_elo_pred_base <- afl_elo %>%
         pred_win_prob,
         away_pred_win_prob,
         margin,
+        away_margin,
         pred_margin,
         away_pred_margin
     ) %>% 
