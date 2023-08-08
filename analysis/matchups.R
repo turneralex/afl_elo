@@ -81,10 +81,9 @@ team_stats <- team_stats %>%
 
 # generate elo predictions for next round
 
-afl_elo_pred <- afl_elo %>% 
+afl_elo_pred_base <- afl_elo %>% 
     filter(
         season == current_season
-        & round == paste("Round", rounds_so_far + 1)
     ) %>% 
     inner_join(
         afl_ladder,
@@ -115,6 +114,12 @@ afl_elo_pred <- afl_elo %>%
         type = "response"
     ) %>% 
     mutate(
+        correct_tip = if_else(
+            (score_expected >= 0.5 & margin >= 0)
+            | (score_expected <= 0.5 & margin <= 0),
+            1,
+            0
+        ),
         pred_margin = if_else(
             pred_win_prob > 0.5 
             & pred_margin < 0,
@@ -129,11 +134,13 @@ afl_elo_pred <- afl_elo %>%
         away_ladder_position = lead(ladder_position, n = 1),
         away_elo_rank = lead(elo_rank, n = 1),
         away_pred_win_prob = lead(pred_win_prob, n = 1),
+        away_margin = lead(margin, n = 1),
         away_pred_margin = lead(pred_margin, n = 1)
     ) %>% 
     slice(1) %>%
     ungroup() %>%
     select(
+        round,
         location, 
         home_team = team, 
         away_team, 
@@ -146,8 +153,10 @@ afl_elo_pred <- afl_elo %>%
         away_elo_rank,
         home_ladder_position = ladder_position,
         away_ladder_position,
+        correct_tip,
         pred_win_prob,
         away_pred_win_prob,
+        margin,
         pred_margin,
         away_pred_margin
     ) %>% 
@@ -177,13 +186,25 @@ afl_elo_pred <- afl_elo %>%
             ),
             2
         ),
+        margin = if_else(
+            elo_diff_hga > 0,
+            margin,
+            away_margin
+        ),
         pred_winner_margin = round(
             if_else(
                 elo_diff_hga > 0,
                 pred_margin,
                 away_pred_margin
             )
-        ),
+        )
+    ) 
+    
+afl_elo_pred <- afl_elo_pred_base %>% 
+    filter(
+        round == paste("Round", rounds_so_far + 1)
+    ) %>% 
+    mutate(
         matchup = paste0(
             "Predicted winner: ", 
             pred_winner, 
