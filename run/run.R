@@ -1,3 +1,5 @@
+library(dplyr)
+
 source(
     here::here(
         "utils", 
@@ -27,8 +29,6 @@ source(
     )
 )
 
-library(dplyr)
-
 # get parameters
 
 files <- list.files(
@@ -47,7 +47,7 @@ elo_par <- readr::read_csv(
 
 # create elo model output
 
-seasons_exclude <- "2010"
+seasons_exclude <- c("2010", "2011")
 
 afl_elo <- afl_fixture_all %>% 
     filter(

@@ -140,6 +140,7 @@ afl_elo_pred_base <- afl_elo %>%
     slice(1) %>%
     ungroup() %>%
     select(
+        season,
         round,
         location, 
         home_team = team, 
@@ -217,6 +218,8 @@ afl_elo_pred <- afl_elo_pred_base %>%
         )
     ) %>% 
     select(
+        season,
+        round,
         home_team, 
         away_team, 
         venue, 
@@ -228,28 +231,17 @@ afl_elo_pred <- afl_elo_pred_base %>%
 
 # provide tips to squiggle
 
-# afl_elo_pred %>% 
-#     select(
-#         pred_winner,
-#         pred_winner_win_prob,
-#         pred_winner_margin
-#     ) %>% 
-#     readr::write_csv(
-#         here::here(
-#             "files",
-#             "predictions.csv"
-#         )
-#     )
-# 
-# googledrive::drive_auth(email = T)
-# 
-# here::here(
-#     "files",
-#     "predictions.csv"
-# ) %>%
-#     googledrive::drive_upload(
-#         name = "squiggle_predictions"
-#     )
+afl_elo_pred %>%
+    select(
+        season,
+        round,
+        home_team,
+        away_team,
+        pred_winner,
+        pred_winner_win_prob,
+        pred_winner_margin
+    ) %>%
+    upload_tips_squiggle()
 
 # create charts 
 

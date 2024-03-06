@@ -69,7 +69,6 @@ if (exists("rounds_so_far")) {
 team_round_stats_base <- afl_stats %>% 
     filter(
         round_roundnumber %in% 1:rounds_so_far
-        & !(round_name %in% finals_so_far)
     ) %>% 
     group_by(
         round_name, 
