@@ -1,4 +1,8 @@
 # afl_elo
-elo model for the AFL, primarily for tipping
+## [elo model](https://en.wikipedia.org/wiki/Elo_rating_system) for the AFL
 
-methodology: https://turneralex.github.io/elo_explainer.html
+methodology & additional info: https://turneralex.github.io/elo_explainer.html
+
+twitter: https://twitter.com/footy_charts
+
+squiggle (where the model is competing): https://squiggle.com.au/
