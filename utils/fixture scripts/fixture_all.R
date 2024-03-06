@@ -1,21 +1,15 @@
 library(dplyr)
 
-# available results check
-
-if (!exists("current_season")) {
-    
-    message(
-        "current_season not found, using season 2022"
-    )
-    
-    current_season <- "2022"
-    
-}
+seasons_include <- seq(
+    from = as.integer(start_season), 
+    to = as.integer(current_season), 
+    by = 1
+)
 
 # read in fixtures
 
 afl_fixture_all <- purrr::map_dfr(
-    .x = 2010:as.integer(current_season), 
+    .x = seasons_include, 
     ~ readr::read_csv(
         here::here(
             "files",
@@ -48,7 +42,7 @@ print(
 # read in venues 
 
 afl_venues_all <- purrr::map_dfr(
-    .x = 2010:as.integer(current_season), 
+    .x = seasons_include, 
     ~ readr::read_csv(
         here::here(
             "files",
