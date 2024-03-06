@@ -89,6 +89,32 @@ afl_elo_rank_change <- afl_elo %>%
         )
     ) 
 
+# upload rankings for squiggle
+
+googledrive::drive_auth(email = T)
+
+googlesheets4::gs4_auth(email = T)
+
+drive_id <- "1IsVkFjmjSUKfzvyuIUXjxRJB5I8uwf2xmE36nnpUDGM"
+
+power_rankings <- afl_elo_rank_change %>% 
+    mutate(
+        season = current_season,
+        round = rounds_so_far - 1
+    ) %>% 
+    select(
+        season,
+        round,
+        team,
+        score = new_elo
+    )
+
+googlesheets4::sheet_write(
+    data = power_rankings,
+    ss = drive_id, 
+    sheet = "power_rankings"
+)
+
 # current elo ratings
 
 rank_elo <- afl_elo_rank_change %>% 
@@ -109,7 +135,7 @@ rank_elo <- afl_elo_rank_change %>%
                 .f = elo_position_team_avg, 
                 .x = -elo_position_avg
             ), 
-            y = plus_minus_avg + if_else(new_elo > 1500, 6, -6),
+            y = plus_minus_avg + if_else(new_elo > 1500, 4, -4),
             label = round(new_elo)
         ),
         size = 5
@@ -118,7 +144,8 @@ rank_elo <- afl_elo_rank_change %>%
     coord_flip() +
     scale_fill_gradient(low = "white", high = "seagreen3") +
     labs(
-        title = paste0("Team elo ratings - Round ", rounds_so_far),
+        # title = paste0("Team elo ratings - Round ", rounds_so_far),
+        title = "Team elo ratings - pre-season",
         subtitle = paste("Season:", current_season),
         x = "Team & rank",
         y = "Elo rating*",
@@ -168,7 +195,7 @@ change_elo <- afl_elo_rank_change %>%
                 .f = team, 
                 .x = -elo_position_prev
             ), 
-            y = plus_minus_prev + if_else(plus_minus_prev > 0, 0.8, -0.8),
+            y = plus_minus_prev + if_else(plus_minus_prev > 0, 1.2, -1.2),
             label = if_else(
                 round(plus_minus_prev, 1) > 0,
                 paste0(
@@ -227,11 +254,8 @@ purrr::map2(
         path = here::here(
             "files",
             "charts", 
-            paste0(
-                current_season,
-                "_",
-                round_name
-            )
+            current_season,
+            round_name
         ),
         width = 25,
         height = 25,
@@ -312,11 +336,8 @@ ggsave(
     path = here::here(
         "files",
         "charts",
-        paste0(
-            current_season,
-            "_",
-            round_name
-        )
+        current_season,
+        round_name
     ),
     width = 25,
     height = 25,
@@ -400,11 +421,8 @@ ggsave(
     path = here::here(
         "files",
         "charts",
-        paste0(
-            current_season,
-            "_",
-            round_name
-        )
+        current_season,
+        round_name
     ),
     width = 25,
     height = 25,

@@ -1,28 +1,33 @@
+# new season checklist:
+# 1. run optim.R 
+# 2. create current season fixture & check mapping functions are up to date
+# 3. run below script
+
 library(dplyr)
 
 # current season & round
 
-current_season <- "2023"
-rounds_so_far <- 13
-finals_so_far <- c(
-    # "Finals Week 1"
-    # "Semi Finals", 
-    # "Preliminary Finals", 
-    # "Grand Final"
-)
+start_season <- "2012" # ensure consistency with optim.R
+current_season <- "2024"
+rounds_so_far <- 0
 round_next <- rounds_so_far + 1
-round_name <- paste("Round", round_next)
+round_name <- "Round 0"
+first_round <- T
 
 # create folder for charts
 
-round_path <- here::here(
+season_path <- here::here(
     "files", 
     "charts",
-    paste0(
-        current_season,
-        "_",
-        round_name
-    )
+    current_season
+)
+
+dir.create(path = season_path)
+
+round_path <- paste(
+    season_path,
+    round_name,
+    sep = "/"
 )
 
 dir.create(path = round_path)
@@ -44,23 +49,38 @@ source(
     )
 ) 
 
-# prep matchup data
-
-source(
-    here::here(
-        "analysis", 
-        "matchups_data.R"
-    )
-) 
-
-# create matchup charts
-
-source(
-    here::here(
-        "analysis", 
-        "matchups.R"
-    )
-) 
+if (first_round) {
+    
+    # first round tips 
+    
+    source(
+        here::here(
+            "analysis", 
+            "round_1_tips.R"
+        )
+    ) 
+    
+} else {
+    
+    # prep matchup data
+    
+    source(
+        here::here(
+            "analysis", 
+            "matchups_data.R"
+        )
+    ) 
+    
+    # create matchup charts
+    
+    source(
+        here::here(
+            "analysis", 
+            "matchups.R"
+        )
+    ) 
+    
+}
 
 # create rank, trend & offensive / defensive charts
 

@@ -1,3 +1,11 @@
+# instructions:
+# 1. shift elo_par.csv to archive
+# 2. update seasons_exclude
+# 3. run script
+# 4. update params_input.txt
+
+current_season <- "2023" # use previous season 
+
 source(
     here::here(
         "utils", 
@@ -15,7 +23,7 @@ source(
 library(dplyr)
 
 par_file_name <- "elo_par"
-seasons_exclude <- "2010"
+seasons_exclude <- c("2010", "2011")
 seasons_remove_hga <- c("2020", "2021")
 
 afl_elo <- afl_fixture_all %>% 
@@ -227,9 +235,9 @@ elo_par <- optim(
     )
 
 elo_par %>%     
-    enframe() %>% 
+    tibble::enframe() %>% 
     rename(param = name) %>% 
-    write_csv(
+    readr::write_csv(
         here::here(
             "files",
             "params", 

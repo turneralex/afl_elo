@@ -44,17 +44,7 @@ afl_fixture <- afl_fixture %>%
 
 # get results for current season
 
-afl_results <- fitzRoy::fetch_results_afl(season = focus_season) %>% 
-    filter(
-        !(
-            round.name %in% c(
-                "Finals Week 1", 
-                "Semi Finals", 
-                "Preliminary Finals", 
-                "Grand Final"
-            )
-        )
-    )
+afl_results <- fitzRoy::fetch_results_afl(season = focus_season) 
 
 # available results check
 
@@ -88,10 +78,11 @@ afl_fixture <- afl_fixture %>%
     left_join(
         afl_results %>% 
             mutate(
-                home_team = change_team_name(match.homeTeam.name)
+                home_team = change_team_name(match.homeTeam.name),
+                round = paste("Round", round.roundNumber),
             ) %>% 
             select(
-                round = round.name,
+                round,
                 home_team,
                 home_goals = homeTeamScore.matchScore.goals,
                 home_behinds = homeTeamScore.matchScore.behinds,

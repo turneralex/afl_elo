@@ -99,18 +99,38 @@ change_team_name <- function(team) {
 
 change_venue_name <- function(venue) {
     
-    # case_when valid for season >= 2023
+    # case_when valid for season >= 2024
     
     dplyr::case_when(
-        venue == "M.C.G."            ~ "MCG",
-        venue == "Docklands"         ~ "Docklands Stadium",
-        venue == "Sydney Showground" ~ "Sydney Showground Stadium",
-        venue == "S.C.G."            ~ "SCG",
+        # VIC
+        venue == "M.C.G."                         ~ "MCG",
+        venue %in% c(
+            "Marvel Stadium",
+            "Docklands"
+        )                                         ~ "Docklands Stadium",
+        venue == "Mars Stadium"                   ~ "Eureka Stadium",
+        # GEE
+        venue == "GMHBA Stadium"                  ~ "Kardinia Park",
+        # WA
+        venue == "Optus Stadium"                  ~ "Perth Stadium",
+        # TAS
+        venue == "Blundstone Arena"               ~ "Bellerive Oval",
+        venue == "University of Tasmania Stadium" ~ "York Park",
+        # NSW
+        venue %in% c(
+            "Sydney Showground",
+            "GIANTS Stadium"
+        )                                         ~ "Sydney Showground Stadium",
+        venue == "S.C.G."                         ~ "SCG",
+        # NT
+        venue == "TIO Stadium"                    ~ "Marrara Oval",
+        venue == "TIO Traeger Park"               ~ "Traeger Park",
+        # QLD
         venue %in% c(
             "Carrara",
             "Heritage Bank Stadium"
-        )                            ~ "Carrara Stadium",
-        T                            ~ venue
+        )                                         ~ "Carrara Stadium",
+        T                                         ~ venue
     ) 
     
 }
@@ -233,5 +253,23 @@ elo_run <- function(elo_df, k, hga_vec, regress) {
     }
     
     dplyr::tibble(elo_df)
+    
+}
+
+# upload tips for squiggle
+
+upload_tips_squiggle <- function(pred_df) {
+    
+    googledrive::drive_auth(email = T)
+    
+    googlesheets4::gs4_auth(email = T)
+    
+    drive_id <- "1Aqkhb5uV-qU7b1Zm2k2KA6M05rpNDEFps1MwPaU3QaM"
+    
+    googlesheets4::sheet_write(
+        data = pred_df,
+        ss = drive_id, 
+        sheet = "predictions"
+    )
     
 }
