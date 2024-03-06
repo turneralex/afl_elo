@@ -1,4 +1,4 @@
 file name: elo_par.csv
-optimised on: share of scoring shots (excludes out on the full)
-seasons: 2011-2022 inclusive
+optimised on: share of scoring shots (excludes out on the full). scoring shots = goals + behinds
+seasons: 2012-2023 inclusive (only 2023 includes finals)
 notes: seasons 2020 & 2021 have HGA set to 0 for all games due to covid scheduling
