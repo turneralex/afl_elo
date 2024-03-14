@@ -241,7 +241,7 @@ afl_elo_pred %>%
         pred_winner_win_prob,
         pred_winner_margin
     ) %>%
-    upload_tips_squiggle()
+    upload_tips_squiggle(drive_id = "1Aqkhb5uV-qU7b1Zm2k2KA6M05rpNDEFps1MwPaU3QaM")
 
 # create charts 
 

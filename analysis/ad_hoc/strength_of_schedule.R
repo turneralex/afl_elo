@@ -3,7 +3,7 @@ library(ggplot2)
 
 # start_season <- "2022" # optional
 current_season <- "2023"
-rounds_so_far <- 23 # rounds to use in analysis
+rounds_so_far <- 24 # rounds to use in analysis
 
 # run the elo model
 
@@ -19,7 +19,7 @@ source(
 # hga: venue effect only
 # opp: opponent effect only
 # both: both effects
-sos_type <- "hga"
+sos_type <- "both"
 
 afl_sos <- afl_elo %>% 
     filter(

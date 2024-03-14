@@ -2,6 +2,7 @@
 # 1. run optim.R 
 # 2. create current season fixture & check mapping functions are up to date
 # 3. run below script
+# 4. run utils/qa_checks.R after running the model (run.R)
 
 library(dplyr)
 
@@ -9,10 +10,10 @@ library(dplyr)
 
 start_season <- "2012" # ensure consistency with optim.R
 current_season <- "2024"
-rounds_so_far <- 0
+rounds_so_far <- 0 # set as -1 for pre-season
 round_next <- rounds_so_far + 1
 round_name <- "Round 0"
-first_round <- T
+first_round <- F
 
 # create folder for charts
 

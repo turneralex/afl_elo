@@ -1,5 +1,29 @@
 library(dplyr)
 
+if (!exists("start_season")) {
+    
+    warning(
+        paste(
+            "start_season not found, using default current_season:",
+            current_season
+        )
+    )
+    
+    start_season <- current_season
+    
+} else if (start_season > current_season) {
+    
+    warning(
+        paste(
+            "start_season more recent than current_season, using default current_season:",
+            current_season
+        )
+    )
+    
+    start_season <- current_season
+    
+}
+
 seasons_include <- seq(
     from = as.integer(start_season), 
     to = as.integer(current_season), 

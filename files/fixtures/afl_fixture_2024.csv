@@ -1,8 +1,8 @@
 season,match_id,round,date,venue,home_team,away_team,home_goals,home_behinds,home_score,away_goals,away_behinds,away_score
-2024,1,Round 0,2024-03-07,SCG,Sydney,Melbourne,NA,NA,NA,NA,NA,NA
-2024,2,Round 0,2024-03-08,Gabba,Brisbane,Carlton,NA,NA,NA,NA,NA,NA
-2024,3,Round 0,2024-03-09,Carrara Stadium,Gold Coast,Richmond,NA,NA,NA,NA,NA,NA
-2024,4,Round 0,2024-03-09,Sydney Showground Stadium,GWS,Collingwood,NA,NA,NA,NA,NA,NA
+2024,1,Round 0,2024-03-07,SCG,Sydney,Melbourne,12,14,86,9,10,64
+2024,2,Round 0,2024-03-08,Gabba,Brisbane,Carlton,12,13,85,13,8,86
+2024,3,Round 0,2024-03-09,Carrara Stadium,Gold Coast,Richmond,14,15,99,9,6,60
+2024,4,Round 0,2024-03-09,Sydney Showground Stadium,GWS,Collingwood,18,6,114,11,16,82
 2024,5,Round 1,2024-03-14,MCG,Carlton,Richmond,NA,NA,NA,NA,NA,NA
 2024,6,Round 1,2024-03-15,MCG,Collingwood,Sydney,NA,NA,NA,NA,NA,NA
 2024,7,Round 1,2024-03-16,MCG,Essendon,Hawthorn,NA,NA,NA,NA,NA,NA

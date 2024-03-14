@@ -3,15 +3,7 @@
 afl_elo_pred <- afl_elo %>% 
     filter(
         season == current_season
-        & round == paste("Round", rounds_so_far)
-    ) %>% 
-    mutate(
-        elo_rank = case_when(
-            rank(-start_elo) == 1 ~ paste0(rank(-start_elo), "st"),
-            rank(-start_elo) == 2 ~ paste0(rank(-start_elo), "nd"),
-            rank(-start_elo) == 3 ~ paste0(rank(-start_elo), "rd"),
-            T ~                     paste0(rank(-start_elo), "th")
-        )
+        & round == paste("Round", rounds_so_far + 1)
     ) %>% 
     modelr::add_predictions(
         model = afl_win_prob_model,
@@ -35,32 +27,16 @@ afl_elo_pred <- afl_elo %>%
     mutate(
         away_team = lead(team, n = 1),
         away_elo = lead(start_elo, n = 1),
-        away_elo_rank = lead(elo_rank, n = 1),
         away_pred_win_prob = lead(pred_win_prob, n = 1),
         away_pred_margin = lead(pred_margin, n = 1)
     ) %>% 
     slice(1) %>%
     ungroup() %>%
-    select(
-        round,
-        location, 
-        home_team = team, 
-        away_team, 
-        venue, 
-        hga_app, 
-        home_elo = start_elo, 
-        away_elo, 
-        score_expected,
-        home_elo_rank = elo_rank,
-        away_elo_rank,
-        pred_win_prob,
-        away_pred_win_prob,
-        pred_margin,
-        away_pred_margin
+    rename(
+        home_team = team,
+        home_elo = start_elo
     ) %>% 
     mutate(
-        season = current_season,
-        game_id = row_number(),
         hga = case_when(
             location == "VIC" ~ hga_app * elo_par["hga_vic"],
             location == "NSW" ~ hga_app * elo_par["hga_nsw"],
@@ -91,32 +67,8 @@ afl_elo_pred <- afl_elo %>%
                 pred_margin,
                 away_pred_margin
             )
-        ),
-        matchup = paste0(
-            "Predicted winner: ", 
-            pred_winner, 
-            " by ", 
-            round(pred_winner_margin), 
-            ", with a ", 
-            round(pred_winner_win_prob * 100), 
-            "% chance of victory"
         )
     ) %>% 
-    select(
-        season,
-        round,
-        home_team, 
-        away_team, 
-        venue, 
-        matchup,
-        pred_winner,
-        pred_winner_win_prob,
-        pred_winner_margin
-    )
-
-# provide tips to squiggle
-
-afl_elo_pred %>%
     select(
         season,
         round,
@@ -125,5 +77,9 @@ afl_elo_pred %>%
         pred_winner,
         pred_winner_win_prob,
         pred_winner_margin
-    ) %>%
-    upload_tips_squiggle()
+    )
+
+# provide tips to squiggle
+
+afl_elo_pred %>%
+    upload_tips_squiggle(drive_id = "1Aqkhb5uV-qU7b1Zm2k2KA6M05rpNDEFps1MwPaU3QaM")

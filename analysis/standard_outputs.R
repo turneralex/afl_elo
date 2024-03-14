@@ -65,7 +65,13 @@ afl_elo_rank_change <- afl_elo %>%
     group_by(team) %>% 
     slice(n()) %>% 
     ungroup() %>% 
-    select(round, team, start_elo, new_elo) %>% 
+    select(
+        season,
+        round, 
+        team, 
+        start_elo, 
+        new_elo
+    ) %>% 
     mutate(
         plus_minus_avg = new_elo - 1500,
         plus_minus_prev = new_elo - start_elo
@@ -98,10 +104,7 @@ googlesheets4::gs4_auth(email = T)
 drive_id <- "1IsVkFjmjSUKfzvyuIUXjxRJB5I8uwf2xmE36nnpUDGM"
 
 power_rankings <- afl_elo_rank_change %>% 
-    mutate(
-        season = current_season,
-        round = rounds_so_far - 1
-    ) %>% 
+    mutate(round = rounds_so_far) %>% 
     select(
         season,
         round,
@@ -109,11 +112,11 @@ power_rankings <- afl_elo_rank_change %>%
         score = new_elo
     )
 
-googlesheets4::sheet_write(
-    data = power_rankings,
-    ss = drive_id, 
-    sheet = "power_rankings"
-)
+power_rankings %>% 
+    googlesheets4::sheet_write(
+        ss = drive_id, 
+        sheet = "power_rankings"
+    )
 
 # current elo ratings
 
@@ -144,8 +147,7 @@ rank_elo <- afl_elo_rank_change %>%
     coord_flip() +
     scale_fill_gradient(low = "white", high = "seagreen3") +
     labs(
-        # title = paste0("Team elo ratings - Round ", rounds_so_far),
-        title = "Team elo ratings - pre-season",
+        title = paste0("Team elo ratings - ", round_name),
         subtitle = paste("Season:", current_season),
         x = "Team & rank",
         y = "Elo rating*",
@@ -212,7 +214,7 @@ change_elo <- afl_elo_rank_change %>%
     coord_flip() +
     scale_fill_manual(values = c("firebrick1", "springgreen4")) +
     labs(
-        title = paste0("Team elo ratings change vs. previous week - Round ", rounds_so_far),
+        title = paste0("Team elo ratings change vs. previous week - ", round_name),
         subtitle = paste("Season:", current_season),
         x = "Team",
         y = "Elo rating change",
@@ -308,7 +310,7 @@ team_stats_base_adj %>%
     ) +
     ggimage::geom_image() +
     labs(
-        title = paste0("Schedule-adjusted team offensive indicators - Round ", rounds_so_far),
+        title = paste0("Schedule-adjusted team offensive indicators - ", round_name),
         subtitle = paste("Season:", current_season),
         x = "Inside 50s",
         y = "Scoring shots*",
@@ -395,7 +397,7 @@ team_stats_base_adj %>%
     scale_x_continuous(labels = abs) +
     scale_y_continuous(labels = abs) +
     labs(
-        title = paste0("Schedule-adjusted team defensive indicators - Round ", rounds_so_far),
+        title = paste0("Schedule-adjusted team defensive indicators - ", round_name),
         subtitle = paste("Season:", current_season),
         x = "Oppositon inside 50s",
         y = "Oppostion scoring shots*",

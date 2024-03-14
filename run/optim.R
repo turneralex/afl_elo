@@ -4,6 +4,9 @@
 # 3. run script
 # 4. update params_input.txt
 
+library(dplyr)
+
+start_season <- "2012"
 current_season <- "2023" # use previous season 
 
 source(
@@ -19,8 +22,6 @@ source(
         "fixture_all.R"
     )
 )
-
-library(dplyr)
 
 par_file_name <- "elo_par"
 seasons_exclude <- c("2010", "2011")
