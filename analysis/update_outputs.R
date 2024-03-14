@@ -11,8 +11,7 @@ library(dplyr)
 start_season <- "2012" # ensure consistency with optim.R
 current_season <- "2024"
 rounds_so_far <- 0 # set as -1 for pre-season
-round_next <- rounds_so_far + 1
-round_name <- "Round 0"
+round_name <- "Round 0" # name of round just completed
 first_round <- F
 
 # create folder for charts
@@ -52,12 +51,12 @@ source(
 
 if (first_round) {
     
-    # first round tips 
+    # first round predictions
     
     source(
         here::here(
             "analysis", 
-            "round_1_tips.R"
+            "first_round_predictions.R"
         )
     ) 
     
