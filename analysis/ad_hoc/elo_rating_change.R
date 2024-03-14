@@ -1,10 +1,10 @@
 library(dplyr)
 library(ggplot2)
 
-start_season <- "2022"
-start_round <- 23
+start_season <- "2023"
+start_round <- 7
 current_season <- "2023" # can be any season
-end_round <- 24
+end_round <- 22
 
 # run the elo model
 
@@ -43,7 +43,10 @@ afl_elo %>%
         elo_change = new_elo - lag(new_elo)
     ) %>% 
     ungroup() %>% 
-    filter(season == current_season) %>% 
+    filter(
+        season == current_season
+        & !is.na(elo_change)
+    ) %>% 
     ggplot(
         aes(
             x = forcats::fct_reorder(team, elo_change), 
