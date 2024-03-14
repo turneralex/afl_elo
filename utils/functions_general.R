@@ -195,7 +195,7 @@ elo_run <- function(elo_df, k, hga_vec, regress) {
         
         next_season <- data.table::as.data.table(elo_df) %>% 
             .[row_id:nrow(.)] %>% 
-            .[, season := lead(season, n = 1, default = "9999"), by = team] %>% 
+            .[, season := lead(season, n = 1, default = current_season), by = team] %>% 
             .[team == game[1, "team"]] %>% 
             .$season %>% 
             .[1]
