@@ -1,12 +1,15 @@
+library(dplyr)
+library(ggplot2)
+
+start_season <- "2012" # ensure consistency with optim.R
+current_season <- "2024"
+
 source(
     here::here(
         "run",
         "run.R"
     )
 )
-
-library(dplyr)
-library(ggplot2)
 
 afl_elo %>% 
     glimpse()
@@ -32,26 +35,17 @@ purrr::map(
 
 # check potential errors
 
-afl_venues_all %>% 
-    tidyr::unnest(cols = teams) %>% 
-    filter(
-        venue == "Perth Stadium"
-        & team == "Gold Coast"
-    )
+team_to_check <- "Collingwood"
+venue_to_check <- "Adelaide Oval"
 
 afl_venues_all %>% 
     tidyr::unnest(cols = teams) %>% 
     filter(
-        venue == "Cazaly's Stadium"
-        & team == "Richmond"
+        team == team_to_check
+        & venue == venue_to_check
     )
 
-# unique locations
-
-afl_elo %>% 
-    distinct(location) %>% 
-    arrange(location)
-
+# 2023 onward is when finals started being included, which will affect the below
 # total games per season
 
 afl_elo %>% 
@@ -71,11 +65,15 @@ afl_elo %>%
         games = n() 
     ) %>% 
     ungroup() %>% 
-    distinct(season, games)
+    distinct(season, games) %>% 
+    arrange(season, games)
 
 # max & min team ratings
 
 afl_elo %>% 
+    filter(
+        !is.na(start_elo)
+    ) %>% 
     select(
         season, 
         round, 
@@ -89,17 +87,27 @@ afl_elo %>%
     filter(
         start_elo == rating_min
         | start_elo == rating_max
+    ) %>% 
+    select(
+        -rating_min,
+        -rating_max
     )
 
 # histogram of ratings
 
 afl_elo %>% 
+    filter(
+        !is.na(start_elo)
+    ) %>% 
     ggplot(aes(x = start_elo)) +
     geom_histogram(binwidth = 1) 
 
 # min & max score adjusted & expected
 
 afl_elo %>% 
+    filter(
+        !is.na(score_expected)
+    ) %>% 
     select(
         season, 
         round, 
@@ -129,6 +137,9 @@ afl_elo %>%
 # histogram of score adjusted & expected
 
 afl_elo %>% 
+    filter(
+        !is.na(score_adjusted)
+    ) %>% 
     select(score_adjusted, score_expected) %>% 
     tidyr::pivot_longer(
         cols = everything()
