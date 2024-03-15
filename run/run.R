@@ -135,7 +135,7 @@ afl_win_prob_model <- afl_elo %>%
     ) %>% 
     mutate(
         win = if_else(
-            score_adjusted >= 0.5, 
+            score_adjusted > 0.5, 
             1,
             0
         )
