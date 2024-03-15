@@ -121,10 +121,16 @@ afl_elo_pred_base <- afl_elo %>%
             0
         ),
         pred_margin = if_else(
-            pred_win_prob > 0.5 
-            & pred_margin < 0,
-            1,
+            pred_win_prob < 0.5 
+            & pred_margin > 0,
+            0,
             pred_margin
+        ),
+        pred_win_prob = if_else(
+            score_expected >= 0.5
+            & pred_win_prob < 0.5,
+            0.5,
+            pred_win_prob
         )
     ) %>% 
     group_by(match_id) %>%
