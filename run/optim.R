@@ -128,7 +128,7 @@ parameter_optim <- function(elo_df, par) {
         
         next_season <- data.table::as.data.table(elo_df) %>% 
             .[row_id:nrow(.)] %>% 
-            .[, season := lead(season, n = 1, default = "9999"), by = team] %>% 
+            .[, season := lead(season, n = 1, default = current_season), by = team] %>% 
             .[team == game[1, "team"]] %>% 
             .$season %>% 
             .[1]
@@ -142,21 +142,21 @@ parameter_optim <- function(elo_df, par) {
         location <- game$location[1]
         
         if (location == "VIC") {
-            hga <- par[3]
+            hga <- par["hga_vic"]
         } else if (location == "NSW") {
-            hga <- par[4]
+            hga <- par["hga_nsw"]
         } else if (location == "QLD") {
-            hga <- par[5]
+            hga <- par["hga_qld"]
         } else if (location == "SA") {
-            hga <- par[6]
+            hga <- par["hga_sa"]
         } else if (location == "WA") {
-            hga <- par[7]
+            hga <- par["hga_wa"]
         } else if (location == "GEE") {
-            hga <- par[8]
+            hga <- par["hga_gee"]
         } else if (location == "TAS") {
-            hga <- par[9]
+            hga <- par["hga_tas"]
         } else {
-            hga <- par[10]
+            hga <- par["hga_other"]
         }
         
         score_expected_1 <- score_expected(

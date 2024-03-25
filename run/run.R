@@ -41,7 +41,8 @@ elo_par <- readr::read_csv(
         "files",
         "params",
         files[files != "archive"]
-    )
+    ),
+    show_col_types = F
 ) %>% 
     tibble::deframe() 
 
@@ -60,7 +61,11 @@ afl_elo <- afl_fixture_all %>%
         by = "venue"
     ) %>% 
     mutate(
-        match_id =  1:nrow(.),
+        match_id =  seq(
+            from = 1,
+            to = n(),
+            by = 1
+        ),
         # share of scoring shots
         home_score_adjusted = (home_goals + home_behinds) / (home_goals + home_behinds + away_goals + away_behinds),
         home_margin = home_score - away_score,
@@ -70,7 +75,7 @@ afl_elo <- afl_fixture_all %>%
             data_venues = afl_venues_all, 
             data_fixture = afl_fixture_all
         )
-    ) %>% 
+    ) %>%
     select(
         season, 
         round, 
@@ -89,10 +94,20 @@ afl_elo <- afl_fixture_all %>%
         names_sep = "_",
         values_to = "team"
     ) %>% 
+    group_by(team) %>% 
+    mutate(
+        team_match_id = seq(
+            from = 1,
+            to = n(),
+            by = 1
+        )
+    ) %>% 
+    ungroup() %>% 
     select(
         season, 
         round, 
         match_id, 
+        team_match_id,
         venue, 
         location, 
         team, 

@@ -120,12 +120,6 @@ afl_elo_pred_base <- afl_elo %>%
             1,
             0
         ),
-        pred_margin = if_else(
-            pred_win_prob < 0.5 
-            & pred_margin > 0,
-            0,
-            pred_margin
-        ),
         pred_win_prob = if_else(
             score_expected >= 0.5
             & pred_win_prob < 0.5,
@@ -235,20 +229,6 @@ afl_elo_pred <- afl_elo_pred_base %>%
         pred_winner_margin
     )
 
-# provide tips to squiggle
-
-afl_elo_pred %>%
-    select(
-        season,
-        round,
-        home_team,
-        away_team,
-        pred_winner,
-        pred_winner_win_prob,
-        pred_winner_margin
-    ) %>%
-    upload_tips_squiggle(drive_id = "1Aqkhb5uV-qU7b1Zm2k2KA6M05rpNDEFps1MwPaU3QaM")
-
 # create charts 
 
 # base table
@@ -280,6 +260,13 @@ matchups_charts_base <- team_stats %>%
             ),
         by = "team"
     ) 
+
+matchup_theme <- theme(
+    plot.title = element_text(size = 20, hjust = 0.5),
+    plot.subtitle = element_text(size = 15, hjust = 0.5),
+    legend.position = "bottom",
+    plot.caption = element_text(size = 10)
+)
 
 # offense
 
@@ -324,25 +311,28 @@ charts_offense <- purrr::map(
         scale_colour_brewer(palette = "Set2") +
         labs(
             title = paste0(
-                round_name,
+                "Round ", rounds_so_far + 1, 
                 ": ",
-                as.character(afl_elo_pred[.x, 1]),
+                afl_elo_pred %>% 
+                    select(home_team) %>% 
+                    slice(.x) %>% 
+                    pull(),
                 " vs. ",
-                as.character(afl_elo_pred[.x, 2]),
+                afl_elo_pred %>% 
+                    select(away_team) %>% 
+                    slice(.x) %>% 
+                    pull(),
                 " @ ",
-                as.character(afl_elo_pred[.x, 3])
+                afl_elo_pred %>% 
+                    select(venue) %>% 
+                    slice(.x) %>% 
+                    pull()
             ),
             subtitle = "\nTeam offensive strengths & weaknesses - closer to the outside indicates greater strength",
             caption = "*Opposition adjusted
                         ^Exlcudes out on the full
                         Created by: footycharts. Source: AFL website"
-        ) +
-        theme(
-            plot.title = element_text(size = 20, hjust = 0.5),
-            plot.subtitle = element_text(size = 15, hjust = 0.5),
-            legend.position = "bottom",
-            plot.caption = element_text(size = 10)
-        )
+        ) + matchup_theme
 )
 
 # defense
@@ -388,25 +378,28 @@ charts_defense <- purrr::map(
         scale_colour_brewer(palette = "Set2") +
         labs(
             title = paste0(
-                round_name,
+                "Round ", rounds_so_far + 1, 
                 ": ",
-                as.character(afl_elo_pred[.x, 1]),
+                afl_elo_pred %>% 
+                    select(home_team) %>% 
+                    slice(.x) %>% 
+                    pull(),
                 " vs. ",
-                as.character(afl_elo_pred[.x, 2]),
+                afl_elo_pred %>% 
+                    select(away_team) %>% 
+                    slice(.x) %>% 
+                    pull(),
                 " @ ",
-                as.character(afl_elo_pred[.x, 3])
+                afl_elo_pred %>% 
+                    select(venue) %>% 
+                    slice(.x) %>% 
+                    pull()
             ),
             subtitle = "\nTeam defensive strengths & weaknesses - closer to the outside indicates greater strength",
             caption = "*Opposition adjusted
                         ^Exlcudes out on the full
                         Created by: footycharts. Source: AFL website"
-        ) +
-        theme(
-            plot.title = element_text(size = 20, hjust = 0.5),
-            plot.subtitle = element_text(size = 15, hjust = 0.5),
-            legend.position = "bottom",
-            plot.caption = element_text(size = 10)
-        )
+        ) + matchup_theme
 )
 
 # play style
@@ -451,25 +444,28 @@ charts_play_style <- purrr::map(
         scale_colour_brewer(palette = "Set2") +
         labs(
             title = paste0(
-                round_name,
+                "Round ", rounds_so_far + 1, 
                 ": ",
-                as.character(afl_elo_pred[.x, 1]),
+                afl_elo_pred %>% 
+                    select(home_team) %>% 
+                    slice(.x) %>% 
+                    pull(),
                 " vs. ",
-                as.character(afl_elo_pred[.x, 2]),
+                afl_elo_pred %>% 
+                    select(away_team) %>% 
+                    slice(.x) %>% 
+                    pull(),
                 " @ ",
-                as.character(afl_elo_pred[.x, 3])
+                afl_elo_pred %>% 
+                    select(venue) %>% 
+                    slice(.x) %>% 
+                    pull()
             ),
             subtitle = "\nTeam defensive strengths & weaknesses - closer to the outside indicates greater strength",
             caption = "*Opposition adjusted
                         ^Exlcudes out on the full
                         Created by: footycharts. Source: AFL website"
-        ) +
-        theme(
-            plot.title = element_text(size = 20, hjust = 0.5), 
-            plot.subtitle = element_text(size = 15, hjust = 0.5),
-            legend.position = "bottom",
-            plot.caption = element_text(size = 10)
-        ) 
+        ) + matchup_theme
 )
 
 # save charts
@@ -478,26 +474,30 @@ charts_play_style <- purrr::map(
 
 purrr::map2(
     .x = charts_offense,
-    .y = 1:nrow(afl_elo_pred),
+    .y = seq(
+        from = 1,
+        to = nrow(afl_elo_pred),
+        by = 1
+    ),
     ~ ggsave(
         plot = .x,
         filename = paste0(
-            round_name,
+            "Round ", rounds_so_far + 1,
             ": ",
-            as.character(afl_elo_pred[.y, 1]),
+            afl_elo_pred %>% 
+                select(home_team) %>% 
+                slice(.y) %>% 
+                pull(),
             " vs. ",
-            as.character(afl_elo_pred[.y, 2]),
+            afl_elo_pred %>% 
+                select(away_team) %>% 
+                slice(.y) %>% 
+                pull(),
             "_1_offense.png"
         ),
-        path = here::here(
-            "files",
-            "charts", 
-            paste0(
-                current_season,
-                "_",
-                round_name
-            ),
-            "matchups"
+        path = paste0(
+            round_path,
+            "/matchups"
         ),
         width = 25,
         height = 25,
@@ -509,26 +509,30 @@ purrr::map2(
 
 purrr::map2(
     .x = charts_defense,
-    .y = 1:nrow(afl_elo_pred),
+    .y = seq(
+        from = 1,
+        to = nrow(afl_elo_pred),
+        by = 1
+    ),
     ~ ggsave(
         plot = .x,
         filename = paste0(
-            round_name,
+            "Round ", rounds_so_far + 1, 
             ": ",
-            as.character(afl_elo_pred[.y, 1]),
+            afl_elo_pred %>% 
+                select(home_team) %>% 
+                slice(.y) %>% 
+                pull(),
             " vs. ",
-            as.character(afl_elo_pred[.y, 2]),
+            afl_elo_pred %>% 
+                select(away_team) %>% 
+                slice(.y) %>% 
+                pull(),
             "_2_defense.png"
         ),
-        path = here::here(
-            "files",
-            "charts", 
-            paste0(
-                current_season,
-                "_",
-                round_name
-            ),
-            "matchups"
+        path = paste0(
+            round_path,
+            "/matchups"
         ),
         width = 25,
         height = 25,
@@ -540,26 +544,30 @@ purrr::map2(
 
 purrr::map2(
     .x = charts_play_style,
-    .y = 1:nrow(afl_elo_pred),
+    .y = seq(
+        from = 1,
+        to = nrow(afl_elo_pred),
+        by = 1
+    ),
     ~ ggsave(
         plot = .x,
         filename = paste0(
-            round_name,
+            "Round ", rounds_so_far + 1, 
             ": ",
-            as.character(afl_elo_pred[.y, 1]),
+            afl_elo_pred %>% 
+                select(home_team) %>% 
+                slice(.y) %>% 
+                pull(),
             " vs. ",
-            as.character(afl_elo_pred[.y, 2]),
+            afl_elo_pred %>% 
+                select(away_team) %>% 
+                slice(.y) %>% 
+                pull(),
             "_3_play_style.png"
         ),
-        path = here::here(
-            "files",
-            "charts", 
-            paste0(
-                current_season,
-                "_",
-                round_name
-            ),
-            "matchups"
+        path = paste0(
+            round_path,
+            "/matchups"
         ),
         width = 25,
         height = 25,
