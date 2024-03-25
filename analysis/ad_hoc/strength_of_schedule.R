@@ -2,6 +2,7 @@ library(dplyr)
 library(ggplot2)
 
 # start_season <- "2022" # optional
+# note: at the beginning of start_season, all team ratings will be set to the average of 1500
 current_season <- "2023"
 rounds_so_far <- 24 # rounds to use in analysis
 

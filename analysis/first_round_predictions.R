@@ -79,7 +79,3 @@ afl_elo_pred <- afl_elo %>%
         pred_winner_margin
     )
 
-# provide tips to squiggle
-
-afl_elo_pred %>%
-    upload_tips_squiggle(drive_id = "1Aqkhb5uV-qU7b1Zm2k2KA6M05rpNDEFps1MwPaU3QaM")
