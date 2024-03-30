@@ -24,33 +24,43 @@ if (!exists("start_season")) {
     
 }
 
-seasons_include <- seq(
-    from = as.integer(start_season), 
-    to = as.integer(current_season), 
-    by = 1
+seasons_include <- as.character(
+    seq(
+        from = as.integer(start_season), 
+        to = as.integer(current_season), 
+        by = 1
+    )
 )
 
 # read in fixtures
 
-afl_fixture_all <- purrr::map_dfr(
-    .x = seasons_include, 
-    ~ readr::read_csv(
+afl_fixture_all <- bind_rows(
+    readr::read_csv(
+        here::here(
+            "files",
+            "fixtures",
+            "afl_fixture_history.csv"
+        ),
+        col_types = "ciiccDccciiiiii"
+    ),
+    readr::read_csv(
         here::here(
             "files",
             "fixtures",
             paste0(
                 "afl_fixture_",
-                .x, 
+                current_season, 
                 ".csv"
             )
         ),
-        col_types = "cicDccciiiiii"
+        col_types = "ciiccDccciiiiii"
     )
 ) %>% 
+    filter(
+        season %in% seasons_include
+    ) %>% 
     mutate(
-        match_id = 1:nrow(.),
-        home_team = change_team_name(home_team),
-        away_team = change_team_name(away_team)
+        match_id = 1:nrow(.)
     )
 
 # available seasons check
@@ -65,32 +75,28 @@ print(
 
 # read in venues 
 
-afl_venues_all <- purrr::map_dfr(
-    .x = seasons_include, 
-    ~ readr::read_csv(
+afl_venues_all <- bind_rows(
+    readr::read_csv(
+        here::here(
+            "files",
+            "venues",
+            "afl_venues_history.csv"
+        ),
+        col_types = "ccc"
+    ),
+    readr::read_csv(
         here::here(
             "files",
             "venues",
             paste0(
-                "afl_venues_", 
-                .x, 
+                "afl_venues_",
+                current_season, 
                 ".csv"
             )
         ),
-        col_types = "cccc"
+        col_types = "ccc"
     )
 ) %>% 
-    mutate(
-        team = change_team_name(team)
-    ) %>% 
+    # remove dupes created by concatenating tables
+    distinct() %>% 
     tidyr::nest(teams = team)
-
-# available seasons check
-
-message("seasons in afl_venues_all:")
-
-print(
-    afl_venues_all %>% 
-        distinct(year) %>% 
-        pull()
-)

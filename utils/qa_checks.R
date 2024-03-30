@@ -17,7 +17,15 @@ afl_elo %>%
 afl_elo %>% 
     skimr::skim()
 
+# which venues are in VIC (the default)
+
+afl_venues_all %>% 
+    filter(
+        location == "VIC"
+    )
+
 # which venues teams were home at
+# contains some stadiums only used before current_season
 
 purrr::map(
     .x = afl_venues_all %>% 
@@ -28,20 +36,33 @@ purrr::map(
         tidyr::unnest(cols = teams) %>% 
         filter(
             venue == .x
-            & !(year %in% c(2020, 2021)) 
         ) %>% 
         distinct(venue, location, team)
+)
+
+# according to the model
+
+purrr::map(
+    .x = afl_elo %>% 
+        distinct(team) %>% 
+        pull() %>% 
+        sort(),
+    ~ afl_elo %>% 
+        filter(
+            team == .x
+            & hga_app == 1
+        ) %>% 
+        distinct(team, venue, location)
 )
 
 # check potential errors
 
 team_to_check <- "Collingwood"
-venue_to_check <- "Adelaide Oval"
+venue_to_check <- "Sydney Showground Stadium"
 
-afl_venues_all %>% 
-    tidyr::unnest(cols = teams) %>% 
+afl_fixture_all %>% 
     filter(
-        team == team_to_check
+        home_team == team_to_check
         & venue == venue_to_check
     )
 
@@ -147,3 +168,4 @@ afl_elo %>%
     ggplot(aes(x = value)) +
     geom_histogram(binwidth = 0.01) +
     facet_grid(name ~ .)
+
