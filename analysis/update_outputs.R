@@ -1,8 +1,10 @@
 # new season checklist:
-# 1. run optim.R 
-# 2. create current season fixture & check mapping functions are up to date
-# 3. run below script
-# 4. run utils/qa_checks.R after running the model (run.R)
+# 1. update & run fixture_history.R
+# 2. update fixture_current.R
+# 3. run optim.R 
+# 4. create current season fixture & check mapping functions are up to date
+# 5. run below script
+# 6. run utils/qa_checks.R after running the model (run.R)
 
 library(dplyr)
 

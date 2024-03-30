@@ -6,38 +6,48 @@
 
 library(dplyr)
 
-start_season <- "2012"
-current_season <- "2023" # use previous season 
-
 source(
     here::here(
         "utils", 
         "functions_general.R"
     )
 )
-source(
+
+par_file_name <- "elo_par_new"
+seasons_exclude <- "2011"
+
+afl_venues_all <- readr::read_csv(
     here::here(
-        "utils", 
-        "fixture scripts", 
-        "fixture_all.R"
-    )
-)
+        "files",
+        "venues",
+        "afl_venues_history.csv"
+    ),
+    col_types = "ccc"
+) %>% 
+    tidyr::nest(teams = team)
 
-par_file_name <- "elo_par"
-seasons_exclude <- c("2010", "2011")
-seasons_remove_hga <- c("2020", "2021")
-
-afl_elo <- afl_fixture_all %>% 
+afl_fixture_all <- readr::read_csv(
+    here::here(
+        "files",
+        "fixtures",
+        "afl_fixture_history.csv"
+    ),
+    col_types = "ciiccDccciiiiii"
+) %>% 
     filter(
         !(season %in% seasons_exclude)
-    ) %>%
+    ) %>% 
+    mutate(
+        match_id = 1:nrow(.)
+    )
+
+afl_elo <- afl_fixture_all %>% 
     left_join(
         afl_venues_all %>% 
-            select(
-                venue, 
+            distinct(
+                venue,
                 location
-            ) %>% 
-            distinct(),
+            ),
         by = "venue"
     ) %>% 
     mutate(
@@ -46,13 +56,12 @@ afl_elo <- afl_fixture_all %>%
         home_score_adjusted = (home_goals + home_behinds) / (home_goals + home_behinds + away_goals + away_behinds),
         hga_app = purrr::pmap_int(
             .l = list(
-                season, 
                 venue, 
                 home_team, 
                 away_team
             ), 
             .f = is_home, 
-            data_venues = afl_venues_all, 
+            data_venues = afl_venues_all,
             data_fixture = afl_fixture_all
         )
     ) %>% 
@@ -61,7 +70,7 @@ afl_elo <- afl_fixture_all %>%
         round, 
         match_id, 
         venue, 
-        location, 
+        location,
         home_team, 
         away_team, 
         home_score_adjusted, 
@@ -78,7 +87,7 @@ afl_elo <- afl_fixture_all %>%
         round, 
         match_id, 
         venue, 
-        location, 
+        location,
         team, 
         home_away, 
         hga_app, 
@@ -102,15 +111,17 @@ afl_elo <- afl_fixture_all %>%
     select(
         -home_away, 
         -home_score_adjusted
-    ) %>% 
-    # exclude certain seasons for home ground advantage
-    mutate(
-        hga_app = if_else(
-            season %in% seasons_remove_hga,
-            as.integer(0),
-            hga_app
-        )
-    )
+    ) 
+
+# check venues the HGA is applicable
+
+venues_hga <- afl_elo %>% 
+    filter(hga_app == 1) %>% 
+    pull(venue) %>% 
+    unique() %>% 
+    sort()
+
+venues_hga
 
 parameter_optim <- function(elo_df, par) {
     
@@ -142,21 +153,21 @@ parameter_optim <- function(elo_df, par) {
         location <- game$location[1]
         
         if (location == "VIC") {
-            hga <- par["hga_vic"]
+            hga <- par[3]
         } else if (location == "NSW") {
-            hga <- par["hga_nsw"]
+            hga <- par[4]
         } else if (location == "QLD") {
-            hga <- par["hga_qld"]
+            hga <- par[5]
         } else if (location == "SA") {
-            hga <- par["hga_sa"]
+            hga <- par[6]
         } else if (location == "WA") {
-            hga <- par["hga_wa"]
+            hga <- par[7]
         } else if (location == "GEE") {
-            hga <- par["hga_gee"]
+            hga <- par[8]
         } else if (location == "TAS") {
-            hga <- par["hga_tas"]
+            hga <- par[9]
         } else {
-            hga <- par["hga_other"]
+            hga <- 0
         }
         
         score_expected_1 <- score_expected(
@@ -212,9 +223,9 @@ parameter_optim <- function(elo_df, par) {
 }
 
 elo_par <- optim(
-    par = c(50, 0.5, rep(50, 8)),
+    par = c(50, 0.5, rep(10, 7)),
     lower = rep(0, 11),
-    upper = c(100, 1, rep(100, 8)),
+    upper = c(100, 1, rep(100, 7)),
     parameter_optim, 
     elo_df = afl_elo,
     method = "L-BFGS-B"
@@ -230,12 +241,11 @@ elo_par <- optim(
             "hga_sa", 
             "hga_wa", 
             "hga_gee", 
-            "hga_tas", 
-            "hga_other"
+            "hga_tas"
         )
     )
 
-elo_par %>%     
+ elo_par %>%     
     tibble::enframe() %>% 
     rename(param = name) %>% 
     readr::write_csv(

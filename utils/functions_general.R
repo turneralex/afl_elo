@@ -15,54 +15,49 @@ elo_update <- function(elo, elo_opp, score_adjusted, score_expected, k, regress,
 
 # check if home ground advantage should apply
 
-is_home <- function(season_year, game_venue, game_home_team, game_away_team, data_venues, data_fixture) {
+is_home <- function(game_venue, game_home_team, game_away_team, data_venues, data_fixture) {
     
     library(dplyr)
     
     location <- data_venues %>% 
         filter(
-            year == season_year 
-            & venue == game_venue
+            venue == game_venue
         ) %>% 
         pull(location) 
     
     away_team_location <- data_venues %>% 
         tidyr::unnest(cols = teams) %>% 
         filter(
-            year == season_year 
-            & team == game_away_team
+            team == game_away_team
         ) %>% 
         inner_join(
             data_fixture %>% 
                 filter(
-                    season == season_year 
-                    & home_team == game_away_team
+                    home_team == game_away_team
                 ) %>% 
                 group_by(venue) %>% 
                 count(),
             by = "venue"
         ) %>% 
-        filter(n > 1) %>% 
+        filter(n >= 10) %>% 
         pull(location) %>% 
         unique()
     
     home_team_location <- data_venues %>% 
         tidyr::unnest(cols = teams) %>% 
         filter(
-            year == season_year 
-            & team == game_home_team
+            team == game_home_team
         ) %>% 
         inner_join(
             data_fixture %>% 
                 filter(
-                    season == season_year 
-                    & home_team == game_home_team
+                    home_team == game_home_team
                 ) %>% 
                 group_by(venue) %>% 
                 count(),
             by = "venue"
         ) %>% 
-        filter(n > 1) %>% 
+        filter(n >= 10) %>% 
         pull(location) %>% 
         unique()
     
@@ -103,39 +98,46 @@ change_venue_name <- function(venue) {
     
     dplyr::case_when(
         # VIC
-        tolower(venue) == "m.c.g."           ~ "MCG",
+        tolower(venue) == "m.c.g."                            ~ "MCG",
         tolower(venue) %in% c(
             "marvel stadium",
             "docklands"
-        )                                    ~ "Docklands Stadium",
-        tolower(venue) == "mars stadium"     ~ "Eureka Stadium",
+        )                                                     ~ "Docklands Stadium",
+        tolower(venue) == "mars stadium"                      ~ "Eureka Stadium",
         # GEE
-        tolower(venue) == "gmhba stadium"    ~ "Kardinia Park",
+        tolower(venue) == "gmhba stadium"                     ~ "Kardinia Park",
         # WA
-        tolower(venue) == "optus stadium"    ~ "Perth Stadium",
+        tolower(venue) == "optus stadium"                    ~ "Perth Stadium",
+        tolower(venue) == "subiaco"                          ~ "Subiaco Oval",
         # TAS
-        tolower(venue) == "blundstone arena" ~ "Bellerive Oval",
+        tolower(venue) == "blundstone arena"                  ~ "Bellerive Oval",
         tolower(venue) %in% c(
             "utas stadium",
             "university of tasmania stadium"
-        )                                    ~ "York Park",
+        )                                                     ~ "York Park",
         # NSW
+        tolower(venue) == "blacktown"                         ~ "Blacktown International Sportspark",
         tolower(venue) %in% c(
             "sydney showground",
             "giants stadium",
             "engie stadium"
-        )                                    ~ "Sydney Showground Stadium",
-        tolower(venue) == "s.c.g."           ~ "SCG",
+        )                                                      ~ "Sydney Showground Stadium",
+        tolower(venue) == "s.c.g."                             ~ "SCG",
         # NT
-        tolower(venue) == "tio stadium"      ~ "Marrara Oval",
-        tolower(venue) == "tio traeger park" ~ "Traeger Park",
+        tolower(venue) == "tio stadium"                        ~ "Marrara Oval",
+        tolower(venue) == "tio traeger park"                   ~ "Traeger Park",
+        # ACT
+        tolower(venue) == "unsw canberra oval"                 ~ "Manuka Oval",
         # QLD
         tolower(venue) %in% c(
             "carrara",
             "heritage bank stadium",
             "people first stadium"
-        )                                    ~ "Carrara Stadium",
-        T                                    ~ venue
+        )                                                      ~ "Carrara Stadium",
+        # other 
+        tolower(venue) == "adelaide arena at jiangwan stadium" ~ "Jiangwan Stadium",
+        tolower(venue) == "wellington"                         ~ "Wellington Regional Stadium",
+        T                                                      ~ venue
     ) 
     
 }
@@ -149,30 +151,37 @@ venue_location <- function(venue) {
     dplyr::case_when(
         tolower(venue) == "adelaide oval" 
         | tolower(venue) == "adelaide hills" 
-        | tolower(venue) == "norwood oval"              ~ "SA",
+        | tolower(venue) == "norwood oval"
+        | tolower(venue) == "football park"                      ~ "SA",
         
         tolower(venue) == "gabba" 
         | tolower(venue) == "carrara stadium" 
-        | tolower(venue) == "cazaly's stadium"          ~ "QLD",
+        | tolower(venue) == "cazaly's stadium" 
+        | tolower(venue) == "riverway stadium"                   ~ "QLD",
         
         tolower(venue) == "scg" 
         | tolower(venue) == "sydney showground stadium" 
-        | tolower(venue) == "stadium australia"         ~ "NSW",
+        | tolower(venue) == "stadium australia" 
+        | tolower(venue) == "blacktown international sportspark" ~ "NSW",
         
         tolower(venue) == "bellerive oval" 
-        | tolower(venue) == "york park"                 ~ "TAS",
+        | tolower(venue) == "york park"                          ~ "TAS",
         
         tolower(venue) == "traeger park" 
-        | tolower(venue) == "marrara oval"              ~ "NT",
+        | tolower(venue) == "marrara oval"                       ~ "NT",
         
-        tolower(venue) == "manuka oval"                 ~ "ACT",
+        tolower(venue) == "manuka oval"                          ~ "ACT",
         
-        tolower(venue) == "perth stadium"               ~ "WA",
+        tolower(venue) == "perth stadium"
+        | tolower(venue) == "subiaco oval"                       ~ "WA",
         
-        tolower(venue) == "kardinia park"               ~ "GEE",
+        tolower(venue) == "kardinia park"                        ~ "GEE",
         
-        tolower(venue) == "jiangwan stadium"            ~ "Other",
-        T                                               ~ "VIC"
+        tolower(venue) %in% c(
+            "jiangwan stadium",
+            "wellington regional stadium"
+        )                                                        ~ "Other",
+        T                                                        ~ "VIC"
     )  
     
 }
@@ -223,7 +232,7 @@ elo_run <- function(elo_df, k, hga_vec, regress) {
         } else if (location == "TAS") {
             hga <- hga_vec["hga_tas"]
         } else {
-            hga <- hga_vec["hga_other"]
+            hga <- 0
         }
         
         score_expected_1 <- score_expected(

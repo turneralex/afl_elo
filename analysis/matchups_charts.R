@@ -63,45 +63,11 @@ afl_ladder <- afl_ladder %>%
 afl_ladder %>% 
     print()
 
-# add ladder position to team stats table
-
-team_stats <- team_stats %>% 
-    inner_join(
-        afl_ladder,
-        by = "team"
-    ) %>% 
-    mutate(
-        team_position = case_when(
-            ladder_position == 1 ~ paste0(ladder_position, "st: ", team),
-            ladder_position == 2 ~ paste0(ladder_position, "nd: ", team),
-            ladder_position == 3 ~ paste0(ladder_position, "rd: ", team),
-            T                    ~ paste0(ladder_position, "th: ", team)
-        )
-    ) 
-
 # generate elo predictions for next round
 
 afl_elo_pred_base <- afl_elo %>% 
     filter(
         season == current_season
-    ) %>% 
-    inner_join(
-        afl_ladder,
-        by = "team"
-    ) %>% 
-    mutate(
-        elo_rank = case_when(
-            rank(-start_elo) == 1 ~ paste0(rank(-start_elo), "st"),
-            rank(-start_elo) == 2 ~ paste0(rank(-start_elo), "nd"),
-            rank(-start_elo) == 3 ~ paste0(rank(-start_elo), "rd"),
-            T ~                     paste0(rank(-start_elo), "th")
-        ),
-        ladder_position = case_when(
-            ladder_position == 1 ~ paste0(ladder_position, "st"),
-            ladder_position == 2 ~ paste0(ladder_position, "nd"),
-            ladder_position == 3 ~ paste0(ladder_position, "rd"),
-            T ~                    paste0(ladder_position, "th")
-        )
     ) %>% 
     modelr::add_predictions(
         model = afl_win_prob_model,
@@ -131,8 +97,6 @@ afl_elo_pred_base <- afl_elo %>%
     mutate(
         away_team = lead(team, n = 1),
         away_elo = lead(start_elo, n = 1),
-        away_ladder_position = lead(ladder_position, n = 1),
-        away_elo_rank = lead(elo_rank, n = 1),
         away_pred_win_prob = lead(pred_win_prob, n = 1),
         away_margin = lead(margin, n = 1),
         away_pred_margin = lead(pred_margin, n = 1)
@@ -150,10 +114,6 @@ afl_elo_pred_base <- afl_elo %>%
         home_elo = start_elo, 
         away_elo, 
         score_expected,
-        home_elo_rank = elo_rank,
-        away_elo_rank,
-        home_ladder_position = ladder_position,
-        away_ladder_position,
         correct_tip,
         pred_win_prob,
         away_pred_win_prob,

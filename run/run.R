@@ -11,12 +11,8 @@ if (exists("current_season")) {
     source(
         here::here(
             "utils",
-            "fixture scripts",
-            paste0(
-                "fixture_",
-                current_season,
-                ".R"
-            )
+            "fixture_scripts",
+            "fixture_current.R"
         )
     )
     
@@ -24,7 +20,7 @@ if (exists("current_season")) {
 source(
     here::here(
         "utils", 
-        "fixture scripts", 
+        "fixture_scripts", 
         "fixture_all.R"
     )
 )
@@ -53,6 +49,7 @@ seasons_exclude <- c("2010", "2011")
 afl_elo <- afl_fixture_all %>% 
     filter(
         !(season %in% seasons_exclude)
+        & !is.na(home_team)
     ) %>%
     left_join(
         afl_venues_all %>% 
@@ -70,15 +67,21 @@ afl_elo <- afl_fixture_all %>%
         home_score_adjusted = (home_goals + home_behinds) / (home_goals + home_behinds + away_goals + away_behinds),
         home_margin = home_score - away_score,
         hga_app = purrr::pmap_int(
-            list(season, venue, home_team, away_team), 
-            is_home, 
-            data_venues = afl_venues_all, 
+            .l = list(
+                venue, 
+                home_team, 
+                away_team
+            ), 
+            .f = is_home, 
+            data_venues = afl_venues_all,
             data_fixture = afl_fixture_all
         )
     ) %>%
     select(
         season, 
-        round, 
+        round_number,
+        round,
+        round_name,
         match_id, 
         venue, 
         location, 
@@ -105,7 +108,9 @@ afl_elo <- afl_fixture_all %>%
     ungroup() %>% 
     select(
         season, 
-        round, 
+        round_number,
+        round,
+        round_name,
         match_id, 
         team_match_id,
         venue, 
