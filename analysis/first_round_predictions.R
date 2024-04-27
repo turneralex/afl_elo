@@ -3,7 +3,7 @@
 afl_elo_pred <- afl_elo %>% 
     filter(
         season == current_season
-        & round == paste("Round", rounds_so_far + 1)
+        & round_number == rounds_so_far + 1
     ) %>% 
     modelr::add_predictions(
         model = afl_win_prob_model,
@@ -53,20 +53,15 @@ afl_elo_pred <- afl_elo %>%
             home_team,
             away_team
         ),
-        pred_winner_win_prob = round(
-            if_else(
-                elo_diff_hga > 0,
-                pred_win_prob,
-                away_pred_win_prob
-            ),
-            2
+        pred_winner_win_prob = if_else(
+            elo_diff_hga > 0,
+            pred_win_prob,
+            away_pred_win_prob
         ),
-        pred_winner_margin = round(
-            if_else(
-                elo_diff_hga > 0,
-                pred_margin,
-                away_pred_margin
-            )
+        pred_winner_margin = if_else(
+            elo_diff_hga > 0,
+            pred_margin,
+            away_pred_margin
         )
     ) %>% 
     select(
@@ -78,4 +73,22 @@ afl_elo_pred <- afl_elo %>%
         pred_winner_win_prob,
         pred_winner_margin
     )
+
+afl_elo_pred %>%
+    mutate(
+        pred_winner_margin = pred_winner_margin %>% 
+            round(),
+        pred_winner_win_prob = pred_winner_win_prob %>% 
+            round(2)
+    ) %>% 
+    select(
+        season,
+        round,
+        home_team,
+        away_team,
+        pred_winner,
+        pred_winner_margin,
+        pred_winner_win_prob
+    ) %>% 
+    print()
 

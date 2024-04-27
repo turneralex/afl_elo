@@ -5,7 +5,7 @@ library(ggplot2)
 
 # chart
 
-plot_title <- "Team rating rating by round"
+plot_title <- "Team rating by round"
 plot_subtitle <- paste("Season:", current_season)
 x_axis_title <- "Round"
 y_axis_title <- "Team rating*"
@@ -15,13 +15,10 @@ plot_caption <- "*Average team rating: 1500
 ratings_trend <- afl_elo %>% 
     filter(
         season == current_season
-        & round %in% paste(
-            "Round", 
-            seq(
-                from = 0,
-                to = rounds_so_far,
-                by = 1
-            )
+        & round_number %in% seq(
+            from = 0,
+            to = rounds_so_far,
+            by = 1
         )
     ) %>%
     mutate(

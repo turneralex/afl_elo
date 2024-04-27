@@ -5,6 +5,8 @@
 # 4. update params_input.txt
 
 library(dplyr)
+library(foreach)
+library(doParallel)
 
 source(
     here::here(
@@ -13,7 +15,7 @@ source(
     )
 )
 
-par_file_name <- "elo_par_new"
+par_file_name <- "elo_par"
 seasons_exclude <- "2011"
 
 afl_venues_all <- readr::read_csv(
@@ -123,13 +125,19 @@ venues_hga <- afl_elo %>%
 
 venues_hga
 
+registerDoParallel(
+    makeCluster(
+        detectCores() - 1
+    )
+)
+
 parameter_optim <- function(elo_df, par) {
     
     library(magrittr)
     
     all_games <- unique(elo_df$match_id)
     
-    for (i in 1:(length(all_games))) {
+    foreach(i = 1:(length(all_games))) %do% {
         
         game <- elo_df[elo_df$match_id == i, ] 
         
@@ -166,6 +174,8 @@ parameter_optim <- function(elo_df, par) {
             hga <- par[8]
         } else if (location == "TAS") {
             hga <- par[9]
+        } else if (location == "ACT") {
+            hga <- par[10]
         } else {
             hga <- 0
         }
@@ -223,9 +233,9 @@ parameter_optim <- function(elo_df, par) {
 }
 
 elo_par <- optim(
-    par = c(50, 0.5, rep(10, 7)),
-    lower = rep(0, 11),
-    upper = c(100, 1, rep(100, 7)),
+    par = c(50, 0.5, rep(10, 8)),
+    lower = rep(0, 12),
+    upper = c(100, 1, rep(100, 8)),
     parameter_optim, 
     elo_df = afl_elo,
     method = "L-BFGS-B"
@@ -241,7 +251,8 @@ elo_par <- optim(
             "hga_sa", 
             "hga_wa", 
             "hga_gee", 
-            "hga_tas"
+            "hga_tas",
+            "hga_act"
         )
     )
 

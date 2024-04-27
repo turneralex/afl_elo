@@ -25,37 +25,37 @@ season,match_id,round_number,round,round_name,date,venue,home_team,away_team,hom
 2024,24,3,Round 3,Round 3,2024-03-29,Perth Stadium,Fremantle,Adelaide,9,15,69,4,10,34
 2024,25,3,Round 3,Round 3,2024-03-30,Docklands Stadium,Essendon,St Kilda,10,11,71,9,13,67
 2024,26,3,Round 3,Round 3,2024-03-30,Adelaide Oval,Port Adelaide,Melbourne,13,11,89,15,6,96
-2024,27,3,Round 3,Round 3,2024-03-31,Docklands Stadium,Western Bulldogs,West Coast,NA,NA,NA,NA,NA,NA
-2024,28,3,Round 3,Round 3,2024-03-31,MCG,Richmond,Sydney,NA,NA,NA,NA,NA,NA
-2024,29,3,Round 3,Round 3,2024-04-01,MCG,Hawthorn,Geelong,NA,NA,NA,NA,NA,NA
-2024,30,4,Round 4,Round 4,2024-04-04,Adelaide Oval,Adelaide,Melbourne,NA,NA,NA,NA,NA,NA
-2024,31,4,Round 4,Round 4,2024-04-05,Norwood Oval,Brisbane,North Melbourne,NA,NA,NA,NA,NA,NA
-2024,32,4,Round 4,Round 4,2024-04-05,Adelaide Oval,Port Adelaide,Essendon,NA,NA,NA,NA,NA,NA
-2024,33,4,Round 4,Round 4,2024-04-06,Adelaide Hills,West Coast,Sydney,NA,NA,NA,NA,NA,NA
-2024,34,4,Round 4,Round 4,2024-04-06,Adelaide Oval,Fremantle,Carlton,NA,NA,NA,NA,NA,NA
-2024,35,4,Round 4,Round 4,2024-04-06,Adelaide Oval,Western Bulldogs,Geelong,NA,NA,NA,NA,NA,NA
-2024,36,4,Round 4,Round 4,2024-04-07,Adelaide Hills,Gold Coast,GWS,NA,NA,NA,NA,NA,NA
-2024,37,4,Round 4,Round 4,2024-04-07,Norwood Oval,Richmond,St Kilda,NA,NA,NA,NA,NA,NA
-2024,38,4,Round 4,Round 4,2024-04-07,Adelaide Oval,Collingwood,Hawthorn,NA,NA,NA,NA,NA,NA
-2024,39,5,Round 5,Round 5,2024-04-11,MCG,Melbourne,Brisbane,NA,NA,NA,NA,NA,NA
-2024,40,5,Round 5,Round 5,2024-04-12,Docklands Stadium,Western Bulldogs,Essendon,NA,NA,NA,NA,NA,NA
-2024,41,5,Round 5,Round 5,2024-04-13,Manuka Oval,GWS,St Kilda,NA,NA,NA,NA,NA,NA
-2024,42,5,Round 5,Round 5,2024-04-13,Docklands Stadium,Carlton,Adelaide,NA,NA,NA,NA,NA,NA
-2024,43,5,Round 5,Round 5,2024-04-13,Carrara Stadium,Gold Coast,Hawthorn,NA,NA,NA,NA,NA,NA
-2024,44,5,Round 5,Round 5,2024-04-13,Adelaide Oval,Port Adelaide,Fremantle,NA,NA,NA,NA,NA,NA
-2024,45,5,Round 5,Round 5,2024-04-14,Kardinia Park,Geelong,North Melbourne,NA,NA,NA,NA,NA,NA
-2024,46,5,Round 5,Round 5,2024-04-14,Perth Stadium,West Coast,Richmond,NA,NA,NA,NA,NA,NA
-2024,47,6,Round 6,Round 6,2024-04-18,Docklands Stadium,St Kilda,Western Bulldogs,NA,NA,NA,NA,NA,NA
-2024,48,6,Round 6,Round 6,2024-04-19,Adelaide Oval,Adelaide,Essendon,NA,NA,NA,NA,NA,NA
-2024,49,6,Round 6,Round 6,2024-04-20,MCG,Collingwood,Port Adelaide,NA,NA,NA,NA,NA,NA
-2024,50,6,Round 6,Round 6,2024-04-20,Docklands Stadium,Carlton,GWS,NA,NA,NA,NA,NA,NA
-2024,51,6,Round 6,Round 6,2024-04-20,Gabba,Brisbane,Geelong,NA,NA,NA,NA,NA,NA
-2024,52,6,Round 6,Round 6,2024-04-20,Perth Stadium,West Coast,Fremantle,NA,NA,NA,NA,NA,NA
-2024,53,6,Round 6,Round 6,2024-04-21,SCG,Sydney,Gold Coast,NA,NA,NA,NA,NA,NA
-2024,54,6,Round 6,Round 6,2024-04-21,Docklands Stadium,North Melbourne,Hawthorn,NA,NA,NA,NA,NA,NA
-2024,55,7,Round 7,Round 7,2024-04-24,MCG,Richmond,Melbourne,NA,NA,NA,NA,NA,NA
-2024,56,7,Round 7,Round 7,2024-04-25,MCG,Essendon,Collingwood,NA,NA,NA,NA,NA,NA
-2024,57,7,Round 7,Round 7,2024-04-25,Manuka Oval,GWS,Brisbane,NA,NA,NA,NA,NA,NA
+2024,27,3,Round 3,Round 3,2024-03-31,Docklands Stadium,Western Bulldogs,West Coast,16,10,106,3,12,30
+2024,28,3,Round 3,Round 3,2024-03-31,MCG,Richmond,Sydney,11,16,82,11,11,77
+2024,29,3,Round 3,Round 3,2024-04-01,MCG,Hawthorn,Geelong,10,10,70,17,4,106
+2024,30,4,Round 4,Round 4,2024-04-04,Adelaide Oval,Adelaide,Melbourne,8,15,63,10,18,78
+2024,31,4,Round 4,Round 4,2024-04-05,Norwood Oval,Brisbane,North Melbourne,16,16,112,6,6,42
+2024,32,4,Round 4,Round 4,2024-04-05,Adelaide Oval,Port Adelaide,Essendon,17,9,111,6,6,42
+2024,33,4,Round 4,Round 4,2024-04-06,Adelaide Hills,West Coast,Sydney,11,12,78,15,14,104
+2024,34,4,Round 4,Round 4,2024-04-06,Adelaide Oval,Fremantle,Carlton,9,9,63,10,13,73
+2024,35,4,Round 4,Round 4,2024-04-06,Adelaide Oval,Western Bulldogs,Geelong,14,7,91,14,11,95
+2024,36,4,Round 4,Round 4,2024-04-07,Adelaide Hills,Gold Coast,GWS,13,11,89,18,9,117
+2024,37,4,Round 4,Round 4,2024-04-07,Norwood Oval,Richmond,St Kilda,9,6,60,9,13,67
+2024,38,4,Round 4,Round 4,2024-04-07,Adelaide Oval,Collingwood,Hawthorn,11,11,77,11,6,72
+2024,39,5,Round 5,Round 5,2024-04-11,MCG,Melbourne,Brisbane,8,12,60,12,10,82
+2024,40,5,Round 5,Round 5,2024-04-12,Docklands Stadium,Western Bulldogs,Essendon,9,13,67,15,6,96
+2024,41,5,Round 5,Round 5,2024-04-13,Manuka Oval,GWS,St Kilda,11,14,80,12,7,79
+2024,42,5,Round 5,Round 5,2024-04-13,Docklands Stadium,Carlton,Adelaide,14,14,98,16,4,100
+2024,43,5,Round 5,Round 5,2024-04-13,Carrara Stadium,Gold Coast,Hawthorn,16,13,109,8,8,56
+2024,44,5,Round 5,Round 5,2024-04-13,Adelaide Oval,Port Adelaide,Fremantle,9,12,66,9,9,63
+2024,45,5,Round 5,Round 5,2024-04-14,Kardinia Park,Geelong,North Melbourne,21,13,139,10,4,64
+2024,46,5,Round 5,Round 5,2024-04-14,Perth Stadium,West Coast,Richmond,16,13,109,10,10,70
+2024,47,6,Round 6,Round 6,2024-04-18,Docklands Stadium,St Kilda,Western Bulldogs,9,10,64,19,10,124
+2024,48,6,Round 6,Round 6,2024-04-19,Adelaide Oval,Adelaide,Essendon,11,9,75,10,18,78
+2024,49,6,Round 6,Round 6,2024-04-20,MCG,Collingwood,Port Adelaide,17,21,123,12,9,81
+2024,50,6,Round 6,Round 6,2024-04-20,Docklands Stadium,Carlton,GWS,17,15,117,15,8,98
+2024,51,6,Round 6,Round 6,2024-04-20,Gabba,Brisbane,Geelong,4,13,37,9,9,63
+2024,52,6,Round 6,Round 6,2024-04-20,Perth Stadium,West Coast,Fremantle,16,9,105,10,8,68
+2024,53,6,Round 6,Round 6,2024-04-21,SCG,Sydney,Gold Coast,17,8,110,8,9,57
+2024,54,6,Round 6,Round 6,2024-04-21,Docklands Stadium,North Melbourne,Hawthorn,10,8,68,17,11,113
+2024,55,7,Round 7,Round 7,2024-04-24,MCG,Richmond,Melbourne,5,12,42,13,7,85
+2024,56,7,Round 7,Round 7,2024-04-25,MCG,Essendon,Collingwood,12,13,85,12,13,85
+2024,57,7,Round 7,Round 7,2024-04-25,Manuka Oval,GWS,Brisbane,8,4,52,6,8,44
 2024,58,7,Round 7,Round 7,2024-04-26,Adelaide Oval,Port Adelaide,St Kilda,NA,NA,NA,NA,NA,NA
 2024,59,7,Round 7,Round 7,2024-04-27,Bellerive Oval,North Melbourne,Adelaide,NA,NA,NA,NA,NA,NA
 2024,60,7,Round 7,Round 7,2024-04-27,MCG,Geelong,Carlton,NA,NA,NA,NA,NA,NA

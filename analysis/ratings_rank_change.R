@@ -33,6 +33,7 @@ afl_elo_rank_change <- afl_elo %>%
     select(
         season,
         round, 
+        round_number,
         team, 
         start_elo, 
         new_elo,
@@ -56,3 +57,13 @@ afl_elo_rank_change <- afl_elo %>%
             team
         )
     ) 
+
+afl_elo_rank_change %>% 
+    mutate(round = rounds_so_far) %>% 
+    select(
+        season,
+        round,
+        team,
+        score = new_elo
+    ) %>% 
+    print()

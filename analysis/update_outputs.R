@@ -14,10 +14,13 @@ start_season <- "2012" # ensure consistency with optim.R
 # note: at the beginning of start_season, all team ratings will be set to the average of 1500
 current_season <- "2024"
 prev_season <- "2023"
-rounds_so_far <- 2 # set as -1 for pre-season
-round_name <- "Round 2" # name of round just completed
+rounds_so_far <- 6 # set as -1 for pre-season
+round_concluded <- paste(
+    "Round",
+    rounds_so_far
+)
 first_round <- F
-compare_change_start_season <- T # if F, then changes is vs. 5 games ago by team
+compare_change_start_season <- F # if F, then changes is vs. 5 games ago by team
 upload_squiggle <- F
 
 # create folder for charts
@@ -32,7 +35,7 @@ dir.create(path = season_path)
 
 round_path <- paste(
     season_path,
-    round_name,
+    round_concluded,
     sep = "/"
 )
 
@@ -68,21 +71,12 @@ if (first_round) {
     
 } else {
     
-    # prep matchup data
+    # rest of season predictions
     
     source(
         here::here(
             "analysis", 
-            "matchups_data.R"
-        )
-    ) 
-    
-    # create matchup charts
-    
-    source(
-        here::here(
-            "analysis", 
-            "matchups_charts.R"
+            "season_predictions.R"
         )
     ) 
     
@@ -105,6 +99,15 @@ if (upload_squiggle) {
         upload_tips_squiggle(drive_id = "1Aqkhb5uV-qU7b1Zm2k2KA6M05rpNDEFps1MwPaU3QaM")
     
 }
+
+# matchup tables
+
+source(
+    here::here(
+        "analysis", 
+        "matchups_tables.R"
+    )
+) 
 
 # ratings rank & change data frame
 
@@ -169,6 +172,24 @@ source(
     )
 ) 
 
+# pred vs. actual wins
+
+source(
+    here::here(
+        "analysis", 
+        "pred_actual_wins_table.R"
+    )
+) 
+
+# round model performance
+
+source(
+    here::here(
+        "analysis", 
+        "round_model_performance_table.R"
+    )
+) 
+
 # save charts
 
 purrr::map2(
@@ -187,8 +208,6 @@ purrr::map2(
     ~ ggsave(
         plot = .x,
         filename = paste0(
-            round_name,
-            "_",
             .y,
             ".png"
         ),
@@ -196,7 +215,7 @@ purrr::map2(
             "files",
             "charts", 
             current_season,
-            round_name
+            round_concluded
         ),
         width = 25,
         height = 25,
@@ -218,7 +237,7 @@ afl_elo_pred_base %>%
             na.rm = T
         ),
         mae = mean(
-            abs(pred_winner_margin - margin),
+            abs(home_pred_margin - home_margin),
             na.rm = T
         )
     )

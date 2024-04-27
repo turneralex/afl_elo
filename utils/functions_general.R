@@ -191,10 +191,11 @@ venue_location <- function(venue) {
 elo_run <- function(elo_df, k, hga_vec, regress) {
     
     library(magrittr)
+    library(foreach)
     
     all_games <- unique(elo_df$match_id)
     
-    for (i in 1:(length(all_games))) {
+    foreach(i = 1:(length(all_games))) %do% {
         
         game <- elo_df[elo_df$match_id == i, ] 
         
@@ -231,6 +232,8 @@ elo_run <- function(elo_df, k, hga_vec, regress) {
             hga <- hga_vec["hga_gee"]
         } else if (location == "TAS") {
             hga <- hga_vec["hga_tas"]
+        } else if (location == "ACT") {
+            hga <- hga_vec["hga_act"]
         } else {
             hga <- 0
         }
