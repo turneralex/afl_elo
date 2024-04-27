@@ -53,6 +53,7 @@ if (exists("rounds_so_far")) {
         afl_fixture %>% 
             filter(
                 round_number == rounds_so_far
+                & !is.na(home_score)
             ) %>% 
             select(
                 home_team,

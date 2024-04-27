@@ -1,37 +1,11 @@
 library(dplyr)
 library(ggplot2)
 
-# team logos
-
-team_logos <- team_stats_base_adj %>% 
-    select(team) %>% 
-    mutate(
-        logo = here::here(
-            "files",
-            "team_logos",
-            paste0(
-                team %>% 
-                    stringr::str_remove_all(pattern = " ") %>% 
-                    tolower(),
-                ".png"
-            )
-        )
-    )
-
 plot_title <- "Team rating quadrants - is your team good & are they trending in the right direction?"
-plot_subtitle <- if (compare_change_start_season) {
-    paste0(
-        "Season: ", 
-        current_season,
-        "\nTrend comparison: vs. start of season"
-    )
-} else {
-    paste0(
-        "Season: ", 
-        current_season,
-        "\nTrend comparison: vs. 5 games ago"
-    )
-} 
+plot_subtitle <- paste0(
+    "Season: ", 
+    current_season
+)
 x_axis_title <- "Team rating vs. average*"
 y_axis_title <- if (compare_change_start_season) {
     "Team rating change vs. start of season"
@@ -70,6 +44,9 @@ plus_minus_prev_high <- afl_elo_rank_change %>%
     max() * 0.5
 
 ratings_quadrants <- afl_elo_rank_change %>% 
+    # filter(
+    #   !(team %in% c("North Melbourne"))
+    # ) %>%
     inner_join(
         team_logos,
         by = "team"
@@ -101,7 +78,7 @@ ratings_quadrants <- afl_elo_rank_change %>%
         aes(
             x = plus_minus_avg_high,
             y = plus_minus_prev_high,
-            label = "Happiness"
+            label = "Joy"
         ),
         size = 12,
         colour = "grey"
