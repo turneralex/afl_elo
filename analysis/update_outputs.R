@@ -229,10 +229,10 @@ afl_elo_pred_base %>%
     summarise(
         correct_tips = sum(correct_tip, na.rm = T),
         bits = sum(
-            if_else(
-                correct_tip == 1,
-                1 + log2(pred_winner_win_prob),
-                1 + log2(1 - pred_winner_win_prob)
+            case_when(
+                home_margin == 0 ~ 1 + (0.5 * log2(pred_winner_win_prob * (1 - pred_winner_win_prob))),
+                correct_tip == 1 ~ 1 + log2(pred_winner_win_prob),
+                T                ~ 1 + log2(1 - pred_winner_win_prob)
             ),
             na.rm = T
         ),

@@ -26,6 +26,26 @@ afl_elo_rank_change <- afl_elo %>%
             new_elo,
             n = 5,
             default = 1500
+        ),
+        elo_prev_4_games = lag(
+            new_elo,
+            n = 4,
+            default = 1500
+        ),
+        elo_prev_3_games = lag(
+            new_elo,
+            n = 3,
+            default = 1500
+        ),
+        elo_prev_2_games = lag(
+            new_elo,
+            n = 2,
+            default = 1500
+        ),
+        elo_prev_1_games = lag(
+            new_elo,
+            n = 1,
+            default = 1500
         )
     ) %>% 
     slice(n()) %>% 
@@ -38,13 +58,25 @@ afl_elo_rank_change <- afl_elo %>%
         start_elo, 
         new_elo,
         last_elo_prev_season,
-        elo_prev_5_games
+        elo_prev_5_games,
+        elo_prev_4_games,
+        elo_prev_3_games,
+        elo_prev_2_games,
+        elo_prev_1_games
     ) %>% 
     mutate(
         plus_minus_avg = new_elo - 1500,
         plus_minus_prev_week = new_elo - start_elo,
         plus_minus_prev_season = new_elo - last_elo_prev_season,
-        plus_minus_prev_5_games = new_elo - elo_prev_5_games
+        plus_minus_prev_5_games = new_elo - (
+            (
+                elo_prev_5_games
+                + (elo_prev_4_games * 2)
+                + (elo_prev_3_games * 3)
+                + (elo_prev_2_games * 4)
+                + (elo_prev_1_games  * 5)
+            ) / 15
+        ) 
     ) %>% 
     arrange(-plus_minus_prev_week) %>% 
     mutate(elo_position_prev = row_number()) %>% 

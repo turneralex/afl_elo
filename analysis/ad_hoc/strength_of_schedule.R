@@ -1,10 +1,10 @@
 library(dplyr)
 library(ggplot2)
 
-# start_season <- "2022" # optional
+start_season <- "2012" # optional
 # note: at the beginning of start_season, all team ratings will be set to the average of 1500
-current_season <- "2023"
-rounds_so_far <- 24 # rounds to use in analysis
+current_season <- "2024"
+rounds_so_far <- 23 # rounds to use in analysis
 
 # run the elo model
 
@@ -51,26 +51,29 @@ afl_sos <- afl_elo %>%
             location == "WA"  ~ hga_app * elo_par["hga_wa"],
             location == "GEE" ~ hga_app * elo_par["hga_gee"],
             location == "TAS" ~ hga_app * elo_par["hga_tas"],
-            T                 ~ hga_app * elo_par["hga_other"]
+            location == "ACT" ~ hga_app * elo_par["hga_act"],
+            T                 ~ 0
         ),
         opp_elo_hga = opp_elo - hga
     ) %>% 
     group_by(team) %>% 
     summarise(
-        opp_elo_avg = mean(opp_elo),
+        opp_elo_avg = mean(opp_elo, na.rm = T),
         hga_home_avg = mean(
             if_else(
                 hga_app == 1,
                 hga,
                 0
-            )
+            ),
+            na.rm = T
         ),
         hga_away_avg = mean(
             if_else(
                 hga_app == -1,
                 hga,
                 0
-            )
+            ),
+            na.rm = T
         )
     ) %>% 
     mutate(
@@ -90,9 +93,7 @@ afl_sos <- afl_elo %>%
         var = "pred_margin",
         type = "response"
     ) %>% 
-    arrange(
-        desc(pred_margin)
-    ) %>% 
+    arrange(pred_margin) %>% 
     mutate(
         elo_position_avg = row_number(),
         elo_position_team_avg = paste0(
@@ -105,15 +106,21 @@ afl_sos <- afl_elo %>%
 # chart
 
 plot_title <- if (sos_type == "hga") {
-    "Strength of schedule - based on venue only"
+    "Strength of schedule - based on HGA only"
 } else if (sos_type == "opp") {
-    "Strength of schedule - based on opponent team rating only"
+    "Strength of schedule so far - based on opponent team rating only"
 } else if (sos_type == "both") {
-    "Strength of schedule - based on opponent team rating & venue"
+    "Strength of schedule so far - based on opponent team rating & HGA"
 }
-plot_subtitle <- paste("Season:", current_season)
+# plot_subtitle <- paste0(
+#     "Rounds 1-",
+#     rounds_so_far,
+#     " inclusive, ",
+#     current_season
+# )
+plot_subtitle <- "2024 regular season"
 x_axis_title <- "Team & rank"
-y_axis_title <- "Average points gained per match from schedule"
+y_axis_title <- "Average points gained or lost per match from schedule"
 plot_caption <- "Created by: footycharts"
 
 afl_sos %>% 
@@ -134,14 +141,20 @@ afl_sos %>%
                 .f = elo_position_team_avg, 
                 .x = elo_position_avg
             ), 
-            y = pred_margin + if_else(pred_margin > 0, 0.25, -0.25),
+            y = pred_margin + if_else(pred_margin > 0, 0.4, -0.4),
             label = round(pred_margin, 1)
         ),
         size = 5
     ) +
     geom_hline(yintercept = 0) +
     coord_flip() +
-    scale_fill_gradient(low = "firebrick1", high = "seagreen3") +
+    scale_fill_gradientn(
+        colors = c(
+            "firebrick1",
+            "white",
+            "cornflowerblue"
+        )
+    ) +
     labs(
         title = plot_title,
         subtitle = plot_subtitle,

@@ -56,10 +56,10 @@ afl_round_model_performance <- afl_elo_pred_base %>%
             round(home_pred_margin - home_margin)
         ),
         home_pred_margin = round(home_pred_margin),
-        bits = if_else(
-            correct_tip == 1,
-            1 + log2(pred_winner_win_prob),
-            1 + log2(1 - pred_winner_win_prob)
+        bits = case_when(
+            home_margin == 0 ~ 1 + (0.5 * log2(pred_winner_win_prob * (1 - pred_winner_win_prob))),
+            correct_tip == 1 ~ 1 + log2(pred_winner_win_prob),
+            T                ~ 1 + log2(1 - pred_winner_win_prob)
         ) %>% 
             round(2),
         home_winner = if_else(

@@ -42,7 +42,6 @@ ratings_trend <- afl_elo %>%
         colour = "firebrick1", 
         alpha = 0.8
     ) +
-    geom_point() + 
     geom_line() +
     facet_wrap(
         . ~ team, 
