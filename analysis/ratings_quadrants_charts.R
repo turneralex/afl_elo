@@ -10,7 +10,7 @@ x_axis_title <- "Team rating vs. average*"
 y_axis_title <- if (compare_change_start_season) {
     "Team rating change vs. start of season"
 } else {
-    "Team rating change over last 5 games"
+    "Weighted average team rating change over the past 5 matches"
 } 
 plot_caption <- "*Average team rating: 1500
                 Created by: footycharts"

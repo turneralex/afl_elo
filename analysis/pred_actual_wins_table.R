@@ -22,10 +22,10 @@ afl_pred_actual_wins <- afl_elo %>%
         type = "response"
     ) %>% 
     mutate(
-        win_flag = if_else(
-            margin > 0,
-            1,
-            0
+        result = case_when(
+            margin == 0 ~ 0.5,
+            margin >= 1 ~ 1,
+            T           ~ 0
         )
     ) %>% 
     group_by(
@@ -33,7 +33,8 @@ afl_pred_actual_wins <- afl_elo %>%
         logo
     ) %>% 
     summarise(
-        actual_wins = sum(win_flag),
+        matches = n(),
+        actual_wins = sum(result),
         pred_wins = sum(pred_win_prob) %>% 
             round(1)
     ) %>% 
@@ -46,6 +47,15 @@ afl_pred_actual_wins <- afl_elo %>%
     ) %>% 
     arrange(
         desc(pred_wins)
+    ) %>% 
+    mutate(
+        ladder_position = case_when(
+            row_number() == 1 ~ paste0(row_number(), "st"),
+            row_number() == 2 ~ paste0(row_number(), "nd"),
+            row_number() == 3 ~ paste0(row_number(), "rd"),
+            T                 ~ paste0(row_number(), "th")
+        ),
+        .before = everything()
     ) %>% 
     gt() %>% 
     cols_hide(columns = team) %>% 
@@ -76,19 +86,25 @@ afl_pred_actual_wins <- afl_elo %>%
         )
     ) %>%
     cols_label(
-        logo = md("Team<sup>1</sup>"),
+        ladder_position = md("Position<sup>1</sup>"),
+        logo = "Team",
+        matches = "Matches",
         actual_wins = "Actual",
         pred_wins = md("Model<sup>2</sup>"),
         wins_diff = "Difference"
     ) %>%
     tab_footnote(
-        footnote = md("<sup>1</sup>Sorted by: model wins<br><sup>2</sup>Model wins: the sum of the expected win % for each game, based on scoring shots"
+        footnote = md("<sup>1</sup>Ranked by: model wins<br><sup>2</sup>Model wins: the sum of the expected win % for each game, based on scoring shots"
         )
     ) %>% 
     data_color(
         columns = wins_diff,
         method = "numeric",
-        palette = c("tomato", "white", "cornflowerblue")
+        palette = c(
+            "tomato", 
+            "white", 
+            "cornflowerblue"
+        )
     ) %>% 
     cols_align(align = "center") %>% 
     tab_style(

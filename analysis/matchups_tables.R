@@ -59,9 +59,10 @@ afl_elo_matchups <- afl_elo_pred %>%
             round(away_elo)
         ),
         pred_winner_win_prob = paste0(
-            pred_winner_win_prob * 100,
+            round(pred_winner_win_prob * 100),
             "%"
-        )
+        ),
+        pred_winner_margin = round(pred_winner_margin)
     ) %>% 
     select(
         matchup,

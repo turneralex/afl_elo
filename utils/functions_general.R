@@ -74,18 +74,28 @@ is_home <- function(game_venue, game_home_team, game_away_team, data_venues, dat
 change_team_name <- function(team) {
     
     dplyr::case_when(
-        tolower(team) == "adelaide crows"    ~ "Adelaide",
-        tolower(team) == "brisbane lions"    ~ "Brisbane",
-        tolower(team) == "geelong cats"      ~ "Geelong",
-        tolower(team) == "gold coast suns"   ~ "Gold Coast",
+        tolower(team) %in% c(
+            "adelaide crows",
+            "kuwarna"
+        )                                  ~ "Adelaide",
+        tolower(team) == "brisbane lions"  ~ "Brisbane",
+        tolower(team) == "geelong cats"    ~ "Geelong",
+        tolower(team) == "gold coast suns" ~ "Gold Coast",
         tolower(team) %in% c(
             "greater western sydney",
             "gws giants" 
-        )                                    ~ "GWS",
-        tolower(team) == "sydney swans"      ~ "Sydney",
-        tolower(team) == "west coast eagles" ~ "West Coast",
-        tolower(team) == "footscray"         ~ "Western Bulldogs",
-        T                                    ~ team
+        )                                  ~ "GWS",
+        tolower(team) == "sydney swans"    ~ "Sydney",
+        tolower(team) %in% c(
+            "west coast eagles",
+            "waalitj marawar"
+        )                                  ~ "West Coast",
+        tolower(team) == "footscray"       ~ "Western Bulldogs",
+        tolower(team) == "narrm"           ~ "Melbourne",
+        tolower(team) == "yartapuulti"     ~ "Port Adelaide",
+        tolower(team) == "walyalup"        ~ "Fremantle",
+        tolower(team) == "euro-yroke"      ~ "St Kilda",
+        T                                  ~ team
     )
     
 }

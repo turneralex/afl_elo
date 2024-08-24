@@ -19,14 +19,15 @@ afl_fixture <- purrr::map_df(
 
 # create data frame of start time & count
 
-afl_start_times <- afl_fixture %>% 
+afl_start_times_base <- afl_fixture %>% 
   filter(
-    !(year == 2024 & round > 15)
+    !(year == 2024 & round > 23)
     & !(year == 2023 & round > 24)
     & !(year == 2022 & round > 23)
   ) %>% 
   select(
     year, 
+    round,
     date
   ) %>% 
   tidyr::separate(
@@ -40,7 +41,9 @@ afl_start_times <- afl_fixture %>%
       start = 1,
       end = 5
     )
-  ) %>% 
+  ) 
+
+afl_start_times <- afl_start_times_base %>% 
   group_by(year) %>% 
   count(time) %>% 
   ungroup() 
@@ -74,6 +77,11 @@ afl_start_times %>%
   # count() %>% 
   # ungroup()
 
+afl_start_times_base %>% 
+    filter(
+        time == "20:30"
+    )
+
 # create chart
 
 plot_title <- "AFL game start time frequency"
@@ -81,10 +89,10 @@ plot_subtitle <- "Regular season games only"
 x_axis_title <- "Start time*"
 y_axis_title <- "Number of games^"
 plot_caption <- "*All times in AEST / AEDT
-                ^2024 to Round 15 only
+                ^2024 excludes the Round 24 floating fixture
                 Created by: footycharts"
 
-order_by_time <- T
+order_by_time <- F
 
 afl_start_times %>% 
   ggplot(
