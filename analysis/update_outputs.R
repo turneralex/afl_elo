@@ -1,19 +1,18 @@
 # new season checklist:
 # 1. update & run fixture_history.R
-# 2. update fixture_current.R
-# 3. run optim.R 
-# 4. create current season fixture & check mapping functions are up to date
-# 5. run below script
-# 6. run utils/qa_checks.R after running the model (run.R)
+# 2. run optim.R 
+# 3. create current season fixture & check mapping functions are up to date
+# 4. run below script
+# 5. run utils/qa_checks.R after running the model (run.R)
 
 library(dplyr)
 
 # current season & round
 
-start_season <- "2012" # ensure consistency with optim.R
+start_season <- "1990" # ensure consistency with optim.R
 # note: at the beginning of start_season, all team ratings will be set to the average of 1500
-current_season <- "2024"
-prev_season <- "2023"
+current_season <- "2025"
+prev_season <- "2024"
 rounds_so_far <- 6 # set as -1 for pre-season
 round_concluded <- paste(
     "Round",
@@ -21,7 +20,7 @@ round_concluded <- paste(
 )
 first_round <- F
 compare_change_start_season <- F # if F, then changes is vs. 5 games ago by team
-upload_squiggle <- F
+upload_squiggle <- T
 
 # create folder for charts
 
@@ -58,29 +57,14 @@ source(
     )
 ) 
 
-if (first_round) {
-    
-    # first round predictions
-    
-    source(
-        here::here(
-            "analysis", 
-            "first_round_predictions.R"
-        )
-    ) 
-    
-} else {
-    
-    # rest of season predictions
-    
-    source(
-        here::here(
-            "analysis", 
-            "season_predictions.R"
-        )
-    ) 
-    
-}
+# predictions
+
+source(
+    here::here(
+        "analysis", 
+        "season_predictions.R"
+    )
+) 
 
 # provide tips to squiggle
 
@@ -102,12 +86,12 @@ if (upload_squiggle) {
 
 # matchup tables
 
-source(
-    here::here(
-        "analysis", 
-        "matchups_tables.R"
-    )
-) 
+# source(
+#     here::here(
+#         "analysis",
+#         "matchups_tables.R"
+#     )
+# )
 
 # ratings rank & change data frame
 
@@ -181,15 +165,6 @@ source(
     )
 ) 
 
-# round model performance
-
-source(
-    here::here(
-        "analysis", 
-        "round_model_performance_table.R"
-    )
-) 
-
 # save charts
 
 purrr::map2(
@@ -222,22 +197,3 @@ purrr::map2(
         units = "cm"
     )
 )
-
-# model performance
-
-afl_elo_pred_base %>% 
-    summarise(
-        correct_tips = sum(correct_tip, na.rm = T),
-        bits = sum(
-            case_when(
-                home_margin == 0 ~ 1 + (0.5 * log2(pred_winner_win_prob * (1 - pred_winner_win_prob))),
-                correct_tip == 1 ~ 1 + log2(pred_winner_win_prob),
-                T                ~ 1 + log2(1 - pred_winner_win_prob)
-            ),
-            na.rm = T
-        ),
-        mae = mean(
-            abs(home_pred_margin - home_margin),
-            na.rm = T
-        )
-    )

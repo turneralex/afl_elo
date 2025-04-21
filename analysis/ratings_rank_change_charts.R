@@ -10,7 +10,7 @@ ratings_rank <- afl_elo_rank_change %>%
                 .f = elo_position_team_avg, 
                 .x = -elo_position_avg
             ), 
-            y = plus_minus_avg, 
+            y = pred_margin, 
             fill = plus_minus_avg
         )
     ) +
@@ -21,8 +21,8 @@ ratings_rank <- afl_elo_rank_change %>%
                 .f = elo_position_team_avg, 
                 .x = -elo_position_avg
             ), 
-            y = plus_minus_avg + if_else(new_elo > 1500, 4, -4),
-            label = round(new_elo)
+            y = pred_margin + if_else(pred_margin > 0, 2, -2),
+            label = round(pred_margin, 1)
         ),
         size = 5
     ) +
@@ -34,7 +34,7 @@ ratings_rank <- afl_elo_rank_change %>%
         subtitle = paste("Season:", current_season),
         x = "Team & rank",
         y = "Team rating*",
-        caption = "*Average team rating: 1500
+        caption = "*Expected margin vs. league average team on a neutral field
                     Created by: footycharts"
     ) +
     theme_bw() +

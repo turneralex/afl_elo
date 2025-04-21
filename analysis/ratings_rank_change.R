@@ -4,8 +4,8 @@ library(dplyr)
 
 afl_elo_rank_change <- afl_elo %>% 
     filter(
-        !is.na(start_elo)
-        & !is.na(new_elo)
+        team != "Fitzroy"
+        & round_number <= rounds_so_far
     ) %>%
     group_by(
         season,
@@ -21,6 +21,7 @@ afl_elo_rank_change <- afl_elo %>%
     ) %>% 
     group_by(team) %>% 
     mutate(
+        season = current_season,
         last_elo_prev_season = max(last_elo_prev_season),
         elo_prev_5_games = lag(
             new_elo,
@@ -66,6 +67,7 @@ afl_elo_rank_change <- afl_elo %>%
     ) %>% 
     mutate(
         plus_minus_avg = new_elo - 1500,
+        score_expected = score_expected(elo = new_elo, elo_opp = 1500, hga = 0),
         plus_minus_prev_week = new_elo - start_elo,
         plus_minus_prev_season = new_elo - last_elo_prev_season,
         plus_minus_prev_5_games = new_elo - (
@@ -77,6 +79,11 @@ afl_elo_rank_change <- afl_elo %>%
                 + (elo_prev_1_games  * 5)
             ) / 15
         ) 
+    ) %>% 
+    modelr::add_predictions(
+        model = afl_margin_model,
+        var = "pred_margin",
+        type = "response"
     ) %>% 
     arrange(-plus_minus_prev_week) %>% 
     mutate(elo_position_prev = row_number()) %>% 

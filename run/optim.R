@@ -1,8 +1,7 @@
 # instructions:
 # 1. shift elo_par.csv to archive
-# 2. update seasons_exclude
-# 3. run script
-# 4. update params_input.txt
+# 2. run script
+# 3. update params_input.txt
 
 library(dplyr)
 library(foreach)
@@ -15,10 +14,16 @@ source(
     )
 )
 
-par_file_name <- "elo_par"
-seasons_exclude <- "2011"
+score_expected <- function(elo, elo_opp, hga_app, hga) {
+    x <- -(elo - elo_opp + (hga_app * hga))
+    y <- 1 / (1 + 10^(x / 400))
+    
+    return(y)
+}
 
-afl_venues_all <- readr::read_csv(
+par_file_name <- "elo_par_new"
+
+afl_venues_history <- readr::read_csv(
     here::here(
         "files",
         "venues",
@@ -26,26 +31,23 @@ afl_venues_all <- readr::read_csv(
     ),
     col_types = "ccc"
 ) %>% 
-    tidyr::nest(teams = team)
+    tidyr::nest(
+        data_teams = c(team, total_flag, current_flag)
+    )
 
-afl_fixture_all <- readr::read_csv(
+afl_fixture_history <- readr::read_csv(
     here::here(
         "files",
         "fixtures",
         "afl_fixture_history.csv"
     ),
-    col_types = "ciiccDccciiiiii"
+    col_types = "ciicciDccciiiiii"
 ) %>% 
-    filter(
-        !(season %in% seasons_exclude)
-    ) %>% 
-    mutate(
-        match_id = 1:nrow(.)
-    )
+    mutate(match_id = 1:nrow(.))
 
-afl_elo <- afl_fixture_all %>% 
+afl_elo <- afl_fixture_history %>% 
     left_join(
-        afl_venues_all %>% 
+        afl_venues_history %>% 
             distinct(
                 venue,
                 location
@@ -60,11 +62,11 @@ afl_elo <- afl_fixture_all %>%
             .l = list(
                 venue, 
                 home_team, 
-                away_team
+                away_team,
+                season
             ), 
             .f = is_home, 
-            data_venues = afl_venues_all,
-            data_fixture = afl_fixture_all
+            data_venues = afl_venues_history
         )
     ) %>% 
     select(
@@ -115,16 +117,6 @@ afl_elo <- afl_fixture_all %>%
         -home_score_adjusted
     ) 
 
-# check venues the HGA is applicable
-
-venues_hga <- afl_elo %>% 
-    filter(hga_app == 1) %>% 
-    pull(venue) %>% 
-    unique() %>% 
-    sort()
-
-venues_hga
-
 registerDoParallel(
     makeCluster(
         detectCores() - 1
@@ -145,17 +137,30 @@ parameter_optim <- function(elo_df, par) {
         
         row_id <- which(elo_df$match_id == i)[1]
         
-        next_season <- data.table::as.data.table(elo_df) %>% 
+        next_season_home <- data.table::as.data.table(elo_df) %>% 
             .[row_id:nrow(.)] %>% 
             .[, season := lead(season, n = 1, default = current_season), by = team] %>% 
             .[team == game[1, "team"]] %>% 
             .$season %>% 
             .[1]
         
-        if (current_season == next_season) {
-            regress_app <- 0
+        if (current_season == next_season_home) {
+            regress_app_home <- 0
         } else {
-            regress_app <- 1
+            regress_app_home <- 1
+        }
+        
+        next_season_away <- data.table::as.data.table(elo_df) %>% 
+            .[row_id:nrow(.)] %>% 
+            .[, season := lead(season, n = 1, default = current_season), by = team] %>% 
+            .[team == game[2, "team"]] %>% 
+            .$season %>% 
+            .[1]
+        
+        if (current_season == next_season_away) {
+            regress_app_away <- 0
+        } else {
+            regress_app_away <- 1
         }
         
         location <- game$location[1]
@@ -180,44 +185,42 @@ parameter_optim <- function(elo_df, par) {
             hga <- 0
         }
         
-        score_expected_1 <- score_expected(
+        score_expected_home <- score_expected(
             game[1, "start_elo"], 
             game[2, "start_elo"], 
             hga_app = game[1, "hga_app"], 
             hga = hga
         )
         
-        score_expected_2 <- score_expected(
+        score_expected_away <- score_expected(
             game[2, "start_elo"], 
             game[1, "start_elo"], 
             hga_app = game[2, "hga_app"], 
             hga = hga
         )
         
-        elo_df[elo_df$match_id == i, "score_expected"] <- c(score_expected_1, score_expected_2) %>%
+        elo_df[elo_df$match_id == i, "score_expected"] <- c(score_expected_home, score_expected_away) %>%
             unlist()
         
-        new_elo_1 <- elo_update(
+        new_elo_home <- elo_update(
             elo = game[1, "start_elo"],
-            elo_opp = game[2, "start_elo"],
             score_adjusted = game[1, "score_adjusted"],
-            score_expected = score_expected_1,
+            score_expected = score_expected_home,
             k = par[1],
             regress = par[2],
-            regress_app = regress_app
+            regress_app = regress_app_home
         )
         
-        new_elo_2 <- elo_update(
+        new_elo_away <- elo_update(
             elo = game[2, "start_elo"],
-            elo_opp = game[1, "start_elo"],
             score_adjusted = game[2, "score_adjusted"],
-            score_expected = score_expected_2,
+            score_expected = score_expected_away,
             k = par[1],
             regress = par[2],
-            regress_app = regress_app
+            regress_app = regress_app_away
         )
         
-        elo_df[elo_df$match_id == i, "new_elo"] <- c(new_elo_1, new_elo_2) %>%
+        elo_df[elo_df$match_id == i, "new_elo"] <- c(new_elo_home, new_elo_away) %>%
             unlist()
         
         elo_df <- data.table::as.data.table(elo_df) %>%

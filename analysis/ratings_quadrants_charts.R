@@ -1,6 +1,27 @@
 library(dplyr)
 library(ggplot2)
 
+# team logos
+
+if (!exists("team_logos")) {
+    
+    team_logos <- afl_elo %>% 
+        distinct(team) %>% 
+        mutate(
+            logo = here::here(
+                "files",
+                "team_logos",
+                paste0(
+                    team %>% 
+                        stringr::str_remove_all(pattern = " ") %>% 
+                        tolower(),
+                    ".png"
+                )
+            )
+        )
+    
+}
+
 plot_title <- "Team rating quadrants - is your team good & are they trending in the right direction?"
 plot_subtitle <- paste0(
     "Season: ", 
@@ -44,9 +65,6 @@ plus_minus_prev_high <- afl_elo_rank_change %>%
     max() * 0.5
 
 ratings_quadrants <- afl_elo_rank_change %>% 
-    # filter(
-    #   !(team %in% c("North Melbourne"))
-    # ) %>%
     inner_join(
         team_logos,
         by = "team"
