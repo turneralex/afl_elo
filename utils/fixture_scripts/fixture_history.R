@@ -6,8 +6,8 @@ source(
     )
 )
 
-season_first <- 2011
-season_last <- 2023
+season_first <- 1990
+season_last <- 2024
 
 # read in fixture
 
@@ -26,6 +26,7 @@ afl_fixture <- purrr::map_df(
         round_number = round,
         round = paste("Round", round),
         round_name = roundname,
+        finals_flag = if_else(is_final > 0, 1, 0),
         date = stringr::str_sub(date, start = 1, end = 10) %>% 
             lubridate::as_date(),
         venue = change_venue_name(venue),
@@ -39,31 +40,6 @@ afl_fixture <- purrr::map_df(
         away_score = ascore
     )
 
-# available results check
-
-if (exists("rounds_so_far")) {
-    
-    message(
-        paste0(
-            "results available for round ",
-            rounds_so_far,
-            ":"
-        )
-    )
-    
-    print(
-        afl_fixture %>% 
-            filter(
-                round_number == rounds_so_far
-            ) %>% 
-            select(
-                home_team,
-                away_team
-            )
-    )
-    
-}
-
 # add location
 
 afl_venues <- afl_fixture %>% 
@@ -74,31 +50,55 @@ afl_venues <- afl_fixture %>%
 
 # create table of teams & home venues
 
-venues_teams <- purrr::map(
+venues_team_season <- purrr::map(
     .x = afl_fixture %>% 
         distinct(venue) %>% 
-        pull(),
+        pull() %>% 
+        sort(),
     ~ afl_fixture %>% 
-        filter(venue == .x) %>% 
-        distinct(home_team) %>% 
-        select(team = home_team)
+        filter(
+            venue == .x
+            & finals_flag == 0
+        ) %>% 
+        select(
+            season,
+            team = home_team
+        ) %>% 
+        group_by(team) %>% 
+        mutate(
+            total_flag = if_else(
+                n() >= 10,
+                1,
+                0
+            )
+        ) %>% 
+        distinct() %>% 
+        mutate(
+            current_flag = if_else(
+                lag(season, n = 1, default = "0000") %>% as.integer() == (season %>% as.integer()) - 1,
+                1,
+                0
+            )
+        ) %>% 
+        ungroup()
 ) %>% 
     purrr::set_names(
         nm = afl_fixture %>% 
             distinct(venue) %>% 
-            pull()
-    ) %>% 
+            pull() %>% 
+            sort()
+    )  %>% 
     tibble::enframe(
         name = "venue", 
-        value = "teams"
+        value = "data_teams"
     ) %>% 
-    mutate(venue = venue)
+    mutate(venue = venue) 
 
 # add location
 
 afl_venues <- afl_venues %>% 
     left_join(
-        venues_teams, 
+        venues_team_season, 
         by = "venue"
     ) 
 
@@ -114,7 +114,7 @@ afl_fixture %>%
     )
 
 afl_venues %>%
-    tidyr::unnest(cols = teams) %>%
+    tidyr::unnest(cols = data_teams) %>%
     readr::write_csv(
         here::here(
             "files", 

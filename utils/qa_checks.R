@@ -1,8 +1,8 @@
 library(dplyr)
 library(ggplot2)
 
-start_season <- "2012" # ensure consistency with optim.R
-current_season <- "2024"
+start_season <- "1990" # ensure consistency with optim.R
+current_season <- "2025"
 
 source(
     here::here(
@@ -22,7 +22,8 @@ afl_elo %>%
 afl_venues_all %>% 
     filter(
         location == "VIC"
-    )
+    ) %>% 
+    distinct(venue)
 
 # which venues teams were home at
 # contains some stadiums only used before current_season
@@ -33,7 +34,7 @@ purrr::map(
         pull() %>% 
         sort(),
     ~ afl_venues_all %>% 
-        tidyr::unnest(cols = teams) %>% 
+        tidyr::unnest(cols = data_teams) %>% 
         filter(
             venue == .x
         ) %>% 
@@ -66,28 +67,16 @@ afl_fixture_all %>%
         & venue == venue_to_check
     )
 
-# 2023 onward is when finals started being included, which will affect the below
 # total games per season
 
 afl_elo %>% 
     group_by(season) %>% 
     summarise(
         games = n() / 2
+    ) %>% 
+    arrange(
+        desc(season)
     )
-
-# team games per season
-
-afl_elo %>% 
-    group_by(
-        season, 
-        team
-    ) %>% 
-    summarise(
-        games = n() 
-    ) %>% 
-    ungroup() %>% 
-    distinct(season, games) %>% 
-    arrange(season, games)
 
 # max & min team ratings
 

@@ -41,7 +41,7 @@ afl_fixture_all <- bind_rows(
             "fixtures",
             "afl_fixture_history.csv"
         ),
-        col_types = "ciiccDccciiiiii"
+        col_types = "ciicciDccciiiiii"
     ),
     readr::read_csv(
         here::here(
@@ -53,7 +53,7 @@ afl_fixture_all <- bind_rows(
                 ".csv"
             )
         ),
-        col_types = "ciiccDccciiiiii"
+        col_types = "ciicciDccciiiiii"
     )
 ) %>% 
     filter(
@@ -75,28 +75,28 @@ print(
 
 # read in venues 
 
-afl_venues_all <- bind_rows(
-    readr::read_csv(
-        here::here(
-            "files",
-            "venues",
-            "afl_venues_history.csv"
-        ),
-        col_types = "ccc"
+afl_venues_history <- readr::read_csv(
+    here::here(
+        "files",
+        "venues",
+        "afl_venues_history.csv"
     ),
-    readr::read_csv(
-        here::here(
-            "files",
-            "venues",
-            paste0(
-                "afl_venues_",
-                current_season, 
-                ".csv"
-            )
-        ),
-        col_types = "ccc"
-    )
+    col_types = "ccc"
 ) %>% 
-    # remove dupes created by concatenating tables
-    distinct() %>% 
+    tidyr::nest(
+        data_teams = c(team, total_flag, current_flag)
+    )
+
+afl_venues_current <- readr::read_csv(
+    here::here(
+        "files",
+        "venues",
+        paste0(
+            "afl_venues_",
+            current_season,
+            ".csv"
+        )
+    ),
+    col_types = "ccc"
+) %>% 
     tidyr::nest(teams = team)

@@ -4,7 +4,7 @@ library(gt)
 afl_pred_actual_wins <- afl_elo %>%
     filter(
         season == current_season
-        & !is.na(score_adjusted)
+        & round_number <= rounds_so_far
     ) %>% 
     select(
         team,

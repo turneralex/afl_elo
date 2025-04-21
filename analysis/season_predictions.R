@@ -1,43 +1,57 @@
 library(dplyr)
 
-# get ladder
-
-afl_ladder <- fitzRoy::fetch_ladder_afl(
-    season = current_season, 
-    round_number = rounds_so_far
-)
-
-# update column names 
-
-afl_ladder <- afl_ladder %>% 
-    rename_with(
-        .fn = ~ .x %>% 
-            tolower() %>% 
-            stringr::str_replace_all(
-                pattern = "[.]", 
-                replacement = "_"
+if (first_round) {
+    
+    afl_ladder <- afl_elo %>% 
+        filter(team != "Fitzroy") %>% 
+        distinct(team) %>% 
+        arrange(team) %>% 
+        mutate(
+            position = 1:nrow(.),
+            ladder_position = case_when(
+                position == 1 ~ paste0(position, "st"),
+                position == 2 ~ paste0(position, "nd"),
+                position == 3 ~ paste0(position, "rd"),
+                T             ~ paste0(position, "th")
             )
-    )
-
-# update team names 
-
-afl_ladder <- afl_ladder %>% 
-    transmute(
-        team = change_team_name(team_name),
-        ladder_position = case_when(
-            position == 1 ~ paste0(position, "st"),
-            position == 2 ~ paste0(position, "nd"),
-            position == 3 ~ paste0(position, "rd"),
-            T             ~ paste0(position, "th")
         )
-    ) 
+    
+} else {
+    
+    # get current ladder
+    
+    afl_ladder <- fitzRoy::fetch_ladder_afl(season = current_season) 
+    
+    # update column names 
+    
+    afl_ladder <- afl_ladder %>% 
+        rename_with(
+            .fn = ~ .x %>% 
+                tolower() %>% 
+                stringr::str_replace_all(
+                    pattern = "[.]", 
+                    replacement = "_"
+                )
+        )
+    
+    # update team names 
+    
+    afl_ladder <- afl_ladder %>% 
+        transmute(
+            team = change_team_name(team_name),
+            ladder_position = case_when(
+                position == 1 ~ paste0(position, "st"),
+                position == 2 ~ paste0(position, "nd"),
+                position == 3 ~ paste0(position, "rd"),
+                T             ~ paste0(position, "th")
+            )
+        ) 
+    
+}
 
 # elo rankings
 
 afl_elo_ladder <- afl_elo %>% 
-    filter(
-        !is.na(new_elo)
-    ) %>% 
     select(
         team,
         new_elo
@@ -62,7 +76,7 @@ afl_elo_ladder <- afl_elo %>%
 afl_elo_pred_base <- afl_elo %>% 
     filter(
         season == current_season
-        & !is.na(score_expected)
+        & round_number > rounds_so_far
     ) %>% 
     inner_join(
         afl_ladder,
@@ -116,7 +130,8 @@ afl_elo_pred_base <- afl_elo %>%
         home_team = team, 
         away_team, 
         venue, 
-        hga_app, 
+        hga_app_flag, 
+        hga,
         home_elo = start_elo, 
         away_elo, 
         score_expected,
@@ -134,17 +149,6 @@ afl_elo_pred_base <- afl_elo %>%
     ) %>% 
     mutate(
         game_id = row_number(),
-        hga = case_when(
-            location == "VIC" ~ hga_app * elo_par["hga_vic"],
-            location == "NSW" ~ hga_app * elo_par["hga_nsw"],
-            location == "QLD" ~ hga_app * elo_par["hga_qld"],
-            location == "SA"  ~ hga_app * elo_par["hga_sa"],
-            location == "WA"  ~ hga_app * elo_par["hga_wa"],
-            location == "GEE" ~ hga_app * elo_par["hga_gee"],
-            location == "TAS" ~ hga_app * elo_par["hga_tas"],
-            location == "ACT" ~ hga_app * elo_par["hga_act"],
-            T                 ~ 0
-        ),
         elo_diff_hga = home_elo - away_elo + hga,
         pred_winner = if_else(
             elo_diff_hga > 0,
@@ -164,12 +168,10 @@ afl_elo_pred_base <- afl_elo %>%
     ) 
 
 afl_elo_pred <- afl_elo_pred_base %>% 
-    filter(
-        round_number == rounds_so_far + 1
-    ) %>% 
     select(
         season,
         round,
+        round_number,
         home_team, 
         away_team, 
         venue,
@@ -185,6 +187,9 @@ afl_elo_pred <- afl_elo_pred_base %>%
     )
 
 afl_elo_pred %>%
+    filter(
+        round_number == rounds_so_far + 1
+    ) %>% 
     mutate(
         pred_winner_margin = pred_winner_margin %>% 
             round(),

@@ -1,123 +1,1147 @@
-venue,location,team
-MCG,VIC,Carlton
-MCG,VIC,Geelong
-MCG,VIC,Melbourne
-MCG,VIC,St Kilda
-MCG,VIC,Hawthorn
-MCG,VIC,Collingwood
-MCG,VIC,Richmond
-MCG,VIC,Essendon
-MCG,VIC,North Melbourne
-MCG,VIC,Sydney
-MCG,VIC,Western Bulldogs
-MCG,VIC,Adelaide
-MCG,VIC,West Coast
-MCG,VIC,GWS
-MCG,VIC,Fremantle
-Docklands Stadium,VIC,Collingwood
-Docklands Stadium,VIC,Essendon
-Docklands Stadium,VIC,North Melbourne
-Docklands Stadium,VIC,Western Bulldogs
-Docklands Stadium,VIC,St Kilda
-Docklands Stadium,VIC,Carlton
-Docklands Stadium,VIC,Geelong
-Docklands Stadium,VIC,Melbourne
-Docklands Stadium,VIC,Richmond
-Docklands Stadium,VIC,Hawthorn
-Docklands Stadium,VIC,Gold Coast
-Docklands Stadium,VIC,Port Adelaide
-Docklands Stadium,VIC,Adelaide
-Docklands Stadium,VIC,GWS
-Docklands Stadium,VIC,Sydney
-Football Park,SA,Adelaide
-Football Park,SA,Port Adelaide
-Gabba,QLD,Brisbane
-Gabba,QLD,Gold Coast
-Gabba,QLD,West Coast
-Gabba,QLD,Richmond
-Gabba,QLD,Carlton
-Gabba,QLD,North Melbourne
-Gabba,QLD,Melbourne
-Gabba,QLD,St Kilda
-Gabba,QLD,Geelong
-Gabba,QLD,Collingwood
-Gabba,QLD,GWS
-Subiaco Oval,WA,West Coast
-Subiaco Oval,WA,Fremantle
-Stadium Australia,NSW,Sydney
-Stadium Australia,NSW,GWS
-Kardinia Park,GEE,Geelong
-Kardinia Park,GEE,Sydney
-Kardinia Park,GEE,Gold Coast
-York Park,TAS,Hawthorn
-York Park,TAS,Sydney
-York Park,TAS,Western Bulldogs
-SCG,NSW,Sydney
-SCG,NSW,Geelong
-SCG,NSW,Gold Coast
-SCG,NSW,Carlton
-SCG,NSW,Melbourne
-Manuka Oval,ACT,Western Bulldogs
-Manuka Oval,ACT,GWS
-Carrara Stadium,QLD,Gold Coast
-Carrara Stadium,QLD,Fremantle
-Carrara Stadium,QLD,Port Adelaide
-Carrara Stadium,QLD,West Coast
-Carrara Stadium,QLD,Adelaide
-Carrara Stadium,QLD,Essendon
-Carrara Stadium,QLD,Carlton
-Carrara Stadium,QLD,Richmond
-Carrara Stadium,QLD,Melbourne
-Carrara Stadium,QLD,Western Bulldogs
-Carrara Stadium,QLD,North Melbourne
-Carrara Stadium,QLD,Geelong
-Carrara Stadium,QLD,GWS
-Carrara Stadium,QLD,St Kilda
-Carrara Stadium,QLD,Sydney
-Carrara Stadium,QLD,Brisbane
-Marrara Oval,NT,Richmond
-Marrara Oval,NT,Melbourne
-Marrara Oval,NT,Western Bulldogs
-Marrara Oval,NT,Gold Coast
-Marrara Oval,NT,Essendon
-Cazaly's Stadium,QLD,Richmond
-Cazaly's Stadium,QLD,Western Bulldogs
-Cazaly's Stadium,QLD,Gold Coast
-Cazaly's Stadium,QLD,Sydney
-Cazaly's Stadium,QLD,Melbourne
-Cazaly's Stadium,QLD,Fremantle
-Cazaly's Stadium,QLD,St Kilda
-Adelaide Oval,SA,Port Adelaide
-Adelaide Oval,SA,Adelaide
-Adelaide Oval,SA,Melbourne
-Adelaide Oval,SA,Hawthorn
-Adelaide Oval,SA,Richmond
-Adelaide Oval,SA,Essendon
-Adelaide Oval,SA,Geelong
-Adelaide Oval,SA,Collingwood
-Bellerive Oval,TAS,North Melbourne
-Bellerive Oval,TAS,St Kilda
-Blacktown International Sportspark,NSW,GWS
-Sydney Showground Stadium,NSW,GWS
-Sydney Showground Stadium,NSW,Collingwood
-Sydney Showground Stadium,NSW,Melbourne
-Sydney Showground Stadium,NSW,Hawthorn
-Sydney Showground Stadium,NSW,Richmond
-Wellington Regional Stadium,Other,St Kilda
-Traeger Park,NT,Melbourne
-Jiangwan Stadium,Other,Gold Coast
-Jiangwan Stadium,Other,St Kilda
-Eureka Stadium,VIC,Western Bulldogs
-Eureka Stadium,VIC,GWS
-Perth Stadium,WA,West Coast
-Perth Stadium,WA,Fremantle
-Perth Stadium,WA,Gold Coast
-Perth Stadium,WA,Geelong
-Perth Stadium,WA,Carlton
-Perth Stadium,WA,Sydney
-Perth Stadium,WA,Essendon
-Perth Stadium,WA,Melbourne
-Riverway Stadium,QLD,Gold Coast
-Norwood Oval,SA,Fremantle
-Norwood Oval,SA,GWS
-Adelaide Hills,SA,Brisbane
+venue,location,season,team,total_flag,current_flag
+Princes Park,VIC,1990,Carlton,1,0
+Princes Park,VIC,1990,Fitzroy,1,0
+Princes Park,VIC,1990,Hawthorn,1,0
+Princes Park,VIC,1991,Fitzroy,1,1
+Princes Park,VIC,1991,Hawthorn,1,1
+Princes Park,VIC,1991,Carlton,1,1
+Princes Park,VIC,1992,Carlton,1,1
+Princes Park,VIC,1992,Melbourne,0,0
+Princes Park,VIC,1992,Fitzroy,1,1
+Princes Park,VIC,1992,North Melbourne,1,0
+Princes Park,VIC,1993,Carlton,1,1
+Princes Park,VIC,1993,Melbourne,0,1
+Princes Park,VIC,1993,Fitzroy,1,1
+Princes Park,VIC,1993,North Melbourne,1,1
+Princes Park,VIC,1993,Essendon,0,0
+Princes Park,VIC,1993,Richmond,0,0
+Princes Park,VIC,1994,Fitzroy,1,1
+Princes Park,VIC,1994,Carlton,1,1
+Princes Park,VIC,1994,Richmond,0,1
+Princes Park,VIC,1994,Essendon,0,1
+Princes Park,VIC,1994,North Melbourne,1,1
+Princes Park,VIC,1994,Melbourne,0,1
+Princes Park,VIC,1995,Carlton,1,1
+Princes Park,VIC,1995,Melbourne,0,1
+Princes Park,VIC,1995,Essendon,0,1
+Princes Park,VIC,1995,Richmond,0,1
+Princes Park,VIC,1995,Fitzroy,1,1
+Princes Park,VIC,1995,North Melbourne,1,1
+Princes Park,VIC,1996,Melbourne,0,1
+Princes Park,VIC,1996,Carlton,1,1
+Princes Park,VIC,1996,North Melbourne,1,1
+Princes Park,VIC,1996,Fitzroy,1,1
+Princes Park,VIC,1996,Richmond,0,1
+Princes Park,VIC,1996,Essendon,0,1
+Princes Park,VIC,1996,Western Bulldogs,1,0
+Princes Park,VIC,1997,Western Bulldogs,1,1
+Princes Park,VIC,1997,Carlton,1,1
+Princes Park,VIC,1997,Richmond,0,1
+Princes Park,VIC,1997,North Melbourne,1,1
+Princes Park,VIC,1997,Essendon,0,1
+Princes Park,VIC,1998,Carlton,1,1
+Princes Park,VIC,1998,Western Bulldogs,1,1
+Princes Park,VIC,1999,Western Bulldogs,1,1
+Princes Park,VIC,1999,Carlton,1,1
+Princes Park,VIC,2000,Carlton,1,1
+Princes Park,VIC,2001,Carlton,1,1
+Princes Park,VIC,2002,Carlton,1,1
+Princes Park,VIC,2002,Melbourne,0,0
+Princes Park,VIC,2002,Western Bulldogs,1,0
+Princes Park,VIC,2002,North Melbourne,1,0
+Princes Park,VIC,2002,St Kilda,0,0
+Princes Park,VIC,2003,Carlton,1,1
+Princes Park,VIC,2004,Carlton,1,1
+Princes Park,VIC,2005,Carlton,1,1
+Windy Hill,VIC,1990,Essendon,1,0
+Windy Hill,VIC,1991,Essendon,1,1
+Waverley Park,VIC,1990,Geelong,0,0
+Waverley Park,VIC,1990,Carlton,0,0
+Waverley Park,VIC,1990,St Kilda,1,0
+Waverley Park,VIC,1990,Fitzroy,0,0
+Waverley Park,VIC,1990,Essendon,0,0
+Waverley Park,VIC,1990,Western Bulldogs,0,0
+Waverley Park,VIC,1990,Collingwood,1,0
+Waverley Park,VIC,1990,Hawthorn,1,0
+Waverley Park,VIC,1990,Melbourne,0,0
+Waverley Park,VIC,1990,Richmond,0,0
+Waverley Park,VIC,1990,North Melbourne,0,0
+Waverley Park,VIC,1991,St Kilda,1,1
+Waverley Park,VIC,1991,Western Bulldogs,0,1
+Waverley Park,VIC,1991,Collingwood,1,1
+Waverley Park,VIC,1991,Hawthorn,1,1
+Waverley Park,VIC,1991,Melbourne,0,1
+Waverley Park,VIC,1991,Geelong,0,1
+Waverley Park,VIC,1991,Essendon,0,1
+Waverley Park,VIC,1991,Richmond,0,1
+Waverley Park,VIC,1991,Carlton,0,1
+Waverley Park,VIC,1991,North Melbourne,0,1
+Waverley Park,VIC,1992,Hawthorn,1,1
+Waverley Park,VIC,1992,St Kilda,1,1
+Waverley Park,VIC,1992,Richmond,0,1
+Waverley Park,VIC,1992,Essendon,0,1
+Waverley Park,VIC,1992,Collingwood,1,1
+Waverley Park,VIC,1992,Geelong,0,1
+Waverley Park,VIC,1992,Melbourne,0,1
+Waverley Park,VIC,1992,Western Bulldogs,0,1
+Waverley Park,VIC,1992,Carlton,0,1
+Waverley Park,VIC,1993,Hawthorn,1,1
+Waverley Park,VIC,1993,St Kilda,1,1
+Waverley Park,VIC,1993,Fitzroy,0,0
+Waverley Park,VIC,1993,Geelong,0,1
+Waverley Park,VIC,1994,St Kilda,1,1
+Waverley Park,VIC,1994,Hawthorn,1,1
+Waverley Park,VIC,1994,Collingwood,1,0
+Waverley Park,VIC,1994,Carlton,0,0
+Waverley Park,VIC,1994,Fitzroy,0,1
+Waverley Park,VIC,1994,Western Bulldogs,0,0
+Waverley Park,VIC,1994,Geelong,0,1
+Waverley Park,VIC,1995,Hawthorn,1,1
+Waverley Park,VIC,1995,St Kilda,1,1
+Waverley Park,VIC,1995,Western Bulldogs,0,1
+Waverley Park,VIC,1995,Fitzroy,0,1
+Waverley Park,VIC,1996,St Kilda,1,1
+Waverley Park,VIC,1996,Hawthorn,1,1
+Waverley Park,VIC,1996,Essendon,0,0
+Waverley Park,VIC,1996,Richmond,0,0
+Waverley Park,VIC,1997,St Kilda,1,1
+Waverley Park,VIC,1997,Hawthorn,1,1
+Waverley Park,VIC,1998,St Kilda,1,1
+Waverley Park,VIC,1998,Hawthorn,1,1
+Waverley Park,VIC,1998,Essendon,0,0
+Waverley Park,VIC,1998,Western Bulldogs,0,0
+Waverley Park,VIC,1998,Collingwood,1,0
+Waverley Park,VIC,1999,Hawthorn,1,1
+Waverley Park,VIC,1999,St Kilda,1,1
+MCG,VIC,1990,North Melbourne,1,0
+MCG,VIC,1990,Richmond,1,0
+MCG,VIC,1990,Melbourne,1,0
+MCG,VIC,1990,Essendon,1,0
+MCG,VIC,1990,St Kilda,1,0
+MCG,VIC,1990,Collingwood,1,0
+MCG,VIC,1990,Western Bulldogs,1,0
+MCG,VIC,1991,Richmond,1,1
+MCG,VIC,1991,North Melbourne,1,1
+MCG,VIC,1991,Melbourne,1,1
+MCG,VIC,1992,Melbourne,1,1
+MCG,VIC,1992,Essendon,1,0
+MCG,VIC,1992,North Melbourne,1,1
+MCG,VIC,1992,Richmond,1,1
+MCG,VIC,1992,Western Bulldogs,1,0
+MCG,VIC,1992,Collingwood,1,0
+MCG,VIC,1992,Carlton,1,0
+MCG,VIC,1993,Western Bulldogs,1,1
+MCG,VIC,1993,North Melbourne,1,1
+MCG,VIC,1993,Richmond,1,1
+MCG,VIC,1993,Essendon,1,1
+MCG,VIC,1993,Melbourne,1,1
+MCG,VIC,1993,Carlton,1,1
+MCG,VIC,1993,Geelong,1,0
+MCG,VIC,1993,Collingwood,1,1
+MCG,VIC,1994,Essendon,1,1
+MCG,VIC,1994,Melbourne,1,1
+MCG,VIC,1994,North Melbourne,1,1
+MCG,VIC,1994,Richmond,1,1
+MCG,VIC,1994,Carlton,1,1
+MCG,VIC,1994,Collingwood,1,1
+MCG,VIC,1994,Geelong,1,1
+MCG,VIC,1995,North Melbourne,1,1
+MCG,VIC,1995,Richmond,1,1
+MCG,VIC,1995,Carlton,1,1
+MCG,VIC,1995,Melbourne,1,1
+MCG,VIC,1995,Collingwood,1,1
+MCG,VIC,1995,Western Bulldogs,1,0
+MCG,VIC,1995,Essendon,1,1
+MCG,VIC,1995,Geelong,1,1
+MCG,VIC,1996,Melbourne,1,1
+MCG,VIC,1996,Richmond,1,1
+MCG,VIC,1996,Carlton,1,1
+MCG,VIC,1996,North Melbourne,1,1
+MCG,VIC,1996,Essendon,1,1
+MCG,VIC,1996,Collingwood,1,1
+MCG,VIC,1996,Geelong,1,1
+MCG,VIC,1996,Western Bulldogs,1,1
+MCG,VIC,1997,North Melbourne,1,1
+MCG,VIC,1997,Collingwood,1,1
+MCG,VIC,1997,Richmond,1,1
+MCG,VIC,1997,Essendon,1,1
+MCG,VIC,1997,Melbourne,1,1
+MCG,VIC,1997,Western Bulldogs,1,1
+MCG,VIC,1997,Geelong,1,1
+MCG,VIC,1997,Carlton,1,1
+MCG,VIC,1998,North Melbourne,1,1
+MCG,VIC,1998,Collingwood,1,1
+MCG,VIC,1998,Richmond,1,1
+MCG,VIC,1998,Melbourne,1,1
+MCG,VIC,1998,Essendon,1,1
+MCG,VIC,1998,Carlton,1,1
+MCG,VIC,1998,Geelong,1,1
+MCG,VIC,1999,Essendon,1,1
+MCG,VIC,1999,Geelong,1,1
+MCG,VIC,1999,Melbourne,1,1
+MCG,VIC,1999,Collingwood,1,1
+MCG,VIC,1999,North Melbourne,1,1
+MCG,VIC,1999,Richmond,1,1
+MCG,VIC,1999,Carlton,1,1
+MCG,VIC,1999,Western Bulldogs,1,0
+MCG,VIC,1999,St Kilda,1,0
+MCG,VIC,2000,Richmond,1,1
+MCG,VIC,2000,North Melbourne,1,1
+MCG,VIC,2000,Hawthorn,1,0
+MCG,VIC,2000,Essendon,1,1
+MCG,VIC,2000,Melbourne,1,1
+MCG,VIC,2000,Collingwood,1,1
+MCG,VIC,2000,St Kilda,1,1
+MCG,VIC,2000,Carlton,1,1
+MCG,VIC,2001,North Melbourne,1,1
+MCG,VIC,2001,Hawthorn,1,1
+MCG,VIC,2001,Melbourne,1,1
+MCG,VIC,2001,Richmond,1,1
+MCG,VIC,2001,Carlton,1,1
+MCG,VIC,2001,Collingwood,1,1
+MCG,VIC,2001,Essendon,1,1
+MCG,VIC,2001,Geelong,1,0
+MCG,VIC,2002,Richmond,1,1
+MCG,VIC,2002,Geelong,1,1
+MCG,VIC,2002,Hawthorn,1,1
+MCG,VIC,2002,Essendon,1,1
+MCG,VIC,2002,Collingwood,1,1
+MCG,VIC,2002,Melbourne,1,1
+MCG,VIC,2002,Carlton,1,1
+MCG,VIC,2002,North Melbourne,1,1
+MCG,VIC,2003,Collingwood,1,1
+MCG,VIC,2003,North Melbourne,1,1
+MCG,VIC,2003,Melbourne,1,1
+MCG,VIC,2003,Carlton,1,1
+MCG,VIC,2003,Essendon,1,1
+MCG,VIC,2003,Richmond,1,1
+MCG,VIC,2003,Hawthorn,1,1
+MCG,VIC,2003,St Kilda,1,0
+MCG,VIC,2004,Richmond,1,1
+MCG,VIC,2004,Hawthorn,1,1
+MCG,VIC,2004,North Melbourne,1,1
+MCG,VIC,2004,Melbourne,1,1
+MCG,VIC,2004,Collingwood,1,1
+MCG,VIC,2004,Western Bulldogs,1,0
+MCG,VIC,2004,Carlton,1,1
+MCG,VIC,2004,Essendon,1,1
+MCG,VIC,2005,Melbourne,1,1
+MCG,VIC,2005,Richmond,1,1
+MCG,VIC,2005,Collingwood,1,1
+MCG,VIC,2005,Carlton,1,1
+MCG,VIC,2005,Hawthorn,1,1
+MCG,VIC,2005,Essendon,1,1
+MCG,VIC,2005,North Melbourne,1,1
+MCG,VIC,2005,Western Bulldogs,1,1
+MCG,VIC,2006,Collingwood,1,1
+MCG,VIC,2006,Richmond,1,1
+MCG,VIC,2006,Melbourne,1,1
+MCG,VIC,2006,Hawthorn,1,1
+MCG,VIC,2006,Essendon,1,1
+MCG,VIC,2006,Carlton,1,1
+MCG,VIC,2006,Western Bulldogs,1,1
+MCG,VIC,2006,St Kilda,1,0
+MCG,VIC,2006,North Melbourne,1,1
+MCG,VIC,2007,Melbourne,1,1
+MCG,VIC,2007,North Melbourne,1,1
+MCG,VIC,2007,Carlton,1,1
+MCG,VIC,2007,Richmond,1,1
+MCG,VIC,2007,Western Bulldogs,1,1
+MCG,VIC,2007,Hawthorn,1,1
+MCG,VIC,2007,Collingwood,1,1
+MCG,VIC,2007,Essendon,1,1
+MCG,VIC,2007,Geelong,1,0
+MCG,VIC,2008,Carlton,1,1
+MCG,VIC,2008,Collingwood,1,1
+MCG,VIC,2008,Hawthorn,1,1
+MCG,VIC,2008,Melbourne,1,1
+MCG,VIC,2008,Richmond,1,1
+MCG,VIC,2008,Essendon,1,1
+MCG,VIC,2008,North Melbourne,1,1
+MCG,VIC,2008,Western Bulldogs,1,1
+MCG,VIC,2009,Richmond,1,1
+MCG,VIC,2009,Hawthorn,1,1
+MCG,VIC,2009,Collingwood,1,1
+MCG,VIC,2009,Melbourne,1,1
+MCG,VIC,2009,Western Bulldogs,1,1
+MCG,VIC,2009,Geelong,1,0
+MCG,VIC,2009,Carlton,1,1
+MCG,VIC,2009,Essendon,1,1
+MCG,VIC,2009,North Melbourne,1,1
+MCG,VIC,2010,Richmond,1,1
+MCG,VIC,2010,Geelong,1,1
+MCG,VIC,2010,Melbourne,1,1
+MCG,VIC,2010,Collingwood,1,1
+MCG,VIC,2010,Hawthorn,1,1
+MCG,VIC,2010,Carlton,1,1
+MCG,VIC,2010,Essendon,1,1
+MCG,VIC,2010,St Kilda,1,0
+MCG,VIC,2011,Carlton,1,1
+MCG,VIC,2011,Geelong,1,1
+MCG,VIC,2011,Melbourne,1,1
+MCG,VIC,2011,St Kilda,1,1
+MCG,VIC,2011,Hawthorn,1,1
+MCG,VIC,2011,Collingwood,1,1
+MCG,VIC,2011,Richmond,1,1
+MCG,VIC,2011,Essendon,1,1
+MCG,VIC,2012,Richmond,1,1
+MCG,VIC,2012,Hawthorn,1,1
+MCG,VIC,2012,Melbourne,1,1
+MCG,VIC,2012,Collingwood,1,1
+MCG,VIC,2012,Geelong,1,1
+MCG,VIC,2012,Carlton,1,1
+MCG,VIC,2012,St Kilda,1,1
+MCG,VIC,2012,Essendon,1,1
+MCG,VIC,2013,Carlton,1,1
+MCG,VIC,2013,Melbourne,1,1
+MCG,VIC,2013,Hawthorn,1,1
+MCG,VIC,2013,St Kilda,1,1
+MCG,VIC,2013,Essendon,1,1
+MCG,VIC,2013,Collingwood,1,1
+MCG,VIC,2013,Richmond,1,1
+MCG,VIC,2013,Geelong,1,1
+MCG,VIC,2014,Richmond,1,1
+MCG,VIC,2014,Melbourne,1,1
+MCG,VIC,2014,Hawthorn,1,1
+MCG,VIC,2014,Collingwood,1,1
+MCG,VIC,2014,Essendon,1,1
+MCG,VIC,2014,Carlton,1,1
+MCG,VIC,2014,Geelong,1,1
+MCG,VIC,2015,Carlton,1,1
+MCG,VIC,2015,Melbourne,1,1
+MCG,VIC,2015,Hawthorn,1,1
+MCG,VIC,2015,Richmond,1,1
+MCG,VIC,2015,Essendon,1,1
+MCG,VIC,2015,Collingwood,1,1
+MCG,VIC,2015,Geelong,1,1
+MCG,VIC,2016,Richmond,1,1
+MCG,VIC,2016,Melbourne,1,1
+MCG,VIC,2016,Geelong,1,1
+MCG,VIC,2016,Collingwood,1,1
+MCG,VIC,2016,Essendon,1,1
+MCG,VIC,2016,Hawthorn,1,1
+MCG,VIC,2016,St Kilda,1,0
+MCG,VIC,2016,Carlton,1,1
+MCG,VIC,2017,Carlton,1,1
+MCG,VIC,2017,Collingwood,1,1
+MCG,VIC,2017,Essendon,1,1
+MCG,VIC,2017,Richmond,1,1
+MCG,VIC,2017,Hawthorn,1,1
+MCG,VIC,2017,Melbourne,1,1
+MCG,VIC,2017,Geelong,1,1
+MCG,VIC,2018,Richmond,1,1
+MCG,VIC,2018,Hawthorn,1,1
+MCG,VIC,2018,Melbourne,1,1
+MCG,VIC,2018,Collingwood,1,1
+MCG,VIC,2018,Geelong,1,1
+MCG,VIC,2018,Carlton,1,1
+MCG,VIC,2018,Essendon,1,1
+MCG,VIC,2019,Carlton,1,1
+MCG,VIC,2019,Collingwood,1,1
+MCG,VIC,2019,Melbourne,1,1
+MCG,VIC,2019,Richmond,1,1
+MCG,VIC,2019,Hawthorn,1,1
+MCG,VIC,2019,Essendon,1,1
+MCG,VIC,2019,Geelong,1,1
+MCG,VIC,2020,Richmond,1,1
+MCG,VIC,2020,Hawthorn,1,1
+MCG,VIC,2020,Collingwood,1,1
+MCG,VIC,2020,Essendon,1,1
+MCG,VIC,2020,Melbourne,1,1
+MCG,VIC,2021,Richmond,1,1
+MCG,VIC,2021,Collingwood,1,1
+MCG,VIC,2021,Melbourne,1,1
+MCG,VIC,2021,Carlton,1,0
+MCG,VIC,2021,Hawthorn,1,1
+MCG,VIC,2021,Geelong,1,0
+MCG,VIC,2021,Essendon,1,1
+MCG,VIC,2021,GWS,0,0
+MCG,VIC,2021,Fremantle,0,0
+MCG,VIC,2022,Melbourne,1,1
+MCG,VIC,2022,Carlton,1,1
+MCG,VIC,2022,Geelong,1,1
+MCG,VIC,2022,Hawthorn,1,1
+MCG,VIC,2022,Collingwood,1,1
+MCG,VIC,2022,Richmond,1,1
+MCG,VIC,2022,Essendon,1,1
+MCG,VIC,2023,Richmond,1,1
+MCG,VIC,2023,Geelong,1,1
+MCG,VIC,2023,Melbourne,1,1
+MCG,VIC,2023,Hawthorn,1,1
+MCG,VIC,2023,Carlton,1,1
+MCG,VIC,2023,Collingwood,1,1
+MCG,VIC,2023,St Kilda,1,0
+MCG,VIC,2023,Essendon,1,1
+MCG,VIC,2024,Carlton,1,1
+MCG,VIC,2024,Collingwood,1,1
+MCG,VIC,2024,Essendon,1,1
+MCG,VIC,2024,Melbourne,1,1
+MCG,VIC,2024,St Kilda,1,1
+MCG,VIC,2024,Hawthorn,1,1
+MCG,VIC,2024,Richmond,1,1
+MCG,VIC,2024,Geelong,1,1
+Carrara Stadium,QLD,1990,Brisbane,1,0
+Carrara Stadium,QLD,1991,Brisbane,1,1
+Carrara Stadium,QLD,1992,Brisbane,1,1
+Carrara Stadium,QLD,2006,Melbourne,0,0
+Carrara Stadium,QLD,2006,Hawthorn,0,0
+Carrara Stadium,QLD,2007,North Melbourne,1,0
+Carrara Stadium,QLD,2008,North Melbourne,1,1
+Carrara Stadium,QLD,2009,Carlton,0,0
+Carrara Stadium,QLD,2009,St Kilda,0,0
+Carrara Stadium,QLD,2009,Richmond,0,0
+Carrara Stadium,QLD,2011,Gold Coast,1,0
+Carrara Stadium,QLD,2012,Gold Coast,1,1
+Carrara Stadium,QLD,2013,Gold Coast,1,1
+Carrara Stadium,QLD,2014,Gold Coast,1,1
+Carrara Stadium,QLD,2015,Gold Coast,1,1
+Carrara Stadium,QLD,2016,Gold Coast,1,1
+Carrara Stadium,QLD,2017,Gold Coast,1,1
+Carrara Stadium,QLD,2018,Gold Coast,1,1
+Carrara Stadium,QLD,2019,Gold Coast,1,1
+Carrara Stadium,QLD,2020,Gold Coast,1,1
+Carrara Stadium,QLD,2020,Fremantle,0,0
+Carrara Stadium,QLD,2020,Port Adelaide,0,0
+Carrara Stadium,QLD,2020,West Coast,0,0
+Carrara Stadium,QLD,2020,Adelaide,0,0
+Carrara Stadium,QLD,2020,Essendon,0,0
+Carrara Stadium,QLD,2020,Carlton,0,0
+Carrara Stadium,QLD,2020,Richmond,0,0
+Carrara Stadium,QLD,2020,Melbourne,0,0
+Carrara Stadium,QLD,2020,Western Bulldogs,0,0
+Carrara Stadium,QLD,2020,North Melbourne,1,0
+Carrara Stadium,QLD,2020,Geelong,0,0
+Carrara Stadium,QLD,2020,GWS,0,0
+Carrara Stadium,QLD,2020,St Kilda,0,0
+Carrara Stadium,QLD,2020,Sydney,0,0
+Carrara Stadium,QLD,2021,Gold Coast,1,1
+Carrara Stadium,QLD,2021,Brisbane,1,0
+Carrara Stadium,QLD,2021,Richmond,0,1
+Carrara Stadium,QLD,2021,North Melbourne,1,1
+Carrara Stadium,QLD,2021,GWS,0,1
+Carrara Stadium,QLD,2021,Sydney,0,1
+Carrara Stadium,QLD,2021,Essendon,0,1
+Carrara Stadium,QLD,2022,Gold Coast,1,1
+Carrara Stadium,QLD,2023,Gold Coast,1,1
+Carrara Stadium,QLD,2024,Gold Coast,1,1
+Subiaco Oval,WA,1990,West Coast,1,0
+Subiaco Oval,WA,1991,West Coast,1,1
+Subiaco Oval,WA,1992,West Coast,1,1
+Subiaco Oval,WA,1993,West Coast,1,1
+Subiaco Oval,WA,1994,West Coast,1,1
+Subiaco Oval,WA,1995,West Coast,1,1
+Subiaco Oval,WA,1995,Fremantle,1,0
+Subiaco Oval,WA,1996,Fremantle,1,1
+Subiaco Oval,WA,1996,West Coast,1,1
+Subiaco Oval,WA,1997,West Coast,1,1
+Subiaco Oval,WA,1997,Fremantle,1,1
+Subiaco Oval,WA,1998,Fremantle,1,1
+Subiaco Oval,WA,1998,West Coast,1,1
+Subiaco Oval,WA,1999,Fremantle,1,1
+Subiaco Oval,WA,1999,West Coast,1,1
+Subiaco Oval,WA,2000,Fremantle,1,1
+Subiaco Oval,WA,2000,West Coast,1,1
+Subiaco Oval,WA,2001,Fremantle,1,1
+Subiaco Oval,WA,2001,West Coast,1,1
+Subiaco Oval,WA,2002,West Coast,1,1
+Subiaco Oval,WA,2002,Fremantle,1,1
+Subiaco Oval,WA,2003,West Coast,1,1
+Subiaco Oval,WA,2003,Fremantle,1,1
+Subiaco Oval,WA,2004,Fremantle,1,1
+Subiaco Oval,WA,2004,West Coast,1,1
+Subiaco Oval,WA,2005,Fremantle,1,1
+Subiaco Oval,WA,2005,West Coast,1,1
+Subiaco Oval,WA,2006,West Coast,1,1
+Subiaco Oval,WA,2006,Fremantle,1,1
+Subiaco Oval,WA,2007,Fremantle,1,1
+Subiaco Oval,WA,2007,West Coast,1,1
+Subiaco Oval,WA,2008,West Coast,1,1
+Subiaco Oval,WA,2008,Fremantle,1,1
+Subiaco Oval,WA,2009,Fremantle,1,1
+Subiaco Oval,WA,2009,West Coast,1,1
+Subiaco Oval,WA,2010,Fremantle,1,1
+Subiaco Oval,WA,2010,West Coast,1,1
+Subiaco Oval,WA,2011,West Coast,1,1
+Subiaco Oval,WA,2011,Fremantle,1,1
+Subiaco Oval,WA,2012,Fremantle,1,1
+Subiaco Oval,WA,2012,West Coast,1,1
+Subiaco Oval,WA,2013,Fremantle,1,1
+Subiaco Oval,WA,2013,West Coast,1,1
+Subiaco Oval,WA,2014,West Coast,1,1
+Subiaco Oval,WA,2014,Fremantle,1,1
+Subiaco Oval,WA,2015,Fremantle,1,1
+Subiaco Oval,WA,2015,West Coast,1,1
+Subiaco Oval,WA,2016,West Coast,1,1
+Subiaco Oval,WA,2016,Fremantle,1,1
+Subiaco Oval,WA,2017,Fremantle,1,1
+Subiaco Oval,WA,2017,West Coast,1,1
+Western Oval,VIC,1990,Western Bulldogs,1,0
+Western Oval,VIC,1991,Western Bulldogs,1,1
+Western Oval,VIC,1992,Western Bulldogs,1,1
+Western Oval,VIC,1993,Western Bulldogs,1,1
+Western Oval,VIC,1994,Western Bulldogs,1,1
+Western Oval,VIC,1994,Fitzroy,1,0
+Western Oval,VIC,1995,Fitzroy,1,1
+Western Oval,VIC,1995,Western Bulldogs,1,1
+Western Oval,VIC,1996,Fitzroy,1,1
+Western Oval,VIC,1996,Western Bulldogs,1,1
+Western Oval,VIC,1997,Western Bulldogs,1,1
+Moorabbin Oval,VIC,1990,St Kilda,1,0
+Moorabbin Oval,VIC,1991,St Kilda,1,1
+Moorabbin Oval,VIC,1992,St Kilda,1,1
+SCG,NSW,1990,Sydney,1,0
+SCG,NSW,1991,Sydney,1,1
+SCG,NSW,1992,Sydney,1,1
+SCG,NSW,1993,Sydney,1,1
+SCG,NSW,1994,Sydney,1,1
+SCG,NSW,1995,Sydney,1,1
+SCG,NSW,1996,Sydney,1,1
+SCG,NSW,1997,Sydney,1,1
+SCG,NSW,1998,Sydney,1,1
+SCG,NSW,1999,Sydney,1,1
+SCG,NSW,1999,North Melbourne,0,0
+SCG,NSW,2000,Sydney,1,1
+SCG,NSW,2000,North Melbourne,0,1
+SCG,NSW,2000,Western Bulldogs,0,0
+SCG,NSW,2001,Sydney,1,1
+SCG,NSW,2001,North Melbourne,0,1
+SCG,NSW,2001,Western Bulldogs,0,1
+SCG,NSW,2002,Sydney,1,1
+SCG,NSW,2002,Western Bulldogs,0,1
+SCG,NSW,2002,North Melbourne,0,1
+SCG,NSW,2003,Sydney,1,1
+SCG,NSW,2003,Western Bulldogs,0,1
+SCG,NSW,2004,Sydney,1,1
+SCG,NSW,2004,Western Bulldogs,0,1
+SCG,NSW,2005,Sydney,1,1
+SCG,NSW,2005,Western Bulldogs,0,1
+SCG,NSW,2006,Sydney,1,1
+SCG,NSW,2006,Western Bulldogs,0,1
+SCG,NSW,2007,Sydney,1,1
+SCG,NSW,2008,Sydney,1,1
+SCG,NSW,2009,Sydney,1,1
+SCG,NSW,2010,Sydney,1,1
+SCG,NSW,2011,Sydney,1,1
+SCG,NSW,2012,Sydney,1,1
+SCG,NSW,2013,Sydney,1,1
+SCG,NSW,2014,Sydney,1,1
+SCG,NSW,2015,Sydney,1,1
+SCG,NSW,2016,Sydney,1,1
+SCG,NSW,2017,Sydney,1,1
+SCG,NSW,2018,Sydney,1,1
+SCG,NSW,2019,Sydney,1,1
+SCG,NSW,2020,Sydney,1,1
+SCG,NSW,2020,Geelong,0,0
+SCG,NSW,2021,Sydney,1,1
+SCG,NSW,2021,Gold Coast,0,0
+SCG,NSW,2021,Carlton,0,0
+SCG,NSW,2021,Melbourne,0,0
+SCG,NSW,2022,Sydney,1,1
+SCG,NSW,2023,Sydney,1,1
+SCG,NSW,2024,Sydney,1,1
+Victoria Park,VIC,1990,Collingwood,1,0
+Victoria Park,VIC,1991,Collingwood,1,1
+Victoria Park,VIC,1992,Collingwood,1,1
+Victoria Park,VIC,1993,Collingwood,1,1
+Victoria Park,VIC,1994,Collingwood,1,1
+Victoria Park,VIC,1995,Collingwood,1,1
+Victoria Park,VIC,1996,Collingwood,1,1
+Victoria Park,VIC,1997,Collingwood,1,1
+Victoria Park,VIC,1998,Collingwood,1,1
+Victoria Park,VIC,1999,Collingwood,1,1
+Kardinia Park,GEE,1990,Geelong,1,0
+Kardinia Park,GEE,1991,Geelong,1,1
+Kardinia Park,GEE,1992,Geelong,1,1
+Kardinia Park,GEE,1993,Geelong,1,1
+Kardinia Park,GEE,1994,Geelong,1,1
+Kardinia Park,GEE,1995,Geelong,1,1
+Kardinia Park,GEE,1996,Geelong,1,1
+Kardinia Park,GEE,1997,Geelong,1,1
+Kardinia Park,GEE,1998,Geelong,1,1
+Kardinia Park,GEE,1999,Geelong,1,1
+Kardinia Park,GEE,2000,Geelong,1,1
+Kardinia Park,GEE,2001,Geelong,1,1
+Kardinia Park,GEE,2002,Geelong,1,1
+Kardinia Park,GEE,2003,Geelong,1,1
+Kardinia Park,GEE,2004,Geelong,1,1
+Kardinia Park,GEE,2005,Geelong,1,1
+Kardinia Park,GEE,2006,Geelong,1,1
+Kardinia Park,GEE,2007,Geelong,1,1
+Kardinia Park,GEE,2008,Geelong,1,1
+Kardinia Park,GEE,2009,Geelong,1,1
+Kardinia Park,GEE,2010,Geelong,1,1
+Kardinia Park,GEE,2011,Geelong,1,1
+Kardinia Park,GEE,2012,Geelong,1,1
+Kardinia Park,GEE,2013,Geelong,1,1
+Kardinia Park,GEE,2014,Geelong,1,1
+Kardinia Park,GEE,2015,Geelong,1,1
+Kardinia Park,GEE,2016,Geelong,1,1
+Kardinia Park,GEE,2017,Geelong,1,1
+Kardinia Park,GEE,2018,Geelong,1,1
+Kardinia Park,GEE,2019,Geelong,1,1
+Kardinia Park,GEE,2020,Geelong,1,1
+Kardinia Park,GEE,2021,Geelong,1,1
+Kardinia Park,GEE,2021,Sydney,0,0
+Kardinia Park,GEE,2021,Gold Coast,0,0
+Kardinia Park,GEE,2022,Geelong,1,1
+Kardinia Park,GEE,2023,Geelong,1,1
+Kardinia Park,GEE,2024,Geelong,1,1
+WACA,WA,1990,West Coast,1,0
+WACA,WA,1991,West Coast,1,1
+WACA,WA,1992,West Coast,1,1
+WACA,WA,1993,West Coast,1,1
+WACA,WA,1994,West Coast,1,1
+WACA,WA,1995,West Coast,1,1
+WACA,WA,1995,Fremantle,1,0
+WACA,WA,1996,West Coast,1,1
+WACA,WA,1996,Fremantle,1,1
+WACA,WA,1997,West Coast,1,1
+WACA,WA,1997,Fremantle,1,1
+WACA,WA,1998,West Coast,1,1
+WACA,WA,1998,Fremantle,1,1
+WACA,WA,1999,Fremantle,1,1
+WACA,WA,1999,West Coast,1,1
+WACA,WA,2000,West Coast,1,1
+WACA,WA,2000,Fremantle,1,1
+Football Park,SA,1991,Adelaide,1,0
+Football Park,SA,1992,Adelaide,1,1
+Football Park,SA,1993,Adelaide,1,1
+Football Park,SA,1994,Adelaide,1,1
+Football Park,SA,1995,Adelaide,1,1
+Football Park,SA,1996,Adelaide,1,1
+Football Park,SA,1997,Adelaide,1,1
+Football Park,SA,1997,Port Adelaide,1,0
+Football Park,SA,1998,Port Adelaide,1,1
+Football Park,SA,1998,Adelaide,1,1
+Football Park,SA,1999,Adelaide,1,1
+Football Park,SA,1999,Port Adelaide,1,1
+Football Park,SA,2000,Adelaide,1,1
+Football Park,SA,2000,Port Adelaide,1,1
+Football Park,SA,2001,Port Adelaide,1,1
+Football Park,SA,2001,Adelaide,1,1
+Football Park,SA,2002,Port Adelaide,1,1
+Football Park,SA,2002,Adelaide,1,1
+Football Park,SA,2003,Adelaide,1,1
+Football Park,SA,2003,Port Adelaide,1,1
+Football Park,SA,2004,Port Adelaide,1,1
+Football Park,SA,2004,Adelaide,1,1
+Football Park,SA,2005,Adelaide,1,1
+Football Park,SA,2005,Port Adelaide,1,1
+Football Park,SA,2006,Port Adelaide,1,1
+Football Park,SA,2006,Adelaide,1,1
+Football Park,SA,2007,Adelaide,1,1
+Football Park,SA,2007,Port Adelaide,1,1
+Football Park,SA,2008,Port Adelaide,1,1
+Football Park,SA,2008,Adelaide,1,1
+Football Park,SA,2009,Port Adelaide,1,1
+Football Park,SA,2009,Adelaide,1,1
+Football Park,SA,2010,Port Adelaide,1,1
+Football Park,SA,2010,Adelaide,1,1
+Football Park,SA,2011,Adelaide,1,1
+Football Park,SA,2011,Port Adelaide,1,1
+Football Park,SA,2012,Port Adelaide,1,1
+Football Park,SA,2012,Adelaide,1,1
+Football Park,SA,2013,Adelaide,1,1
+Football Park,SA,2013,Port Adelaide,1,1
+Gabba,QLD,1991,Brisbane,1,0
+Gabba,QLD,1993,Brisbane,1,0
+Gabba,QLD,1994,Brisbane,1,1
+Gabba,QLD,1995,Brisbane,1,1
+Gabba,QLD,1996,Brisbane,1,1
+Gabba,QLD,1997,Brisbane,1,1
+Gabba,QLD,1998,Brisbane,1,1
+Gabba,QLD,1999,Brisbane,1,1
+Gabba,QLD,2000,Brisbane,1,1
+Gabba,QLD,2001,Brisbane,1,1
+Gabba,QLD,2001,Melbourne,0,0
+Gabba,QLD,2002,Brisbane,1,1
+Gabba,QLD,2002,Melbourne,0,1
+Gabba,QLD,2003,Brisbane,1,1
+Gabba,QLD,2003,Melbourne,0,1
+Gabba,QLD,2004,Brisbane,1,1
+Gabba,QLD,2004,Melbourne,0,1
+Gabba,QLD,2005,Brisbane,1,1
+Gabba,QLD,2005,Melbourne,0,1
+Gabba,QLD,2006,Brisbane,1,1
+Gabba,QLD,2006,Melbourne,0,1
+Gabba,QLD,2007,Brisbane,1,1
+Gabba,QLD,2007,Melbourne,0,1
+Gabba,QLD,2008,Brisbane,1,1
+Gabba,QLD,2009,Brisbane,1,1
+Gabba,QLD,2010,Brisbane,1,1
+Gabba,QLD,2011,Brisbane,1,1
+Gabba,QLD,2011,Gold Coast,0,0
+Gabba,QLD,2012,Brisbane,1,1
+Gabba,QLD,2013,Brisbane,1,1
+Gabba,QLD,2014,Brisbane,1,1
+Gabba,QLD,2015,Brisbane,1,1
+Gabba,QLD,2016,Brisbane,1,1
+Gabba,QLD,2017,Brisbane,1,1
+Gabba,QLD,2018,Brisbane,1,1
+Gabba,QLD,2018,Gold Coast,0,0
+Gabba,QLD,2019,Brisbane,1,1
+Gabba,QLD,2020,Brisbane,1,1
+Gabba,QLD,2020,West Coast,0,0
+Gabba,QLD,2020,Richmond,0,0
+Gabba,QLD,2020,Carlton,0,0
+Gabba,QLD,2020,North Melbourne,0,0
+Gabba,QLD,2020,Melbourne,0,0
+Gabba,QLD,2020,St Kilda,0,0
+Gabba,QLD,2020,Geelong,0,0
+Gabba,QLD,2020,Collingwood,0,0
+Gabba,QLD,2020,GWS,0,0
+Gabba,QLD,2021,Brisbane,1,1
+Gabba,QLD,2022,Brisbane,1,1
+Gabba,QLD,2023,Brisbane,1,1
+Gabba,QLD,2024,Brisbane,1,1
+North Hobart Oval,TAS,1991,Fitzroy,0,0
+North Hobart Oval,TAS,1992,Fitzroy,0,1
+Canberra Stadium,ACT,1995,Fitzroy,0,0
+Manuka Oval,ACT,1998,North Melbourne,1,0
+Manuka Oval,ACT,2001,North Melbourne,1,0
+Manuka Oval,ACT,2002,North Melbourne,1,1
+Manuka Oval,ACT,2003,North Melbourne,1,1
+Manuka Oval,ACT,2004,North Melbourne,1,1
+Manuka Oval,ACT,2005,North Melbourne,1,1
+Manuka Oval,ACT,2006,North Melbourne,1,1
+Manuka Oval,ACT,2007,Western Bulldogs,0,0
+Manuka Oval,ACT,2007,Melbourne,0,0
+Manuka Oval,ACT,2008,Melbourne,0,1
+Manuka Oval,ACT,2008,Western Bulldogs,0,1
+Manuka Oval,ACT,2009,Western Bulldogs,0,1
+Manuka Oval,ACT,2009,Melbourne,0,1
+Manuka Oval,ACT,2010,Western Bulldogs,0,1
+Manuka Oval,ACT,2011,Western Bulldogs,0,1
+Manuka Oval,ACT,2012,GWS,1,0
+Manuka Oval,ACT,2013,GWS,1,1
+Manuka Oval,ACT,2014,GWS,1,1
+Manuka Oval,ACT,2015,GWS,1,1
+Manuka Oval,ACT,2016,GWS,1,1
+Manuka Oval,ACT,2017,GWS,1,1
+Manuka Oval,ACT,2018,GWS,1,1
+Manuka Oval,ACT,2019,GWS,1,1
+Manuka Oval,ACT,2021,GWS,1,0
+Manuka Oval,ACT,2022,GWS,1,1
+Manuka Oval,ACT,2023,GWS,1,1
+Manuka Oval,ACT,2024,GWS,1,1
+Docklands Stadium,VIC,2000,Essendon,1,0
+Docklands Stadium,VIC,2000,St Kilda,1,0
+Docklands Stadium,VIC,2000,Western Bulldogs,1,0
+Docklands Stadium,VIC,2000,North Melbourne,1,0
+Docklands Stadium,VIC,2000,Richmond,1,0
+Docklands Stadium,VIC,2000,Melbourne,1,0
+Docklands Stadium,VIC,2000,Geelong,1,0
+Docklands Stadium,VIC,2000,Collingwood,1,0
+Docklands Stadium,VIC,2000,Hawthorn,1,0
+Docklands Stadium,VIC,2001,Western Bulldogs,1,1
+Docklands Stadium,VIC,2001,Essendon,1,1
+Docklands Stadium,VIC,2001,Collingwood,1,1
+Docklands Stadium,VIC,2001,St Kilda,1,1
+Docklands Stadium,VIC,2001,North Melbourne,1,1
+Docklands Stadium,VIC,2001,Geelong,1,1
+Docklands Stadium,VIC,2001,Richmond,1,1
+Docklands Stadium,VIC,2001,Hawthorn,1,1
+Docklands Stadium,VIC,2001,Melbourne,1,1
+Docklands Stadium,VIC,2002,St Kilda,1,1
+Docklands Stadium,VIC,2002,Western Bulldogs,1,1
+Docklands Stadium,VIC,2002,North Melbourne,1,1
+Docklands Stadium,VIC,2002,Essendon,1,1
+Docklands Stadium,VIC,2002,Carlton,1,0
+Docklands Stadium,VIC,2002,Richmond,1,1
+Docklands Stadium,VIC,2002,Collingwood,1,1
+Docklands Stadium,VIC,2002,Geelong,1,1
+Docklands Stadium,VIC,2002,Hawthorn,1,1
+Docklands Stadium,VIC,2003,Western Bulldogs,1,1
+Docklands Stadium,VIC,2003,St Kilda,1,1
+Docklands Stadium,VIC,2003,Richmond,1,1
+Docklands Stadium,VIC,2003,North Melbourne,1,1
+Docklands Stadium,VIC,2003,Melbourne,1,0
+Docklands Stadium,VIC,2003,Collingwood,1,1
+Docklands Stadium,VIC,2003,Hawthorn,1,1
+Docklands Stadium,VIC,2003,Essendon,1,1
+Docklands Stadium,VIC,2003,Geelong,1,1
+Docklands Stadium,VIC,2003,Carlton,1,1
+Docklands Stadium,VIC,2004,St Kilda,1,1
+Docklands Stadium,VIC,2004,Western Bulldogs,1,1
+Docklands Stadium,VIC,2004,Essendon,1,1
+Docklands Stadium,VIC,2004,Geelong,1,1
+Docklands Stadium,VIC,2004,Collingwood,1,1
+Docklands Stadium,VIC,2004,Richmond,1,1
+Docklands Stadium,VIC,2004,North Melbourne,1,1
+Docklands Stadium,VIC,2004,Hawthorn,1,1
+Docklands Stadium,VIC,2004,Carlton,1,1
+Docklands Stadium,VIC,2004,Melbourne,1,1
+Docklands Stadium,VIC,2005,North Melbourne,1,1
+Docklands Stadium,VIC,2005,Western Bulldogs,1,1
+Docklands Stadium,VIC,2005,Collingwood,1,1
+Docklands Stadium,VIC,2005,St Kilda,1,1
+Docklands Stadium,VIC,2005,Geelong,1,1
+Docklands Stadium,VIC,2005,Carlton,1,1
+Docklands Stadium,VIC,2005,Essendon,1,1
+Docklands Stadium,VIC,2005,Richmond,1,1
+Docklands Stadium,VIC,2005,Melbourne,1,1
+Docklands Stadium,VIC,2005,Hawthorn,1,1
+Docklands Stadium,VIC,2006,Western Bulldogs,1,1
+Docklands Stadium,VIC,2006,Essendon,1,1
+Docklands Stadium,VIC,2006,Melbourne,1,1
+Docklands Stadium,VIC,2006,Collingwood,1,1
+Docklands Stadium,VIC,2006,Richmond,1,1
+Docklands Stadium,VIC,2006,Hawthorn,1,1
+Docklands Stadium,VIC,2006,St Kilda,1,1
+Docklands Stadium,VIC,2006,Carlton,1,1
+Docklands Stadium,VIC,2006,North Melbourne,1,1
+Docklands Stadium,VIC,2006,Geelong,1,1
+Docklands Stadium,VIC,2007,Western Bulldogs,1,1
+Docklands Stadium,VIC,2007,Geelong,1,1
+Docklands Stadium,VIC,2007,Essendon,1,1
+Docklands Stadium,VIC,2007,St Kilda,1,1
+Docklands Stadium,VIC,2007,North Melbourne,1,1
+Docklands Stadium,VIC,2007,Carlton,1,1
+Docklands Stadium,VIC,2007,Richmond,1,1
+Docklands Stadium,VIC,2007,Collingwood,1,1
+Docklands Stadium,VIC,2007,Melbourne,1,1
+Docklands Stadium,VIC,2008,St Kilda,1,1
+Docklands Stadium,VIC,2008,Western Bulldogs,1,1
+Docklands Stadium,VIC,2008,North Melbourne,1,1
+Docklands Stadium,VIC,2008,Geelong,1,1
+Docklands Stadium,VIC,2008,Essendon,1,1
+Docklands Stadium,VIC,2008,Richmond,1,1
+Docklands Stadium,VIC,2008,Carlton,1,1
+Docklands Stadium,VIC,2008,Collingwood,1,1
+Docklands Stadium,VIC,2009,St Kilda,1,1
+Docklands Stadium,VIC,2009,Carlton,1,1
+Docklands Stadium,VIC,2009,Essendon,1,1
+Docklands Stadium,VIC,2009,North Melbourne,1,1
+Docklands Stadium,VIC,2009,Western Bulldogs,1,1
+Docklands Stadium,VIC,2009,Collingwood,1,1
+Docklands Stadium,VIC,2009,Geelong,1,1
+Docklands Stadium,VIC,2009,Richmond,1,1
+Docklands Stadium,VIC,2010,Western Bulldogs,1,1
+Docklands Stadium,VIC,2010,St Kilda,1,1
+Docklands Stadium,VIC,2010,Essendon,1,1
+Docklands Stadium,VIC,2010,North Melbourne,1,1
+Docklands Stadium,VIC,2010,Carlton,1,1
+Docklands Stadium,VIC,2010,Richmond,1,1
+Docklands Stadium,VIC,2010,Collingwood,1,1
+Docklands Stadium,VIC,2010,Geelong,1,1
+Docklands Stadium,VIC,2011,Collingwood,1,1
+Docklands Stadium,VIC,2011,Essendon,1,1
+Docklands Stadium,VIC,2011,North Melbourne,1,1
+Docklands Stadium,VIC,2011,Western Bulldogs,1,1
+Docklands Stadium,VIC,2011,St Kilda,1,1
+Docklands Stadium,VIC,2011,Carlton,1,1
+Docklands Stadium,VIC,2011,Geelong,1,1
+Docklands Stadium,VIC,2011,Melbourne,1,0
+Docklands Stadium,VIC,2011,Richmond,1,1
+Docklands Stadium,VIC,2012,North Melbourne,1,1
+Docklands Stadium,VIC,2012,Western Bulldogs,1,1
+Docklands Stadium,VIC,2012,Essendon,1,1
+Docklands Stadium,VIC,2012,St Kilda,1,1
+Docklands Stadium,VIC,2012,Collingwood,1,1
+Docklands Stadium,VIC,2012,Richmond,1,1
+Docklands Stadium,VIC,2012,Carlton,1,1
+Docklands Stadium,VIC,2012,Melbourne,1,1
+Docklands Stadium,VIC,2012,Geelong,1,1
+Docklands Stadium,VIC,2013,Western Bulldogs,1,1
+Docklands Stadium,VIC,2013,North Melbourne,1,1
+Docklands Stadium,VIC,2013,Geelong,1,1
+Docklands Stadium,VIC,2013,Richmond,1,1
+Docklands Stadium,VIC,2013,St Kilda,1,1
+Docklands Stadium,VIC,2013,Collingwood,1,1
+Docklands Stadium,VIC,2013,Essendon,1,1
+Docklands Stadium,VIC,2013,Carlton,1,1
+Docklands Stadium,VIC,2013,Hawthorn,1,0
+Docklands Stadium,VIC,2013,Melbourne,1,1
+Docklands Stadium,VIC,2014,Collingwood,1,1
+Docklands Stadium,VIC,2014,Carlton,1,1
+Docklands Stadium,VIC,2014,North Melbourne,1,1
+Docklands Stadium,VIC,2014,St Kilda,1,1
+Docklands Stadium,VIC,2014,Essendon,1,1
+Docklands Stadium,VIC,2014,Western Bulldogs,1,1
+Docklands Stadium,VIC,2014,Geelong,1,1
+Docklands Stadium,VIC,2014,Richmond,1,1
+Docklands Stadium,VIC,2014,Melbourne,1,1
+Docklands Stadium,VIC,2015,Western Bulldogs,1,1
+Docklands Stadium,VIC,2015,St Kilda,1,1
+Docklands Stadium,VIC,2015,Collingwood,1,1
+Docklands Stadium,VIC,2015,North Melbourne,1,1
+Docklands Stadium,VIC,2015,Carlton,1,1
+Docklands Stadium,VIC,2015,Essendon,1,1
+Docklands Stadium,VIC,2015,Geelong,1,1
+Docklands Stadium,VIC,2015,Hawthorn,1,0
+Docklands Stadium,VIC,2015,Richmond,1,1
+Docklands Stadium,VIC,2015,Melbourne,1,1
+Docklands Stadium,VIC,2016,North Melbourne,1,1
+Docklands Stadium,VIC,2016,Western Bulldogs,1,1
+Docklands Stadium,VIC,2016,St Kilda,1,1
+Docklands Stadium,VIC,2016,Carlton,1,1
+Docklands Stadium,VIC,2016,Richmond,1,1
+Docklands Stadium,VIC,2016,Melbourne,1,1
+Docklands Stadium,VIC,2016,Essendon,1,1
+Docklands Stadium,VIC,2016,Geelong,1,1
+Docklands Stadium,VIC,2016,Collingwood,1,1
+Docklands Stadium,VIC,2017,St Kilda,1,1
+Docklands Stadium,VIC,2017,North Melbourne,1,1
+Docklands Stadium,VIC,2017,Western Bulldogs,1,1
+Docklands Stadium,VIC,2017,Geelong,1,1
+Docklands Stadium,VIC,2017,Carlton,1,1
+Docklands Stadium,VIC,2017,Collingwood,1,1
+Docklands Stadium,VIC,2017,Essendon,1,1
+Docklands Stadium,VIC,2017,Richmond,1,1
+Docklands Stadium,VIC,2017,Hawthorn,1,0
+Docklands Stadium,VIC,2018,Essendon,1,1
+Docklands Stadium,VIC,2018,St Kilda,1,1
+Docklands Stadium,VIC,2018,North Melbourne,1,1
+Docklands Stadium,VIC,2018,Carlton,1,1
+Docklands Stadium,VIC,2018,Western Bulldogs,1,1
+Docklands Stadium,VIC,2018,Collingwood,1,1
+Docklands Stadium,VIC,2018,Hawthorn,1,1
+Docklands Stadium,VIC,2018,Richmond,1,1
+Docklands Stadium,VIC,2019,Western Bulldogs,1,1
+Docklands Stadium,VIC,2019,St Kilda,1,1
+Docklands Stadium,VIC,2019,Essendon,1,1
+Docklands Stadium,VIC,2019,North Melbourne,1,1
+Docklands Stadium,VIC,2019,Carlton,1,1
+Docklands Stadium,VIC,2019,Richmond,1,1
+Docklands Stadium,VIC,2019,Collingwood,1,1
+Docklands Stadium,VIC,2019,Hawthorn,1,1
+Docklands Stadium,VIC,2020,Western Bulldogs,1,1
+Docklands Stadium,VIC,2020,Essendon,1,1
+Docklands Stadium,VIC,2020,North Melbourne,1,1
+Docklands Stadium,VIC,2020,Carlton,1,1
+Docklands Stadium,VIC,2020,St Kilda,1,1
+Docklands Stadium,VIC,2020,Hawthorn,1,1
+Docklands Stadium,VIC,2021,Essendon,1,1
+Docklands Stadium,VIC,2021,North Melbourne,1,1
+Docklands Stadium,VIC,2021,St Kilda,1,1
+Docklands Stadium,VIC,2021,Western Bulldogs,1,1
+Docklands Stadium,VIC,2021,Collingwood,1,0
+Docklands Stadium,VIC,2021,Carlton,1,1
+Docklands Stadium,VIC,2021,Richmond,1,0
+Docklands Stadium,VIC,2021,Gold Coast,0,0
+Docklands Stadium,VIC,2021,Hawthorn,1,1
+Docklands Stadium,VIC,2021,Port Adelaide,0,0
+Docklands Stadium,VIC,2021,Adelaide,0,0
+Docklands Stadium,VIC,2021,GWS,0,0
+Docklands Stadium,VIC,2021,Sydney,0,0
+Docklands Stadium,VIC,2022,St Kilda,1,1
+Docklands Stadium,VIC,2022,Western Bulldogs,1,1
+Docklands Stadium,VIC,2022,Essendon,1,1
+Docklands Stadium,VIC,2022,North Melbourne,1,1
+Docklands Stadium,VIC,2022,Collingwood,1,1
+Docklands Stadium,VIC,2022,Carlton,1,1
+Docklands Stadium,VIC,2022,Hawthorn,1,1
+Docklands Stadium,VIC,2022,Richmond,1,1
+Docklands Stadium,VIC,2023,North Melbourne,1,1
+Docklands Stadium,VIC,2023,St Kilda,1,1
+Docklands Stadium,VIC,2023,Western Bulldogs,1,1
+Docklands Stadium,VIC,2023,Essendon,1,1
+Docklands Stadium,VIC,2023,Carlton,1,1
+Docklands Stadium,VIC,2023,Richmond,1,1
+Docklands Stadium,VIC,2023,Collingwood,1,1
+Docklands Stadium,VIC,2023,Hawthorn,1,1
+Docklands Stadium,VIC,2024,North Melbourne,1,1
+Docklands Stadium,VIC,2024,Essendon,1,1
+Docklands Stadium,VIC,2024,Western Bulldogs,1,1
+Docklands Stadium,VIC,2024,Carlton,1,1
+Docklands Stadium,VIC,2024,St Kilda,1,1
+Docklands Stadium,VIC,2024,Collingwood,1,1
+Docklands Stadium,VIC,2024,Hawthorn,1,1
+Docklands Stadium,VIC,2024,Richmond,1,1
+York Park,TAS,2001,Hawthorn,1,0
+York Park,TAS,2002,Hawthorn,1,1
+York Park,TAS,2003,Hawthorn,1,1
+York Park,TAS,2003,St Kilda,0,0
+York Park,TAS,2004,Hawthorn,1,1
+York Park,TAS,2004,St Kilda,0,1
+York Park,TAS,2005,St Kilda,0,1
+York Park,TAS,2005,Hawthorn,1,1
+York Park,TAS,2006,Hawthorn,1,1
+York Park,TAS,2006,St Kilda,0,1
+York Park,TAS,2007,Hawthorn,1,1
+York Park,TAS,2008,Hawthorn,1,1
+York Park,TAS,2009,Hawthorn,1,1
+York Park,TAS,2010,Hawthorn,1,1
+York Park,TAS,2011,Hawthorn,1,1
+York Park,TAS,2012,Hawthorn,1,1
+York Park,TAS,2013,Hawthorn,1,1
+York Park,TAS,2014,Hawthorn,1,1
+York Park,TAS,2015,Hawthorn,1,1
+York Park,TAS,2016,Hawthorn,1,1
+York Park,TAS,2017,Hawthorn,1,1
+York Park,TAS,2018,Hawthorn,1,1
+York Park,TAS,2019,Hawthorn,1,1
+York Park,TAS,2021,Hawthorn,1,0
+York Park,TAS,2022,Hawthorn,1,1
+York Park,TAS,2023,Hawthorn,1,1
+York Park,TAS,2024,Hawthorn,1,1
+Stadium Australia,NSW,2002,Sydney,1,0
+Stadium Australia,NSW,2003,Sydney,1,1
+Stadium Australia,NSW,2004,Sydney,1,1
+Stadium Australia,NSW,2005,Sydney,1,1
+Stadium Australia,NSW,2006,Sydney,1,1
+Stadium Australia,NSW,2007,Sydney,1,1
+Stadium Australia,NSW,2008,Sydney,1,1
+Stadium Australia,NSW,2009,Sydney,1,1
+Stadium Australia,NSW,2010,Sydney,1,1
+Stadium Australia,NSW,2011,Sydney,1,1
+Stadium Australia,NSW,2012,GWS,0,0
+Stadium Australia,NSW,2012,Sydney,1,1
+Stadium Australia,NSW,2013,GWS,0,1
+Stadium Australia,NSW,2013,Sydney,1,1
+Stadium Australia,NSW,2014,Sydney,1,1
+Stadium Australia,NSW,2015,Sydney,1,1
+Stadium Australia,NSW,2022,GWS,0,0
+Marrara Oval,NT,2004,Western Bulldogs,0,0
+Marrara Oval,NT,2005,Western Bulldogs,0,1
+Marrara Oval,NT,2006,Western Bulldogs,0,1
+Marrara Oval,NT,2007,Western Bulldogs,0,1
+Marrara Oval,NT,2008,Western Bulldogs,0,1
+Marrara Oval,NT,2009,Western Bulldogs,0,1
+Marrara Oval,NT,2010,Melbourne,1,0
+Marrara Oval,NT,2010,Western Bulldogs,0,1
+Marrara Oval,NT,2011,Richmond,0,0
+Marrara Oval,NT,2011,Melbourne,1,1
+Marrara Oval,NT,2012,Western Bulldogs,0,0
+Marrara Oval,NT,2012,Melbourne,1,1
+Marrara Oval,NT,2013,Western Bulldogs,0,1
+Marrara Oval,NT,2013,Melbourne,1,1
+Marrara Oval,NT,2014,Melbourne,1,1
+Marrara Oval,NT,2015,Melbourne,1,1
+Marrara Oval,NT,2016,Melbourne,1,1
+Marrara Oval,NT,2017,Melbourne,1,1
+Marrara Oval,NT,2018,Melbourne,1,1
+Marrara Oval,NT,2019,Melbourne,1,1
+Marrara Oval,NT,2020,Gold Coast,0,0
+Marrara Oval,NT,2020,Essendon,0,0
+Marrara Oval,NT,2022,Gold Coast,0,0
+Marrara Oval,NT,2023,Gold Coast,0,1
+Marrara Oval,NT,2024,Gold Coast,0,1
+Cazaly's Stadium,QLD,2011,Richmond,0,0
+Cazaly's Stadium,QLD,2012,Richmond,0,1
+Cazaly's Stadium,QLD,2013,Richmond,0,1
+Cazaly's Stadium,QLD,2014,Western Bulldogs,0,0
+Cazaly's Stadium,QLD,2015,Western Bulldogs,0,1
+Cazaly's Stadium,QLD,2016,Western Bulldogs,0,1
+Cazaly's Stadium,QLD,2017,Western Bulldogs,0,1
+Cazaly's Stadium,QLD,2018,Gold Coast,0,0
+Cazaly's Stadium,QLD,2020,Sydney,0,0
+Cazaly's Stadium,QLD,2020,Melbourne,0,0
+Cazaly's Stadium,QLD,2020,Fremantle,0,0
+Cazaly's Stadium,QLD,2021,St Kilda,0,0
+Cazaly's Stadium,QLD,2022,St Kilda,0,1
+Adelaide Oval,SA,2011,Port Adelaide,1,0
+Adelaide Oval,SA,2014,Port Adelaide,1,0
+Adelaide Oval,SA,2014,Adelaide,1,0
+Adelaide Oval,SA,2015,Adelaide,1,1
+Adelaide Oval,SA,2015,Port Adelaide,1,1
+Adelaide Oval,SA,2016,Port Adelaide,1,1
+Adelaide Oval,SA,2016,Adelaide,1,1
+Adelaide Oval,SA,2017,Adelaide,1,1
+Adelaide Oval,SA,2017,Port Adelaide,1,1
+Adelaide Oval,SA,2018,Port Adelaide,1,1
+Adelaide Oval,SA,2018,Adelaide,1,1
+Adelaide Oval,SA,2019,Adelaide,1,1
+Adelaide Oval,SA,2019,Port Adelaide,1,1
+Adelaide Oval,SA,2020,Adelaide,1,1
+Adelaide Oval,SA,2020,Port Adelaide,1,1
+Adelaide Oval,SA,2020,Melbourne,0,0
+Adelaide Oval,SA,2020,Hawthorn,0,0
+Adelaide Oval,SA,2021,Adelaide,1,1
+Adelaide Oval,SA,2021,Port Adelaide,1,1
+Adelaide Oval,SA,2022,Adelaide,1,1
+Adelaide Oval,SA,2022,Port Adelaide,1,1
+Adelaide Oval,SA,2023,Port Adelaide,1,1
+Adelaide Oval,SA,2023,Adelaide,1,1
+Adelaide Oval,SA,2023,Richmond,0,0
+Adelaide Oval,SA,2023,Essendon,0,0
+Adelaide Oval,SA,2023,Geelong,0,0
+Adelaide Oval,SA,2023,Collingwood,0,0
+Adelaide Oval,SA,2024,Port Adelaide,1,1
+Adelaide Oval,SA,2024,Adelaide,1,1
+Adelaide Oval,SA,2024,Fremantle,0,0
+Adelaide Oval,SA,2024,Western Bulldogs,0,0
+Adelaide Oval,SA,2024,Collingwood,0,1
+Bellerive Oval,TAS,2012,North Melbourne,1,0
+Bellerive Oval,TAS,2013,North Melbourne,1,1
+Bellerive Oval,TAS,2014,North Melbourne,1,1
+Bellerive Oval,TAS,2015,North Melbourne,1,1
+Bellerive Oval,TAS,2016,North Melbourne,1,1
+Bellerive Oval,TAS,2017,North Melbourne,1,1
+Bellerive Oval,TAS,2018,North Melbourne,1,1
+Bellerive Oval,TAS,2019,North Melbourne,1,1
+Bellerive Oval,TAS,2021,North Melbourne,1,0
+Bellerive Oval,TAS,2021,St Kilda,0,0
+Bellerive Oval,TAS,2022,North Melbourne,1,1
+Bellerive Oval,TAS,2023,North Melbourne,1,1
+Bellerive Oval,TAS,2024,North Melbourne,1,1
+Blacktown International Sportspark,NSW,2012,GWS,0,0
+Sydney Showground Stadium,NSW,2012,GWS,1,0
+Sydney Showground Stadium,NSW,2013,GWS,1,1
+Sydney Showground Stadium,NSW,2014,GWS,1,1
+Sydney Showground Stadium,NSW,2015,GWS,1,1
+Sydney Showground Stadium,NSW,2016,GWS,1,1
+Sydney Showground Stadium,NSW,2017,GWS,1,1
+Sydney Showground Stadium,NSW,2018,GWS,1,1
+Sydney Showground Stadium,NSW,2019,GWS,1,1
+Sydney Showground Stadium,NSW,2020,GWS,1,1
+Sydney Showground Stadium,NSW,2020,Collingwood,0,0
+Sydney Showground Stadium,NSW,2020,Melbourne,0,0
+Sydney Showground Stadium,NSW,2020,Hawthorn,0,0
+Sydney Showground Stadium,NSW,2021,GWS,1,1
+Sydney Showground Stadium,NSW,2021,Richmond,0,0
+Sydney Showground Stadium,NSW,2021,Melbourne,0,1
+Sydney Showground Stadium,NSW,2022,GWS,1,1
+Sydney Showground Stadium,NSW,2023,GWS,1,1
+Sydney Showground Stadium,NSW,2024,GWS,1,1
+Wellington Regional Stadium,Other,2013,St Kilda,0,0
+Wellington Regional Stadium,Other,2014,St Kilda,0,1
+Wellington Regional Stadium,Other,2015,St Kilda,0,1
+Traeger Park,NT,2014,Melbourne,1,0
+Traeger Park,NT,2015,Melbourne,1,1
+Traeger Park,NT,2016,Melbourne,1,1
+Traeger Park,NT,2017,Melbourne,1,1
+Traeger Park,NT,2018,Melbourne,1,1
+Traeger Park,NT,2019,Melbourne,1,1
+Traeger Park,NT,2020,Melbourne,1,1
+Traeger Park,NT,2022,Melbourne,1,0
+Traeger Park,NT,2023,Melbourne,1,1
+Traeger Park,NT,2024,Melbourne,1,1
+Jiangwan Stadium,Other,2017,Gold Coast,0,0
+Jiangwan Stadium,Other,2018,Gold Coast,0,1
+Jiangwan Stadium,Other,2019,St Kilda,0,0
+Eureka Stadium,VIC,2017,Western Bulldogs,1,0
+Eureka Stadium,VIC,2018,Western Bulldogs,1,1
+Eureka Stadium,VIC,2019,Western Bulldogs,1,1
+Eureka Stadium,VIC,2021,Western Bulldogs,1,0
+Eureka Stadium,VIC,2021,GWS,0,0
+Eureka Stadium,VIC,2022,Western Bulldogs,1,1
+Eureka Stadium,VIC,2023,Western Bulldogs,1,1
+Eureka Stadium,VIC,2024,Western Bulldogs,1,1
+Perth Stadium,WA,2018,West Coast,1,0
+Perth Stadium,WA,2018,Fremantle,1,0
+Perth Stadium,WA,2018,Gold Coast,0,0
+Perth Stadium,WA,2019,Fremantle,1,1
+Perth Stadium,WA,2019,West Coast,1,1
+Perth Stadium,WA,2020,West Coast,1,1
+Perth Stadium,WA,2020,Geelong,0,0
+Perth Stadium,WA,2020,Fremantle,1,1
+Perth Stadium,WA,2020,Carlton,0,0
+Perth Stadium,WA,2020,Sydney,0,0
+Perth Stadium,WA,2021,West Coast,1,1
+Perth Stadium,WA,2021,Fremantle,1,1
+Perth Stadium,WA,2021,Essendon,0,0
+Perth Stadium,WA,2022,West Coast,1,1
+Perth Stadium,WA,2022,Fremantle,1,1
+Perth Stadium,WA,2023,Fremantle,1,1
+Perth Stadium,WA,2023,West Coast,1,1
+Perth Stadium,WA,2024,Fremantle,1,1
+Perth Stadium,WA,2024,West Coast,1,1
+Riverway Stadium,QLD,2019,Gold Coast,0,0
+Norwood Oval,SA,2023,Fremantle,0,0
+Norwood Oval,SA,2023,GWS,0,0
+Norwood Oval,SA,2024,Brisbane,0,0
+Norwood Oval,SA,2024,Richmond,0,0
+Adelaide Hills,SA,2023,Brisbane,0,0
+Adelaide Hills,SA,2024,West Coast,0,0
+Adelaide Hills,SA,2024,Gold Coast,0,0

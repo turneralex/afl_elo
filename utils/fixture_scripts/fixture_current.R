@@ -16,6 +16,7 @@ afl_fixture <- fitzRoy::fetch_fixture_squiggle(season = current_season) %>%
         round_number = round,
         round = paste("Round", round),
         round_name = roundname,
+        finals_flag = if_else(is_final > 0, 1, 0),
         date = stringr::str_sub(date, start = 1, end = 10) %>% 
             lubridate::as_date(),
         venue = change_venue_name(venue),
