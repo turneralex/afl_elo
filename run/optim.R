@@ -57,7 +57,8 @@ afl_elo <- afl_fixture_history %>%
     mutate(
         match_id =  1:nrow(.),
         # share of scoring shots
-        home_score_adjusted = (home_goals + home_behinds) / (home_goals + home_behinds + away_goals + away_behinds),
+        home_score_adjusted = ((home_goals + home_behinds) / (home_goals + home_behinds + away_goals + away_behinds) * 0.5)
+                              + (home_score / (home_score + away_score) * 0.5),
         hga_app = purrr::pmap_int(
             .l = list(
                 venue, 
