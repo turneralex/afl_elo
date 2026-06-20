@@ -1,0 +1,217 @@
+season,match_id,round_number,round,round_name,finals_flag,date,venue,home_team,away_team,home_goals,home_behinds,home_score,away_goals,away_behinds,away_score
+2025,1,0,Round 0,Opening Round,0,2025-03-07,SCG,Sydney,Hawthorn,11,10,76,14,12,96
+2025,2,0,Round 0,Opening Round,0,2025-03-09,Sydney Showground Stadium,GWS,Collingwood,15,14,104,6,16,52
+2025,3,1,Round 1,Round 1,0,2025-03-13,MCG,Richmond,Carlton,13,4,82,9,15,69
+2025,4,1,Round 1,Round 1,0,2025-03-14,MCG,Hawthorn,Essendon,17,9,111,12,13,85
+2025,5,1,Round 1,Round 1,0,2025-03-15,Kardinia Park,Geelong,Fremantle,23,9,147,10,9,69
+2025,6,1,Round 1,Round 1,0,2025-03-15,SCG,Sydney,Brisbane,12,10,82,12,14,86
+2025,7,1,Round 1,Round 1,0,2025-03-15,MCG,Collingwood,Port Adelaide,21,10,136,6,9,45
+2025,8,1,Round 1,Round 1,0,2025-03-15,Docklands Stadium,Western Bulldogs,North Melbourne,17,11,113,14,13,97
+2025,9,1,Round 1,Round 1,0,2025-03-16,Adelaide Oval,Adelaide,St Kilda,21,9,135,10,12,72
+2025,10,1,Round 1,Round 1,0,2025-03-16,MCG,Melbourne,GWS,11,8,74,11,11,77
+2025,11,1,Round 1,Round 1,0,2025-03-16,Perth Stadium,West Coast,Gold Coast,7,7,49,20,16,136
+2025,12,2,Round 2,Round 2,0,2025-03-20,MCG,Carlton,Hawthorn,8,12,60,12,8,80
+2025,13,2,Round 2,Round 2,0,2025-03-21,MCG,Western Bulldogs,Collingwood,10,10,70,10,16,76
+2025,14,2,Round 2,Round 2,0,2025-03-22,MCG,Essendon,Adelaide,15,10,100,25,11,161
+2025,15,2,Round 2,Round 2,0,2025-03-22,Adelaide Oval,Port Adelaide,Richmond,21,14,140,9,14,68
+2025,16,2,Round 2,Round 2,0,2025-03-22,Docklands Stadium,St Kilda,Geelong,15,8,98,13,13,91
+2025,17,2,Round 2,Round 2,0,2025-03-23,Gabba,Brisbane,West Coast,14,10,94,11,9,75
+2025,18,2,Round 2,Round 2,0,2025-03-23,Docklands Stadium,North Melbourne,Melbourne,19,11,125,9,12,66
+2025,19,2,Round 2,Round 2,0,2025-03-23,Perth Stadium,Fremantle,Sydney,9,11,65,9,14,68
+2025,20,3,Round 3,Round 3,0,2025-03-27,Docklands Stadium,Essendon,Port Adelaide,9,18,72,8,12,60
+2025,21,3,Round 3,Round 3,0,2025-03-28,Docklands Stadium,Carlton,Western Bulldogs,11,9,75,12,11,83
+2025,22,3,Round 3,Round 3,0,2025-03-29,MCG,Melbourne,Gold Coast,8,14,62,18,12,120
+2025,23,3,Round 3,Round 3,0,2025-03-29,Docklands Stadium,St Kilda,Richmond,20,15,135,7,11,53
+2025,24,3,Round 3,Round 3,0,2025-03-29,Gabba,Brisbane,Geelong,10,10,70,9,7,61
+2025,25,3,Round 3,Round 3,0,2025-03-29,York Park,Hawthorn,GWS,10,16,76,9,10,64
+2025,26,3,Round 3,Round 3,0,2025-03-30,Adelaide Oval,Adelaide,North Melbourne,17,12,114,12,6,78
+2025,27,3,Round 3,Round 3,0,2025-03-30,Perth Stadium,West Coast,Fremantle,10,8,68,15,16,106
+2025,28,4,Round 4,Round 4,0,2025-04-03,MCG,Collingwood,Carlton,8,15,63,6,10,46
+2025,29,4,Round 4,Round 4,0,2025-04-04,Kardinia Park,Geelong,Melbourne,12,13,85,6,10,46
+2025,30,4,Round 4,Round 4,0,2025-04-05,Carrara Stadium,Gold Coast,Adelaide,13,13,91,14,6,90
+2025,31,4,Round 4,Round 4,0,2025-04-05,MCG,Richmond,Brisbane,13,12,90,18,10,118
+2025,32,4,Round 4,Round 4,0,2025-04-05,Docklands Stadium,North Melbourne,Sydney,8,4,52,18,9,117
+2025,33,4,Round 4,Round 4,0,2025-04-06,Sydney Showground Stadium,GWS,West Coast,20,12,132,7,9,51
+2025,34,4,Round 4,Round 4,0,2025-04-06,Adelaide Oval,Port Adelaide,St Kilda,10,12,72,13,11,89
+2025,35,4,Round 4,Round 4,0,2025-04-06,Perth Stadium,Fremantle,Western Bulldogs,15,7,97,12,9,81
+2025,36,5,Round 5,Round 5,0,2025-04-10,Adelaide Oval,Adelaide,Geelong,15,10,100,18,11,119
+2025,37,5,Round 5,Round 5,0,2025-04-11,Adelaide Oval,Collingwood,Sydney,16,13,109,12,6,78
+2025,38,5,Round 5,Round 5,0,2025-04-12,Barossa Park,North Melbourne,Gold Coast,13,11,89,21,15,141
+2025,39,5,Round 5,Round 5,0,2025-04-12,Adelaide Oval,Carlton,West Coast,17,19,121,6,14,50
+2025,40,5,Round 5,Round 5,0,2025-04-12,Norwood Oval,Western Bulldogs,Brisbane,14,13,97,18,10,118
+2025,41,5,Round 5,Round 5,0,2025-04-12,Adelaide Oval,Melbourne,Essendon,8,9,57,15,6,96
+2025,42,5,Round 5,Round 5,0,2025-04-13,Barossa Park,Richmond,Fremantle,7,5,47,16,12,108
+2025,43,5,Round 5,Round 5,0,2025-04-13,Norwood Oval,St Kilda,GWS,12,10,82,16,14,110
+2025,44,5,Round 5,Round 5,0,2025-04-13,Adelaide Oval,Port Adelaide,Hawthorn,18,13,121,14,7,91
+2025,45,6,Round 6,Round 6,0,2025-04-17,Gabba,Brisbane,Collingwood,7,11,53,16,9,105
+2025,46,6,Round 6,Round 6,0,2025-04-18,Docklands Stadium,North Melbourne,Carlton,11,5,71,24,9,153
+2025,47,6,Round 6,Round 6,0,2025-04-18,Perth Stadium,West Coast,Essendon,11,9,75,11,11,77
+2025,48,6,Round 6,Round 6,0,2025-04-19,MCG,Melbourne,Fremantle,16,11,107,14,13,97
+2025,49,6,Round 6,Round 6,0,2025-04-19,Adelaide Oval,Adelaide,GWS,7,10,52,4,10,34
+2025,50,6,Round 6,Round 6,0,2025-04-19,Docklands Stadium,Richmond,Gold Coast,12,8,80,9,15,69
+2025,51,6,Round 6,Round 6,0,2025-04-20,SCG,Sydney,Port Adelaide,10,17,77,13,7,85
+2025,52,6,Round 6,Round 6,0,2025-04-20,Docklands Stadium,Western Bulldogs,St Kilda,18,19,127,8,8,56
+2025,53,6,Round 6,Round 6,0,2025-04-21,MCG,Geelong,Hawthorn,12,14,86,11,13,79
+2025,54,7,Round 7,Round 7,0,2025-04-24,MCG,Melbourne,Richmond,12,11,83,9,9,63
+2025,55,7,Round 7,Round 7,0,2025-04-25,MCG,Collingwood,Essendon,16,11,107,10,6,66
+2025,56,7,Round 7,Round 7,0,2025-04-25,Perth Stadium,Fremantle,Adelaide,12,13,85,9,13,67
+2025,57,7,Round 7,Round 7,0,2025-04-26,Docklands Stadium,St Kilda,Brisbane,11,7,73,17,16,118
+2025,58,7,Round 7,Round 7,0,2025-04-26,Adelaide Oval,Port Adelaide,North Melbourne,14,13,97,13,10,88
+2025,59,7,Round 7,Round 7,0,2025-04-26,Manuka Oval,GWS,Western Bulldogs,12,9,81,17,11,113
+2025,60,7,Round 7,Round 7,0,2025-04-27,Carrara Stadium,Gold Coast,Sydney,17,15,117,12,7,79
+2025,61,7,Round 7,Round 7,0,2025-04-27,MCG,Carlton,Geelong,14,10,94,12,4,76
+2025,62,7,Round 7,Round 7,0,2025-04-27,Docklands Stadium,Hawthorn,West Coast,18,16,124,11,8,74
+2025,63,8,Round 8,Round 8,0,2025-05-01,Docklands Stadium,Essendon,North Melbourne,9,11,65,9,8,62
+2025,64,8,Round 8,Round 8,0,2025-05-02,Docklands Stadium,St Kilda,Fremantle,14,10,94,5,3,33
+2025,65,8,Round 8,Round 8,0,2025-05-03,Eureka Stadium,Western Bulldogs,Port Adelaide,20,11,131,5,11,41
+2025,66,8,Round 8,Round 8,0,2025-05-03,Adelaide Oval,Adelaide,Carlton,16,14,110,7,8,50
+2025,67,8,Round 8,Round 8,0,2025-05-03,MCG,Collingwood,Geelong,12,15,87,13,12,90
+2025,68,8,Round 8,Round 8,0,2025-05-03,Perth Stadium,West Coast,Melbourne,11,10,76,16,12,108
+2025,69,8,Round 8,Round 8,0,2025-05-04,SCG,Sydney,GWS,12,15,87,10,13,73
+2025,70,8,Round 8,Round 8,0,2025-05-04,MCG,Hawthorn,Richmond,16,13,109,6,8,44
+2025,71,8,Round 8,Round 8,0,2025-05-04,Gabba,Brisbane,Gold Coast,9,12,66,7,7,49
+2025,72,9,Round 9,Round 9,0,2025-05-08,Perth Stadium,Fremantle,Collingwood,12,11,83,15,7,97
+2025,73,9,Round 9,Round 9,0,2025-05-09,MCG,St Kilda,Carlton,9,8,62,11,11,77
+2025,74,9,Round 9,Round 9,0,2025-05-10,MCG,Melbourne,Hawthorn,7,14,56,13,13,91
+2025,75,9,Round 9,Round 9,0,2025-05-10,Docklands Stadium,Essendon,Sydney,11,5,71,8,15,63
+2025,76,9,Round 9,Round 9,0,2025-05-10,Marrara Oval,Gold Coast,Western Bulldogs,15,16,106,14,12,96
+2025,77,9,Round 9,Round 9,0,2025-05-10,Adelaide Oval,Port Adelaide,Adelaide,12,12,84,13,11,89
+2025,78,9,Round 9,Round 9,0,2025-05-11,MCG,Richmond,West Coast,11,15,81,11,13,79
+2025,79,9,Round 9,Round 9,0,2025-05-11,Kardinia Park,Geelong,GWS,14,17,101,16,9,105
+2025,80,9,Round 9,Round 9,0,2025-05-11,Bellerive Oval,North Melbourne,Brisbane,10,11,71,10,11,71
+2025,81,10,Round 10,Round 10,0,2025-05-15,Marrara Oval,Gold Coast,Hawthorn,16,8,104,15,6,96
+2025,82,10,Round 10,Round 10,0,2025-05-16,SCG,Sydney,Carlton,11,12,78,9,8,62
+2025,83,10,Round 10,Round 10,0,2025-05-17,MCG,Collingwood,Adelaide,11,12,78,10,8,68
+2025,84,10,Round 10,Round 10,0,2025-05-17,Sydney Showground Stadium,GWS,Fremantle,8,13,61,13,17,95
+2025,85,10,Round 10,Round 10,0,2025-05-17,Adelaide Oval,Port Adelaide,Geelong,5,9,39,17,13,115
+2025,86,10,Round 10,Round 10,0,2025-05-17,Docklands Stadium,Western Bulldogs,Essendon,18,19,127,5,6,36
+2025,87,10,Round 10,Round 10,0,2025-05-18,MCG,Richmond,North Melbourne,11,8,74,12,6,78
+2025,88,10,Round 10,Round 10,0,2025-05-18,Gabba,Brisbane,Melbourne,13,10,88,14,15,99
+2025,89,10,Round 10,Round 10,0,2025-05-18,Perth Stadium,West Coast,St Kilda,16,12,108,12,8,80
+2025,90,11,Round 11,Round 11,0,2025-05-22,Kardinia Park,Geelong,Western Bulldogs,20,7,127,16,17,113
+2025,91,11,Round 11,Round 11,0,2025-05-23,MCG,Essendon,Richmond,11,15,81,8,10,58
+2025,92,11,Round 11,Round 11,0,2025-05-24,Docklands Stadium,Carlton,GWS,12,10,82,17,8,110
+2025,93,11,Round 11,Round 11,0,2025-05-24,MCG,Hawthorn,Brisbane,8,12,60,14,9,93
+2025,94,11,Round 11,Round 11,0,2025-05-24,Docklands Stadium,North Melbourne,Collingwood,9,9,63,15,18,108
+2025,95,11,Round 11,Round 11,0,2025-05-24,Perth Stadium,Fremantle,Port Adelaide,15,10,100,7,9,51
+2025,96,11,Round 11,Round 11,0,2025-05-25,Adelaide Oval,Adelaide,West Coast,19,14,128,8,14,62
+2025,97,11,Round 11,Round 11,0,2025-05-25,MCG,Melbourne,Sydney,19,17,131,12,6,78
+2025,98,11,Round 11,Round 11,0,2025-05-25,Docklands Stadium,St Kilda,Gold Coast,8,13,61,12,8,80
+2025,99,12,Round 12,Round 12,0,2025-05-29,Gabba,Brisbane,Essendon,13,12,90,11,6,72
+2025,100,12,Round 12,Round 12,0,2025-05-30,MCG,Collingwood,Hawthorn,16,11,107,8,8,56
+2025,101,12,Round 12,Round 12,0,2025-05-31,Carrara Stadium,Gold Coast,Fremantle,9,10,64,11,9,75
+2025,102,12,Round 12,Round 12,0,2025-05-31,Sydney Showground Stadium,GWS,Richmond,12,8,80,10,17,77
+2025,103,12,Round 12,Round 12,0,2025-05-31,SCG,Sydney,Adelaide,5,11,41,21,5,131
+2025,104,12,Round 12,Round 12,0,2025-06-01,Traeger Park,Melbourne,St Kilda,7,21,63,14,7,91
+2025,105,12,Round 12,Round 12,0,2025-06-01,Perth Stadium,West Coast,Geelong,11,7,73,17,14,116
+2025,106,13,Round 13,Round 13,0,2025-06-05,Docklands Stadium,Western Bulldogs,Hawthorn,8,11,59,12,9,81
+2025,107,13,Round 13,Round 13,0,2025-06-06,Adelaide Oval,Adelaide,Brisbane,10,8,68,8,15,63
+2025,108,13,Round 13,Round 13,0,2025-06-07,MCG,Richmond,Sydney,4,12,36,11,14,80
+2025,109,13,Round 13,Round 13,0,2025-06-07,Kardinia Park,Geelong,Gold Coast,9,7,61,5,7,37
+2025,110,13,Round 13,Round 13,0,2025-06-07,Manuka Oval,GWS,Port Adelaide,7,8,50,9,12,66
+2025,111,13,Round 13,Round 13,0,2025-06-08,Hands Oval,North Melbourne,West Coast,9,8,62,6,16,52
+2025,112,13,Round 13,Round 13,0,2025-06-08,MCG,Carlton,Essendon,11,12,78,11,4,70
+2025,113,13,Round 13,Round 13,0,2025-06-09,MCG,Melbourne,Collingwood,10,11,71,11,6,72
+2025,114,14,Round 14,Round 14,0,2025-06-12,Docklands Stadium,St Kilda,Western Bulldogs,8,12,60,20,12,132
+2025,115,14,Round 14,Round 14,0,2025-06-13,York Park,Hawthorn,Adelaide,6,11,47,5,14,44
+2025,116,14,Round 14,Round 14,0,2025-06-14,Gabba,Brisbane,GWS,13,18,96,17,5,107
+2025,117,14,Round 14,Round 14,0,2025-06-14,MCG,Essendon,Geelong,8,8,56,23,13,151
+2025,118,14,Round 14,Round 14,0,2025-06-14,Perth Stadium,North Melbourne,Fremantle,10,7,67,10,13,73
+2025,119,14,Round 14,Round 14,0,2025-06-15,Adelaide Oval,Port Adelaide,Melbourne,14,9,93,9,14,68
+2025,120,14,Round 14,Round 14,0,2025-06-15,Perth Stadium,West Coast,Carlton,7,10,52,12,14,86
+2025,121,15,Round 15,Round 15,0,2025-06-19,Perth Stadium,Fremantle,Essendon,16,8,104,9,9,63
+2025,122,15,Round 15,Round 15,0,2025-06-20,Kardinia Park,Geelong,Brisbane,6,15,51,14,8,92
+2025,123,15,Round 15,Round 15,0,2025-06-21,MCG,Carlton,North Melbourne,10,13,73,13,6,84
+2025,124,15,Round 15,Round 15,0,2025-06-21,Adelaide Oval,Port Adelaide,Sydney,7,10,52,9,17,71
+2025,125,15,Round 15,Round 15,0,2025-06-21,Docklands Stadium,Collingwood,St Kilda,16,12,108,11,8,74
+2025,126,15,Round 15,Round 15,0,2025-06-22,Sydney Showground Stadium,GWS,Gold Coast,16,10,106,14,15,99
+2025,127,15,Round 15,Round 15,0,2025-06-22,Docklands Stadium,Western Bulldogs,Richmond,21,9,135,8,8,56
+2025,128,16,Round 16,Round 16,0,2025-06-26,Adelaide Oval,Port Adelaide,Carlton,16,14,110,8,12,60
+2025,129,16,Round 16,Round 16,0,2025-06-27,SCG,Sydney,Western Bulldogs,14,12,96,16,9,105
+2025,130,16,Round 16,Round 16,0,2025-06-28,Carrara Stadium,Gold Coast,Melbourne,15,14,104,12,13,85
+2025,131,16,Round 16,Round 16,0,2025-06-28,York Park,Hawthorn,North Melbourne,23,12,150,9,11,65
+2025,132,16,Round 16,Round 16,0,2025-06-28,Docklands Stadium,Collingwood,West Coast,13,10,88,8,11,59
+2025,133,16,Round 16,Round 16,0,2025-06-29,MCG,Richmond,Adelaide,8,6,54,18,14,122
+2025,134,16,Round 16,Round 16,0,2025-06-29,Perth Stadium,Fremantle,St Kilda,11,15,81,9,15,69
+2025,135,17,Round 17,Round 17,0,2025-07-03,Docklands Stadium,North Melbourne,Western Bulldogs,13,7,85,20,14,134
+2025,136,17,Round 17,Round 17,0,2025-07-04,MCG,Carlton,Collingwood,8,11,59,17,13,115
+2025,137,17,Round 17,Round 17,0,2025-07-04,Perth Stadium,West Coast,GWS,8,4,52,16,15,111
+2025,138,17,Round 17,Round 17,0,2025-07-05,Docklands Stadium,Essendon,Gold Coast,11,8,74,18,7,115
+2025,139,17,Round 17,Round 17,0,2025-07-05,Kardinia Park,Geelong,Richmond,18,16,124,7,10,52
+2025,140,17,Round 17,Round 17,0,2025-07-05,Gabba,Brisbane,Port Adelaide,18,12,120,14,8,92
+2025,141,17,Round 17,Round 17,0,2025-07-05,Docklands Stadium,St Kilda,Hawthorn,10,14,74,14,10,94
+2025,142,17,Round 17,Round 17,0,2025-07-06,SCG,Sydney,Fremantle,14,10,94,12,11,83
+2025,143,17,Round 17,Round 17,0,2025-07-06,Adelaide Oval,Adelaide,Melbourne,13,12,90,11,11,77
+2025,144,18,Round 18,Round 18,0,2025-07-10,Docklands Stadium,Carlton,Brisbane,9,12,66,15,13,103
+2025,145,18,Round 18,Round 18,0,2025-07-11,Carrara Stadium,Gold Coast,Collingwood,10,9,69,8,15,63
+2025,146,18,Round 18,Round 18,0,2025-07-12,Docklands Stadium,Western Bulldogs,Adelaide,15,8,98,16,13,109
+2025,147,18,Round 18,Round 18,0,2025-07-12,Sydney Showground Stadium,GWS,Geelong,17,9,111,13,7,85
+2025,148,18,Round 18,Round 18,0,2025-07-12,MCG,Richmond,Essendon,6,10,46,4,13,37
+2025,149,18,Round 18,Round 18,0,2025-07-12,Perth Stadium,Fremantle,Hawthorn,12,5,77,9,10,64
+2025,150,18,Round 18,Round 18,0,2025-07-13,MCG,Melbourne,North Melbourne,18,11,119,12,11,83
+2025,151,18,Round 18,Round 18,0,2025-07-13,Docklands Stadium,St Kilda,Sydney,13,9,87,14,8,92
+2025,152,18,Round 18,Round 18,0,2025-07-13,Adelaide Oval,Port Adelaide,West Coast,12,15,87,9,7,61
+2025,153,19,Round 19,Round 19,0,2025-07-17,Docklands Stadium,Essendon,GWS,7,14,56,16,8,104
+2025,154,19,Round 19,Round 19,0,2025-07-18,Gabba,Brisbane,Western Bulldogs,12,14,86,12,4,76
+2025,155,19,Round 19,Round 19,0,2025-07-19,York Park,Hawthorn,Port Adelaide,13,9,87,7,7,49
+2025,156,19,Round 19,Round 19,0,2025-07-19,SCG,Sydney,North Melbourne,12,12,84,7,11,53
+2025,157,19,Round 19,Round 19,0,2025-07-19,MCG,Carlton,Melbourne,12,6,78,10,10,70
+2025,158,19,Round 19,Round 19,0,2025-07-19,Perth Stadium,West Coast,Richmond,8,8,56,16,9,105
+2025,159,19,Round 19,Round 19,0,2025-07-20,Kardinia Park,Geelong,St Kilda,17,11,113,12,10,82
+2025,160,19,Round 19,Round 19,0,2025-07-20,MCG,Collingwood,Fremantle,11,12,78,12,7,79
+2025,161,19,Round 19,Round 19,0,2025-07-20,Adelaide Oval,Adelaide,Gold Coast,16,11,107,6,10,46
+2025,162,20,Round 20,Round 20,0,2025-07-24,MCG,Hawthorn,Carlton,13,7,85,9,7,61
+2025,163,20,Round 20,Round 20,0,2025-07-25,Docklands Stadium,Essendon,Western Bulldogs,7,8,50,22,11,143
+2025,164,20,Round 20,Round 20,0,2025-07-25,Sydney Showground Stadium,GWS,Sydney,15,12,102,8,10,58
+2025,165,20,Round 20,Round 20,0,2025-07-26,Carrara Stadium,Gold Coast,Brisbane,20,10,130,9,10,64
+2025,166,20,Round 20,Round 20,0,2025-07-26,Perth Stadium,Fremantle,West Coast,18,18,126,12,5,77
+2025,167,20,Round 20,Round 20,0,2025-07-26,Docklands Stadium,North Melbourne,Geelong,7,7,49,22,18,150
+2025,168,20,Round 20,Round 20,0,2025-07-26,Adelaide Oval,Adelaide,Port Adelaide,20,13,133,5,5,35
+2025,169,20,Round 20,Round 20,0,2025-07-27,MCG,Richmond,Collingwood,8,9,57,13,15,93
+2025,170,20,Round 20,Round 20,0,2025-07-27,Docklands Stadium,St Kilda,Melbourne,15,6,96,13,12,90
+2025,171,21,Round 21,Round 21,0,2025-07-31,Docklands Stadium,Western Bulldogs,GWS,19,18,132,6,8,44
+2025,172,21,Round 21,Round 21,0,2025-08-01,Adelaide Oval,Adelaide,Hawthorn,15,11,101,13,9,87
+2025,173,21,Round 21,Round 21,0,2025-08-02,Docklands Stadium,Melbourne,West Coast,21,13,139,8,8,56
+2025,174,21,Round 21,Round 21,0,2025-08-02,Carrara Stadium,Gold Coast,Richmond,16,11,107,2,11,23
+2025,175,21,Round 21,Round 21,0,2025-08-02,SCG,Sydney,Essendon,9,14,68,7,12,54
+2025,176,21,Round 21,Round 21,0,2025-08-02,MCG,Collingwood,Brisbane,10,5,65,14,8,92
+2025,177,21,Round 21,Round 21,0,2025-08-03,Docklands Stadium,St Kilda,North Melbourne,11,12,78,10,9,69
+2025,178,21,Round 21,Round 21,0,2025-08-03,Kardinia Park,Geelong,Port Adelaide,23,15,153,9,11,65
+2025,179,21,Round 21,Round 21,0,2025-08-03,Perth Stadium,Fremantle,Carlton,15,4,94,10,7,67
+2025,180,22,Round 22,Round 22,0,2025-08-07,MCG,Hawthorn,Collingwood,17,8,110,6,10,46
+2025,181,22,Round 22,Round 22,0,2025-08-08,Kardinia Park,Geelong,Essendon,15,19,109,10,5,65
+2025,182,22,Round 22,Round 22,0,2025-08-09,MCG,Richmond,St Kilda,7,10,52,8,8,56
+2025,183,22,Round 22,Round 22,0,2025-08-09,Gabba,Brisbane,Sydney,13,12,90,13,14,92
+2025,184,22,Round 22,Round 22,0,2025-08-09,Docklands Stadium,Carlton,Gold Coast,11,8,74,13,15,93
+2025,185,22,Round 22,Round 22,0,2025-08-09,Adelaide Oval,Port Adelaide,Fremantle,13,8,86,13,14,92
+2025,186,22,Round 22,Round 22,0,2025-08-10,Manuka Oval,GWS,North Melbourne,20,13,133,12,7,79
+2025,187,22,Round 22,Round 22,0,2025-08-10,MCG,Melbourne,Western Bulldogs,15,9,99,15,15,105
+2025,188,22,Round 22,Round 22,0,2025-08-10,Perth Stadium,West Coast,Adelaide,12,6,78,13,9,87
+2025,189,23,Round 23,Round 23,0,2025-08-15,Docklands Stadium,Essendon,St Kilda,11,9,75,11,11,77
+2025,190,23,Round 23,Round 23,0,2025-08-15,Perth Stadium,Fremantle,Brisbane,5,14,44,15,11,101
+2025,191,23,Round 23,Round 23,0,2025-08-16,Carrara Stadium,Gold Coast,GWS,11,10,76,17,9,111
+2025,192,23,Round 23,Round 23,0,2025-08-16,Docklands Stadium,Carlton,Port Adelaide,18,10,118,9,10,64
+2025,193,23,Round 23,Round 23,0,2025-08-16,MCG,Hawthorn,Melbourne,13,14,92,8,8,56
+2025,194,23,Round 23,Round 23,0,2025-08-16,Adelaide Oval,Adelaide,Collingwood,9,5,59,8,8,56
+2025,195,23,Round 23,Round 23,0,2025-08-17,Bellerive Oval,North Melbourne,Richmond,20,15,135,13,9,87
+2025,196,23,Round 23,Round 23,0,2025-08-17,SCG,Sydney,Geelong,10,8,68,16,15,111
+2025,197,23,Round 23,Round 23,0,2025-08-17,Docklands Stadium,Western Bulldogs,West Coast,19,12,126,4,8,32
+2025,198,24,Round 24,Round 24,0,2025-08-21,MCG,Essendon,Carlton,8,8,56,13,12,90
+2025,199,24,Round 24,Round 24,0,2025-08-22,MCG,Collingwood,Melbourne,11,16,82,11,10,76
+2025,200,24,Round 24,Round 24,0,2025-08-22,Adelaide Oval,Port Adelaide,Gold Coast,10,11,71,9,13,67
+2025,201,24,Round 24,Round 24,0,2025-08-23,Docklands Stadium,North Melbourne,Adelaide,15,10,100,17,11,113
+2025,202,24,Round 24,Round 24,0,2025-08-23,MCG,Richmond,Geelong,9,10,64,14,19,103
+2025,203,24,Round 24,Round 24,0,2025-08-23,Perth Stadium,West Coast,Sydney,7,9,51,18,10,118
+2025,204,24,Round 24,Round 24,0,2025-08-24,Sydney Showground Stadium,GWS,St Kilda,15,14,104,14,9,93
+2025,205,24,Round 24,Round 24,0,2025-08-24,Docklands Stadium,Western Bulldogs,Fremantle,14,13,97,17,10,112
+2025,206,24,Round 24,Round 24,0,2025-08-24,Gabba,Brisbane,Hawthorn,11,23,89,11,13,79
+2025,207,24,Round 24,Round 24,0,2025-08-27,Carrara Stadium,Gold Coast,Essendon,23,15,153,8,10,58
+2025,208,25,Round 25,Finals Week 1,1,2025-09-04,Adelaide Oval,Adelaide,Collingwood,8,7,55,11,13,79
+2025,209,25,Round 25,Finals Week 1,1,2025-09-05,MCG,Geelong,Brisbane,16,16,112,11,8,74
+2025,210,25,Round 25,Finals Week 1,1,2025-09-06,Sydney Showground Stadium,GWS,Hawthorn,13,10,88,16,11,107
+2025,211,25,Round 25,Finals Week 1,1,2025-09-06,Perth Stadium,Fremantle,Gold Coast,12,7,79,11,14,80
+2025,212,26,Round 26,Semi-Finals,1,2025-09-12,Adelaide Oval,Adelaide,Hawthorn,10,7,67,14,17,101
+2025,213,26,Round 26,Semi-Finals,1,2025-09-13,Gabba,Brisbane,Gold Coast,14,16,100,6,11,47
+2025,214,27,Round 27,Preliminary Finals,1,2025-09-19,MCG,Geelong,Hawthorn,17,13,115,13,7,85
+2025,215,27,Round 27,Preliminary Finals,1,2025-09-20,MCG,Collingwood,Brisbane,11,5,71,15,10,100
+2025,216,28,Round 28,Grand Final,1,2025-09-27,MCG,Geelong,Brisbane,NA,NA,NA,NA,NA,NA

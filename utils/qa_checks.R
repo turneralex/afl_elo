@@ -2,7 +2,7 @@ library(dplyr)
 library(ggplot2)
 
 start_season <- "1990" # ensure consistency with optim.R
-current_season <- "2025"
+current_season <- "2026"
 
 source(
     here::here(
@@ -51,7 +51,7 @@ purrr::map(
     ~ afl_elo %>% 
         filter(
             team == .x
-            & hga_app == 1
+            & hga_app_flag == 1
         ) %>% 
         distinct(team, venue, location)
 )

@@ -7,7 +7,7 @@ source(
 )
 
 season_first <- 1990
-season_last <- 2024
+season_last <- 2025
 
 # read in fixture
 

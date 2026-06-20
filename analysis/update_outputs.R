@@ -1,9 +1,8 @@
 # new season checklist:
 # 1. update & run fixture_history.R
 # 2. run optim.R 
-# 3. create current season fixture & check mapping functions are up to date
+# 3. run utils/qa_checks.R to check mapping functions are up to date
 # 4. run below script
-# 5. run utils/qa_checks.R after running the model (run.R)
 
 library(dplyr)
 
@@ -11,9 +10,9 @@ library(dplyr)
 
 start_season <- "1990" # ensure consistency with optim.R
 # note: at the beginning of start_season, all team ratings will be set to the average of 1500
-current_season <- "2025"
-prev_season <- "2024"
-rounds_so_far <- 6 # set as -1 for pre-season
+current_season <- "2026"
+prev_season <- "2025"
+rounds_so_far <- 14 # set as -1 for pre-season
 round_concluded <- paste(
     "Round",
     rounds_so_far

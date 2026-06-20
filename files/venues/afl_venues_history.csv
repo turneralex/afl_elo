@@ -380,6 +380,15 @@ MCG,VIC,2024,St Kilda,1,1
 MCG,VIC,2024,Hawthorn,1,1
 MCG,VIC,2024,Richmond,1,1
 MCG,VIC,2024,Geelong,1,1
+MCG,VIC,2025,Richmond,1,1
+MCG,VIC,2025,Hawthorn,1,1
+MCG,VIC,2025,Collingwood,1,1
+MCG,VIC,2025,Melbourne,1,1
+MCG,VIC,2025,Carlton,1,1
+MCG,VIC,2025,Western Bulldogs,1,0
+MCG,VIC,2025,Essendon,1,1
+MCG,VIC,2025,Geelong,1,1
+MCG,VIC,2025,St Kilda,1,1
 Carrara Stadium,QLD,1990,Brisbane,1,0
 Carrara Stadium,QLD,1991,Brisbane,1,1
 Carrara Stadium,QLD,1992,Brisbane,1,1
@@ -424,6 +433,7 @@ Carrara Stadium,QLD,2021,Essendon,0,1
 Carrara Stadium,QLD,2022,Gold Coast,1,1
 Carrara Stadium,QLD,2023,Gold Coast,1,1
 Carrara Stadium,QLD,2024,Gold Coast,1,1
+Carrara Stadium,QLD,2025,Gold Coast,1,1
 Subiaco Oval,WA,1990,West Coast,1,0
 Subiaco Oval,WA,1991,West Coast,1,1
 Subiaco Oval,WA,1992,West Coast,1,1
@@ -539,6 +549,7 @@ SCG,NSW,2021,Melbourne,0,0
 SCG,NSW,2022,Sydney,1,1
 SCG,NSW,2023,Sydney,1,1
 SCG,NSW,2024,Sydney,1,1
+SCG,NSW,2025,Sydney,1,1
 Victoria Park,VIC,1990,Collingwood,1,0
 Victoria Park,VIC,1991,Collingwood,1,1
 Victoria Park,VIC,1992,Collingwood,1,1
@@ -586,6 +597,7 @@ Kardinia Park,GEE,2021,Gold Coast,0,0
 Kardinia Park,GEE,2022,Geelong,1,1
 Kardinia Park,GEE,2023,Geelong,1,1
 Kardinia Park,GEE,2024,Geelong,1,1
+Kardinia Park,GEE,2025,Geelong,1,1
 WACA,WA,1990,West Coast,1,0
 WACA,WA,1991,West Coast,1,1
 WACA,WA,1992,West Coast,1,1
@@ -694,6 +706,7 @@ Gabba,QLD,2021,Brisbane,1,1
 Gabba,QLD,2022,Brisbane,1,1
 Gabba,QLD,2023,Brisbane,1,1
 Gabba,QLD,2024,Brisbane,1,1
+Gabba,QLD,2025,Brisbane,1,1
 North Hobart Oval,TAS,1991,Fitzroy,0,0
 North Hobart Oval,TAS,1992,Fitzroy,0,1
 Canberra Stadium,ACT,1995,Fitzroy,0,0
@@ -724,6 +737,7 @@ Manuka Oval,ACT,2021,GWS,1,0
 Manuka Oval,ACT,2022,GWS,1,1
 Manuka Oval,ACT,2023,GWS,1,1
 Manuka Oval,ACT,2024,GWS,1,1
+Manuka Oval,ACT,2025,GWS,1,1
 Docklands Stadium,VIC,2000,Essendon,1,0
 Docklands Stadium,VIC,2000,St Kilda,1,0
 Docklands Stadium,VIC,2000,Western Bulldogs,1,0
@@ -948,6 +962,15 @@ Docklands Stadium,VIC,2024,St Kilda,1,1
 Docklands Stadium,VIC,2024,Collingwood,1,1
 Docklands Stadium,VIC,2024,Hawthorn,1,1
 Docklands Stadium,VIC,2024,Richmond,1,1
+Docklands Stadium,VIC,2025,Western Bulldogs,1,1
+Docklands Stadium,VIC,2025,St Kilda,1,1
+Docklands Stadium,VIC,2025,North Melbourne,1,1
+Docklands Stadium,VIC,2025,Essendon,1,1
+Docklands Stadium,VIC,2025,Carlton,1,1
+Docklands Stadium,VIC,2025,Richmond,1,1
+Docklands Stadium,VIC,2025,Hawthorn,1,1
+Docklands Stadium,VIC,2025,Collingwood,1,1
+Docklands Stadium,VIC,2025,Melbourne,1,0
 York Park,TAS,2001,Hawthorn,1,0
 York Park,TAS,2002,Hawthorn,1,1
 York Park,TAS,2003,Hawthorn,1,1
@@ -975,6 +998,7 @@ York Park,TAS,2021,Hawthorn,1,0
 York Park,TAS,2022,Hawthorn,1,1
 York Park,TAS,2023,Hawthorn,1,1
 York Park,TAS,2024,Hawthorn,1,1
+York Park,TAS,2025,Hawthorn,1,1
 Stadium Australia,NSW,2002,Sydney,1,0
 Stadium Australia,NSW,2003,Sydney,1,1
 Stadium Australia,NSW,2004,Sydney,1,1
@@ -1017,6 +1041,7 @@ Marrara Oval,NT,2020,Essendon,0,0
 Marrara Oval,NT,2022,Gold Coast,0,0
 Marrara Oval,NT,2023,Gold Coast,0,1
 Marrara Oval,NT,2024,Gold Coast,0,1
+Marrara Oval,NT,2025,Gold Coast,0,1
 Cazaly's Stadium,QLD,2011,Richmond,0,0
 Cazaly's Stadium,QLD,2012,Richmond,0,1
 Cazaly's Stadium,QLD,2013,Richmond,0,1
@@ -1062,6 +1087,11 @@ Adelaide Oval,SA,2024,Adelaide,1,1
 Adelaide Oval,SA,2024,Fremantle,0,0
 Adelaide Oval,SA,2024,Western Bulldogs,0,0
 Adelaide Oval,SA,2024,Collingwood,0,1
+Adelaide Oval,SA,2025,Adelaide,1,1
+Adelaide Oval,SA,2025,Port Adelaide,1,1
+Adelaide Oval,SA,2025,Collingwood,0,1
+Adelaide Oval,SA,2025,Carlton,0,0
+Adelaide Oval,SA,2025,Melbourne,0,0
 Bellerive Oval,TAS,2012,North Melbourne,1,0
 Bellerive Oval,TAS,2013,North Melbourne,1,1
 Bellerive Oval,TAS,2014,North Melbourne,1,1
@@ -1075,6 +1105,7 @@ Bellerive Oval,TAS,2021,St Kilda,0,0
 Bellerive Oval,TAS,2022,North Melbourne,1,1
 Bellerive Oval,TAS,2023,North Melbourne,1,1
 Bellerive Oval,TAS,2024,North Melbourne,1,1
+Bellerive Oval,TAS,2025,North Melbourne,1,1
 Blacktown International Sportspark,NSW,2012,GWS,0,0
 Sydney Showground Stadium,NSW,2012,GWS,1,0
 Sydney Showground Stadium,NSW,2013,GWS,1,1
@@ -1094,6 +1125,7 @@ Sydney Showground Stadium,NSW,2021,Melbourne,0,1
 Sydney Showground Stadium,NSW,2022,GWS,1,1
 Sydney Showground Stadium,NSW,2023,GWS,1,1
 Sydney Showground Stadium,NSW,2024,GWS,1,1
+Sydney Showground Stadium,NSW,2025,GWS,1,1
 Wellington Regional Stadium,Other,2013,St Kilda,0,0
 Wellington Regional Stadium,Other,2014,St Kilda,0,1
 Wellington Regional Stadium,Other,2015,St Kilda,0,1
@@ -1107,6 +1139,7 @@ Traeger Park,NT,2020,Melbourne,1,1
 Traeger Park,NT,2022,Melbourne,1,0
 Traeger Park,NT,2023,Melbourne,1,1
 Traeger Park,NT,2024,Melbourne,1,1
+Traeger Park,NT,2025,Melbourne,1,1
 Jiangwan Stadium,Other,2017,Gold Coast,0,0
 Jiangwan Stadium,Other,2018,Gold Coast,0,1
 Jiangwan Stadium,Other,2019,St Kilda,0,0
@@ -1118,6 +1151,7 @@ Eureka Stadium,VIC,2021,GWS,0,0
 Eureka Stadium,VIC,2022,Western Bulldogs,1,1
 Eureka Stadium,VIC,2023,Western Bulldogs,1,1
 Eureka Stadium,VIC,2024,Western Bulldogs,1,1
+Eureka Stadium,VIC,2025,Western Bulldogs,1,1
 Perth Stadium,WA,2018,West Coast,1,0
 Perth Stadium,WA,2018,Fremantle,1,0
 Perth Stadium,WA,2018,Gold Coast,0,0
@@ -1137,11 +1171,19 @@ Perth Stadium,WA,2023,Fremantle,1,1
 Perth Stadium,WA,2023,West Coast,1,1
 Perth Stadium,WA,2024,Fremantle,1,1
 Perth Stadium,WA,2024,West Coast,1,1
+Perth Stadium,WA,2025,West Coast,1,1
+Perth Stadium,WA,2025,Fremantle,1,1
+Perth Stadium,WA,2025,North Melbourne,0,0
 Riverway Stadium,QLD,2019,Gold Coast,0,0
 Norwood Oval,SA,2023,Fremantle,0,0
 Norwood Oval,SA,2023,GWS,0,0
 Norwood Oval,SA,2024,Brisbane,0,0
 Norwood Oval,SA,2024,Richmond,0,0
+Norwood Oval,SA,2025,Western Bulldogs,0,0
+Norwood Oval,SA,2025,St Kilda,0,0
 Adelaide Hills,SA,2023,Brisbane,0,0
 Adelaide Hills,SA,2024,West Coast,0,0
 Adelaide Hills,SA,2024,Gold Coast,0,0
+Barossa Park,SA,2025,North Melbourne,0,0
+Barossa Park,SA,2025,Richmond,0,0
+Hands Oval,WA,2025,North Melbourne,0,0
